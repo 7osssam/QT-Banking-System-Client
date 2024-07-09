@@ -22,13 +22,12 @@ add_executable(${APPNAME} ${APP_HEADERS} ${APP_SOURCES}) # for dynamic library u
 
 target_include_directories(${APPNAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}
-						   ${CMAKE_SOURCE_DIR}/Bank/
-						   ${CMAKE_SOURCE_DIR}/BankAccount/
+						   ${CMAKE_SOURCE_DIR}/src/AppManager
 						   )
 ############# etc....
 
 # Add any dependencies or compile options specific to lock6g
-target_link_libraries(${APPNAME} PRIVATE Bank BankAccount nlohmann_json)
+target_link_libraries(${APPNAME} PRIVATE ${QT_LIBRARIES} qtmaterialwidgets AppManager)
 ############# etc....
 
 # Set the compile warnings options if enabled
@@ -44,5 +43,5 @@ install(TARGETS ${APPNAME}
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin )
-		
+
 message(STATUS "[Application: ${APPNAME}] Added Executable target: ${APPNAME}")
