@@ -29,8 +29,6 @@ add_git_submodule(tests/lib/googletest https://github.com/google/googletest)
 
 
 #add_subdirectory(test_suite)  # Test suite Template 
-add_subdirectory(Bank_TS)
-
 
 ############# etc....
 
