@@ -39,10 +39,11 @@ add_library(${LIBNAME} STATIC ${LIB_HEADERS} ${LIB_SOURCES} ${LIB_RESOURCES} ${L
 target_include_directories(${LIBNAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}
 							${CMAKE_SOURCE_DIR}/lib/qtmaterial/components
+							${CMAKE_SOURCE_DIR}/src/RequestManager
 						   )
 ############# etc.... add any other include directories here
 
-target_link_libraries(${LIBNAME} PUBLIC qtmaterialwidgets)
+target_link_libraries(${LIBNAME} PUBLIC qtmaterialwidgets RequestManager)
 target_link_libraries(${LIBNAME} PRIVATE ${QT_LIBRARIES})
 ############# etc.... add any other libraries here
 

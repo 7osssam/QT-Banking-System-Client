@@ -8,8 +8,9 @@
 #include "qtmaterialtextfield.h"
 #include "qtmaterialflatbutton.h"
 #include "qtmaterialiconbutton.h"
-#include "qtmaterialdialog.h"
 #include "qtmaterialsnackbar.h"
+
+#include "RequestManager.h"
 
 #include <QMovie>
 #include <QLineEdit>
@@ -31,15 +32,18 @@ private:
 	QLabel*				  backgroundLabel;
 	QMovie*				  backgroundMovie;
 	QtMaterialIconButton* connectionIconButton;
-	QtMaterialDialog*	  loginDialog;
 	QtMaterialSnackbar*	  loginSnackbar;
+	RequestManager*		  requestManager;
 
-	bool				  isConnected;
+	bool isConnected;
 
 	// Connection dialog components
 	QDialog*	 connectionDialog;
 	QLineEdit*	 ipPortField;
 	QPushButton* connectButton;
+
+	QString email;
+	QString password;
 
 signals:
 	void connectToServer(const QString& host, quint16 port);
@@ -50,11 +54,11 @@ public slots:
 	void onConnected();
 	void onDisconnected();
 	void onFailedLogin(QString message);
+	void onSuccessfulLogin(QString role);
 
 private slots:
 	void onLoginButton();
-	void onLoginButtonDialog();
-	void onTextChanged();
+	void onLoginTextChanged();
 	void onConnectionIconButton();
 	void onConnectButton();
 };

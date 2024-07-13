@@ -9,8 +9,12 @@
 #define CONNECTED_COLOR	   "#00FF00"
 #define DISCONNECTED_COLOR "#808080"
 
-LoginWidget::LoginWidget(QWidget* parent) : QWidget(parent), isConnected(false)
+LoginWidget::LoginWidget(QWidget* parent) :
+	QWidget(parent), isConnected(false), requestManager(RequestManager::getInstance(this))
 {
+	// set object name
+	setObjectName("LoginWidget");
+
 	// Set the window size
 	setFixedSize(800, 600);
 
@@ -57,8 +61,8 @@ LoginWidget::LoginWidget(QWidget* parent) : QWidget(parent), isConnected(false)
 	passwordField->setLabelColor(QColor(LABEL_COLOR));
 	layout->addWidget(passwordField);
 
-	connect(emailField, &QtMaterialTextField::textChanged, this, &LoginWidget::onTextChanged);
-	connect(passwordField, &QtMaterialTextField::textChanged, this, &LoginWidget::onTextChanged);
+	connect(emailField, &QtMaterialTextField::textChanged, this, &LoginWidget::onLoginTextChanged);
+	connect(passwordField, &QtMaterialTextField::textChanged, this, &LoginWidget::onLoginTextChanged);
 
 	// Login Button
 	loginButton = new QtMaterialFlatButton("Login", Material::ButtonTextDefault, this);
@@ -114,13 +118,12 @@ LoginWidget::LoginWidget(QWidget* parent) : QWidget(parent), isConnected(false)
 	loginSnackbar = new QtMaterialSnackbar(this);
 	loginSnackbar->setAutoHideDuration(3000);	// Auto-hide after 3 seconds
 	loginSnackbar->setClickToDismissMode(true); // Allow click to dismiss
-												//loginSnackbar->set
 }
 
 void LoginWidget::onLoginButton()
 {
-	QString email = emailField->text();
-	QString password = passwordField->text();
+	email = emailField->text();
+	password = passwordField->text();
 
 	if (email.isEmpty() || password.isEmpty())
 	{
@@ -128,18 +131,10 @@ void LoginWidget::onLoginButton()
 		return;
 	}
 
-	QJsonObject loginData;
-	loginData.insert("Request", 1);
-	QJsonObject data;
-	data.insert("email", email);
-	data.insert("password", password);
-
-	loginData.insert("Data", data);
-
-	emit sendLoginRequest(loginData);
+	requestManager->sendLoginRequest(email, password);
 }
 
-void LoginWidget::onTextChanged()
+void LoginWidget::onLoginTextChanged()
 {
 	emailField->setLabelVisible(emailField->text().isEmpty());
 	passwordField->setLabelVisible(passwordField->text().isEmpty());
@@ -197,14 +192,21 @@ void LoginWidget::onDisconnected()
 
 	QMessageBox::warning(this, "Connected", "Disconnected from server", QMessageBox::Ok);
 }
+
 void LoginWidget::onFailedLogin(QString message)
 {
+	// set color to red with small opacity
+	loginSnackbar->setBackgroundColor(QColor(255, 0, 0, 100));
+
 	loginSnackbar->addMessage("Login Failed: " + message);
 }
 
-//onLoginButtonDialog
-void LoginWidget::onLoginButtonDialog()
+void LoginWidget::onSuccessfulLogin(QString role)
 {
-	loginDialog->hide();
-	//emit disconnectFromServer();
+	// set color to green with small opacity
+	loginSnackbar->setBackgroundColor(QColor(0, 255, 0, 100));
+
+	loginSnackbar->addMessage("Login Successful: " + role);
+
+	requestManager->sendinitRequest(email, password);
 }
