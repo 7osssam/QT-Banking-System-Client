@@ -348,7 +348,6 @@ void UserWidget::onTransactionsFetched(const QList<QMap<QString, QString>>& tran
 		// make the table read only
 		transactionsTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
 		transactionsTable->setSelectionBehavior(QAbstractItemView::SelectRows);
-		transactionsTable->setSelectionMode(QAbstractItemView::SingleSelection);
 		transactionsTable->setShowGrid(false);
 		transactionsTable->setAlternatingRowColors(true);
 		transactionsTable->horizontalHeader()->setStretchLastSection(true);
