@@ -40,7 +40,7 @@ public:
 		emit makeRequest(loginData);
 	}
 
-	// TODO: get account number
+	// TODO: get account number (2)
 
 	void sendGetBalanceRequest(const int& account_number)
 	{
@@ -88,6 +88,76 @@ public:
 		transferData.insert("Data", data);
 
 		emit makeRequest(transferData);
+	}
+
+	// TODO: Transfer amount (6)
+
+	void sendGetDatabaseContentRequest(const QString& email)
+	{
+		QJsonObject getDatabaseContentData;
+		getDatabaseContentData.insert("Request", 7);
+		QJsonObject data;
+		data.insert("email", email);
+
+		getDatabaseContentData.insert("Data", data);
+
+		emit makeRequest(getDatabaseContentData);
+	}
+
+	void sendCreateNewUserRequest(const QString& email, QMap<QString, QString> new_data)
+	{
+		QJsonObject createNewUserData;
+		createNewUserData.insert("Request", 8);
+		QJsonObject data;
+		data.insert("email", email);
+
+		QJsonArray	newUser;
+		QJsonObject user;
+		user.insert("first_name", new_data["first_name"]);
+		user.insert("last_name", new_data["last_name"]);
+		user.insert("email", new_data["email"]);
+		user.insert("password", new_data["password"]);
+		user.insert("role", new_data["role"]);
+		user.insert("initial_balance", new_data["initial_balance"].toDouble());
+		newUser.append(user);
+
+		data.insert("newUser", newUser);
+		createNewUserData.insert("Data", data);
+
+		emit makeRequest(createNewUserData);
+	}
+
+	void sendDeleteUserRequest(const QString& email, const QString& account_number)
+	{
+		QJsonObject deleteUserRequest;
+		deleteUserRequest.insert("Request", 9);
+		QJsonObject data;
+		data.insert("email", email);
+		data.insert("account_number", account_number.toInt());
+
+		deleteUserRequest.insert("Data", data);
+
+		emit makeRequest(deleteUserRequest);
+	}
+
+	void sendUpdateUserRequest(const QString& email, const QString& account_number, QMap<QString, QString> new_data)
+	{
+		QJsonObject updateUserRequest;
+		updateUserRequest.insert("Request", 10);
+		QJsonObject data;
+		data.insert("email", email);
+		data.insert("account_number", account_number.toInt());
+
+		QJsonObject newUser;
+		newUser.insert("first_name", new_data["first_name"]);
+		newUser.insert("last_name", new_data["last_name"]);
+		newUser.insert("email", new_data["email"]);
+		newUser.insert("role", new_data["role"]);
+		data.insert("newData", newUser);
+
+		updateUserRequest.insert("Data", data);
+
+		emit makeRequest(updateUserRequest);
 	}
 
 	void sendinitRequest(const QString& email, const QString& password)
