@@ -61,10 +61,13 @@ signals:
 	void loginSuccess(QString role);
 
 	void TransactionsFetched(const QList<QMap<QString, QString>>& transactions);
+	void DatabaseFetched(const QList<QMap<QString, QString>>& databaseContent);
 	void BalanceFetched(QString balance);
 
-	void SuccessfullRequestUserWidget(QString message);
-	void FailedRequestUserWidget(QString message);
+	//void SuccessfullRequestUserWidget(QString message);
+	//void FailedRequestUserWidget(QString message);
+	void SuccessfullRequest(QString message);
+	void FailedRequest(QString message);
 
 public:
 	explicit ResponseManager(QObject* parent = nullptr) : QObject(parent)
@@ -163,17 +166,21 @@ public:
 				}
 				else
 				{
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
 				}
 				break;
 
 			case MakeTransaction:
 				if (getResponseStatus(dataObject))
 				{
-					emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					//emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					emit SuccessfullRequest(getResponseMessage(dataObject));
 				}
 				else
 				{
-					emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
 				}
 
 				break;
@@ -184,22 +191,76 @@ public:
 				break;
 
 			case GetDatabase:
+				if (getResponseStatus(dataObject))
+				{
+					// extract the database content
+					QList<QMap<QString, QString>> databaseContent;
+					QJsonArray					  databaseArray = dataObject.value("users").toArray();
 
-				// handle the get database response
+					for (int i = 0; i < databaseArray.size(); i++)
+					{
+						QMap<QString, QString> user;
+						QJsonObject			   userObject = databaseArray.at(i).toObject();
+
+						user.insert("first_name", userObject.value("first_name").toString());
+						user.insert("last_name", userObject.value("last_name").toString());
+						user.insert("email", userObject.value("email").toString());
+						user.insert("role", userObject.value("role").toString());
+						user.insert("account_number", QString::number(userObject.value("account_number").toInt()));
+						user.insert("balance", QString::number(userObject.value("balance").toDouble(), 'f', 2));
+
+						databaseContent.append(user);
+					}
+
+					emit DatabaseFetched(databaseContent);
+				}
+				else
+				{
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
+				}
+
 				break;
 
 			case CreateNewUser:
+				if (getResponseStatus(dataObject))
+				{
+					//emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					emit SuccessfullRequest(getResponseMessage(dataObject));
+				}
+				else
+				{
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
+				}
 
-				// handle the create new user response
 				break;
 
 			case DeleteUser:
+				if (getResponseStatus(dataObject))
+				{
+					//emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					emit SuccessfullRequest(getResponseMessage(dataObject));
+				}
+				else
+				{
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
+				}
 
-				// handle the delete user response
 				break;
 
 			case UpdateUser:
-
+				if (getResponseStatus(dataObject))
+				{
+					//emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					emit SuccessfullRequest(getResponseMessage(dataObject));
+				}
+				else
+				{
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
+				}
 				// handle the update user response
 				break;
 
@@ -233,24 +294,38 @@ public:
 			case UpdateEmail:
 				if (getResponseStatus(dataObject))
 				{
-					emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					//emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					emit SuccessfullRequest(getResponseMessage(dataObject));
 				}
 				else
 				{
-					emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
 				}
 				break;
 			case UpdatePassword:
 				if (getResponseStatus(dataObject))
 				{
-					emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					//emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					emit SuccessfullRequest(getResponseMessage(dataObject));
 				}
 				else
 				{
-					emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
 				}
 				break;
 			case JsonParseError:
+				if (getResponseStatus(dataObject))
+				{
+					//emit SuccessfullRequestUserWidget(getResponseMessage(dataObject));
+					emit SuccessfullRequest(getResponseMessage(dataObject));
+				}
+				else
+				{
+					//emit FailedRequestUserWidget(getResponseMessage(dataObject));
+					emit FailedRequest(getResponseMessage(dataObject));
+				}
 
 				// handle the json parse error response
 				break;
