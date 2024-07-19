@@ -27,7 +27,7 @@ target_include_directories(${APPNAME} PUBLIC
 ############# etc....
 
 # Add any dependencies or compile options specific to lock6g
-target_link_libraries(${APPNAME} PRIVATE ${QT_LIBRARIES} qtmaterialwidgets AppManager)
+target_link_libraries(${APPNAME} PRIVATE ${QT_LIBRARIES} qt-material-widgets AppManager)
 ############# etc....
 
 # Set the compile warnings options if enabled
