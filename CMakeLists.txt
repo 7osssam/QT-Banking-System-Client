@@ -64,7 +64,7 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 #==============================================================================
 # Project Options
 #==============================================================================
-option(ENABLE_TESTS "Enable All Tests" ON)
+option(ENABLE_TESTS "Enable All Tests" OFF)
 option(ENABLE_COVERAGE "Enable Coverage" ON) # TODO: Adding code coverage Support for this template
 
 option(ENABLE_WARNINGS "Enable to add warnings to a target." OFF)
@@ -148,7 +148,9 @@ if(ENABLE_SANITIZE_ADDR
 endif()
 
 
-#set(QT_MATERIAL_WIDGETS_BUILD_EXAMPLES OFF)
+option(QT_MATERIAL_WIDGETS_BUILD_EXAMPLES "Build examples" OFF)
+option(QT_MATERIAL_WIDGETS_BUILD_STATIC "Build static library" OFF)
+
 add_git_submodule(lib/qtmaterial https://github.com/sebcaux/qt-material-widgets)
 
 
