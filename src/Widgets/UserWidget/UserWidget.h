@@ -13,7 +13,7 @@
 #include "qtmaterialsnackbar.h"
 #include "qtmaterialtextfield.h"
 
-#include "RequestManager.h"
+#include "RequestFactory.h"
 
 class UserWidget : public QWidget
 {
@@ -53,7 +53,7 @@ private:
 	QString						  account_number_;
 	QString						  balance_;
 	QList<QMap<QString, QString>> transactions_;
-	RequestManager*				  requestManager;
+	RequestFactory*				  requestFactory;
 
 	QtMaterialSnackbar*	  notificationSnackbar;
 	QtMaterialTabs*		  tabs;
@@ -66,8 +66,7 @@ private:
 	QtMaterialTextField*  toEmailField;
 	QtMaterialTextField*  amountField;
 	QtMaterialFlatButton* transferButton;
-
-	QTableWidget* transactionsTable;
+	QTableWidget*		  transactionsTable;
 };
 
 #endif // USERWIDGET_H

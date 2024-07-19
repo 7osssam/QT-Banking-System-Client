@@ -4,12 +4,16 @@
 #include <QIntValidator>
 #include <QRegularExpressionValidator>
 #include <QHBoxLayout>
+#include <QVariantMap>
+
 #include "UpdateEmailDialog.h"
 #include "UpdatePasswordDialog.h"
 
+#include "ValidationStrategy.h"
+
 UserWidget::UserWidget(QString email, QString first_name, QString account_number, QString balance, QWidget* parent) :
 	QWidget(parent), email_(email), first_name_(first_name), account_number_(account_number), balance_(balance),
-	requestManager(RequestManager::getInstance(this))
+	requestFactory(RequestFactory::getInstance(this))
 {
 	// set object name
 	setObjectName("UserWidget");
@@ -24,6 +28,8 @@ UserWidget::UserWidget(QString email, QString first_name, QString account_number
 	tabs->addTab("Home");
 	tabs->addTab("Transfer");
 	tabs->addTab("Settings");
+
+	tabs->setHaloVisible(true);
 
 	tabs->setTabIcon(0, QtMaterialTheme::icon("action", "home"));
 	tabs->setTabIcon(1, QtMaterialTheme::icon("communication", "import_export"));
@@ -56,9 +62,6 @@ UserWidget::UserWidget(QString email, QString first_name, QString account_number
 	connect(toAccountField, &QtMaterialTextField::textChanged, this, &UserWidget::onTransferFieldsChanged);
 	connect(toEmailField, &QtMaterialTextField::textChanged, this, &UserWidget::onTransferFieldsChanged);
 	connect(amountField, &QtMaterialTextField::textChanged, this, &UserWidget::onTransferFieldsChanged);
-
-	// logout
-	connect(this, &UserWidget::logout, this, &UserWidget::onLogoutConfirmed);
 
 	onBalanceFetched(balance_);
 }
@@ -106,8 +109,8 @@ QWidget* UserWidget::createTransferTab()
 	toEmailField = new QtMaterialTextField(this);
 	toEmailField->setPlaceholderText("To Email");
 	toEmailField->setEchoMode(QLineEdit::Normal);
-	toEmailField->setValidator(new QIntValidator(this));
-	// toEmailField->setValidator(new QRegExpValidator(QRegExp("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"), this));
+	const QRegularExpression emailPattern(R"((^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$))");
+	toEmailField->setValidator(new QRegularExpressionValidator(emailPattern, this));
 
 	amountField = new QtMaterialTextField(this);
 	amountField->setLabelText("Amount");
@@ -189,8 +192,6 @@ QWidget* UserWidget::createSettingsTab()
 	layout->addStretch(4);
 	layout->addWidget(logoutButton);
 
-	// make spaces in layout equal for more aesthetic look
-
 	// Initialize the logout confirmation dialog
 	logoutDialog = new QtMaterialDialog(this);
 	QWidget*	 dialogWidget = new QWidget();
@@ -206,7 +207,7 @@ QWidget* UserWidget::createSettingsTab()
 	QHBoxLayout* buttonsLayout = new QHBoxLayout;
 
 	QtMaterialFlatButton* confirmButton = new QtMaterialFlatButton("Yes", Material::ButtonRaisedPrimary, dialogWidget);
-	connect(confirmButton, &QPushButton::clicked, this, &UserWidget::onLogoutConfirmed);
+	connect(confirmButton, &QPushButton::clicked, this, &UserWidget::onLogoutConfirmed, Qt::QueuedConnection);
 	buttonsLayout->addWidget(confirmButton);
 
 	QtMaterialFlatButton* cancelButton =
@@ -237,63 +238,56 @@ QVBoxLayout* UserWidget::createTabLayout()
 void UserWidget::onUpdateEmail()
 {
 	UpdateEmailDialog dialog(this);
+	QVariantMap		  data;
+
 	if (dialog.exec() == QDialog::Accepted)
 	{
-		QString email = dialog.getEmail();
-		QString newEmail = dialog.getNewEmail();
-		QString password = dialog.getPassword();
+		data = dialog.getData();
 
-		// print the email, new email and repeated new email for debugging
-		qDebug() << "Email: " << email;
-		qDebug() << "New Email: " << newEmail;
-		qDebug() << "password: " << password;
-
-		if (email == newEmail)
+		if (data["email"] == data["new_email"])
 		{
 			onFailedRequest("Old and new email are the same");
 			return;
 		}
-		if (email != email_)
+		if (data["email"] != email_)
 		{
 			onFailedRequest("You didn't enter your email correctly");
 			return;
 		}
 
-		// Send request to update email
-		requestManager->sendUpdateEmailRequest(email, password, newEmail);
+		requestFactory->createRequest(RequestFactory::UpdateEmail, data);
 	}
 }
 
 void UserWidget::onUpdatePassword()
 {
 	UpdatePasswordDialog dialog(this);
+	QVariantMap			 data;
+
 	if (dialog.exec() == QDialog::Accepted)
 	{
-		QString email = dialog.getEmail();
-		QString currentPassword = dialog.getCurrentPassword();
-		QString newPassword = dialog.getNewPassword();
-		QString repeatedNewPassword = dialog.getRepeatedNewPassword();
+		data = dialog.getData();
 
 		// print the email, current password, new password and repeated new password for debugging
-		qDebug() << "Email: " << email;
-		qDebug() << "Current Password: " << currentPassword;
-		qDebug() << "New Password: " << newPassword;
-		qDebug() << "Repeated New Password: " << repeatedNewPassword;
+		qDebug() << "Email: " << data["email"];
+		qDebug() << "Current Password: " << data["password"];
+		qDebug() << "New Password: " << data["new_password"];
+		qDebug() << "Repeated New Password: " << data["repeated_new_password"];
 
-		if (currentPassword == newPassword)
+		if (data["current_password"] == data["new_password"])
 		{
 			onFailedRequest("Old and new password are the same");
 			return;
 		}
 
-		if (email != email_)
+		if (data["email"] != email_)
 		{
 			onFailedRequest("You didn't enter your email correctly");
 			return;
 		}
 
 		// Send request to update password
-		requestManager->sendUpdatePasswordRequest(email, currentPassword, newPassword);
+		requestFactory->createRequest(RequestFactory::UpdatePassword, data);
 	}
 }
 
@@ -317,7 +311,7 @@ void UserWidget::updateTransactionsTable()
 	// Send the request to get the transaction history
 	if (tabContents->currentIndex() == 0)
 	{
-		requestManager->sendGetTransactionsHistoryRequest(email_);
+		requestFactory->createRequest(RequestFactory::GetTransactionsHistory, QVariantMap({{"email", email_}}));
 	}
 }
 
@@ -360,7 +354,9 @@ void UserWidget::onTransactionsFetched(const QList<QMap<QString, QString>>& tran
 void UserWidget::onBalanceLabelClicked()
 {
 	// Send the request to get the balance
-	requestManager->sendGetBalanceRequest(account_number_.toInt());
+	QVariantMap data;
+	data["account_number"] = account_number_;
+	requestFactory->createRequest(RequestFactory::GetBalance, data);
 }
 
 void UserWidget::onBalanceFetched(const QString balance)
@@ -375,34 +371,49 @@ void UserWidget::updateFirstNameLabel()
 {
 	welcomeLabel->setText(QString("Hello %1, %2").arg(first_name_).arg(account_number_));
 }
-
 void UserWidget::onTransferFieldsChanged()
 {
-	amountField->setLabelVisible(amountField->text().isEmpty());
+	// Create validation strategy instances
+	AccountNumberValidationStrategy accountNumberValidationStrategy;
+	EmailValidationStrategy			emailValidationStrategy;
+	BalanceValidationStrategy		balanceValidationStrategy;
 
-	if ((!toAccountField->text().isEmpty() && !amountField->text().isEmpty()) ||
-		(!toEmailField->text().isEmpty() && !amountField->text().isEmpty()))
-	{
-		transferButton->setDisabled(false);
-	}
-	else
-	{
-		transferButton->setDisabled(true);
-	}
+	// Get field texts
+	QString accountText = toAccountField->text();
+	QString emailText = toEmailField->text();
+	QString amountText = amountField->text();
 
-	if (!toAccountField->text().isEmpty())
-	{
-		toEmailField->setDisabled(true);
-	}
-	else if (!toEmailField->text().isEmpty())
-	{
-		toAccountField->setDisabled(true);
-	}
-	else
-	{
-		toAccountField->setDisabled(false);
-		toEmailField->setDisabled(false);
-	}
+	// Show or hide the label for the amountField based on whether it's empty
+	amountField->setLabelVisible(amountText.isEmpty());
+
+	// Determine if the transfer button should be enabled
+	bool isInputValid = (!accountText.isEmpty() || !emailText.isEmpty()) && !amountText.isEmpty();
+
+	// Disable fields based on the presence of text in toAccountField and toEmailField
+	toAccountField->setDisabled(!emailText.isEmpty());
+	toEmailField->setDisabled(!accountText.isEmpty());
+
+	// Validate and set input line color
+	auto validateAndSetColor = [](QtMaterialTextField* field, const IValidationStrategy& strategy) {
+		if (strategy.isValid(field->text()) && !field->text().isEmpty())
+		{
+			field->setInputLineColor(Qt::green);
+		}
+		else
+		{
+			field->setInputLineColor(Qt::red);
+		}
+	};
+
+	validateAndSetColor(toAccountField, accountNumberValidationStrategy);
+	validateAndSetColor(toEmailField, emailValidationStrategy);
+	validateAndSetColor(amountField, balanceValidationStrategy);
+
+	// Enable transfer button if at least one of the account or email field is valid and amount is valid
+	transferButton->setDisabled(
+		!isInputValid ||
+		(toAccountField->inputLineColor() != Qt::green && toEmailField->inputLineColor() != Qt::green) ||
+		amountField->inputLineColor() != Qt::green);
 }
 
 void UserWidget::onTransferButtonClicked()
@@ -411,14 +422,23 @@ void UserWidget::onTransferButtonClicked()
 	QString toEmail = toEmailField->text();
 	double	amount = amountField->text().toDouble();
 
+	QVariantMap data;
+	data["from_account_number"] = account_number_.toInt();
+
+	data["transaction_amount"] = amount;
+
 	// send request to transfer money wiether using email or account number
 	if (!toAccount.isEmpty())
 	{
-		requestManager->sendTransferRequest(account_number_, toAccount, amount, false);
+		data["to_email"] = "";
+		data["to_account_number"] = toAccount.toInt();
+		requestFactory->createRequest(RequestFactory::MakeTransaction, data);
 	}
 	else if (!toEmail.isEmpty())
 	{
-		requestManager->sendTransferRequest(account_number_, toEmail, amount, true);
+		data["to_email"] = toEmail;
+		data["to_account_number"] = -1;
+		requestFactory->createRequest(RequestFactory::MakeTransaction, data);
 	}
 }
 
