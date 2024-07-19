@@ -2,6 +2,8 @@
 #include <QMessageBox>
 #include <QRegularExpressionValidator>
 
+#include "RequestFactory.h"
+
 #define TEXT_COLOR		   "#030637"
 #define INK_COLOR		   "#910A67"
 #define INPUT_LINE_COLOR   "#E0E0E0"
@@ -10,7 +12,7 @@
 #define DISCONNECTED_COLOR "#808080"
 
 LoginWidget::LoginWidget(QWidget* parent) :
-	QWidget(parent), isConnected(false), requestManager(RequestManager::getInstance(this))
+	QWidget(parent), isConnected(false), requestFactory(RequestFactory::getInstance(this))
 {
 	// set object name
 	setObjectName("LoginWidget");
@@ -122,16 +124,16 @@ LoginWidget::LoginWidget(QWidget* parent) :
 
 void LoginWidget::onLoginButton()
 {
-	email = emailField->text();
-	password = passwordField->text();
+	loginData.insert("email", emailField->text());
+	loginData.insert("password", passwordField->text());
 
-	if (email.isEmpty() || password.isEmpty())
+	if (emailField->text().isEmpty() || passwordField->text().isEmpty())
 	{
 		QMessageBox::warning(this, "Login Failed", "Email or password cannot be empty", QMessageBox::Ok);
 		return;
 	}
 
-	requestManager->sendLoginRequest(email, password);
+	requestFactory->createRequest(RequestFactory::Login, loginData);
 }
 
 void LoginWidget::onLoginTextChanged()
@@ -179,7 +181,7 @@ void LoginWidget::onConnected()
 
 	loginButton->setDisabled(false);
 
-	QMessageBox::warning(this, "Connected", "Connected to server", QMessageBox::Ok);
+	onSuccessfullRequest("Connected");
 }
 
 void LoginWidget::onDisconnected()
@@ -190,23 +192,27 @@ void LoginWidget::onDisconnected()
 
 	loginButton->setDisabled(true);
 
-	QMessageBox::warning(this, "Connected", "Disconnected from server", QMessageBox::Ok);
+	onFailedRequest("Disconnected");
 }
 
-void LoginWidget::onFailedLogin(QString message)
+void LoginWidget::onFailedRequest(QString message)
 {
 	// set color to red with small opacity
 	loginSnackbar->setBackgroundColor(QColor(255, 0, 0, 100));
 
-	loginSnackbar->addMessage("Login Failed: " + message);
+	loginSnackbar->addMessage(message);
 }
 
-void LoginWidget::onSuccessfulLogin(QString role)
+void LoginWidget::onSuccessfullRequest(QString message)
 {
 	// set color to green with small opacity
 	loginSnackbar->setBackgroundColor(QColor(0, 255, 0, 100));
 
-	loginSnackbar->addMessage("Login Successful: " + role);
+	loginSnackbar->addMessage(message);
 
-	requestManager->sendinitRequest(email, password);
+	//if the message string contains "Login Successfull" then emit the signal to the UIManager
+	if (message.contains("Login Successfull"))
+	{
+		requestFactory->createRequest(RequestFactory::UserInit, loginData);
+	}
 }

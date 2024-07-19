@@ -10,7 +10,7 @@
 #include "qtmaterialiconbutton.h"
 #include "qtmaterialsnackbar.h"
 
-#include "RequestManager.h"
+#include "RequestFactory.h"
 
 #include <QMovie>
 #include <QLineEdit>
@@ -33,7 +33,7 @@ private:
 	QMovie*				  backgroundMovie;
 	QtMaterialIconButton* connectionIconButton;
 	QtMaterialSnackbar*	  loginSnackbar;
-	RequestManager*		  requestManager;
+	RequestFactory*		  requestFactory;
 
 	bool isConnected;
 
@@ -42,8 +42,9 @@ private:
 	QLineEdit*	 ipPortField;
 	QPushButton* connectButton;
 
-	QString email;
-	QString password;
+	QString		email;
+	QString		password;
+	QVariantMap loginData;
 
 signals:
 	void connectToServer(const QString& host, quint16 port);
@@ -53,8 +54,8 @@ signals:
 public slots:
 	void onConnected();
 	void onDisconnected();
-	void onFailedLogin(QString message);
-	void onSuccessfulLogin(QString role);
+	void onFailedRequest(QString message);
+	void onSuccessfullRequest(QString message);
 
 private slots:
 	void onLoginButton();
