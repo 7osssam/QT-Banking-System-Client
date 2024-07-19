@@ -43,7 +43,7 @@ target_include_directories(${LIBNAME} PUBLIC
 						   )
 ############# etc.... add any other include directories here
 
-target_link_libraries(${LIBNAME} PUBLIC qtmaterialwidgets RequestManager)
+target_link_libraries(${LIBNAME} PUBLIC qt-material-widgets RequestManager)
 target_link_libraries(${LIBNAME} PRIVATE ${QT_LIBRARIES})
 ############# etc.... add any other libraries here
 
