@@ -2,17 +2,20 @@
 #include <QMessageBox>
 #include <QRegularExpressionValidator>
 
-#include "RequestFactory.h"
+#include "RequestManager.h"
 
-#define TEXT_COLOR		   "#030637"
-#define INK_COLOR		   "#910A67"
-#define INPUT_LINE_COLOR   "#E0E0E0"
-#define LABEL_COLOR		   "#3C0753"
+#define TEXT_COLOR		   "#0A1E4A" // Dark blue
+#define INK_COLOR		   "#1C3A75" // Medium blue
+#define INPUT_LINE_COLOR   "#A3C9E9" // Light blue
+#define LABEL_COLOR		   "#163A5F" // Deep blue
+
+// light green
 #define CONNECTED_COLOR	   "#00FF00"
-#define DISCONNECTED_COLOR "#808080"
+// dark red
+#define DISCONNECTED_COLOR "#FF0000"
 
 LoginWidget::LoginWidget(QWidget* parent) :
-	QWidget(parent), isConnected(false), requestFactory(RequestFactory::getInstance(this))
+	QWidget(parent), isConnected(false), requestManager(RequestManager::getInstance(this))
 {
 	// set object name
 	setObjectName("LoginWidget");
@@ -24,7 +27,9 @@ LoginWidget::LoginWidget(QWidget* parent) :
 	backgroundLabel = new QLabel(this);
 	backgroundLabel->setGeometry(0, 0, 800, 600);
 
-	backgroundMovie = new QMovie("space.gif");
+	backgroundMovie = new QMovie(":/gifs/background.gif");
+	// fill the background with the gif
+	backgroundMovie->setScaledSize(QSize(800, 600));
 	backgroundLabel->setMovie(backgroundMovie);
 	backgroundMovie->start();
 
@@ -37,15 +42,14 @@ LoginWidget::LoginWidget(QWidget* parent) :
 	// Application Title
 	titleLabel = new QLabel("Banking System", loginForm);
 	titleLabel->setAlignment(Qt::AlignCenter);
-	titleLabel->setStyleSheet("font-size: 24px; color: #FFFFFF;");
-	titleLabel->setCursor(Qt::ArrowCursor);
-	titleLabel->setPixmap(QPixmap("logo.png"));
+	titleLabel->setPixmap(QPixmap(":/icons/bank.png", "PNG").scaled(300, 300, Qt::KeepAspectRatio));
 
 	layout->addWidget(titleLabel);
 
 	// Email Field
 	emailField = new QtMaterialTextField(this);
 	emailField->setLabelText("Email");
+	emailField->setFont(QFont("Fira Sans", 18, QFont::ExtraBold));
 
 	emailField->setTextColor(QColor(TEXT_COLOR));
 	emailField->setInkColor(QColor(INK_COLOR));
@@ -67,13 +71,14 @@ LoginWidget::LoginWidget(QWidget* parent) :
 	connect(passwordField, &QtMaterialTextField::textChanged, this, &LoginWidget::onLoginTextChanged);
 
 	// Login Button
-	loginButton = new QtMaterialFlatButton("Login", Material::ButtonTextDefault, this);
-	loginButton->setUseThemeColors(true);
-	loginButton->setRole(Material::Primary);
-	loginButton->setOverlayStyle(Material::TintedOverlay);
-	loginButton->setDisabled(true); // Initially disabled until connected to the server
+	loginButton = new QtMaterialFlatButton("Login", Material::ButtonRaisedDefault, this);
+	loginButton->setOverlayStyle(Material::GrayOverlay);
+	loginButton->setDisabled(true);						// Initially disabled until connected to the server
 	loginButton->setIcon(QtMaterialTheme::icon("action", "input"));
-	loginButton->setCornerRadius(20);
+	loginButton->setCornerRadius(17);
+	loginButton->setBackgroundColor(QColor("#0A1E4A")); // Dark blue
+	loginButton->setOverlayColor(QColor("#1C3A75"));	// Medium blue
+	loginButton->setFont(QFont("Fira Sans", 18, QFont::ExtraBold));
 
 	connect(loginButton, &QtMaterialFlatButton::clicked, this, &LoginWidget::onLoginButton);
 	layout->addWidget(loginButton);
@@ -91,6 +96,7 @@ LoginWidget::LoginWidget(QWidget* parent) :
 	// Connection Dialog
 	connectionDialog = new QDialog(this);
 	connectionDialog->setWindowTitle("Connect to Server");
+	connectionDialog->setFixedSize(200, 100);
 
 	QVBoxLayout* dialogLayout = new QVBoxLayout(connectionDialog);
 
@@ -104,8 +110,7 @@ LoginWidget::LoginWidget(QWidget* parent) :
 
 	ipPortField->setValidator(ipValidator);
 	ipPortField->setInputMask("000.000.000.000:0000");
-	ipPortField->setFixedWidth(300);
-	ipPortField->setFixedHeight(30);
+	ipPortField->setAlignment(Qt::AlignCenter);
 	ipPortField->setCursorPosition(0);
 
 	dialogLayout->addWidget(ipPortField);
@@ -117,9 +122,12 @@ LoginWidget::LoginWidget(QWidget* parent) :
 	connectionDialog->setLayout(dialogLayout);
 
 	// Login Snackbar
-	loginSnackbar = new QtMaterialSnackbar(this);
-	loginSnackbar->setAutoHideDuration(3000);	// Auto-hide after 3 seconds
-	loginSnackbar->setClickToDismissMode(true); // Allow click to dismiss
+	notificationSnackbar = new QtMaterialSnackbar(this);
+	notificationSnackbar->setAutoHideDuration(3000);   // Auto-hide after 3 seconds
+	notificationSnackbar->setClickToDismissMode(true); // Allow click to dismiss
+
+	// Set the font for snackbar FiraSans-Ultra font
+	notificationSnackbar->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
 }
 
 void LoginWidget::onLoginButton()
@@ -129,16 +137,17 @@ void LoginWidget::onLoginButton()
 
 	if (emailField->text().isEmpty() || passwordField->text().isEmpty())
 	{
-		QMessageBox::warning(this, "Login Failed", "Email or password cannot be empty", QMessageBox::Ok);
+		onFailedRequest("Email or password cannot be empty");
 		return;
 	}
 
-	requestFactory->createRequest(RequestFactory::Login, loginData);
+	requestManager->createRequest(RequestManager::Login, loginData);
 }
 
 void LoginWidget::onLoginTextChanged()
 {
 	emailField->setLabelVisible(emailField->text().isEmpty());
+	emailField->setInputLineColor(emailField->text().isEmpty() ? QColor("#FF0000") : QColor("#A3C9E9"));
 	passwordField->setLabelVisible(passwordField->text().isEmpty());
 }
 
@@ -159,7 +168,7 @@ void LoginWidget::onConnectButton()
 	QString		ipPort = ipPortField->text();
 	QStringList ipPortList = ipPort.split(":");
 
-	if (ipPortList.size() != 2)
+	if (ipPortList.size() != 2 || ipPortList[0].isEmpty() || ipPortList[1].isEmpty())
 	{
 		QMessageBox::warning(this, "Connect Failed", "Invalid IP address or port format", QMessageBox::Ok);
 
@@ -198,21 +207,27 @@ void LoginWidget::onDisconnected()
 void LoginWidget::onFailedRequest(QString message)
 {
 	// set color to red with small opacity
-	loginSnackbar->setBackgroundColor(QColor(255, 0, 0, 100));
+	notificationSnackbar->setBackgroundColor(QColor(255, 0, 0, 100));
 
-	loginSnackbar->addMessage(message);
+	notificationSnackbar->addMessage(message);
 }
 
 void LoginWidget::onSuccessfullRequest(QString message)
 {
 	// set color to green with small opacity
-	loginSnackbar->setBackgroundColor(QColor(0, 255, 0, 100));
+	notificationSnackbar->setBackgroundColor(QColor(0, 255, 0, 100));
 
-	loginSnackbar->addMessage(message);
+	notificationSnackbar->addMessage(message);
 
 	//if the message string contains "Login Successfull" then emit the signal to the UIManager
 	if (message.contains("Login Successfull"))
 	{
-		requestFactory->createRequest(RequestFactory::UserInit, loginData);
+		requestManager->createRequest(RequestManager::UserInit, loginData);
 	}
+}
+
+void LoginWidget::clearFields()
+{
+	emailField->clear();
+	passwordField->clear();
 }

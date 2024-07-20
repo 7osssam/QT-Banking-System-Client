@@ -17,14 +17,7 @@ file(GLOB LIB_SOURCES
   "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
   "${CMAKE_CURRENT_SOURCE_DIR}/*.cc")
 
-# Collect Module Resource files *.ui *.qrc
-file(GLOB LIB_RESOURCES
-  "${CMAKE_CURRENT_SOURCE_DIR}/*.ui"
-  "${CMAKE_CURRENT_SOURCE_DIR}/*.rc"
-  "${CMAKE_CURRENT_SOURCE_DIR}/*.qrc")
 
-file(GLOB LIB_EXTRA
-  "${CMAKE_CURRENT_SOURCE_DIR}/space.gif")
 
 # Create named folders for the sources within the project
 source_group("header" FILES ${LIB_HEADERS})
@@ -39,11 +32,11 @@ add_library(${LIBNAME} STATIC ${LIB_HEADERS} ${LIB_SOURCES} ${LIB_RESOURCES} ${L
 target_include_directories(${LIBNAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}
 							${CMAKE_SOURCE_DIR}/lib/qtmaterial/components
-							${CMAKE_SOURCE_DIR}/src/RequestManager
+							${CMAKE_SOURCE_DIR}/src/requestModule
 						   )
 ############# etc.... add any other include directories here
 
-target_link_libraries(${LIBNAME} PUBLIC  qt-material-widgets RequestManager)
+target_link_libraries(${LIBNAME} PUBLIC  qt-material-widgets requestModule)
 target_link_libraries(${LIBNAME} PRIVATE ${QT_LIBRARIES})
 ############# etc.... add any other libraries here
 
