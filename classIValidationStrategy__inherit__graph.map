@@ -1,0 +1,8 @@
+<map id="IValidationStrategy" name="IValidationStrategy">
+<area shape="rect" id="node1" title="Interface for validation strategies." alt="" coords="511,5,658,97"/>
+<area shape="rect" id="node2" href="$classAccountNumberValidationStrategy.html" title="Concrete validation strategy for account numbers." alt="" coords="5,145,252,237"/>
+<area shape="rect" id="node3" href="$classBalanceValidationStrategy.html" title="Concrete validation strategy for balances." alt="" coords="277,145,471,237"/>
+<area shape="rect" id="node4" href="$classEmailValidationStrategy.html" title="Concrete validation strategy for emails." alt="" coords="495,145,674,237"/>
+<area shape="rect" id="node5" href="$classNameValidationStrategy.html" title="Concrete validation strategy for names." alt="" coords="698,145,879,237"/>
+<area shape="rect" id="node6" href="$classPasswordValidationStrategy.html" title="Concrete validation strategy for passwords." alt="" coords="903,145,1106,237"/>
+</map>

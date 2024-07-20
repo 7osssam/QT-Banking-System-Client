@@ -1,0 +1,865 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>BankingSystem_Client: ResponseManager Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BankingSystem_Client
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">This is a qt project for a banking system (Client side)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classResponseManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classResponseManager-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">ResponseManager Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Manages the responses received from the server.  
+ <a href="classResponseManager.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="ResponseManager_8h_source.html">ResponseManager.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ResponseManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager__inherit__graph.png" border="0" usemap="#aResponseManager_inherit__map" alt="Inheritance graph"/></div>
+<map name="aResponseManager_inherit__map" id="aResponseManager_inherit__map">
+<area shape="rect" title="Manages the responses received from the server." alt="" coords="5,131,195,252"/>
+<area shape="rect" title=" " alt="" coords="63,5,137,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for ResponseManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager__coll__graph.png" border="0" usemap="#aResponseManager_coll__map" alt="Collaboration graph"/></div>
+<map name="aResponseManager_coll__map" id="aResponseManager_coll__map">
+<area shape="rect" title="Manages the responses received from the server." alt="" coords="5,131,195,252"/>
+<area shape="rect" title=" " alt="" coords="63,5,137,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:aedd78aa8d384dbeff2c1659c606c0a46"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46">AvailableRequests</a> { <br />
+&#160;&#160;<a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a979bf7e13b6cf4b1bcf11747bde02312">Login</a> = 1
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a96bd83eb74dce7b6c91a70d5bbb74f07">GetAccountnumber</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46aff4e77e1000edaf723bc42e971ad2cae">GetBalance</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a443677a815cd7e8c39ea8e92b6062711">GetTransactionsHistory</a>
+, <br />
+&#160;&#160;<a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a48c9a500f90c49573d2d58f844fb2289">MakeTransaction</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a93f3b700f6f5c497c42320edf2d6ee4c">TransferAmount</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a6b2f62612623e31d1edbb0be7e77cd7d">GetDatabase</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a1c638b6dd1d3833fdce9b202d80da3d4">CreateNewUser</a>
+, <br />
+&#160;&#160;<a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a5b16d998c13fd92609d9a75d6519f357">DeleteUser</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46ae5f110efed8be4198d2b2917437f2930">UpdateUser</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a1ebd4aff3719ac52e34d00d462f9be12">UserInit</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46ab67a3ce626b2ad2a963b8aa95b099584">UpdateEmail</a>
+, <br />
+&#160;&#160;<a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a893790cde1186cb3a10776a2661f9ec2">UpdatePassword</a>
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a6588aaef496f2b07b67de79c37b48638">JsonParseError</a> = -1
+, <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46ad39577502e7dc359479b06b537942f9f">Connection</a> = -2
+<br />
+ }</td></tr>
+<tr class="memdesc:aedd78aa8d384dbeff2c1659c606c0a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the types of requests that can be handled.  <a href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46">More...</a><br /></td></tr>
+<tr class="separator:aedd78aa8d384dbeff2c1659c606c0a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a6353f20634ce5632f7093286982f778c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#a6353f20634ce5632f7093286982f778c">userloginSuccess</a> (QString email, QString first_name, QString account_number, QString balance)</td></tr>
+<tr class="memdesc:a6353f20634ce5632f7093286982f778c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when a user login is successful.  <a href="classResponseManager.html#a6353f20634ce5632f7093286982f778c">More...</a><br /></td></tr>
+<tr class="separator:a6353f20634ce5632f7093286982f778c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a831c0fc50b2dad35dee3e0b9059ffec5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#a831c0fc50b2dad35dee3e0b9059ffec5">adminLoginSuccess</a> (QString email, QString first_name)</td></tr>
+<tr class="memdesc:a831c0fc50b2dad35dee3e0b9059ffec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when an admin login is successful.  <a href="classResponseManager.html#a831c0fc50b2dad35dee3e0b9059ffec5">More...</a><br /></td></tr>
+<tr class="separator:a831c0fc50b2dad35dee3e0b9059ffec5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77a22bd43518d801fad008673ef40251"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#a77a22bd43518d801fad008673ef40251">ConnectionResponse</a> (bool status)</td></tr>
+<tr class="memdesc:a77a22bd43518d801fad008673ef40251"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted for connection response.  <a href="classResponseManager.html#a77a22bd43518d801fad008673ef40251">More...</a><br /></td></tr>
+<tr class="separator:a77a22bd43518d801fad008673ef40251"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f87910b0e8b1f7e4ff75fbc937cc84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#a15f87910b0e8b1f7e4ff75fbc937cc84">TransactionsFetched</a> (const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;transactions)</td></tr>
+<tr class="memdesc:a15f87910b0e8b1f7e4ff75fbc937cc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when transactions are fetched.  <a href="classResponseManager.html#a15f87910b0e8b1f7e4ff75fbc937cc84">More...</a><br /></td></tr>
+<tr class="separator:a15f87910b0e8b1f7e4ff75fbc937cc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab011bf96812c06bbf06990a3ec4a960f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#ab011bf96812c06bbf06990a3ec4a960f">DatabaseFetched</a> (const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;databaseContent)</td></tr>
+<tr class="memdesc:ab011bf96812c06bbf06990a3ec4a960f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when the database content is fetched.  <a href="classResponseManager.html#ab011bf96812c06bbf06990a3ec4a960f">More...</a><br /></td></tr>
+<tr class="separator:ab011bf96812c06bbf06990a3ec4a960f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af991043d309d238c2ffa982381d1f001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#af991043d309d238c2ffa982381d1f001">BalanceFetched</a> (QString balance)</td></tr>
+<tr class="memdesc:af991043d309d238c2ffa982381d1f001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when the balance is fetched.  <a href="classResponseManager.html#af991043d309d238c2ffa982381d1f001">More...</a><br /></td></tr>
+<tr class="separator:af991043d309d238c2ffa982381d1f001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af96d4add1d9a4da8fb3b21f47aec8ede"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#af96d4add1d9a4da8fb3b21f47aec8ede">SuccessfullRequest</a> (QString message)</td></tr>
+<tr class="memdesc:af96d4add1d9a4da8fb3b21f47aec8ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted for a successful request.  <a href="classResponseManager.html#af96d4add1d9a4da8fb3b21f47aec8ede">More...</a><br /></td></tr>
+<tr class="separator:af96d4add1d9a4da8fb3b21f47aec8ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dccee086f7eb2eca819f9068df41e4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#a2dccee086f7eb2eca819f9068df41e4c">FailedRequest</a> (QString message)</td></tr>
+<tr class="memdesc:a2dccee086f7eb2eca819f9068df41e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted for a failed request.  <a href="classResponseManager.html#a2dccee086f7eb2eca819f9068df41e4c">More...</a><br /></td></tr>
+<tr class="separator:a2dccee086f7eb2eca819f9068df41e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aebf00d18670f9a73086789ca9449b48d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#aebf00d18670f9a73086789ca9449b48d">getResponseStatus</a> (QJsonObject Data)</td></tr>
+<tr class="memdesc:aebf00d18670f9a73086789ca9449b48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the status value in the response.  <a href="classResponseManager.html#aebf00d18670f9a73086789ca9449b48d">More...</a><br /></td></tr>
+<tr class="separator:aebf00d18670f9a73086789ca9449b48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8a0c60f8917fde5976be069ea30df7f"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#aa8a0c60f8917fde5976be069ea30df7f">getResponseMessage</a> (QJsonObject Data)</td></tr>
+<tr class="memdesc:aa8a0c60f8917fde5976be069ea30df7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the message from the response.  <a href="classResponseManager.html#aa8a0c60f8917fde5976be069ea30df7f">More...</a><br /></td></tr>
+<tr class="separator:aa8a0c60f8917fde5976be069ea30df7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0253362263f94b8fb1b5c7e3fcd7ca8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#a0253362263f94b8fb1b5c7e3fcd7ca8f">ResponseManager</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:a0253362263f94b8fb1b5c7e3fcd7ca8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="classResponseManager.html" title="Manages the responses received from the server.">ResponseManager</a>.  <a href="classResponseManager.html#a0253362263f94b8fb1b5c7e3fcd7ca8f">More...</a><br /></td></tr>
+<tr class="separator:a0253362263f94b8fb1b5c7e3fcd7ca8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa53d34d37b864b44bff4527d021faa76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse</a> (QJsonObject Data)</td></tr>
+<tr class="memdesc:aa53d34d37b864b44bff4527d021faa76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the response received from the server.  <a href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">More...</a><br /></td></tr>
+<tr class="separator:aa53d34d37b864b44bff4527d021faa76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Manages the responses received from the server. </p>
+<p>The <a class="el" href="classResponseManager.html" title="Manages the responses received from the server.">ResponseManager</a> class processes server responses and emits signals based on the response type. It handles various response types defined in the AvailableRequests enum and provides feedback through signals to update the application state accordingly. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="aedd78aa8d384dbeff2c1659c606c0a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedd78aa8d384dbeff2c1659c606c0a46">&#9670;&nbsp;</a></span>AvailableRequests</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46">ResponseManager::AvailableRequests</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Defines the types of requests that can be handled. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a979bf7e13b6cf4b1bcf11747bde02312"></a>Login&#160;</td><td class="fielddoc"><p>User login response. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a96bd83eb74dce7b6c91a70d5bbb74f07"></a>GetAccountnumber&#160;</td><td class="fielddoc"><p>Response to get account number. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46aff4e77e1000edaf723bc42e971ad2cae"></a>GetBalance&#160;</td><td class="fielddoc"><p>Response to get account balance. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a443677a815cd7e8c39ea8e92b6062711"></a>GetTransactionsHistory&#160;</td><td class="fielddoc"><p>Response to get transaction history. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a48c9a500f90c49573d2d58f844fb2289"></a>MakeTransaction&#160;</td><td class="fielddoc"><p>Response to make a transaction. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a93f3b700f6f5c497c42320edf2d6ee4c"></a>TransferAmount&#160;</td><td class="fielddoc"><p>Response to transfer an amount (not used for now) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a6b2f62612623e31d1edbb0be7e77cd7d"></a>GetDatabase&#160;</td><td class="fielddoc"><p>Response to get the database. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a1c638b6dd1d3833fdce9b202d80da3d4"></a>CreateNewUser&#160;</td><td class="fielddoc"><p>Response to create a new user. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a5b16d998c13fd92609d9a75d6519f357"></a>DeleteUser&#160;</td><td class="fielddoc"><p>Response to delete a user. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46ae5f110efed8be4198d2b2917437f2930"></a>UpdateUser&#160;</td><td class="fielddoc"><p>Response to update user information. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a1ebd4aff3719ac52e34d00d462f9be12"></a>UserInit&#160;</td><td class="fielddoc"><p>Response to initialize user. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46ab67a3ce626b2ad2a963b8aa95b099584"></a>UpdateEmail&#160;</td><td class="fielddoc"><p>Response to update user email. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a893790cde1186cb3a10776a2661f9ec2"></a>UpdatePassword&#160;</td><td class="fielddoc"><p>Response to update user password. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46a6588aaef496f2b07b67de79c37b48638"></a>JsonParseError&#160;</td><td class="fielddoc"><p>Indicates a JSON parse error. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aedd78aa8d384dbeff2c1659c606c0a46ad39577502e7dc359479b06b537942f9f"></a>Connection&#160;</td><td class="fielddoc"><p>Indicates a connection response. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a0253362263f94b8fb1b5c7e3fcd7ca8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0253362263f94b8fb1b5c7e3fcd7ca8f">&#9670;&nbsp;</a></span>ResponseManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ResponseManager::ResponseManager </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor for <a class="el" href="classResponseManager.html" title="Manages the responses received from the server.">ResponseManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>The parent QObject, default is nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a831c0fc50b2dad35dee3e0b9059ffec5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831c0fc50b2dad35dee3e0b9059ffec5">&#9670;&nbsp;</a></span>adminLoginSuccess</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::adminLoginSuccess </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>first_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted when an admin login is successful. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Admin's email. </td></tr>
+    <tr><td class="paramname">first_name</td><td>Admin's first name. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_a831c0fc50b2dad35dee3e0b9059ffec5_icgraph.png" border="0" usemap="#aclassResponseManager_a831c0fc50b2dad35dee3e0b9059ffec5_icgraph" alt=""/></div>
+<map name="aclassResponseManager_a831c0fc50b2dad35dee3e0b9059ffec5_icgraph" id="aclassResponseManager_a831c0fc50b2dad35dee3e0b9059ffec5_icgraph">
+<area shape="rect" title="Signal emitted when an admin login is successful." alt="" coords="560,5,787,47"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,13,512,39"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,13,207,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af991043d309d238c2ffa982381d1f001"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af991043d309d238c2ffa982381d1f001">&#9670;&nbsp;</a></span>BalanceFetched</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::BalanceFetched </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>balance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted when the balance is fetched. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">balance</td><td>User's balance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac">UIManager::closeUserWidget()</a>, <a class="el" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59">UIManager::createUserWidget()</a>, and <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_af991043d309d238c2ffa982381d1f001_icgraph.png" border="0" usemap="#aclassResponseManager_af991043d309d238c2ffa982381d1f001_icgraph" alt=""/></div>
+<map name="aclassResponseManager_af991043d309d238c2ffa982381d1f001_icgraph" id="aclassResponseManager_af991043d309d238c2ffa982381d1f001_icgraph">
+<area shape="rect" title="Signal emitted when the balance is fetched." alt="" coords="839,99,1041,141"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="557,56,767,83"/>
+<area shape="rect" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,107,230,133"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="533,157,791,184"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="313,56,456,83"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="9,5,232,32"/>
+<area shape="rect" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,56,236,83"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="284,157,485,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a77a22bd43518d801fad008673ef40251"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77a22bd43518d801fad008673ef40251">&#9670;&nbsp;</a></span>ConnectionResponse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::ConnectionResponse </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted for connection response. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>Connection status (true for success, false for failure). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_a77a22bd43518d801fad008673ef40251_icgraph.png" border="0" usemap="#aclassResponseManager_a77a22bd43518d801fad008673ef40251_icgraph" alt=""/></div>
+<map name="aclassResponseManager_a77a22bd43518d801fad008673ef40251_icgraph" id="aclassResponseManager_a77a22bd43518d801fad008673ef40251_icgraph">
+<area shape="rect" title="Signal emitted for connection response." alt="" coords="560,5,783,47"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,13,512,39"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,13,207,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab011bf96812c06bbf06990a3ec4a960f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab011bf96812c06bbf06990a3ec4a960f">&#9670;&nbsp;</a></span>DatabaseFetched</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::DatabaseFetched </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>databaseContent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted when the database content is fetched. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">databaseContent</td><td>List of database content. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44">UIManager::closeAdminWidget()</a>, <a class="el" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db">UIManager::createAdminWidget()</a>, and <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_ab011bf96812c06bbf06990a3ec4a960f_icgraph.png" border="0" usemap="#aclassResponseManager_ab011bf96812c06bbf06990a3ec4a960f_icgraph" alt=""/></div>
+<map name="aclassResponseManager_ab011bf96812c06bbf06990a3ec4a960f_icgraph" id="aclassResponseManager_ab011bf96812c06bbf06990a3ec4a960f_icgraph">
+<area shape="rect" title="Signal emitted when the database content is fetched." alt="" coords="839,99,1051,141"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="551,56,773,83"/>
+<area shape="rect" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,107,236,133"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="533,157,791,184"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="313,56,456,83"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="15,5,226,32"/>
+<area shape="rect" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,56,230,83"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="284,157,485,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2dccee086f7eb2eca819f9068df41e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dccee086f7eb2eca819f9068df41e4c">&#9670;&nbsp;</a></span>FailedRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::FailedRequest </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted for a failed request. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Failure message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_a2dccee086f7eb2eca819f9068df41e4c_icgraph.png" border="0" usemap="#aclassResponseManager_a2dccee086f7eb2eca819f9068df41e4c_icgraph" alt=""/></div>
+<map name="aclassResponseManager_a2dccee086f7eb2eca819f9068df41e4c_icgraph" id="aclassResponseManager_a2dccee086f7eb2eca819f9068df41e4c_icgraph">
+<area shape="rect" title="Signal emitted for a failed request." alt="" coords="560,5,801,32"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,5,512,32"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,5,207,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa8a0c60f8917fde5976be069ea30df7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8a0c60f8917fde5976be069ea30df7f">&#9670;&nbsp;</a></span>getResponseMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ResponseManager::getResponseMessage </td>
+          <td>(</td>
+          <td class="paramtype">QJsonObject&#160;</td>
+          <td class="paramname"><em>Data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieves the message from the response. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Data</td><td>The QJsonObject representing the response data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The message as a QString. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_aa8a0c60f8917fde5976be069ea30df7f_icgraph.png" border="0" usemap="#aclassResponseManager_aa8a0c60f8917fde5976be069ea30df7f_icgraph" alt=""/></div>
+<map name="aclassResponseManager_aa8a0c60f8917fde5976be069ea30df7f_icgraph" id="aclassResponseManager_aa8a0c60f8917fde5976be069ea30df7f_icgraph">
+<area shape="rect" title="Retrieves the message from the response." alt="" coords="560,5,795,47"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,13,512,39"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,13,207,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aebf00d18670f9a73086789ca9449b48d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf00d18670f9a73086789ca9449b48d">&#9670;&nbsp;</a></span>getResponseStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ResponseManager::getResponseStatus </td>
+          <td>(</td>
+          <td class="paramtype">QJsonObject&#160;</td>
+          <td class="paramname"><em>Data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks the status value in the response. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Data</td><td>The QJsonObject representing the response data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if the status value is 1, false otherwise. </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_aebf00d18670f9a73086789ca9449b48d_icgraph.png" border="0" usemap="#aclassResponseManager_aebf00d18670f9a73086789ca9449b48d_icgraph" alt=""/></div>
+<map name="aclassResponseManager_aebf00d18670f9a73086789ca9449b48d_icgraph" id="aclassResponseManager_aebf00d18670f9a73086789ca9449b48d_icgraph">
+<area shape="rect" title="Checks the status value in the response." alt="" coords="560,5,795,47"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,13,512,39"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,13,207,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa53d34d37b864b44bff4527d021faa76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53d34d37b864b44bff4527d021faa76">&#9670;&nbsp;</a></span>handleResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::handleResponse </td>
+          <td>(</td>
+          <td class="paramtype">QJsonObject&#160;</td>
+          <td class="paramname"><em>Data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles the response received from the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Data</td><td>The QJsonObject representing the response data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87">UIManager::responseReady()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_aa53d34d37b864b44bff4527d021faa76_cgraph.png" border="0" usemap="#aclassResponseManager_aa53d34d37b864b44bff4527d021faa76_cgraph" alt=""/></div>
+<map name="aclassResponseManager_aa53d34d37b864b44bff4527d021faa76_cgraph" id="aclassResponseManager_aa53d34d37b864b44bff4527d021faa76_cgraph">
+<area shape="rect" title="Handles the response received from the server." alt="" coords="5,46,263,73"/>
+<area shape="rect" href="classResponseManager.html#aa8a0c60f8917fde5976be069ea30df7f" title="Retrieves the message from the response." alt="" coords="311,5,545,47"/>
+<area shape="rect" href="classResponseManager.html#aebf00d18670f9a73086789ca9449b48d" title="Checks the status value in the response." alt="" coords="311,71,545,112"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_aa53d34d37b864b44bff4527d021faa76_icgraph.png" border="0" usemap="#aclassResponseManager_aa53d34d37b864b44bff4527d021faa76_icgraph" alt=""/></div>
+<map name="aclassResponseManager_aa53d34d37b864b44bff4527d021faa76_icgraph" id="aclassResponseManager_aa53d34d37b864b44bff4527d021faa76_icgraph">
+<area shape="rect" title="Handles the response received from the server." alt="" coords="255,5,512,32"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,5,207,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af96d4add1d9a4da8fb3b21f47aec8ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96d4add1d9a4da8fb3b21f47aec8ede">&#9670;&nbsp;</a></span>SuccessfullRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::SuccessfullRequest </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted for a successful request. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Success message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_af96d4add1d9a4da8fb3b21f47aec8ede_icgraph.png" border="0" usemap="#aclassResponseManager_af96d4add1d9a4da8fb3b21f47aec8ede_icgraph" alt=""/></div>
+<map name="aclassResponseManager_af96d4add1d9a4da8fb3b21f47aec8ede_icgraph" id="aclassResponseManager_af96d4add1d9a4da8fb3b21f47aec8ede_icgraph">
+<area shape="rect" title="Signal emitted for a successful request." alt="" coords="560,5,783,47"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,13,512,39"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,13,207,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a15f87910b0e8b1f7e4ff75fbc937cc84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f87910b0e8b1f7e4ff75fbc937cc84">&#9670;&nbsp;</a></span>TransactionsFetched</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::TransactionsFetched </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>transactions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted when transactions are fetched. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transactions</td><td>List of transactions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44">UIManager::closeAdminWidget()</a>, <a class="el" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac">UIManager::closeUserWidget()</a>, <a class="el" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db">UIManager::createAdminWidget()</a>, <a class="el" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59">UIManager::createUserWidget()</a>, and <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_a15f87910b0e8b1f7e4ff75fbc937cc84_icgraph.png" border="0" usemap="#aclassResponseManager_a15f87910b0e8b1f7e4ff75fbc937cc84_icgraph" alt=""/></div>
+<map name="aclassResponseManager_a15f87910b0e8b1f7e4ff75fbc937cc84_icgraph" id="aclassResponseManager_a15f87910b0e8b1f7e4ff75fbc937cc84_icgraph">
+<area shape="rect" title="Signal emitted when transactions are fetched." alt="" coords="839,74,1069,115"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="551,81,773,108"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="15,81,226,108"/>
+<area shape="rect" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,5,236,32"/>
+<area shape="rect" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,132,230,159"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="533,183,791,209"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="313,81,456,108"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="284,183,485,209"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6353f20634ce5632f7093286982f778c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6353f20634ce5632f7093286982f778c">&#9670;&nbsp;</a></span>userloginSuccess</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ResponseManager::userloginSuccess </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>first_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>account_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>balance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted when a user login is successful. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>User's email. </td></tr>
+    <tr><td class="paramname">first_name</td><td>User's first name. </td></tr>
+    <tr><td class="paramname">account_number</td><td>User's account number. </td></tr>
+    <tr><td class="paramname">balance</td><td>User's balance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76">handleResponse()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classResponseManager_a6353f20634ce5632f7093286982f778c_icgraph.png" border="0" usemap="#aclassResponseManager_a6353f20634ce5632f7093286982f778c_icgraph" alt=""/></div>
+<map name="aclassResponseManager_a6353f20634ce5632f7093286982f778c_icgraph" id="aclassResponseManager_a6353f20634ce5632f7093286982f778c_icgraph">
+<area shape="rect" title="Signal emitted when a user login is successful." alt="" coords="560,5,771,47"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,13,512,39"/>
+<area shape="rect" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,13,207,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="ResponseManager_8h_source.html">ResponseManager.h</a></li>
+<li>ResponseManager.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classResponseManager.html">ResponseManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

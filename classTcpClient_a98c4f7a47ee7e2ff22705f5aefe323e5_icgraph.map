@@ -1,0 +1,4 @@
+<map id="TcpClient::ResponseReadySignal" name="TcpClient::ResponseReadySignal">
+<area shape="rect" id="node1" title="Signal emitted when a response is ready." alt="" coords="193,5,387,47"/>
+<area shape="rect" id="node2" href="$classClientHandler.html#a88abe966b363ef9a5fedd1c5555a9a32" title="Runs the event loop for the ClientHandler." alt="" coords="5,13,145,39"/>
+</map>

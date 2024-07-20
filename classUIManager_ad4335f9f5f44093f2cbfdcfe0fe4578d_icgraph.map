@@ -1,0 +1,4 @@
+<map id="UIManager::connectToTheServer" name="UIManager::connectToTheServer">
+<area shape="rect" id="node1" title="Connects to the server." alt="" coords="276,5,508,32"/>
+<area shape="rect" id="node2" href="$classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0" title="Creates the login widget." alt="" coords="5,5,228,32"/>
+</map>

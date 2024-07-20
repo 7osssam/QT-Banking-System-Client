@@ -1,0 +1,5 @@
+<map id="UserWidget::UserWidget" name="UserWidget::UserWidget">
+<area shape="rect" id="node1" title="Constructs a UserWidget instance." alt="" coords="5,13,188,39"/>
+<area shape="rect" id="node2" href="$classUserWidget.html#a2559a719f73a41c0755b954e7e88f37c" title="Slot to handle successful fetch of balance." alt="" coords="236,13,461,39"/>
+<area shape="rect" id="node3" href="$classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="509,5,704,47"/>
+</map>

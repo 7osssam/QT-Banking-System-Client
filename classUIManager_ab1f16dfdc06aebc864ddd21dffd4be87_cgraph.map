@@ -1,0 +1,8 @@
+<map id="UIManager::onConnectionResponse" name="UIManager::onConnectionResponse">
+<area shape="rect" id="node1" title="Handles the server connection response." alt="" coords="5,42,259,69"/>
+<area shape="rect" id="node2" href="$classLoginWidget.html#aa8b517477c0dfb8d176c85bfe2bc9093" title="Slot to handle successful connection to the server." alt="" coords="316,15,512,42"/>
+<area shape="rect" id="node5" href="$classLoginWidget.html#ade2fcc2eae6ac42a0a494cb04cc705fe" title="Slot to handle disconnection from the server." alt="" coords="307,67,521,94"/>
+<area shape="rect" id="node3" href="$classLoginWidget.html#ada9460a9aca11b5a4e7a78d047964c15" title="Slot to handle successful login request." alt="" coords="579,5,779,47"/>
+<area shape="rect" id="node4" href="$classRequestManager.html#ab57f072ef0c3f17c67f38a3d32abba32" title="Creates a request based on the provided type and data." alt="" coords="836,13,1071,39"/>
+<area shape="rect" id="node6" href="$classLoginWidget.html#acec729298fad290d58afa915747db662" title="Slot to handle failed login request." alt="" coords="569,71,788,98"/>
+</map>

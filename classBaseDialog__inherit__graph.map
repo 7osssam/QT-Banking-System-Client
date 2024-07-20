@@ -1,0 +1,8 @@
+<map id="BaseDialog" name="BaseDialog">
+<area shape="rect" id="node1" title="The BaseDialog class provides a base class for creating dialogs with validation support." alt="" coords="273,131,493,355"/>
+<area shape="rect" id="node3" href="$classCreateUserDialog.html" title="The CreateUserDialog class provides a dialog for creating new users with input validation." alt="" coords="5,410,168,502"/>
+<area shape="rect" id="node4" href="$classUpdateEmailDialog.html" title="The UpdateEmailDialog class provides a dialog for updating user email with input validation." alt="" coords="192,403,365,509"/>
+<area shape="rect" id="node5" href="$classUpdatePasswordDialog.html" title="The UpdatePasswordDialog class provides a dialog for updating user passwords with input validation." alt="" coords="389,403,587,509"/>
+<area shape="rect" id="node6" href="$classUpdateUserDialog.html" title="The UpdateUserDialog class provides a dialog for updating user information with input validation." alt="" coords="611,410,778,502"/>
+<area shape="rect" id="node2" title=" " alt="" coords="345,5,420,83"/>
+</map>

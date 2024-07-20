@@ -1,0 +1,11 @@
+<map id="UpdateEmailDialog::UpdateEmailDialog" name="UpdateEmailDialog::UpdateEmailDialog">
+<area shape="rect" id="node1" title="Constructor for UpdateEmailDialog." alt="" coords="5,123,161,164"/>
+<area shape="rect" id="node2" href="$classBaseDialog.html#afdfd5707b754ca2391a77a8c03d650dd" title="Connects signals for the dialog." alt="" coords="209,101,412,127"/>
+<area shape="rect" id="node8" href="$classUpdateEmailDialog.html#ac536a9cd527cc9a0a6a4d12d74991ca6" title="Sets up the user interface." alt="" coords="233,152,389,193"/>
+<area shape="rect" id="node3" href="$classBaseDialog.html#a8def162fdb199789470ed23570465e95" title="Validates the input of a specified field." alt="" coords="469,101,660,127"/>
+<area shape="rect" id="node4" href="$classIValidationStrategy.html#a3469ac4def6a8a416ee0830a7af5bae2" title="Retrieves the error message for invalid input." alt="" coords="746,5,893,47"/>
+<area shape="rect" id="node5" href="$classIValidationStrategy.html#adec0172539f5ee41c8f42424b85cc7cb" title="Validates the input string." alt="" coords="969,127,1116,168"/>
+<area shape="rect" id="node6" href="$classBaseDialog.html#ab83ac795b8f131b9b21d804dc026b2b4" title="Sets the validity style of an input field." alt="" coords="717,123,921,164"/>
+<area shape="rect" id="node7" href="$classBaseDialog.html#a2698a96efb218e5e676585a9bea3d68e" title="Updates the state of the confirm button based on the validity of the form." alt="" coords="719,188,919,229"/>
+<area shape="rect" id="node9" href="$classBaseDialog.html#ae4870830d6d305c993a746ecf7515dd6" title="Creates an input field with validation." alt="" coords="460,159,669,186"/>
+</map>

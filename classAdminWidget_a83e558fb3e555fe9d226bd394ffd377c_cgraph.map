@@ -1,0 +1,4 @@
+<map id="AdminWidget::onTransactionsFetched" name="AdminWidget::onTransactionsFetched">
+<area shape="rect" id="node1" title="Slot for handling fetched transaction history." alt="" coords="5,5,220,47"/>
+<area shape="rect" id="node2" href="$classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="268,5,475,47"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CreateUserDialog" name="CreateUserDialog">
+<area shape="rect" id="node1" title="The CreateUserDialog class provides a dialog for creating new users with input validation." alt="" coords="34,403,197,495"/>
+<area shape="rect" id="node2" href="$classBaseDialog.html" title="The BaseDialog class provides a base class for creating dialogs with validation support." alt="" coords="5,131,225,355"/>
+<area shape="rect" id="node3" title=" " alt="" coords="78,5,153,83"/>
+</map>

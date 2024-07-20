@@ -1,0 +1,4 @@
+<map id="UserWidget::onBalanceFetched" name="UserWidget::onBalanceFetched">
+<area shape="rect" id="node1" title="Slot to handle successful fetch of balance." alt="" coords="5,13,231,39"/>
+<area shape="rect" id="node2" href="$classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="279,5,473,47"/>
+</map>

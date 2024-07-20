@@ -1,0 +1,12 @@
+<map id="UserWidget::onSuccessfullRequest" name="UserWidget::onSuccessfullRequest">
+<area shape="rect" id="node1" title="Slot to handle successful request." alt="" coords="1007,107,1201,149"/>
+<area shape="rect" id="node2" href="$classUserWidget.html#a2559a719f73a41c0755b954e7e88f37c" title="Slot to handle successful fetch of balance." alt="" coords="733,56,959,83"/>
+<area shape="rect" id="node9" href="$classUIManager.html#a11d8aaf700fa79d9492f9aca04a1f0e8" title="Displays a successful notification." alt="" coords="751,173,941,214"/>
+<area shape="rect" id="node10" href="$classUserWidget.html#ad41d81e9ae0ede55d5f0e8a16f3abb43" title="Slot to handle successful fetch of transactions." alt="" coords="745,107,947,149"/>
+<area shape="rect" id="node3" href="$classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="475,56,685,83"/>
+<area shape="rect" id="node7" href="$classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,132,230,159"/>
+<area shape="rect" id="node8" href="$classUserWidget.html#aca06f061c4efc03b1f1be03c45d14ad6" title="Constructs a UserWidget instance." alt="" coords="489,5,671,32"/>
+<area shape="rect" id="node4" href="$classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="284,56,427,83"/>
+<area shape="rect" id="node5" href="$classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="9,31,232,57"/>
+<area shape="rect" id="node6" href="$classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,81,236,108"/>
+</map>

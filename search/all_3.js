@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['getaccountbalance_5',['getAccountBalance',['../classBankAccount.html#af34bc12ef9f8e9dd0d244d49b7f93987',1,'BankAccount']]],
-  ['getaccountholder_6',['getAccountHolder',['../classBankAccount.html#a7383470c2a8195e7cca91748b9dcb4da',1,'BankAccount']]],
-  ['getaccountnumber_7',['getAccountNumber',['../classBankAccount.html#ad4b19502634b8f7de834bc9efe77df24',1,'BankAccount']]],
-  ['getaccounttype_8',['getAccountType',['../classBankAccount.html#aab906ff06c9d8e1225986d23e706d65e',1,'BankAccount']]]
+  ['databasefetched_34',['DatabaseFetched',['../classResponseManager.html#ab011bf96812c06bbf06990a3ec4a960f',1,'ResponseManager']]],
+  ['deleteuser_35',['DeleteUser',['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310aaadb31279034a82211cbcbcb6f32f138',1,'RequestManager::DeleteUser()'],['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a5b16d998c13fd92609d9a75d6519f357',1,'ResponseManager::DeleteUser()']]],
+  ['disconnectedsignal_36',['DisconnectedSignal',['../classTcpClient.html#afc80322ec1c625d62123bde851d515ea',1,'TcpClient']]],
+  ['disconnectfromserver_37',['disconnectFromServer',['../classLoginWidget.html#ac72d1556f0cb79f39f35b4469fddd8a5',1,'LoginWidget']]],
+  ['disconnectfromtheserver_38',['disconnectFromTheServer',['../classUIManager.html#a24edbc79706999c5200476b4eea01bc4',1,'UIManager']]]
 ];

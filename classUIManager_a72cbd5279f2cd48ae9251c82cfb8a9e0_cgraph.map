@@ -1,0 +1,6 @@
+<map id="UIManager::createLoginWidget" name="UIManager::createLoginWidget">
+<area shape="rect" id="node1" title="Creates the login widget." alt="" coords="5,64,228,91"/>
+<area shape="rect" id="node2" href="$classUIManager.html#ad4335f9f5f44093f2cbfdcfe0fe4578d" title="Connects to the server." alt="" coords="276,5,508,32"/>
+<area shape="rect" id="node3" href="$classUIManager.html#a24edbc79706999c5200476b4eea01bc4" title="Disconnects from the server." alt="" coords="290,57,494,98"/>
+<area shape="rect" id="node4" href="$classUIManager.html#ae3b2e6b93a0ea5a5e2a594f6da296305" title="Slot to handle requests that are ready to be sent." alt="" coords="297,123,487,149"/>
+</map>

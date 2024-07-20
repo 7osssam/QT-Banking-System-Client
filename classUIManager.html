@@ -1,0 +1,924 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>BankingSystem_Client: UIManager Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BankingSystem_Client
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">This is a qt project for a banking system (Client side)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classUIManager.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="classUIManager-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">UIManager Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Inheritance diagram for UIManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager__inherit__graph.png" border="0" usemap="#aUIManager_inherit__map" alt="Inheritance graph"/></div>
+<map name="aUIManager_inherit__map" id="aUIManager_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,131,221,457"/>
+<area shape="rect" title=" " alt="" coords="76,5,151,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for UIManager:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager__coll__graph.png" border="0" usemap="#aUIManager_coll__map" alt="Collaboration graph"/></div>
+<map name="aUIManager_coll__map" id="aUIManager_coll__map">
+<area shape="rect" title=" " alt="" coords="5,131,221,457"/>
+<area shape="rect" title=" " alt="" coords="76,5,151,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a07f79ae3d3b675df0efa016013882a87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87">responseReady</a> (QJsonObject Data)</td></tr>
+<tr class="memdesc:a07f79ae3d3b675df0efa016013882a87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot to handle responses from the server.  <a href="classUIManager.html#a07f79ae3d3b675df0efa016013882a87">More...</a><br /></td></tr>
+<tr class="separator:a07f79ae3d3b675df0efa016013882a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3b2e6b93a0ea5a5e2a594f6da296305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#ae3b2e6b93a0ea5a5e2a594f6da296305">requestReady</a> (QJsonObject Data)</td></tr>
+<tr class="memdesc:ae3b2e6b93a0ea5a5e2a594f6da296305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot to handle requests that are ready to be sent.  <a href="classUIManager.html#ae3b2e6b93a0ea5a5e2a594f6da296305">More...</a><br /></td></tr>
+<tr class="separator:ae3b2e6b93a0ea5a5e2a594f6da296305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58fa1af357a55ac112b41da383c1d410"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410">logout</a> ()</td></tr>
+<tr class="memdesc:a58fa1af357a55ac112b41da383c1d410"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs out the current user.  <a href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410">More...</a><br /></td></tr>
+<tr class="separator:a58fa1af357a55ac112b41da383c1d410"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72cbd5279f2cd48ae9251c82cfb8a9e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0">createLoginWidget</a> ()</td></tr>
+<tr class="memdesc:a72cbd5279f2cd48ae9251c82cfb8a9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the login widget.  <a href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0">More...</a><br /></td></tr>
+<tr class="separator:a72cbd5279f2cd48ae9251c82cfb8a9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a772a301e3422deaf4f6489435b9db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db">createAdminWidget</a> (QString email, QString first_name)</td></tr>
+<tr class="memdesc:a76a772a301e3422deaf4f6489435b9db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the admin widget.  <a href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db">More...</a><br /></td></tr>
+<tr class="separator:a76a772a301e3422deaf4f6489435b9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15fa6321d4967795e43175cdcd3c4d59"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59">createUserWidget</a> (QString email, QString first_name, QString account_number, QString balance)</td></tr>
+<tr class="memdesc:a15fa6321d4967795e43175cdcd3c4d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the user widget.  <a href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59">More...</a><br /></td></tr>
+<tr class="separator:a15fa6321d4967795e43175cdcd3c4d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11d8aaf700fa79d9492f9aca04a1f0e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a11d8aaf700fa79d9492f9aca04a1f0e8">onSuccessfullNotification</a> (QString message)</td></tr>
+<tr class="memdesc:a11d8aaf700fa79d9492f9aca04a1f0e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a successful notification.  <a href="classUIManager.html#a11d8aaf700fa79d9492f9aca04a1f0e8">More...</a><br /></td></tr>
+<tr class="separator:a11d8aaf700fa79d9492f9aca04a1f0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9012bf1f97207eb755720a5eeb400f87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a9012bf1f97207eb755720a5eeb400f87">onFailedNotification</a> (QString message)</td></tr>
+<tr class="memdesc:a9012bf1f97207eb755720a5eeb400f87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a failed notification.  <a href="classUIManager.html#a9012bf1f97207eb755720a5eeb400f87">More...</a><br /></td></tr>
+<tr class="separator:a9012bf1f97207eb755720a5eeb400f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cbe7d3f7987016eaebbf5815a6bba44"><td class="memItemLeft" align="right" valign="top"><a id="a9cbe7d3f7987016eaebbf5815a6bba44"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44">closeAdminWidget</a> ()</td></tr>
+<tr class="memdesc:a9cbe7d3f7987016eaebbf5815a6bba44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the admin widget. <br /></td></tr>
+<tr class="separator:a9cbe7d3f7987016eaebbf5815a6bba44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44bd3b3ff855e9ea6924bab6550594ac"><td class="memItemLeft" align="right" valign="top"><a id="a44bd3b3ff855e9ea6924bab6550594ac"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac">closeUserWidget</a> ()</td></tr>
+<tr class="memdesc:a44bd3b3ff855e9ea6924bab6550594ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the user widget. <br /></td></tr>
+<tr class="separator:a44bd3b3ff855e9ea6924bab6550594ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacc11a77ee12b674d0d8f370025239b4"><td class="memItemLeft" align="right" valign="top"><a id="aacc11a77ee12b674d0d8f370025239b4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#aacc11a77ee12b674d0d8f370025239b4">closeLoginWidget</a> ()</td></tr>
+<tr class="memdesc:aacc11a77ee12b674d0d8f370025239b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the login widget. <br /></td></tr>
+<tr class="separator:aacc11a77ee12b674d0d8f370025239b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4335f9f5f44093f2cbfdcfe0fe4578d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#ad4335f9f5f44093f2cbfdcfe0fe4578d">connectToTheServer</a> (const QString &amp;host, quint16 port)</td></tr>
+<tr class="memdesc:ad4335f9f5f44093f2cbfdcfe0fe4578d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects to the server.  <a href="classUIManager.html#ad4335f9f5f44093f2cbfdcfe0fe4578d">More...</a><br /></td></tr>
+<tr class="separator:ad4335f9f5f44093f2cbfdcfe0fe4578d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24edbc79706999c5200476b4eea01bc4"><td class="memItemLeft" align="right" valign="top"><a id="a24edbc79706999c5200476b4eea01bc4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a24edbc79706999c5200476b4eea01bc4">disconnectFromTheServer</a> ()</td></tr>
+<tr class="memdesc:a24edbc79706999c5200476b4eea01bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnects from the server. <br /></td></tr>
+<tr class="separator:a24edbc79706999c5200476b4eea01bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1f16dfdc06aebc864ddd21dffd4be87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#ab1f16dfdc06aebc864ddd21dffd4be87">onConnectionResponse</a> (bool status)</td></tr>
+<tr class="memdesc:ab1f16dfdc06aebc864ddd21dffd4be87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the server connection response.  <a href="classUIManager.html#ab1f16dfdc06aebc864ddd21dffd4be87">More...</a><br /></td></tr>
+<tr class="separator:ab1f16dfdc06aebc864ddd21dffd4be87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a70b0aadd20c0671507c06d50c5e6a74a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a70b0aadd20c0671507c06d50c5e6a74a">makeRequest</a> (QJsonObject Data)</td></tr>
+<tr class="memdesc:a70b0aadd20c0671507c06d50c5e6a74a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when a request is ready to be sent to the server.  <a href="classUIManager.html#a70b0aadd20c0671507c06d50c5e6a74a">More...</a><br /></td></tr>
+<tr class="separator:a70b0aadd20c0671507c06d50c5e6a74a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0ea470ffcdc3dde7ee606d4e04c1aad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#ad0ea470ffcdc3dde7ee606d4e04c1aad">requestConnection</a> (const QString &amp;host, quint16 port)</td></tr>
+<tr class="memdesc:ad0ea470ffcdc3dde7ee606d4e04c1aad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted to request a connection to the server.  <a href="classUIManager.html#ad0ea470ffcdc3dde7ee606d4e04c1aad">More...</a><br /></td></tr>
+<tr class="separator:ad0ea470ffcdc3dde7ee606d4e04c1aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a924af632a6382716c9e86b15f2eea2df"><td class="memItemLeft" align="right" valign="top"><a id="a924af632a6382716c9e86b15f2eea2df"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a924af632a6382716c9e86b15f2eea2df">requestDisconnection</a> ()</td></tr>
+<tr class="memdesc:a924af632a6382716c9e86b15f2eea2df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted to request a disconnection from the server. <br /></td></tr>
+<tr class="separator:a924af632a6382716c9e86b15f2eea2df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:aeac3e2a8fd4ba49821ce653f4d2fa6b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#aeac3e2a8fd4ba49821ce653f4d2fa6b6">~UIManager</a> ()</td></tr>
+<tr class="memdesc:aeac3e2a8fd4ba49821ce653f4d2fa6b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="classUIManager.html">UIManager</a> class.  <a href="classUIManager.html#aeac3e2a8fd4ba49821ce653f4d2fa6b6">More...</a><br /></td></tr>
+<tr class="separator:aeac3e2a8fd4ba49821ce653f4d2fa6b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a084fc287d25c2d96c8319d0654a001f4"><td class="memItemLeft" align="right" valign="top"><a id="a084fc287d25c2d96c8319d0654a001f4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#a084fc287d25c2d96c8319d0654a001f4">UIManager</a> (const <a class="el" href="classUIManager.html">UIManager</a> &amp;)=delete</td></tr>
+<tr class="memdesc:a084fc287d25c2d96c8319d0654a001f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted copy constructor to prevent copying. <br /></td></tr>
+<tr class="separator:a084fc287d25c2d96c8319d0654a001f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfdc680586670761f2585a8596e6be78"><td class="memItemLeft" align="right" valign="top"><a id="abfdc680586670761f2585a8596e6be78"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#abfdc680586670761f2585a8596e6be78">operator=</a> (const <a class="el" href="classUIManager.html">UIManager</a> &amp;)=delete</td></tr>
+<tr class="memdesc:abfdc680586670761f2585a8596e6be78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deleted assignment operator to prevent copying. <br /></td></tr>
+<tr class="separator:abfdc680586670761f2585a8596e6be78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:abbd0c60ea453543a8ae5a64816eadce3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classUIManager.html">UIManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUIManager.html#abbd0c60ea453543a8ae5a64816eadce3">getInstance</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:abbd0c60ea453543a8ae5a64816eadce3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the singleton instance of <a class="el" href="classUIManager.html">UIManager</a>.  <a href="classUIManager.html#abbd0c60ea453543a8ae5a64816eadce3">More...</a><br /></td></tr>
+<tr class="separator:abbd0c60ea453543a8ae5a64816eadce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aeac3e2a8fd4ba49821ce653f4d2fa6b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac3e2a8fd4ba49821ce653f4d2fa6b6">&#9670;&nbsp;</a></span>~UIManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UIManager::~UIManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor for the <a class="el" href="classUIManager.html">UIManager</a> class. </p>
+<p>Cleans up the main window and its widgets. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad4335f9f5f44093f2cbfdcfe0fe4578d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4335f9f5f44093f2cbfdcfe0fe4578d">&#9670;&nbsp;</a></span>connectToTheServer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::connectToTheServer </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">quint16&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Connects to the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>Server host address. </td></tr>
+    <tr><td class="paramname">port</td><td>Server port number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0">createLoginWidget()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d_icgraph.png" border="0" usemap="#aclassUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d_icgraph" alt=""/></div>
+<map name="aclassUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d_icgraph" id="aclassUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d_icgraph">
+<area shape="rect" title="Connects to the server." alt="" coords="276,5,508,32"/>
+<area shape="rect" href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0" title="Creates the login widget." alt="" coords="5,5,228,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a76a772a301e3422deaf4f6489435b9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a772a301e3422deaf4f6489435b9db">&#9670;&nbsp;</a></span>createAdminWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::createAdminWidget </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>first_name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the admin widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>Admin email address. </td></tr>
+    <tr><td class="paramname">first_name</td><td>Admin first name. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a76a772a301e3422deaf4f6489435b9db_cgraph.png" border="0" usemap="#aclassUIManager_a76a772a301e3422deaf4f6489435b9db_cgraph" alt=""/></div>
+<map name="aclassUIManager_a76a772a301e3422deaf4f6489435b9db_cgraph" id="aclassUIManager_a76a772a301e3422deaf4f6489435b9db_cgraph">
+<area shape="rect" title="Creates the admin widget." alt="" coords="5,18,236,45"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="284,119,427,146"/>
+<area shape="rect" href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6" title="Slot for handling updates to the database content." alt="" coords="745,7,992,48"/>
+<area shape="rect" href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c" title="Slot for handling fetched transaction history." alt="" coords="761,72,976,113"/>
+<area shape="rect" href="classLoginWidget.html#a9eefea5a7f5c538ff74e5b9ef061da9f" title="Clears the input fields for email and password." alt="" coords="495,69,677,95"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="475,119,697,146"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="481,170,691,197"/>
+<area shape="rect" href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="1040,57,1247,99"/>
+<area shape="rect" href="classUserWidget.html#a2559a719f73a41c0755b954e7e88f37c" title="Slot to handle successful fetch of balance." alt="" coords="756,141,981,167"/>
+<area shape="rect" href="classUserWidget.html#ad41d81e9ae0ede55d5f0e8a16f3abb43" title="Slot to handle successful fetch of transactions." alt="" coords="767,192,970,233"/>
+<area shape="rect" href="classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="1046,149,1241,191"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a72cbd5279f2cd48ae9251c82cfb8a9e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72cbd5279f2cd48ae9251c82cfb8a9e0">&#9670;&nbsp;</a></span>createLoginWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::createLoginWidget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the login widget. </p>
+<p>Initializes and displays the login widget. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0_cgraph.png" border="0" usemap="#aclassUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0_cgraph" alt=""/></div>
+<map name="aclassUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0_cgraph" id="aclassUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0_cgraph">
+<area shape="rect" title="Creates the login widget." alt="" coords="5,64,228,91"/>
+<area shape="rect" href="classUIManager.html#ad4335f9f5f44093f2cbfdcfe0fe4578d" title="Connects to the server." alt="" coords="276,5,508,32"/>
+<area shape="rect" href="classUIManager.html#a24edbc79706999c5200476b4eea01bc4" title="Disconnects from the server." alt="" coords="290,57,494,98"/>
+<area shape="rect" href="classUIManager.html#ae3b2e6b93a0ea5a5e2a594f6da296305" title="Slot to handle requests that are ready to be sent." alt="" coords="297,123,487,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a15fa6321d4967795e43175cdcd3c4d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15fa6321d4967795e43175cdcd3c4d59">&#9670;&nbsp;</a></span>createUserWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::createUserWidget </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>first_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>account_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>balance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the user widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>User email address. </td></tr>
+    <tr><td class="paramname">first_name</td><td>User first name. </td></tr>
+    <tr><td class="paramname">account_number</td><td>User account number. </td></tr>
+    <tr><td class="paramname">balance</td><td>User account balance. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a15fa6321d4967795e43175cdcd3c4d59_cgraph.png" border="0" usemap="#aclassUIManager_a15fa6321d4967795e43175cdcd3c4d59_cgraph" alt=""/></div>
+<map name="aclassUIManager_a15fa6321d4967795e43175cdcd3c4d59_cgraph" id="aclassUIManager_a15fa6321d4967795e43175cdcd3c4d59_cgraph">
+<area shape="rect" title="Creates the user widget." alt="" coords="5,170,224,197"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="272,94,415,121"/>
+<area shape="rect" href="classUserWidget.html#a2559a719f73a41c0755b954e7e88f37c" title="Slot to handle successful fetch of balance." alt="" coords="744,145,969,171"/>
+<area shape="rect" href="classUserWidget.html#ad41d81e9ae0ede55d5f0e8a16f3abb43" title="Slot to handle successful fetch of transactions." alt="" coords="755,196,958,237"/>
+<area shape="rect" href="classLoginWidget.html#a9eefea5a7f5c538ff74e5b9ef061da9f" title="Clears the input fields for email and password." alt="" coords="483,18,665,45"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="463,69,685,95"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="469,119,679,146"/>
+<area shape="rect" href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6" title="Slot for handling updates to the database content." alt="" coords="733,5,980,47"/>
+<area shape="rect" href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c" title="Slot for handling fetched transaction history." alt="" coords="749,71,964,112"/>
+<area shape="rect" href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="1028,59,1235,100"/>
+<area shape="rect" href="classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="1034,149,1229,191"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abbd0c60ea453543a8ae5a64816eadce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd0c60ea453543a8ae5a64816eadce3">&#9670;&nbsp;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classUIManager.html">UIManager</a> * UIManager::getInstance </td>
+          <td>(</td>
+          <td class="paramtype">QObject *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the singleton instance of <a class="el" href="classUIManager.html">UIManager</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Optional parent QObject. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the <a class="el" href="classUIManager.html">UIManager</a> instance. </dd></dl>
+
+</div>
+</div>
+<a id="a58fa1af357a55ac112b41da383c1d410"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58fa1af357a55ac112b41da383c1d410">&#9670;&nbsp;</a></span>logout</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::logout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs out the current user. </p>
+<p>Disconnects signals and resets the UI to the login widget. </p>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44">closeAdminWidget()</a>, <a class="el" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac">closeUserWidget()</a>, <a class="el" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db">createAdminWidget()</a>, and <a class="el" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59">createUserWidget()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a58fa1af357a55ac112b41da383c1d410_cgraph.png" border="0" usemap="#aclassUIManager_a58fa1af357a55ac112b41da383c1d410_cgraph" alt=""/></div>
+<map name="aclassUIManager_a58fa1af357a55ac112b41da383c1d410_cgraph" id="aclassUIManager_a58fa1af357a55ac112b41da383c1d410_cgraph">
+<area shape="rect" title="Logs out the current user." alt="" coords="5,81,148,107"/>
+<area shape="rect" href="classLoginWidget.html#a9eefea5a7f5c538ff74e5b9ef061da9f" title="Clears the input fields for email and password." alt="" coords="217,30,398,57"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="196,81,419,107"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="202,133,413,159"/>
+<area shape="rect" href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6" title="Slot for handling updates to the database content." alt="" coords="467,5,713,47"/>
+<area shape="rect" href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c" title="Slot for handling fetched transaction history." alt="" coords="483,71,697,112"/>
+<area shape="rect" href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="761,55,968,96"/>
+<area shape="rect" href="classUserWidget.html#a2559a719f73a41c0755b954e7e88f37c" title="Slot to handle successful fetch of balance." alt="" coords="477,137,703,163"/>
+<area shape="rect" href="classUserWidget.html#ad41d81e9ae0ede55d5f0e8a16f3abb43" title="Slot to handle successful fetch of transactions." alt="" coords="489,188,691,229"/>
+<area shape="rect" href="classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="767,145,962,187"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a58fa1af357a55ac112b41da383c1d410_icgraph.png" border="0" usemap="#aclassUIManager_a58fa1af357a55ac112b41da383c1d410_icgraph" alt=""/></div>
+<map name="aclassUIManager_a58fa1af357a55ac112b41da383c1d410_icgraph" id="aclassUIManager_a58fa1af357a55ac112b41da383c1d410_icgraph">
+<area shape="rect" title="Logs out the current user." alt="" coords="284,56,427,83"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="9,5,232,32"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="15,56,226,83"/>
+<area shape="rect" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,107,236,133"/>
+<area shape="rect" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,157,230,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a70b0aadd20c0671507c06d50c5e6a74a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70b0aadd20c0671507c06d50c5e6a74a">&#9670;&nbsp;</a></span>makeRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::makeRequest </td>
+          <td>(</td>
+          <td class="paramtype">QJsonObject&#160;</td>
+          <td class="paramname"><em>Data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted when a request is ready to be sent to the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Data</td><td>JSON object containing the request data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#ae3b2e6b93a0ea5a5e2a594f6da296305">requestReady()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a70b0aadd20c0671507c06d50c5e6a74a_icgraph.png" border="0" usemap="#aclassUIManager_a70b0aadd20c0671507c06d50c5e6a74a_icgraph" alt=""/></div>
+<map name="aclassUIManager_a70b0aadd20c0671507c06d50c5e6a74a_icgraph" id="aclassUIManager_a70b0aadd20c0671507c06d50c5e6a74a_icgraph">
+<area shape="rect" title="Signal emitted when a request is ready to be sent to the server." alt="" coords="515,5,705,32"/>
+<area shape="rect" href="classUIManager.html#ae3b2e6b93a0ea5a5e2a594f6da296305" title="Slot to handle requests that are ready to be sent." alt="" coords="276,5,467,32"/>
+<area shape="rect" href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0" title="Creates the login widget." alt="" coords="5,5,228,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab1f16dfdc06aebc864ddd21dffd4be87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1f16dfdc06aebc864ddd21dffd4be87">&#9670;&nbsp;</a></span>onConnectionResponse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::onConnectionResponse </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Handles the server connection response. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>Connection status (true if connected, false otherwise). </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_ab1f16dfdc06aebc864ddd21dffd4be87_cgraph.png" border="0" usemap="#aclassUIManager_ab1f16dfdc06aebc864ddd21dffd4be87_cgraph" alt=""/></div>
+<map name="aclassUIManager_ab1f16dfdc06aebc864ddd21dffd4be87_cgraph" id="aclassUIManager_ab1f16dfdc06aebc864ddd21dffd4be87_cgraph">
+<area shape="rect" title="Handles the server connection response." alt="" coords="5,42,259,69"/>
+<area shape="rect" href="classLoginWidget.html#aa8b517477c0dfb8d176c85bfe2bc9093" title="Slot to handle successful connection to the server." alt="" coords="316,15,512,42"/>
+<area shape="rect" href="classLoginWidget.html#ade2fcc2eae6ac42a0a494cb04cc705fe" title="Slot to handle disconnection from the server." alt="" coords="307,67,521,94"/>
+<area shape="rect" href="classLoginWidget.html#ada9460a9aca11b5a4e7a78d047964c15" title="Slot to handle successful login request." alt="" coords="579,5,779,47"/>
+<area shape="rect" href="classRequestManager.html#ab57f072ef0c3f17c67f38a3d32abba32" title="Creates a request based on the provided type and data." alt="" coords="836,13,1071,39"/>
+<area shape="rect" href="classLoginWidget.html#acec729298fad290d58afa915747db662" title="Slot to handle failed login request." alt="" coords="569,71,788,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9012bf1f97207eb755720a5eeb400f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9012bf1f97207eb755720a5eeb400f87">&#9670;&nbsp;</a></span>onFailedNotification</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::onFailedNotification </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displays a failed notification. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The failure message to be displayed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a9012bf1f97207eb755720a5eeb400f87_cgraph.png" border="0" usemap="#aclassUIManager_a9012bf1f97207eb755720a5eeb400f87_cgraph" alt=""/></div>
+<map name="aclassUIManager_a9012bf1f97207eb755720a5eeb400f87_cgraph" id="aclassUIManager_a9012bf1f97207eb755720a5eeb400f87_cgraph">
+<area shape="rect" title="Displays a failed notification." alt="" coords="5,56,236,83"/>
+<area shape="rect" href="classAdminWidget.html#ada18070029b272ef46e64c0527ef15a1" title="Slot for handling failed request messages." alt="" coords="284,5,509,32"/>
+<area shape="rect" href="classLoginWidget.html#acec729298fad290d58afa915747db662" title="Slot to handle failed login request." alt="" coords="287,56,506,83"/>
+<area shape="rect" href="classUserWidget.html#a5a60611c42c15e352eca583657488ee5" title="Slot to handle failed request." alt="" coords="290,107,503,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a11d8aaf700fa79d9492f9aca04a1f0e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11d8aaf700fa79d9492f9aca04a1f0e8">&#9670;&nbsp;</a></span>onSuccessfullNotification</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::onSuccessfullNotification </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Displays a successful notification. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The success message to be displayed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8_cgraph.png" border="0" usemap="#aclassUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8_cgraph" alt=""/></div>
+<map name="aclassUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8_cgraph" id="aclassUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8_cgraph">
+<area shape="rect" title="Displays a successful notification." alt="" coords="5,71,196,112"/>
+<area shape="rect" href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="244,5,451,47"/>
+<area shape="rect" href="classLoginWidget.html#ada9460a9aca11b5a4e7a78d047964c15" title="Slot to handle successful login request." alt="" coords="247,71,447,112"/>
+<area shape="rect" href="classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="250,136,445,177"/>
+<area shape="rect" href="classRequestManager.html#ab57f072ef0c3f17c67f38a3d32abba32" title="Creates a request based on the provided type and data." alt="" coords="499,78,733,105"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0ea470ffcdc3dde7ee606d4e04c1aad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0ea470ffcdc3dde7ee606d4e04c1aad">&#9670;&nbsp;</a></span>requestConnection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::requestConnection </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">quint16&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Signal emitted to request a connection to the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">host</td><td>Server host address. </td></tr>
+    <tr><td class="paramname">port</td><td>Server port number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#ad4335f9f5f44093f2cbfdcfe0fe4578d">connectToTheServer()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad_icgraph.png" border="0" usemap="#aclassUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad_icgraph" alt=""/></div>
+<map name="aclassUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad_icgraph" id="aclassUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad_icgraph">
+<area shape="rect" title="Signal emitted to request a connection to the server." alt="" coords="556,5,779,32"/>
+<area shape="rect" href="classUIManager.html#ad4335f9f5f44093f2cbfdcfe0fe4578d" title="Connects to the server." alt="" coords="276,5,508,32"/>
+<area shape="rect" href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0" title="Creates the login widget." alt="" coords="5,5,228,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae3b2e6b93a0ea5a5e2a594f6da296305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3b2e6b93a0ea5a5e2a594f6da296305">&#9670;&nbsp;</a></span>requestReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::requestReady </td>
+          <td>(</td>
+          <td class="paramtype">QJsonObject&#160;</td>
+          <td class="paramname"><em>Data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot to handle requests that are ready to be sent. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Data</td><td>JSON object containing the request data. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0">createLoginWidget()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305_icgraph.png" border="0" usemap="#aclassUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305_icgraph" alt=""/></div>
+<map name="aclassUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305_icgraph" id="aclassUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305_icgraph">
+<area shape="rect" title="Slot to handle requests that are ready to be sent." alt="" coords="276,5,467,32"/>
+<area shape="rect" href="classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0" title="Creates the login widget." alt="" coords="5,5,228,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a07f79ae3d3b675df0efa016013882a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f79ae3d3b675df0efa016013882a87">&#9670;&nbsp;</a></span>responseReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void UIManager::responseReady </td>
+          <td>(</td>
+          <td class="paramtype">QJsonObject&#160;</td>
+          <td class="paramname"><em>Data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot to handle responses from the server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Data</td><td>JSON object containing the response data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classUIManager_a07f79ae3d3b675df0efa016013882a87_cgraph.png" border="0" usemap="#aclassUIManager_a07f79ae3d3b675df0efa016013882a87_cgraph" alt=""/></div>
+<map name="aclassUIManager_a07f79ae3d3b675df0efa016013882a87_cgraph" id="aclassUIManager_a07f79ae3d3b675df0efa016013882a87_cgraph">
+<area shape="rect" title="Slot to handle responses from the server." alt="" coords="5,46,207,73"/>
+<area shape="rect" href="classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,46,512,73"/>
+<area shape="rect" href="classResponseManager.html#aa8a0c60f8917fde5976be069ea30df7f" title="Retrieves the message from the response." alt="" coords="560,5,795,47"/>
+<area shape="rect" href="classResponseManager.html#aebf00d18670f9a73086789ca9449b48d" title="Checks the status value in the response." alt="" coords="560,71,795,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="UIManager_8h_source.html">UIManager.h</a></li>
+<li>UIManager.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classUIManager.html">UIManager</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

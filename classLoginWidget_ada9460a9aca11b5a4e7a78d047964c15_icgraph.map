@@ -1,0 +1,6 @@
+<map id="LoginWidget::onSuccessfullRequest" name="LoginWidget::onSuccessfullRequest">
+<area shape="rect" id="node1" title="Slot to handle successful login request." alt="" coords="551,27,751,69"/>
+<area shape="rect" id="node2" href="$classLoginWidget.html#aa8b517477c0dfb8d176c85bfe2bc9093" title="Slot to handle successful connection to the server." alt="" coords="307,5,503,32"/>
+<area shape="rect" id="node4" href="$classUIManager.html#a11d8aaf700fa79d9492f9aca04a1f0e8" title="Displays a successful notification." alt="" coords="309,57,500,98"/>
+<area shape="rect" id="node3" href="$classUIManager.html#ab1f16dfdc06aebc864ddd21dffd4be87" title="Handles the server connection response." alt="" coords="5,5,259,32"/>
+</map>

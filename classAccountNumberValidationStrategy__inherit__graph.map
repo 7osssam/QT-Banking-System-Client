@@ -1,0 +1,4 @@
+<map id="AccountNumberValidationStrategy" name="AccountNumberValidationStrategy">
+<area shape="rect" id="node1" title="Concrete validation strategy for account numbers." alt="" coords="5,145,252,237"/>
+<area shape="rect" id="node2" href="$classIValidationStrategy.html" title="Interface for validation strategies." alt="" coords="55,5,202,97"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="TcpClient::closeConnection" name="TcpClient::closeConnection">
+<area shape="rect" id="node1" title="Close the TCP connection." alt="" coords="260,13,456,39"/>
+<area shape="rect" id="node2" href="$classClientHandler.html#a325999da116f2deb7caa7d1caf056fed" title="Requests disconnection from the server." alt="" coords="5,5,212,47"/>
+</map>

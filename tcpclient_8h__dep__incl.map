@@ -1,0 +1,6 @@
+<map id="tcpclient.h" name="tcpclient.h">
+<area shape="rect" id="node1" title="Header file for the TcpClient class." alt="" coords="91,5,181,32"/>
+<area shape="rect" id="node2" href="$ClientHandler_8h_source.html" title=" " alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node4" href="$tcpclient_8cpp.html" title="Implementation file for the TcpClient class." alt="" coords="153,80,258,107"/>
+<area shape="rect" id="node3" href="$AppManager_8h.html" title="Manages the application&#39;s UI and client handling in separate threads." alt="" coords="9,155,124,181"/>
+</map>

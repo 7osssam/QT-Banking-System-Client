@@ -1,0 +1,4 @@
+<map id="EmailValidationStrategy" name="EmailValidationStrategy">
+<area shape="rect" id="node1" title="Concrete validation strategy for emails." alt="" coords="5,145,184,237"/>
+<area shape="rect" id="node2" href="$classIValidationStrategy.html" title="Interface for validation strategies." alt="" coords="21,5,168,97"/>
+</map>

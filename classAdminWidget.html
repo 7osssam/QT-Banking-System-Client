@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>BankingSystem_Client: AdminWidget Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">BankingSystem_Client
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">This is a qt project for a banking system (Client side)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classAdminWidget.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
+<a href="#signals">Signals</a> &#124;
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classAdminWidget-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">AdminWidget Class Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Provides an interface for administrative tasks within the banking system.  
+ <a href="classAdminWidget.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="AdminWidget_8h_source.html">AdminWidget.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for AdminWidget:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget__inherit__graph.png" border="0" usemap="#aAdminWidget_inherit__map" alt="Inheritance graph"/></div>
+<map name="aAdminWidget_inherit__map" id="aAdminWidget_inherit__map">
+<area shape="rect" title="Provides an interface for administrative tasks within the banking system." alt="" coords="5,131,236,267"/>
+<area shape="rect" title=" " alt="" coords="81,5,160,83"/>
+</map>
+</div>
+<div class="dynheader">
+Collaboration diagram for AdminWidget:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget__coll__graph.png" border="0" usemap="#aAdminWidget_coll__map" alt="Collaboration graph"/></div>
+<map name="aAdminWidget_coll__map" id="aAdminWidget_coll__map">
+<area shape="rect" title="Provides an interface for administrative tasks within the banking system." alt="" coords="5,131,236,267"/>
+<area shape="rect" title=" " alt="" coords="81,5,160,83"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a70d2a259b7eff10abddfa37c38af09e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6">onDatabaseContentUpdated</a> (const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;data)</td></tr>
+<tr class="memdesc:a70d2a259b7eff10abddfa37c38af09e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot for handling updates to the database content.  <a href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6">More...</a><br /></td></tr>
+<tr class="separator:a70d2a259b7eff10abddfa37c38af09e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e558fb3e555fe9d226bd394ffd377c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c">onTransactionsFetched</a> (const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;transactions)</td></tr>
+<tr class="memdesc:a83e558fb3e555fe9d226bd394ffd377c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot for handling fetched transaction history.  <a href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c">More...</a><br /></td></tr>
+<tr class="separator:a83e558fb3e555fe9d226bd394ffd377c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a065362884e1a3423cf4a95d61833df1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f">onSuccessfullRequest</a> (QString message)</td></tr>
+<tr class="memdesc:a065362884e1a3423cf4a95d61833df1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot for handling successful request messages.  <a href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f">More...</a><br /></td></tr>
+<tr class="separator:a065362884e1a3423cf4a95d61833df1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada18070029b272ef46e64c0527ef15a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminWidget.html#ada18070029b272ef46e64c0527ef15a1">onFailedRequest</a> (QString message)</td></tr>
+<tr class="memdesc:ada18070029b272ef46e64c0527ef15a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot for handling failed request messages.  <a href="classAdminWidget.html#ada18070029b272ef46e64c0527ef15a1">More...</a><br /></td></tr>
+<tr class="separator:ada18070029b272ef46e64c0527ef15a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a1f2b985e090a371d4d02e542d30f3c2f"><td class="memItemLeft" align="right" valign="top"><a id="a1f2b985e090a371d4d02e542d30f3c2f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminWidget.html#a1f2b985e090a371d4d02e542d30f3c2f">logout</a> ()</td></tr>
+<tr class="memdesc:a1f2b985e090a371d4d02e542d30f3c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when the admin logs out. <br /></td></tr>
+<tr class="separator:a1f2b985e090a371d4d02e542d30f3c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3e4dad442cae1acff26333538480ebd5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAdminWidget.html#a3e4dad442cae1acff26333538480ebd5">AdminWidget</a> (QString email, QString first_name, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a3e4dad442cae1acff26333538480ebd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs an <a class="el" href="classAdminWidget.html" title="Provides an interface for administrative tasks within the banking system.">AdminWidget</a> object.  <a href="classAdminWidget.html#a3e4dad442cae1acff26333538480ebd5">More...</a><br /></td></tr>
+<tr class="separator:a3e4dad442cae1acff26333538480ebd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Provides an interface for administrative tasks within the banking system. </p>
+<p>The <a class="el" href="classAdminWidget.html" title="Provides an interface for administrative tasks within the banking system.">AdminWidget</a> class allows administrators to manage user accounts, view transaction history, and update settings. It includes tabs for managing the database, viewing transactions, and updating settings, as well as floating action buttons for user management tasks. The widget provides features for viewing database content, managing user accounts, and logging out of the application. The <a class="el" href="classAdminWidget.html" title="Provides an interface for administrative tasks within the banking system.">AdminWidget</a> communicates with the backend server through the <a class="el" href="classRequestManager.html" title="Manages the creation and dispatching of requests in the system.">RequestManager</a> to perform various operations.</p>
+<p>The widget consists of:</p><ul>
+<li>Database tab: Displays database content and allows users.</li>
+<li>Transactions tab: Shows transaction history for all bank accounts (from -&gt; to -&gt; amount).</li>
+<li>Settings tab: Allows the admin to update their email address and password. </li>
+</ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3e4dad442cae1acff26333538480ebd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e4dad442cae1acff26333538480ebd5">&#9670;&nbsp;</a></span>AdminWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AdminWidget::AdminWidget </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>email</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>first_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *&#160;</td>
+          <td class="paramname"><em>parent</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructs an <a class="el" href="classAdminWidget.html" title="Provides an interface for administrative tasks within the banking system.">AdminWidget</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">email</td><td>The email of the admin. </td></tr>
+    <tr><td class="paramname">first_name</td><td>The first name of the admin. </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent widget (default is nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a70d2a259b7eff10abddfa37c38af09e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d2a259b7eff10abddfa37c38af09e6">&#9670;&nbsp;</a></span>onDatabaseContentUpdated</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminWidget::onDatabaseContentUpdated </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot for handling updates to the database content. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>The updated database content. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44">UIManager::closeAdminWidget()</a>, and <a class="el" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db">UIManager::createAdminWidget()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_cgraph.png" border="0" usemap="#aclassAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_cgraph" alt=""/></div>
+<map name="aclassAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_cgraph" id="aclassAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_cgraph">
+<area shape="rect" title="Slot for handling updates to the database content." alt="" coords="5,5,252,47"/>
+<area shape="rect" href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="300,5,507,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_icgraph.png" border="0" usemap="#aclassAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_icgraph" alt=""/></div>
+<map name="aclassAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_icgraph" id="aclassAdminWidget_a70d2a259b7eff10abddfa37c38af09e6_icgraph">
+<area shape="rect" title="Slot for handling updates to the database content." alt="" coords="745,74,992,115"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="475,56,697,83"/>
+<area shape="rect" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,107,236,133"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="284,56,427,83"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="15,5,226,32"/>
+<area shape="rect" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,56,230,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ada18070029b272ef46e64c0527ef15a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada18070029b272ef46e64c0527ef15a1">&#9670;&nbsp;</a></span>onFailedRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminWidget::onFailedRequest </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot for handling failed request messages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The failure message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a9012bf1f97207eb755720a5eeb400f87">UIManager::onFailedNotification()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget_ada18070029b272ef46e64c0527ef15a1_icgraph.png" border="0" usemap="#aclassAdminWidget_ada18070029b272ef46e64c0527ef15a1_icgraph" alt=""/></div>
+<map name="aclassAdminWidget_ada18070029b272ef46e64c0527ef15a1_icgraph" id="aclassAdminWidget_ada18070029b272ef46e64c0527ef15a1_icgraph">
+<area shape="rect" title="Slot for handling failed request messages." alt="" coords="284,5,509,32"/>
+<area shape="rect" href="classUIManager.html#a9012bf1f97207eb755720a5eeb400f87" title="Displays a failed notification." alt="" coords="5,5,236,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a065362884e1a3423cf4a95d61833df1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a065362884e1a3423cf4a95d61833df1f">&#9670;&nbsp;</a></span>onSuccessfullRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminWidget::onSuccessfullRequest </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot for handling successful request messages. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>The success message. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6">onDatabaseContentUpdated()</a>, <a class="el" href="classUIManager.html#a11d8aaf700fa79d9492f9aca04a1f0e8">UIManager::onSuccessfullNotification()</a>, and <a class="el" href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c">onTransactionsFetched()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget_a065362884e1a3423cf4a95d61833df1f_icgraph.png" border="0" usemap="#aclassAdminWidget_a065362884e1a3423cf4a95d61833df1f_icgraph" alt=""/></div>
+<map name="aclassAdminWidget_a065362884e1a3423cf4a95d61833df1f_icgraph" id="aclassAdminWidget_a065362884e1a3423cf4a95d61833df1f_icgraph">
+<area shape="rect" title="Slot for handling successful request messages." alt="" coords="1040,106,1247,147"/>
+<area shape="rect" href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6" title="Slot for handling updates to the database content." alt="" coords="745,106,992,147"/>
+<area shape="rect" href="classUIManager.html#a11d8aaf700fa79d9492f9aca04a1f0e8" title="Displays a successful notification." alt="" coords="773,171,964,213"/>
+<area shape="rect" href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c" title="Slot for handling fetched transaction history." alt="" coords="761,41,976,82"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="475,31,697,57"/>
+<area shape="rect" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,107,236,133"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="284,31,427,57"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="15,5,226,32"/>
+<area shape="rect" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,56,230,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a83e558fb3e555fe9d226bd394ffd377c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83e558fb3e555fe9d226bd394ffd377c">&#9670;&nbsp;</a></span>onTransactionsFetched</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdminWidget::onTransactionsFetched </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>transactions</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Slot for handling fetched transaction history. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transactions</td><td>The fetched transactions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">Referenced by <a class="el" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44">UIManager::closeAdminWidget()</a>, and <a class="el" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db">UIManager::createAdminWidget()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_cgraph.png" border="0" usemap="#aclassAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_cgraph" alt=""/></div>
+<map name="aclassAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_cgraph" id="aclassAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_cgraph">
+<area shape="rect" title="Slot for handling fetched transaction history." alt="" coords="5,5,220,47"/>
+<area shape="rect" href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="268,5,475,47"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_icgraph.png" border="0" usemap="#aclassAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_icgraph" alt=""/></div>
+<map name="aclassAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_icgraph" id="aclassAdminWidget_a83e558fb3e555fe9d226bd394ffd377c_icgraph">
+<area shape="rect" title="Slot for handling fetched transaction history." alt="" coords="745,74,960,115"/>
+<area shape="rect" href="classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="475,56,697,83"/>
+<area shape="rect" href="classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,107,236,133"/>
+<area shape="rect" href="classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="284,56,427,83"/>
+<area shape="rect" href="classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="15,5,226,32"/>
+<area shape="rect" href="classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,56,230,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="AdminWidget_8h_source.html">AdminWidget.h</a></li>
+<li>AdminWidget.cpp</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classAdminWidget.html">AdminWidget</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<map id="UIManager::responseReady" name="UIManager::responseReady">
+<area shape="rect" id="node1" title="Slot to handle responses from the server." alt="" coords="5,46,207,73"/>
+<area shape="rect" id="node2" href="$classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="255,46,512,73"/>
+<area shape="rect" id="node3" href="$classResponseManager.html#aa8a0c60f8917fde5976be069ea30df7f" title="Retrieves the message from the response." alt="" coords="560,5,795,47"/>
+<area shape="rect" id="node4" href="$classResponseManager.html#aebf00d18670f9a73086789ca9449b48d" title="Checks the status value in the response." alt="" coords="560,71,795,112"/>
+</map>

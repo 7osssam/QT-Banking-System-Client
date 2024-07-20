@@ -1,0 +1,4 @@
+<map id="UIManager.h" name="UIManager.h">
+<area shape="rect" id="node1" title="Manages the user interface of the application." alt="" coords="11,5,115,32"/>
+<area shape="rect" id="node2" href="$AppManager_8h.html" title="Manages the application&#39;s UI and client handling in separate threads." alt="" coords="5,80,120,107"/>
+</map>

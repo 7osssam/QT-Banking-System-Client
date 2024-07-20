@@ -1,0 +1,10 @@
+<map id="ResponseManager::DatabaseFetched" name="ResponseManager::DatabaseFetched">
+<area shape="rect" id="node1" title="Signal emitted when the database content is fetched." alt="" coords="839,99,1051,141"/>
+<area shape="rect" id="node2" href="$classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="551,56,773,83"/>
+<area shape="rect" id="node5" href="$classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,107,236,133"/>
+<area shape="rect" id="node7" href="$classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="533,157,791,184"/>
+<area shape="rect" id="node3" href="$classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="313,56,456,83"/>
+<area shape="rect" id="node4" href="$classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="15,5,226,32"/>
+<area shape="rect" id="node6" href="$classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="11,56,230,83"/>
+<area shape="rect" id="node8" href="$classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="284,157,485,184"/>
+</map>
