@@ -13,12 +13,23 @@ file(GLOB APP_SOURCES
   "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp"
   "${CMAKE_CURRENT_SOURCE_DIR}/*.cc")
 
+  # Collect Module Resource files *.ui *.qrc
+file(GLOB LIB_RESOURCES
+  "${CMAKE_SOURCE_DIR}/resources/*.ui"
+  "${CMAKE_SOURCE_DIR}/resources/*.rc"
+  "${CMAKE_SOURCE_DIR}/resources/*.qrc")
+
+file(GLOB LIB_EXTRA
+  "${CMAKE_SOURCE_DIR}/resources/space.gif")
+
+qt_add_resources(RESOURCES ${LIB_RESOURCES})
+
 # Create named folders for the sources within the project
 source_group("header" FILES ${APP_HEADERS})
 source_group("src" FILES ${APP_SOURCES})
 
 # Set Properties->General->Configuration Type to Dynamic Library (.dll/.so/.dylib)
-add_executable(${APPNAME} ${APP_HEADERS} ${APP_SOURCES}) # for dynamic library use SHARED
+add_executable(${APPNAME} ${APP_HEADERS} ${APP_SOURCES} ${RESOURCES})
 
 target_include_directories(${APPNAME} PUBLIC
 						   ${CMAKE_CURRENT_SOURCE_DIR}
