@@ -20,7 +20,7 @@ file(GLOB LIB_RESOURCES
   "${CMAKE_SOURCE_DIR}/resources/*.qrc")
 
 file(GLOB LIB_EXTRA
-  "${CMAKE_SOURCE_DIR}/resources/space.gif")
+  "${CMAKE_SOURCE_DIR}/resources/background.gif")
 
 qt_add_resources(RESOURCES ${LIB_RESOURCES})
 
