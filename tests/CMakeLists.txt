@@ -3,7 +3,7 @@
 
 
 #============================================================================
-# Alternatively, We can use FetchContent module to download GoogleTest  
+# Alternatively, We can use FetchContent module to download GoogleTest
 #============================================================================
 ## Include FetchContent module
 # include(FetchContent)
@@ -28,7 +28,7 @@ add_git_submodule(tests/lib/googletest https://github.com/google/googletest)
 # =============================================================================
 
 
-#add_subdirectory(test_suite)  # Test suite Template 
+add_subdirectory(ResponseManager)  # Test suite Template
 
 ############# etc....
 
