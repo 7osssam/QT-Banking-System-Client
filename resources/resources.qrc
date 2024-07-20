@@ -1,0 +1,39 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource>
+    <file>gifs/space.gif</file>
+    <file>icons/bank.png</file>
+	<file>fonts/FiraSans-Bold.ttf</file>
+	<file>fonts/FiraSans-BoldItalic.ttf</file>
+	<file>fonts/FiraSans-Book.ttf</file>
+	<file>fonts/FiraSans-BookItalic.ttf</file>
+	<file>fonts/FiraSans-Eight.ttf</file>
+	<file>fonts/FiraSans-EightItalic.ttf</file>
+	<file>fonts/FiraSans-ExtraBold.ttf</file>
+	<file>fonts/FiraSans-ExtraBoldItalic.ttf</file>
+	<file>fonts/FiraSans-ExtraLight.ttf</file>
+	<file>fonts/FiraSans-ExtraLightItalic.ttf</file>
+	<file>fonts/FiraSans-Four.ttf</file>
+	<file>fonts/FiraSans-FourItalic.ttf</file>
+	<file>fonts/FiraSans-Hair.ttf</file>
+	<file>fonts/FiraSans-HairItalic.ttf</file>
+	<file>fonts/FiraSans-Heavy.ttf</file>
+	<file>fonts/FiraSans-HeavyItalic.ttf</file>
+	<file>fonts/FiraSans-Italic.ttf</file>
+	<file>fonts/FiraSans-Light.ttf</file>
+	<file>fonts/FiraSans-LightItalic.ttf</file>
+	<file>fonts/FiraSans-Medium.ttf</file>
+	<file>fonts/FiraSans-MediumItalic.ttf</file>
+	<file>fonts/FiraSans-Regular.ttf</file>
+	<file>fonts/FiraSans-SemiBold.ttf</file>
+	<file>fonts/FiraSans-SemiBoldItalic.ttf</file>
+	<file>fonts/FiraSans-Thin.ttf</file>
+	<file>fonts/FiraSans-ThinItalic.ttf</file>
+	<file>fonts/FiraSans-Two.ttf</file>
+	<file>fonts/FiraSans-TwoItalic.ttf</file>
+	<file>fonts/FiraSans-Ultra.ttf</file>
+	<file>fonts/FiraSans-UltraItalic.ttf</file>
+	<file>fonts/FiraSans-UltraLight.ttf</file>
+	<file>fonts/FiraSans-UltraLightItalic.ttf</file>
+</qresource>
+</RCC>
