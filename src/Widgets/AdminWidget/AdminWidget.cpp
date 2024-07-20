@@ -1,4 +1,4 @@
-#include "adminwidget.h"
+#include "AdminWidget.h"
 #include <QHeaderView>
 #include <QApplication>
 #include <QGuiApplication>
