@@ -41,11 +41,11 @@ target_include_directories(${LIBNAME} PUBLIC
 						   ${CMAKE_SOURCE_DIR}/src/Widgets/AdminWidget
 						   ${CMAKE_SOURCE_DIR}/src/Widgets/UserWidget
 						   ${CMAKE_SOURCE_DIR}/src/Client
-						   ${CMAKE_SOURCE_DIR}/src/RequestManager
+						   ${CMAKE_SOURCE_DIR}/src/requestModule
 						   )
 ############# etc.... add any other include directories here
 
-target_link_libraries(${LIBNAME} PRIVATE ${QT_LIBRARIES} LoginWidget AdminWidget UserWidget qt-material-widgets Client RequestManager)
+target_link_libraries(${LIBNAME} PRIVATE ${QT_LIBRARIES} LoginWidget AdminWidget UserWidget qt-material-widgets Client requestModule)
 ############# etc.... add any other libraries here
 
 target_sources(${LIBNAME} PRIVATE ${LIB_RESOURCES} ${LIB_EXTRA})

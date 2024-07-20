@@ -6,9 +6,9 @@ UIManager::UIManager(QObject* parent) :
 {
 	responseManager = new ResponseManager(this);
 
-	requestFactory = RequestFactory::getInstance(this);
+	requestManager = RequestManager::getInstance(this);
 
-	connect(requestFactory, &RequestFactory::makeRequest, this, &UIManager::requestReady);
+	connect(requestManager, &RequestManager::makeRequest, this, &UIManager::requestReady);
 
 	connect(responseManager, &ResponseManager::userloginSuccess, this, &UIManager::createUserWidget);
 	connect(responseManager, &ResponseManager::adminLoginSuccess, this, &UIManager::createAdminWidget);
@@ -53,28 +53,21 @@ void UIManager::logout()
 	// Disconnect signals to avoid any pending connections.
 	if (userWidget != nullptr)
 	{
-		disconnect(adminWidget, &AdminWidget::logout, this, &UIManager::logout);
-		disconnect(responseManager, &ResponseManager::TransactionsFetched, userWidget,
-				   &UserWidget::onTransactionsFetched);
-		disconnect(responseManager, &ResponseManager::BalanceFetched, userWidget, &UserWidget::onBalanceFetched);
 		closeUserWidget();
 	}
 	if (adminWidget != nullptr)
 	{
-		disconnect(adminWidget, &AdminWidget::logout, this, &UIManager::logout);
-		disconnect(responseManager, &ResponseManager::TransactionsFetched, adminWidget,
-				   &AdminWidget::onTransactionsFetched);
-		disconnect(responseManager, &ResponseManager::DatabaseFetched, adminWidget,
-				   &AdminWidget::onDatabaseContentUpdated);
 		closeAdminWidget();
 	}
+
+	loginWidget->clearFields();
+
 	stackedWidget->setCurrentWidget(loginWidget);
 }
 void UIManager::createLoginWidget()
 {
 	if (loginWidget == nullptr)
 	{
-		//loginWidget = LoginWidget::getInstance(mainWindow);
 		loginWidget = new LoginWidget(mainWindow);
 		connect(loginWidget, &LoginWidget::connectToServer, this, &UIManager::connectToTheServer);
 		connect(loginWidget, &LoginWidget::disconnectFromServer, this, &UIManager::disconnectFromTheServer);
@@ -153,6 +146,11 @@ void UIManager::onFailedNotification(QString message)
 
 void UIManager::closeAdminWidget()
 {
+	disconnect(adminWidget, &AdminWidget::logout, this, &UIManager::logout);
+	disconnect(responseManager, &ResponseManager::TransactionsFetched, adminWidget,
+			   &AdminWidget::onTransactionsFetched);
+	disconnect(responseManager, &ResponseManager::DatabaseFetched, adminWidget, &AdminWidget::onDatabaseContentUpdated);
+
 	stackedWidget->removeWidget(adminWidget);
 	adminWidget->deleteLater();
 	adminWidget = nullptr;
@@ -160,6 +158,10 @@ void UIManager::closeAdminWidget()
 
 void UIManager::closeUserWidget()
 {
+	disconnect(adminWidget, &AdminWidget::logout, this, &UIManager::logout);
+	disconnect(responseManager, &ResponseManager::TransactionsFetched, userWidget, &UserWidget::onTransactionsFetched);
+	disconnect(responseManager, &ResponseManager::BalanceFetched, userWidget, &UserWidget::onBalanceFetched);
+
 	stackedWidget->removeWidget(userWidget);
 	userWidget->deleteLater();
 	userWidget = nullptr;

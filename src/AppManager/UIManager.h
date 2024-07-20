@@ -11,7 +11,7 @@
 #include "LoginWidget.h"
 #include "AdminWidget.h"
 #include "UserWidget.h"
-#include "RequestFactory.h"
+#include "RequestManager.h"
 #include "ResponseManager.h"
 
 /**
@@ -36,7 +36,7 @@ private:
 	QString			 role;			  /**< Role of the logged-in user. */
 	QString			 message;		  /**< Message to be displayed. */
 	ResponseManager* responseManager; /**< Handles server responses. */
-	RequestFactory*	 requestFactory;  /**< Creates requests to be sent to the server. */
+	RequestManager*	 requestManager;  /**< Creates requests to be sent to the server. */
 
 	/**
      * @brief Private constructor for the UIManager class.
