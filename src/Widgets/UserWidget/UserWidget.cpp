@@ -13,7 +13,7 @@
 
 UserWidget::UserWidget(QString email, QString first_name, QString account_number, QString balance, QWidget* parent) :
 	QWidget(parent), email_(email), first_name_(first_name), account_number_(account_number), balance_(balance),
-	requestFactory(RequestFactory::getInstance(this))
+	requestManager(RequestManager::getInstance(this))
 {
 	// set object name
 	setObjectName("UserWidget");
@@ -50,6 +50,7 @@ UserWidget::UserWidget(QString email, QString first_name, QString account_number
 	notificationSnackbar = new QtMaterialSnackbar(this);
 	notificationSnackbar->setAutoHideDuration(3000);   // Auto-hide after 3 seconds
 	notificationSnackbar->setClickToDismissMode(true); // Allow click to dismiss
+	notificationSnackbar->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
 
 	connect(tabs, &QtMaterialTabs::currentChanged, tabContents, &QStackedWidget::setCurrentIndex);
 
@@ -74,6 +75,7 @@ QWidget* UserWidget::createHomeTab()
 
 	welcomeLabel =
 		new QtMaterialFlatButton("Hello " + first_name_ + ", " + account_number_, Material::ButtonTextPrimary, homeTab);
+	welcomeLabel->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
 	layout->addWidget(welcomeLabel);
 
 	transactionsTable = new QTableWidget(homeTab);
@@ -105,21 +107,27 @@ QWidget* UserWidget::createTransferTab()
 	toAccountField->setPlaceholderText("To Account");
 	toAccountField->setEchoMode(QLineEdit::Normal);
 	toAccountField->setValidator(new QIntValidator(this));
+	toAccountField->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
 
 	toEmailField = new QtMaterialTextField(this);
 	toEmailField->setPlaceholderText("To Email");
 	toEmailField->setEchoMode(QLineEdit::Normal);
 	const QRegularExpression emailPattern(R"((^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$))");
 	toEmailField->setValidator(new QRegularExpressionValidator(emailPattern, this));
+	toEmailField->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
 
 	amountField = new QtMaterialTextField(this);
 	amountField->setLabelText("Amount");
 	amountField->setEchoMode(QLineEdit::Normal);
 	amountField->setValidator(new QIntValidator(0, 999999999, this));
+	amountField->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
+	amountField->setLabelColor(QColor("#222831"));
 
 	transferButton = new QtMaterialFlatButton("Transfer", Material::ButtonTextSecondary, this);
 
 	transferButton->setDisabled(true); // Initially disabled until all fields are filled
+	transferButton->setOverlayStyle(Material::GrayOverlay);
+	transferButton->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
 
 	// Create a horizontal layout for toAccountField, "OR" label, and toEmailField
 	QHBoxLayout* toAccountEmailLayout = new QHBoxLayout();
@@ -128,6 +136,7 @@ QWidget* UserWidget::createTransferTab()
 	QLabel* orLabel = new QLabel("OR", this);
 
 	orLabel->setAlignment(Qt::AlignCenter); // Center align the "OR" label
+	orLabel->setFont(QFont("Fira Sans", 20, QFont::ExtraBold));
 	toAccountEmailLayout->addWidget(orLabel);
 
 	toAccountEmailLayout->addWidget(toEmailField);
@@ -160,6 +169,7 @@ QWidget* UserWidget::createSettingsTab()
 	updateEmailButton->setBackgroundColor(QColor("#222831"));
 	updateEmailButton->setRole(Material::Primary);
 	updateEmailButton->setOverlayStyle(Material::TintedOverlay);
+	updateEmailButton->setFont(QFont("Fira Sans", 20, QFont::ExtraBold));
 	connect(updateEmailButton, &QPushButton::clicked, this, &UserWidget::onUpdateEmail);
 	layout->addStretch(1);
 
@@ -172,6 +182,7 @@ QWidget* UserWidget::createSettingsTab()
 	updatePasswordButton->setBackgroundColor(QColor("#222831"));
 	updatePasswordButton->setRole(Material::Primary);
 	updatePasswordButton->setOverlayStyle(Material::TintedOverlay);
+	updatePasswordButton->setFont(QFont("Fira Sans", 20, QFont::ExtraBold));
 	connect(updatePasswordButton, &QPushButton::clicked, this, &UserWidget::onUpdatePassword);
 	layout->addStretch(1);
 	layout->addWidget(updatePasswordButton);
@@ -184,8 +195,9 @@ QWidget* UserWidget::createSettingsTab()
 
 	logoutButton->setRole(Material::Primary);
 	logoutButton->setOverlayStyle(Material::TintedOverlay);
+	logoutButton->setFont(QFont("Fira Sans", 20, QFont::Light));
 
-	logoutButton->setIcon(QtMaterialTheme::icon("action", "exit_to_app"));
+		logoutButton->setIcon(QtMaterialTheme::icon("action", "exit_to_app"));
 	logoutButton->setCornerRadius(20);
 
 	connect(logoutButton, &QPushButton::clicked, this, &UserWidget::onLogoutClicked);
@@ -198,7 +210,7 @@ QWidget* UserWidget::createSettingsTab()
 	QVBoxLayout* dialogWidgetLayout = new QVBoxLayout(dialogWidget);
 
 	QLabel* dialogLabel = new QLabel("Are you sure you want to logout?", dialogWidget);
-
+	dialogLabel->setFont(QFont("Fira Sans", 20, QFont::Light));
 	dialogLabel->setAlignment(Qt::AlignCenter);
 	dialogLabel->setStyleSheet("font-size: 16px; color: #222831;");
 
@@ -255,7 +267,7 @@ void UserWidget::onUpdateEmail()
 			return;
 		}
 
-		requestFactory->createRequest(RequestFactory::UpdateEmail, data);
+		requestManager->createRequest(RequestManager::UpdateEmail, data);
 	}
 }
 
@@ -287,7 +299,7 @@ void UserWidget::onUpdatePassword()
 		}
 
 		// Send request to update password
-		requestFactory->createRequest(RequestFactory::UpdatePassword, data);
+		requestManager->createRequest(RequestManager::UpdatePassword, data);
 	}
 }
 
@@ -311,7 +323,7 @@ void UserWidget::updateTransactionsTable()
 	// Send the request to get the transaction history
 	if (tabContents->currentIndex() == 0)
 	{
-		requestFactory->createRequest(RequestFactory::GetTransactionsHistory, QVariantMap({{"email", email_}}));
+		requestManager->createRequest(RequestManager::GetTransactionsHistory, QVariantMap({{"email", email_}}));
 	}
 }
 
@@ -355,8 +367,8 @@ void UserWidget::onBalanceLabelClicked()
 {
 	// Send the request to get the balance
 	QVariantMap data;
-	data["account_number"] = account_number_;
-	requestFactory->createRequest(RequestFactory::GetBalance, data);
+	data["account_number"] = account_number_.toInt();
+	requestManager->createRequest(RequestManager::GetBalance, data);
 }
 
 void UserWidget::onBalanceFetched(const QString balance)
@@ -432,20 +444,20 @@ void UserWidget::onTransferButtonClicked()
 	{
 		data["to_email"] = "";
 		data["to_account_number"] = toAccount.toInt();
-		requestFactory->createRequest(RequestFactory::MakeTransaction, data);
+		requestManager->createRequest(RequestManager::MakeTransaction, data);
 	}
 	else if (!toEmail.isEmpty())
 	{
 		data["to_email"] = toEmail;
 		data["to_account_number"] = -1;
-		requestFactory->createRequest(RequestFactory::MakeTransaction, data);
+		requestManager->createRequest(RequestManager::MakeTransaction, data);
 	}
 }
 
 void UserWidget::onSuccessfullRequest(QString message)
 {
 	// show snackbar message
-	notificationSnackbar->setBackgroundColor(QColor(25, 255, 25));
+	notificationSnackbar->setBackgroundColor(QColor(0, 200, 0, 255)); // Solid green
 
 	notificationSnackbar->addMessage(message);
 }
@@ -453,7 +465,7 @@ void UserWidget::onSuccessfullRequest(QString message)
 void UserWidget::onFailedRequest(QString message)
 {
 	// show snackbar message
-	notificationSnackbar->setBackgroundColor(QColor(255, 25, 25));
+	notificationSnackbar->setBackgroundColor(QColor(200, 0, 0, 255)); // Solid red
 
 	notificationSnackbar->addMessage(message);
 }
