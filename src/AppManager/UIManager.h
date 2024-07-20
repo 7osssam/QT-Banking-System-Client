@@ -8,7 +8,7 @@
 #include <QLabel>
 #include <QJsonDocument>
 #include <QMessageBox>
-#include "LoginWidget.h"
+#include "loginwidget.h"
 #include "AdminWidget.h"
 #include "UserWidget.h"
 #include "RequestManager.h"
