@@ -6,7 +6,7 @@
  * for managing client requests and responses using the TcpClient class.
  */
 
-#include "clienthandler.h"
+#include "ClientHandler.h"
 #include <QDebug>
 
 ClientHandler::ClientHandler(QObject* parent) : QObject(parent), tcpClient(nullptr)
