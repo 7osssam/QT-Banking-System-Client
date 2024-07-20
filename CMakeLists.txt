@@ -64,7 +64,7 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 #==============================================================================
 # Project Options
 #==============================================================================
-option(ENABLE_TESTS "Enable All Tests" OFF)
+option(ENABLE_TESTS "Enable All Tests" ON)
 option(ENABLE_COVERAGE "Enable Coverage" ON) # TODO: Adding code coverage Support for this template
 
 option(ENABLE_WARNINGS "Enable to add warnings to a target." OFF)
@@ -98,22 +98,6 @@ include(QTModules)
 foreach(library IN LISTS MODULES)
     find_package(${library} REQUIRED)
 endforeach()
-
-## Link libraries
-#foreach(library IN LISTS MODULES)
-#    target_link_libraries(${PROJECT_NAME} PRIVATE ${library})
-#    if(${PROJECT_NAME}_BUILD_EXECUTABLE)
-#        target_link_libraries(${PROJECT_NAME}_LIB PRIVATE ${library})
-#    endif()
-#endforeach()
-
-## Link Qt libraries
-#foreach(library IN LISTS QT_COMPONENTS)
-#    target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::${library})
-#    if(${PROJECT_NAME}_BUILD_EXECUTABLE)
-#        target_link_libraries(${PROJECT_NAME}_LIB PRIVATE Qt6::${library})
-#    endif()
-#endforeach()
 
 
 # Find the appropriate Qt version
