@@ -1,7 +1,7 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
 <qresource>
-    <file>gifs/space.gif</file>
+    <file>gifs/background.gif</file>
     <file>icons/bank.png</file>
 	<file>fonts/FiraSans-Bold.ttf</file>
 	<file>fonts/FiraSans-BoldItalic.ttf</file>
