@@ -16,7 +16,7 @@ AdminWidget::AdminWidget(QString email, QString first_name, QWidget* parent) :
 	QWidget(parent), admin_email_{email}, admin_first_name_{first_name}, notificationSnackbar{nullptr}, tabs{nullptr},
 	tabContents{nullptr}, databaseTable{nullptr}, transactionsTable{nullptr}, updateUserFab{nullptr},
 	deleteUserFab{nullptr}, createNewUserFab{nullptr}, selectedUserData{}, welcomeLabel{nullptr}, logoutDialog{nullptr},
-	requestFactory{RequestFactory::getInstance()}
+	requestManager{RequestManager::getInstance()}
 {
 	// set object name
 	setObjectName("AdminWidget");
@@ -54,6 +54,7 @@ AdminWidget::AdminWidget(QString email, QString first_name, QWidget* parent) :
 	notificationSnackbar = new QtMaterialSnackbar(this);
 	notificationSnackbar->setAutoHideDuration(3000);   // Auto-hide after 3 seconds
 	notificationSnackbar->setClickToDismissMode(true); // Allow click to dismiss
+	notificationSnackbar->setFont(QFont("Fira Sans", 16, QFont::ExtraBold));
 
 	connect(tabs, &QtMaterialTabs::currentChanged, tabContents, &QStackedWidget::setCurrentIndex);
 
@@ -114,6 +115,7 @@ QWidget* AdminWidget::createSettingsTab()
 	updateEmailButton->setBackgroundColor(QColor("#222831"));
 	updateEmailButton->setRole(Material::Primary);
 	updateEmailButton->setOverlayStyle(Material::TintedOverlay);
+	updateEmailButton->setFont(QFont("Fira Sans", 20, QFont::ExtraBold));
 	connect(updateEmailButton, &QPushButton::clicked, this, &AdminWidget::onUpdateEmail);
 	layout->addStretch(1);
 	layout->addWidget(updateEmailButton);
@@ -124,6 +126,7 @@ QWidget* AdminWidget::createSettingsTab()
 	updatePasswordButton->setBackgroundColor(QColor("#222831"));
 	updatePasswordButton->setRole(Material::Primary);
 	updatePasswordButton->setOverlayStyle(Material::TintedOverlay);
+	updatePasswordButton->setFont(QFont("Fira Sans", 20, QFont::ExtraBold));
 	connect(updatePasswordButton, &QPushButton::clicked, this, &AdminWidget::onUpdatePassword);
 	layout->addStretch(1);
 
@@ -137,6 +140,7 @@ QWidget* AdminWidget::createSettingsTab()
 	logoutButton->setOverlayStyle(Material::TintedOverlay);
 	logoutButton->setIcon(QtMaterialTheme::icon("action", "exit_to_app"));
 	logoutButton->setCornerRadius(20);
+	logoutButton->setFont(QFont("Fira Sans", 20, QFont::Light));
 	connect(logoutButton, &QPushButton::clicked, this, &AdminWidget::onLogoutClicked);
 	layout->addStretch(4);
 	layout->addWidget(logoutButton);
@@ -147,6 +151,7 @@ QWidget* AdminWidget::createSettingsTab()
 	QVBoxLayout* dialogWidgetLayout = new QVBoxLayout(dialogWidget);
 
 	QLabel* dialogLabel = new QLabel("Are you sure you want to logout?", dialogWidget);
+	dialogLabel->setFont(QFont("Fira Sans", 20, QFont::Light));
 	dialogLabel->setAlignment(Qt::AlignCenter);
 	dialogLabel->setStyleSheet("font-size: 16px; color: #222831;");
 	dialogWidgetLayout->addWidget(dialogLabel);
@@ -202,7 +207,7 @@ void AdminWidget::onUpdateEmail()
 			return;
 		}
 
-		requestFactory->createRequest(RequestFactory::UpdateEmail, data);
+		requestManager->createRequest(RequestManager::UpdateEmail, data);
 	}
 }
 
@@ -234,7 +239,7 @@ void AdminWidget::onUpdatePassword()
 		}
 
 		// Send request to update password
-		requestFactory->createRequest(RequestFactory::UpdatePassword, data);
+		requestManager->createRequest(RequestManager::UpdatePassword, data);
 	}
 }
 
@@ -328,13 +333,14 @@ void AdminWidget::onTransactionsFetched(const QList<QMap<QString, QString>>& tra
 void AdminWidget::onSuccessfullRequest(QString message)
 {
 	// show snackbar message
-	notificationSnackbar->setBackgroundColor(QColor(25, 255, 25));
+	notificationSnackbar->setBackgroundColor(QColor(0, 200, 0, 255)); // Solid green
+
 	notificationSnackbar->addMessage(message);
 }
 
 void AdminWidget::onFailedRequest(QString message)
 {
-	notificationSnackbar->setBackgroundColor(QColor(255, 25, 25));
+	notificationSnackbar->setBackgroundColor(QColor(200, 0, 0, 255)); // Solid red
 
 	notificationSnackbar->addMessage(message);
 }
@@ -346,7 +352,7 @@ void AdminWidget::updateDatabaseTable()
 		QVariantMap data;
 		data.insert("email", admin_email_);
 
-		requestFactory->createRequest(RequestFactory::GetDatabase, data);
+		requestManager->createRequest(RequestManager::GetDatabase, data);
 
 		createNewUserFab->show();
 		updateUserFab->show();
@@ -367,7 +373,7 @@ void AdminWidget::updateTransactionsTable()
 		QVariantMap data;
 		data.insert("email", admin_email_);
 
-		requestFactory->createRequest(RequestFactory::GetTransactionsHistory, data);
+		requestManager->createRequest(RequestManager::GetTransactionsHistory, data);
 	}
 }
 
@@ -430,14 +436,14 @@ void AdminWidget::onUpdateUserClicked()
 
 			data.insert("newData", newData);
 
-			requestFactory->createRequest(RequestFactory::UpdateUser, data);
+			requestManager->createRequest(RequestManager::UpdateUser, data);
 		}
 		else if (selectedUserData.value("role") == "user")
 		{
 			data.insert("account_number", newData.value("account_number").toInt());
 			data.insert("newData", newData);
 
-			requestFactory->createRequest(RequestFactory::UpdateUser, data);
+			requestManager->createRequest(RequestManager::UpdateUser, data);
 		}
 	}
 }
@@ -461,7 +467,7 @@ void AdminWidget::onCreateNewUserClicked()
 			qDebug() << i.key() << ": " << i.value();
 		}
 
-		requestFactory->createRequest(RequestFactory::CreateNewUser, data);
+		requestManager->createRequest(RequestManager::CreateNewUser, data);
 	}
 }
 
@@ -490,7 +496,7 @@ void AdminWidget::onDeleteUserClicked()
 		data.insert("email", admin_email_);
 		data.insert("account_number", selectedUserData.value("account_number"));
 
-		requestFactory->createRequest(RequestFactory::DeleteUser, data);
+		requestManager->createRequest(RequestManager::DeleteUser, data);
 	}
 }
 
