@@ -1,42 +1,515 @@
 @startuml
 title This Diagram shows the relationship between all system components
 package [src] as C_0009392701334512935369 {
-package [BankAccount] as C_0001617240256891923844 {
-class "BankAccount" as C_0009984192897324832466
-class C_0009984192897324832466 [[classBankAccount.html{BankAccount}]] {
-+BankAccount(int accountNumber, const std::string & accountHolder, const std::string & accountType, double accountBalance) : void [[[{BankAccount}]]]
+package [requestModule] as C_0007249139127462911352 {
+class "RequestManager" as C_0017581648629732253705
+class C_0017581648629732253705 [[classRequestManager.html{RequestManager}]] {
+-RequestManager(QObject * parent = nullptr) : void [[[{RequestManager}]]]
++RequestManager(const RequestManager &) = deleted : void [[[{RequestManager}]]]
 ..
-+deposit(double amount) : void [[[{deposit}]]]
-+displayAccountInfo() const : void [[[{displayAccountInfo}]]]
-+getAccountBalance() const : double [[[{getAccountBalance}]]]
-+getAccountHolder() const : const std::string & [[[{getAccountHolder}]]]
-+getAccountNumber() const : int [[[{getAccountNumber}]]]
-+getAccountType() const : const std::string & [[[{getAccountType}]]]
-+withdraw(double amount) : bool [[[{withdraw}]]]
-__
--accountBalance : double [[[{accountBalance}]]]
--accountHolder : std::string [[[{accountHolder}]]]
--accountNumber : int [[[{accountNumber}]]]
--accountType : std::string [[[{accountType}]]]
-}
-}
-package [Bank] as C_0002394840416120061501 {
-class "Bank" as C_0013925658533498293399
-class C_0013925658533498293399 [[classBank.html{Bank}]] {
-+Bank() : void [[[{Bank}]]]
-+Bank(Bank && obj) : void [[[{Bank}]]]
++operator=(const RequestManager &) = deleted : void [[[{operator=}]]]
 ..
-+SortAccounts() : void [[[{SortAccounts}]]]
-+addAccount(const BankAccount & account) : void [[[{addAccount}]]]
-+displayAllAccounts() const : void [[[{displayAllAccounts}]]]
-+getAccounts() const : std::vector<BankAccount> [[[{getAccounts}]]]
-+getTotalBalance() const : double [[[{getTotalBalance}]]]
++createRequest(AvailableRequests requestType, QVariantMap data) : void [[[{createRequest}]]]
+{static} +getInstance(QObject * parent = nullptr) : RequestManager * [[[{getInstance}]]]
++makeRequest(QJsonObject Data) : void [[[{makeRequest}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
 __
--accounts : std::vector<BankAccount> [[[{accounts}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+}
+enum "RequestManager##AvailableRequests" as C_0014397068199454785176
+enum C_0014397068199454785176 [[enumRequestManager##AvailableRequests.html{RequestManager##AvailableRequests}]] {
+Login
+GetAccountnumber
+GetBalance
+GetTransactionsHistory
+MakeTransaction
+TransferAmount
+GetDatabase
+CreateNewUser
+DeleteUser
+UpdateUser
+UserInit
+UpdateEmail
+UpdatePassword
+JsonParseError
+}
+class "ResponseManager" as C_0000524940392191554637
+class C_0000524940392191554637 [[classResponseManager.html{ResponseManager}]] {
++ResponseManager(QObject * parent = nullptr) : void [[[{ResponseManager}]]]
+..
++BalanceFetched(QString balance) : void [[[{BalanceFetched}]]]
++ConnectionResponse(bool status) : void [[[{ConnectionResponse}]]]
++DatabaseFetched(const QList<QMap<QString,QString>> & databaseContent) : void [[[{DatabaseFetched}]]]
++FailedRequest(QString message) : void [[[{FailedRequest}]]]
++SuccessfullRequest(QString message) : void [[[{SuccessfullRequest}]]]
++TransactionsFetched(const QList<QMap<QString,QString>> & transactions) : void [[[{TransactionsFetched}]]]
++adminLoginSuccess(QString email, QString first_name) : void [[[{adminLoginSuccess}]]]
++getResponseMessage(QJsonObject Data) : QString [[[{getResponseMessage}]]]
++getResponseStatus(QJsonObject Data) : bool [[[{getResponseStatus}]]]
++handleResponse(QJsonObject Data) : void [[[{handleResponse}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
++userloginSuccess(QString email, QString first_name, QString account_number, QString balance) : void [[[{userloginSuccess}]]]
+__
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+}
+enum "ResponseManager##AvailableRequests" as C_0015588328822049200852
+enum C_0015588328822049200852 [[enumResponseManager##AvailableRequests.html{ResponseManager##AvailableRequests}]] {
+Login
+GetAccountnumber
+GetBalance
+GetTransactionsHistory
+MakeTransaction
+TransferAmount
+GetDatabase
+CreateNewUser
+DeleteUser
+UpdateUser
+UserInit
+UpdateEmail
+UpdatePassword
+JsonParseError
+Connection
+}
+}
+package [Widgets] as C_0014176827974556851772 {
+package [AdminWidget] as C_0010347011073788372111 {
+class "AdminWidget" as C_0005551684386604303784
+class C_0005551684386604303784 [[classAdminWidget.html{AdminWidget}]] {
++AdminWidget(QString email, QString first_name, QWidget * parent = nullptr) : void [[[{AdminWidget}]]]
+..
+-createDatabaseTab() : QWidget * [[[{createDatabaseTab}]]]
+-createSettingsTab() : QWidget * [[[{createSettingsTab}]]]
+-createTabLayout() : QVBoxLayout * [[[{createTabLayout}]]]
+-createTransactionsTab() : QWidget * [[[{createTransactionsTab}]]]
++logout() : void [[[{logout}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
+-onCreateNewUserClicked() : void [[[{onCreateNewUserClicked}]]]
++onDatabaseContentUpdated(const QList<QMap<QString,QString>> & data) : void [[[{onDatabaseContentUpdated}]]]
+-onDeleteUserClicked() : void [[[{onDeleteUserClicked}]]]
++onFailedRequest(QString message) : void [[[{onFailedRequest}]]]
+-onLogoutClicked() : void [[[{onLogoutClicked}]]]
+-onLogoutConfirmed() : void [[[{onLogoutConfirmed}]]]
++onSuccessfullRequest(QString message) : void [[[{onSuccessfullRequest}]]]
++onTransactionsFetched(const QList<QMap<QString,QString>> & transactions) : void [[[{onTransactionsFetched}]]]
+-onUpdateEmail() : void [[[{onUpdateEmail}]]]
+-onUpdatePassword() : void [[[{onUpdatePassword}]]]
+-onUpdateUserClicked() : void [[[{onUpdateUserClicked}]]]
+-onUserSelectionChanged() : void [[[{onUserSelectionChanged}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+-setupFloatingActionButtons() : void [[[{setupFloatingActionButtons}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+-updateDatabaseTable() : void [[[{updateDatabaseTable}]]]
+-updateTransactionsTable() : void [[[{updateTransactionsTable}]]]
+__
+-admin_email_ : QString [[[{admin_email_}]]]
+-admin_first_name_ : QString [[[{admin_first_name_}]]]
+-createNewUserFab : QtMaterialFloatingActionButton * [[[{createNewUserFab}]]]
+-databaseContent_ : QList<QMap<QString,QString>> [[[{databaseContent_}]]]
+-databaseTable : QTableWidget * [[[{databaseTable}]]]
+-deleteUserFab : QtMaterialFloatingActionButton * [[[{deleteUserFab}]]]
+-logoutDialog : QtMaterialDialog * [[[{logoutDialog}]]]
+-notificationSnackbar : QtMaterialSnackbar * [[[{notificationSnackbar}]]]
+-requestManager : RequestManager * [[[{requestManager}]]]
+-selectedUserData : QVariantMap [[[{selectedUserData}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+-tabContents : QStackedWidget * [[[{tabContents}]]]
+-tabs : QtMaterialTabs * [[[{tabs}]]]
+-transactionsTable : QTableWidget * [[[{transactionsTable}]]]
+-transactions_ : QList<QMap<QString,QString>> [[[{transactions_}]]]
+-updateUserFab : QtMaterialFloatingActionButton * [[[{updateUserFab}]]]
+-welcomeLabel : QtMaterialFlatButton * [[[{welcomeLabel}]]]
+}
+}
+package [UserWidget] as C_0009763794611585888067 {
+class "UserWidget" as C_0014887478323458850046
+class C_0014887478323458850046 [[classUserWidget.html{UserWidget}]] {
++UserWidget(QString email, QString first_name, QString account_number, QString balance, QWidget * parent = nullptr) : void [[[{UserWidget}]]]
+..
+-createHomeTab() : QWidget * [[[{createHomeTab}]]]
+-createSettingsTab() : QWidget * [[[{createSettingsTab}]]]
+-createTabLayout() : QVBoxLayout * [[[{createTabLayout}]]]
+-createTransferTab() : QWidget * [[[{createTransferTab}]]]
++logout() : void [[[{logout}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++onBalanceFetched(const QString balance) : void [[[{onBalanceFetched}]]]
+-onBalanceLabelClicked() : void [[[{onBalanceLabelClicked}]]]
++onFailedRequest(QString message) : void [[[{onFailedRequest}]]]
+-onLogoutClicked() : void [[[{onLogoutClicked}]]]
+-onLogoutConfirmed() : void [[[{onLogoutConfirmed}]]]
++onSuccessfullRequest(QString message) : void [[[{onSuccessfullRequest}]]]
++onTransactionsFetched(const QList<QMap<QString,QString>> & transactions) : void [[[{onTransactionsFetched}]]]
+-onTransferButtonClicked() : void [[[{onTransferButtonClicked}]]]
+-onTransferFieldsChanged() : void [[[{onTransferFieldsChanged}]]]
+-onUpdateEmail() : void [[[{onUpdateEmail}]]]
+-onUpdatePassword() : void [[[{onUpdatePassword}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+-updateFirstNameLabel() : void [[[{updateFirstNameLabel}]]]
+-updateTransactionsTable() : void [[[{updateTransactionsTable}]]]
+__
+-account_number_ : QString [[[{account_number_}]]]
+-amountField : QtMaterialTextField * [[[{amountField}]]]
+-balanceLabel : QtMaterialFlatButton * [[[{balanceLabel}]]]
+-balance_ : QString [[[{balance_}]]]
+-email_ : QString [[[{email_}]]]
+-first_name_ : QString [[[{first_name_}]]]
+-logoutDialog : QtMaterialDialog * [[[{logoutDialog}]]]
+-notificationSnackbar : QtMaterialSnackbar * [[[{notificationSnackbar}]]]
+-requestManager : RequestManager * [[[{requestManager}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+-tabContents : QStackedWidget * [[[{tabContents}]]]
+-tabs : QtMaterialTabs * [[[{tabs}]]]
+-toAccountField : QtMaterialTextField * [[[{toAccountField}]]]
+-toEmailField : QtMaterialTextField * [[[{toEmailField}]]]
+-transactionsTable : QTableWidget * [[[{transactionsTable}]]]
+-transactions_ : QList<QMap<QString,QString>> [[[{transactions_}]]]
+-transferButton : QtMaterialFlatButton * [[[{transferButton}]]]
+-welcomeLabel : QtMaterialFlatButton * [[[{welcomeLabel}]]]
+}
+}
+package [LoginWidget] as C_0013767205248218814589 {
+class "LoginWidget" as C_0009314656593254540318
+class C_0009314656593254540318 [[classLoginWidget.html{LoginWidget}]] {
++LoginWidget(QWidget * parent = nullptr) : void [[[{LoginWidget}]]]
+..
++clearFields() : void [[[{clearFields}]]]
++connectToServer(const QString & host, quint16 port) : void [[[{connectToServer}]]]
++disconnectFromServer() : void [[[{disconnectFromServer}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
+-onConnectButton() : void [[[{onConnectButton}]]]
++onConnected() : void [[[{onConnected}]]]
+-onConnectionIconButton() : void [[[{onConnectionIconButton}]]]
++onDisconnected() : void [[[{onDisconnected}]]]
++onFailedRequest(QString message) : void [[[{onFailedRequest}]]]
+-onLoginButton() : void [[[{onLoginButton}]]]
+-onLoginTextChanged() : void [[[{onLoginTextChanged}]]]
++onSuccessfullRequest(QString message) : void [[[{onSuccessfullRequest}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
++sendLoginRequest(QJsonObject loginData) : void [[[{sendLoginRequest}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-backgroundLabel : QLabel * [[[{backgroundLabel}]]]
+-backgroundMovie : QMovie * [[[{backgroundMovie}]]]
+-connectButton : QPushButton * [[[{connectButton}]]]
+-connectionDialog : QDialog * [[[{connectionDialog}]]]
+-connectionIconButton : QtMaterialIconButton * [[[{connectionIconButton}]]]
+-email : QString [[[{email}]]]
+-emailField : QtMaterialTextField * [[[{emailField}]]]
+-ipPortField : QLineEdit * [[[{ipPortField}]]]
+-isConnected : bool [[[{isConnected}]]]
+-loginButton : QtMaterialFlatButton * [[[{loginButton}]]]
+-loginData : QVariantMap [[[{loginData}]]]
+-notificationSnackbar : QtMaterialSnackbar * [[[{notificationSnackbar}]]]
+-password : QString [[[{password}]]]
+-passwordField : QtMaterialTextField * [[[{passwordField}]]]
+-requestManager : RequestManager * [[[{requestManager}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+-titleLabel : QLabel * [[[{titleLabel}]]]
 }
 }
 }
-C_0013925658533498293399 o-- C_0009984192897324832466 : -accounts
+package [Dialogs] as C_0017470984763561192632 {
+abstract "IValidationStrategy" as C_0017510141229418621978
+abstract C_0017510141229418621978 [[classIValidationStrategy.html{IValidationStrategy}]] {
+{abstract} +errorMessage() const = 0 : QString [[[{errorMessage}]]]
+{abstract} +isValid(const QString & input) const = 0 : bool [[[{isValid}]]]
+__
+}
+class "NameValidationStrategy" as C_0012472032526046711988
+class C_0012472032526046711988 [[classNameValidationStrategy.html{NameValidationStrategy}]] {
++errorMessage() const : QString [[[{errorMessage}]]]
++isValid(const QString & input) const : bool [[[{isValid}]]]
+__
+}
+class "EmailValidationStrategy" as C_0012861765083885074797
+class C_0012861765083885074797 [[classEmailValidationStrategy.html{EmailValidationStrategy}]] {
++errorMessage() const : QString [[[{errorMessage}]]]
++isValid(const QString & input) const : bool [[[{isValid}]]]
+__
+}
+class "PasswordValidationStrategy" as C_0013353315463673300878
+class C_0013353315463673300878 [[classPasswordValidationStrategy.html{PasswordValidationStrategy}]] {
++errorMessage() const : QString [[[{errorMessage}]]]
++isValid(const QString & input) const : bool [[[{isValid}]]]
+__
+}
+class "BalanceValidationStrategy" as C_0001544226777174606881
+class C_0001544226777174606881 [[classBalanceValidationStrategy.html{BalanceValidationStrategy}]] {
++errorMessage() const : QString [[[{errorMessage}]]]
++isValid(const QString & input) const : bool [[[{isValid}]]]
+__
+}
+class "AccountNumberValidationStrategy" as C_0009937287470556469371
+class C_0009937287470556469371 [[classAccountNumberValidationStrategy.html{AccountNumberValidationStrategy}]] {
++errorMessage() const : QString [[[{errorMessage}]]]
++isValid(const QString & input) const : bool [[[{isValid}]]]
+__
+}
+abstract "BaseDialog" as C_0006277281904743403160
+abstract C_0006277281904743403160 [[classBaseDialog.html{BaseDialog}]] {
++BaseDialog(QWidget * parent = nullptr) : void [[[{BaseDialog}]]]
+..
+#connectSignals() : void [[[{connectSignals}]]]
+#createInputField(QVBoxLayout * layout, const QString & labelText, IValidationStrategy * validationStrategy, bool isPassword = false) : QtMaterialTextField * [[[{createInputField}]]]
+{abstract} +getData() const = 0 : QVariantMap [[[{getData}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+#setFieldValidityStyle(QtMaterialTextField * field, QLabel * errorLabel, const QString & errorMessage, bool isValid) : void [[[{setFieldValidityStyle}]]]
+{abstract} #setupUI() = 0 : void [[[{setupUI}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+#updateConfirmButtonState() : void [[[{updateConfirmButtonState}]]]
+#validateInput(QtMaterialTextField * field) : void [[[{validateInput}]]]
+__
+#cancelButton : QtMaterialFlatButton * [[[{cancelButton}]]]
+#confirmButton : QtMaterialFlatButton * [[[{confirmButton}]]]
+#errorLabels_ : QMap<QtMaterialTextField *,QLabel *> [[[{errorLabels_}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+#validationStrategies_ : QMap<QtMaterialTextField *,IValidationStrategy *> [[[{validationStrategies_}]]]
+}
+class "UpdateUserDialog" as C_0017531555969316099187
+class C_0017531555969316099187 [[classUpdateUserDialog.html{UpdateUserDialog}]] {
++UpdateUserDialog(QVariantMap data, QWidget * parent = nullptr) : void [[[{UpdateUserDialog}]]]
+..
+-connectSignals() : void [[[{connectSignals}]]]
++getData() const : QVariantMap [[[{getData}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
+-onRoleChanged() : void [[[{onRoleChanged}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+-setupUI() : void [[[{setupUI}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-data_ : QVariantMap [[[{data_}]]]
+-emailEdit : QtMaterialTextField * [[[{emailEdit}]]]
+-firstNameEdit : QtMaterialTextField * [[[{firstNameEdit}]]]
+-lastNameEdit : QtMaterialTextField * [[[{lastNameEdit}]]]
+-notificationErrorLabel : QLabel * [[[{notificationErrorLabel}]]]
+-roleComboBox : QComboBox * [[[{roleComboBox}]]]
+-role_ : QString [[[{role_}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+}
+class "CreateUserDialog" as C_0007804638616733427194
+class C_0007804638616733427194 [[classCreateUserDialog.html{CreateUserDialog}]] {
++CreateUserDialog(QWidget * parent = nullptr) : void [[[{CreateUserDialog}]]]
+..
+-connectSignals() : void [[[{connectSignals}]]]
++getData() const : QVariantMap [[[{getData}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
+-onRoleChanged() : void [[[{onRoleChanged}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+-setupUI() : void [[[{setupUI}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-confirmPasswordEdit : QtMaterialTextField * [[[{confirmPasswordEdit}]]]
+-emailEdit : QtMaterialTextField * [[[{emailEdit}]]]
+-firstNameEdit : QtMaterialTextField * [[[{firstNameEdit}]]]
+-initialBalanceEdit : QtMaterialTextField * [[[{initialBalanceEdit}]]]
+-lastNameEdit : QtMaterialTextField * [[[{lastNameEdit}]]]
+-passwordEdit : QtMaterialTextField * [[[{passwordEdit}]]]
+-roleComboBox : QComboBox * [[[{roleComboBox}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+}
+class "UpdateEmailDialog" as C_0004896682309518099660
+class C_0004896682309518099660 [[classUpdateEmailDialog.html{UpdateEmailDialog}]] {
++UpdateEmailDialog(QWidget * parent = nullptr) : void [[[{UpdateEmailDialog}]]]
+..
++getData() const : QVariantMap [[[{getData}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+#setupUI() : void [[[{setupUI}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-emailField : QtMaterialTextField * [[[{emailField}]]]
+-newEmailField : QtMaterialTextField * [[[{newEmailField}]]]
+-passwordField : QtMaterialTextField * [[[{passwordField}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+}
+class "UpdatePasswordDialog" as C_0011439797056535069865
+class C_0011439797056535069865 [[classUpdatePasswordDialog.html{UpdatePasswordDialog}]] {
++UpdatePasswordDialog(QWidget * parent = nullptr) : void [[[{UpdatePasswordDialog}]]]
+..
++getData() const : QVariantMap [[[{getData}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
+-onShowHidePasswordClicked(bool checked) : void [[[{onShowHidePasswordClicked}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
+#setupUI() : void [[[{setupUI}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-currentPasswordField : QtMaterialTextField * [[[{currentPasswordField}]]]
+-emailField : QtMaterialTextField * [[[{emailField}]]]
+-isPasswordVisible : bool [[[{isPasswordVisible}]]]
+-newPasswordField : QtMaterialTextField * [[[{newPasswordField}]]]
+-repeatedNewPasswordField : QtMaterialTextField * [[[{repeatedNewPasswordField}]]]
+-showHidePasswordRadioButton : QtMaterialRadioButton * [[[{showHidePasswordRadioButton}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+}
+}
+package [Client] as C_0011121512235108805536 {
+class "TcpClient" as C_0006770949275830638079
+class C_0006770949275830638079 [[classTcpClient.html{TcpClient}]] {
++TcpClient(QObject * parent = nullptr) : void [[[{TcpClient}]]]
++~TcpClient() : void [[[{~TcpClient}]]]
+..
++ConnectedSignal() : void [[[{ConnectedSignal}]]]
++DisconnectedSignal() : void [[[{DisconnectedSignal}]]]
++ResponseReadySignal(QByteArray response) : void [[[{ResponseReadySignal}]]]
++closeConnection() : void [[[{closeConnection}]]]
++connectToServer(const QString & host, quint16 port) : void [[[{connectToServer}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
+-onConnected() : void [[[{onConnected}]]]
+-onDisconnected() : void [[[{onDisconnected}]]]
+-onErrorOccurred(QAbstractSocket::SocketError socketError) : void [[[{onErrorOccurred}]]]
+-onReadyRead() : void [[[{onReadyRead}]]]
+-onStateChanged(QAbstractSocket::SocketState socketState) : void [[[{onStateChanged}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
++sendTcpRequest(const QByteArray & request) : void [[[{sendTcpRequest}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-socket : QTcpSocket * [[[{socket}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+}
+class "ClientHandler" as C_0003891570225386253038
+class C_0003891570225386253038 [[classClientHandler.html{ClientHandler}]] {
++ClientHandler(QObject * parent = nullptr) : void [[[{ClientHandler}]]]
++~ClientHandler() : void [[[{~ClientHandler}]]]
+..
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++onConnectedSignal() : void [[[{onConnectedSignal}]]]
++onDisconnectedSignal() : void [[[{onDisconnectedSignal}]]]
++onResponseReady(QByteArray response) : void [[[{onResponseReady}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
++requestClientConnection(const QString & host, quint16 port) : void [[[{requestClientConnection}]]]
++requestClientDisconnection() : void [[[{requestClientDisconnection}]]]
++run() : void [[[{run}]]]
++sendRequest(QJsonObject request) : void [[[{sendRequest}]]]
++sendResponseBack(QJsonObject response) : void [[[{sendResponseBack}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+-tcpClient : TcpClient * [[[{tcpClient}]]]
+}
+}
+package [AppManager] as C_0011206568869901917921 {
+class "UIManager" as C_0004909201866089141242
+class C_0004909201866089141242 [[classUIManager.html{UIManager}]] {
+-UIManager(QObject * parent = nullptr) : void [[[{UIManager}]]]
++UIManager(const UIManager &) = deleted : void [[[{UIManager}]]]
++~UIManager() : void [[[{~UIManager}]]]
+..
++operator=(const UIManager &) = deleted : void [[[{operator=}]]]
+..
++closeAdminWidget() : void [[[{closeAdminWidget}]]]
++closeLoginWidget() : void [[[{closeLoginWidget}]]]
++closeUserWidget() : void [[[{closeUserWidget}]]]
++connectToTheServer(const QString & host, quint16 port) : void [[[{connectToTheServer}]]]
++createAdminWidget(QString email, QString first_name) : void [[[{createAdminWidget}]]]
++createLoginWidget() : void [[[{createLoginWidget}]]]
++createUserWidget(QString email, QString first_name, QString account_number, QString balance) : void [[[{createUserWidget}]]]
++disconnectFromTheServer() : void [[[{disconnectFromTheServer}]]]
+{static} +getInstance(QObject * parent = nullptr) : UIManager * [[[{getInstance}]]]
++logout() : void [[[{logout}]]]
++makeRequest(QJsonObject Data) : void [[[{makeRequest}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++onConnectionResponse(bool status) : void [[[{onConnectionResponse}]]]
++onFailedNotification(QString message) : void [[[{onFailedNotification}]]]
++onSuccessfullNotification(QString message) : void [[[{onSuccessfullNotification}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
++requestConnection(const QString & host, quint16 port) : void [[[{requestConnection}]]]
++requestDisconnection() : void [[[{requestDisconnection}]]]
++requestReady(QJsonObject Data) : void [[[{requestReady}]]]
++responseReady(QJsonObject Data) : void [[[{responseReady}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-adminWidget : AdminWidget * [[[{adminWidget}]]]
+-first_name : QString [[[{first_name}]]]
+-host : QString [[[{host}]]]
+-loginWidget : LoginWidget * [[[{loginWidget}]]]
+-mainWindow : QMainWindow * [[[{mainWindow}]]]
+-message : QString [[[{message}]]]
+-port : quint16 [[[{port}]]]
+-requestManager : RequestManager * [[[{requestManager}]]]
+-responseManager : ResponseManager * [[[{responseManager}]]]
+-role : QString [[[{role}]]]
+-stackedWidget : QStackedWidget * [[[{stackedWidget}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+-userWidget : UserWidget * [[[{userWidget}]]]
+}
+class "AppManager" as C_0004125011841911275123
+class C_0004125011841911275123 [[classAppManager.html{AppManager}]] {
+-AppManager(QObject * parent = nullptr) : void [[[{AppManager}]]]
++AppManager(const AppManager &) = deleted : void [[[{AppManager}]]]
++~AppManager() : void [[[{~AppManager}]]]
+..
++operator=(const AppManager &) = deleted : void [[[{operator=}]]]
+..
+{static} +getInstance(QObject * parent = nullptr) : AppManager & [[[{getInstance}]]]
++metaObject() const : const QMetaObject * [[[{metaObject}]]]
++qt_metacall(QMetaObject::Call, int, void **) : int [[[{qt_metacall}]]]
++qt_metacast(const char *) : void * [[[{qt_metacast}]]]
+{static} -qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : void [[[{qt_static_metacall}]]]
++start() : void [[[{start}]]]
+{static} +tr(const char * s, const char * c = nullptr, int n = -1) : QString [[[{tr}]]]
+__
+-AppManagerThread : QThread * [[[{AppManagerThread}]]]
+-clientHandler : ClientHandler * [[[{clientHandler}]]]
+{static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]
+-uiManager : UIManager * [[[{uiManager}]]]
+}
+}
+}
+C_0017581648629732253705 ..> C_0014397068199454785176
+C_0014397068199454785176 --+ C_0017581648629732253705
+C_0015588328822049200852 --+ C_0000524940392191554637
+C_0005551684386604303784 --> C_0017581648629732253705 : -requestManager
+C_0014887478323458850046 --> C_0017581648629732253705 : -requestManager
+C_0009314656593254540318 --> C_0017581648629732253705 : -requestManager
+C_0017510141229418621978 <|-- C_0012472032526046711988
+C_0017510141229418621978 <|-- C_0012861765083885074797
+C_0017510141229418621978 <|-- C_0013353315463673300878
+C_0017510141229418621978 <|-- C_0001544226777174606881
+C_0017510141229418621978 <|-- C_0009937287470556469371
+C_0006277281904743403160 ..> C_0017510141229418621978
+C_0006277281904743403160 <|-- C_0017531555969316099187
+C_0006277281904743403160 <|-- C_0007804638616733427194
+C_0006277281904743403160 <|-- C_0004896682309518099660
+C_0006277281904743403160 <|-- C_0011439797056535069865
+C_0003891570225386253038 --> C_0006770949275830638079 : -tcpClient
+C_0004909201866089141242 --> C_0009314656593254540318 : -loginWidget
+C_0004909201866089141242 --> C_0014887478323458850046 : -userWidget
+C_0004909201866089141242 --> C_0005551684386604303784 : -adminWidget
+C_0004909201866089141242 --> C_0000524940392191554637 : -responseManager
+C_0004909201866089141242 --> C_0017581648629732253705 : -requestManager
+C_0004125011841911275123 --> C_0004909201866089141242 : -uiManager
+C_0004125011841911275123 --> C_0003891570225386253038 : -clientHandler
 
 'Generated with clang-uml, version 0.5.3
 'LLVM version clang version 18.1.1 (https://github.com/llvm/llvm-project.git dba2a75e9c7ef81fe84774ba5eee5e67e01d801a)
