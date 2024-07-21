@@ -1,0 +1,122 @@
+@startuml
+actor User
+participant LoginWidget
+participant UserWidget
+participant AdminWidget
+participant RequestManager
+participant UIManager
+participant AppManager
+participant ClientHandler
+participant ResponseManager
+participant TcpClient
+
+User -> LoginWidget: Enter login information
+LoginWidget -> UIManager: requestConnection(host, port)
+activate UIManager
+
+UIManager -> TcpClient: connectToServer(host, port)
+activate TcpClient
+
+TcpClient -> TcpClient: Process connection request
+TcpClient -> UIManager: Connection response
+deactivate TcpClient
+
+UIManager -> LoginWidget: connectionResult(response)
+deactivate UIManager
+
+LoginWidget -> User: Display connection status
+
+alt connection successful
+    User -> LoginWidget: Enter login information
+    LoginWidget -> RequestManager: createRequest(Login, loginData)
+    activate RequestManager
+
+    RequestManager -> UIManager: makeRequest(request)
+    deactivate RequestManager
+
+    UIManager -> AppManager: makeRequest(request)
+    activate AppManager
+
+    AppManager -> ClientHandler: sendRequest(request)
+    activate ClientHandler
+
+    ClientHandler -> TcpClient: sendTcpRequest(request)
+    activate TcpClient
+
+    TcpClient -> TcpClient: Process request
+    TcpClient -> ClientHandler: sendResponseBack(response)
+    deactivate TcpClient
+
+    ClientHandler -> ResponseManager: handleResponse(response)
+    deactivate ClientHandler
+
+    ResponseManager -> UIManager: handleResponse(response)
+    activate UIManager
+
+    UIManager -> LoginWidget: responseReady(response)
+    LoginWidget -> User: Display login result
+    deactivate UIManager
+
+    User -> UserWidget: Operation (update email/password, view balance, transfer, etc.)
+    UserWidget -> RequestManager: createRequest(requestType, data)
+    activate RequestManager
+
+    RequestManager -> UIManager: makeRequest(request)
+    deactivate RequestManager
+
+    UIManager -> AppManager: makeRequest(request)
+    activate AppManager
+
+    AppManager -> ClientHandler: sendRequest(request)
+    activate ClientHandler
+
+    ClientHandler -> TcpClient: sendTcpRequest(request)
+    activate TcpClient
+
+    TcpClient -> TcpClient: Process request
+    TcpClient -> ClientHandler: sendResponseBack(response)
+    deactivate TcpClient
+
+    ClientHandler -> ResponseManager: handleResponse(response)
+    deactivate ClientHandler
+
+    ResponseManager -> UIManager: handleResponse(response)
+    activate UIManager
+
+    UIManager -> UserWidget: responseReady(response)
+    UserWidget -> User: Display operation result
+    deactivate UIManager
+
+    User -> AdminWidget: Operation (update user information/password, create user, delete user, view database/transaction records, etc.)
+    AdminWidget -> RequestManager: createRequest(requestType, data)
+    activate RequestManager
+
+    RequestManager -> UIManager: makeRequest(request)
+    deactivate RequestManager
+
+    UIManager -> AppManager: makeRequest(request)
+    activate AppManager
+
+    AppManager -> ClientHandler: sendRequest(request)
+    activate ClientHandler
+
+    ClientHandler -> TcpClient: sendTcpRequest(request)
+    activate TcpClient
+
+    TcpClient -> TcpClient: Process request
+    TcpClient -> ClientHandler: sendResponseBack(response)
+    deactivate TcpClient
+
+    ClientHandler -> ResponseManager: handleResponse(response)
+    deactivate ClientHandler
+
+    ResponseManager -> UIManager: handleResponse(response)
+    activate UIManager
+
+    UIManager -> AdminWidget: responseReady(response)
+    AdminWidget -> User: Display operation result
+    deactivate UIManager
+else connection failed
+    LoginWidget -> User: Display connection error
+end
+@enduml
