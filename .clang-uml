@@ -2,8 +2,8 @@ add_compile_flags:
   - --target=x86_64-w64-mingw32
   - -fparse-all-comments
   - -Wno-unknown-warning-option
-  - -DUSE_THREADS_POSIX 
-remove_compile_flags:  
+  - -DUSE_THREADS_POSIX
+remove_compile_flags:
   - -Wunused-command-line-argument
 # Change to directory where compile_commands.json is
 compilation_database_dir: .
@@ -14,8 +14,12 @@ diagrams:
     type: class
     title: This Diagram shows the relationship between all system components
     glob:
-      - src/Bank/*.cpp
-      - src/BankAccount/*.cpp
+      - src/AppManager/*.cpp
+      - src/Client/*.cpp
+      - src/requestModule/*.cpp
+      - src/Widgets/AdminWidget/*.cpp
+      - src/Widgets/UserWidget/*.cpp
+      - src/Widgets/LoginWidget/*.cpp
       - app/*.cpp
     include:
       paths:
@@ -29,7 +33,6 @@ diagrams:
       namespaces:
         - std
         - tests  # Exclude Google Test namespace
-        - nlohmann  # Exclude nlohmann namespace
     generate_packages: true
     package_type: directory
     generate_links:
@@ -38,8 +41,12 @@ diagrams:
   include_diagram:
     type: include
     glob:
-      - src/Bank/*.cpp
-      - src/BankAccount/*.cpp
+      - src/AppManager/*.cpp
+      - src/Client/*.cpp
+      - src/requestModule/*.cpp
+      - src/Widgets/AdminWidget/*.cpp
+      - src/Widgets/UserWidget/*.cpp
+      - src/Widgets/LoginWidget/*.cpp
       - app/*.cpp
     include:
       paths:
@@ -51,14 +58,23 @@ diagrams:
       namespaces:
         - std
         - tests  # Exclude Google Test namespace
-        - nlohmann  # Exclude nlohmann namespace
       paths:
         - lib/
   sequence_diagram:
     type: sequence
     glob:
-      - src/Bank/*.cpp
-      - src/BankAccount/*.cpp
+      - src/AppManager/*.cpp
+      - src/AppManager/*.h
+      - src/Client/*.cpp
+      - src/Client/*.h
+      - src/requestModule/*.cpp
+      - src/requestModule/*.h
+      - src/Widgets/AdminWidget/*.cpp
+      - src/Widgets/AdminWidget/*.h
+      - src/Widgets/UserWidget/*.cpp
+      - src/Widgets/UserWidget/*.h
+      - src/Widgets/LoginWidget/*.cpp
+      - src/Widgets/LoginWidget/*.h
       - app/*.cpp
     include:
       paths:
@@ -70,9 +86,8 @@ diagrams:
       namespaces:
         - std
         - tests  # Exclude Google Test namespace
-        - nlohmann  # Exclude nlohmann namespace
       paths:
         - lib/
     start_from:
       #- function: "main()"
-      - function: "Bank::displayAllAccounts() const"
+      - function: "AppManager::AppManager(QObject *)"
