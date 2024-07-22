@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['_7eappmanager_119',['~AppManager',['../classAppManager.html#aee444cb63c8febdbf5ea3fcbf1a90836',1,'AppManager']]],
-  ['_7eclienthandler_120',['~ClientHandler',['../classClientHandler.html#a202c875fbf38e4a52975f6c173f78127',1,'ClientHandler']]],
-  ['_7etcpclient_121',['~TcpClient',['../classTcpClient.html#a125d2277f401cbdebadb9689a5933e18',1,'TcpClient']]],
-  ['_7euimanager_122',['~UIManager',['../classUIManager.html#aeac3e2a8fd4ba49821ce653f4d2fa6b6',1,'UIManager']]]
+  ['validateinput_116',['validateInput',['../classBaseDialog.html#a8def162fdb199789470ed23570465e95',1,'BaseDialog']]],
+  ['validationstrategies_5f_117',['validationStrategies_',['../classBaseDialog.html#ad95823a270f3a8b2e990bc1ab214c38a',1,'BaseDialog']]],
+  ['validationstrategy_2eh_118',['ValidationStrategy.h',['../ValidationStrategy_8h.html',1,'']]]
 ];

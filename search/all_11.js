@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['tcpclient_95',['TcpClient',['../classTcpClient.html',1,'TcpClient'],['../classTcpClient.html#a135f8e77b7d681ec99077774e2c8949c',1,'TcpClient::TcpClient()']]],
-  ['tcpclient_2ecpp_96',['tcpclient.cpp',['../tcpclient_8cpp.html',1,'']]],
-  ['tcpclient_2eh_97',['tcpclient.h',['../tcpclient_8h.html',1,'']]],
-  ['transactionsfetched_98',['TransactionsFetched',['../classResponseManager.html#a15f87910b0e8b1f7e4ff75fbc937cc84',1,'ResponseManager']]],
-  ['transferamount_99',['TransferAmount',['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310a58fc4431f7c77a667ed7d524efdb2155',1,'RequestManager::TransferAmount()'],['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a93f3b700f6f5c497c42320edf2d6ee4c',1,'ResponseManager::TransferAmount()']]]
+  ['sendloginrequest_87',['sendLoginRequest',['../classLoginWidget.html#acdecebe1c1993a45ece8624d9bc508fe',1,'LoginWidget']]],
+  ['sendrequest_88',['sendRequest',['../classClientHandler.html#ac83e40235b51c02bd186ae640e3876af',1,'ClientHandler']]],
+  ['sendresponseback_89',['sendResponseBack',['../classClientHandler.html#a0269cf757270b7f92d4b929300f5e2e4',1,'ClientHandler']]],
+  ['sendtcprequest_90',['sendTcpRequest',['../classTcpClient.html#ab595fd55636a7f4e81beac3be309fb5e',1,'TcpClient']]],
+  ['setfieldvaliditystyle_91',['setFieldValidityStyle',['../classBaseDialog.html#ab83ac795b8f131b9b21d804dc026b2b4',1,'BaseDialog']]],
+  ['setupui_92',['setupUI',['../classBaseDialog.html#ae5e9f9df38ea7f36d8282dfa28f4648f',1,'BaseDialog::setupUI()'],['../classUpdateEmailDialog.html#ac536a9cd527cc9a0a6a4d12d74991ca6',1,'UpdateEmailDialog::setupUI()'],['../classUpdatePasswordDialog.html#aec60b38012638806423fd873f7ce74ae',1,'UpdatePasswordDialog::setupUI()']]],
+  ['start_93',['start',['../classAppManager.html#ab3b9bfa5387850ab1f99663ff44eb3d6',1,'AppManager']]],
+  ['successfullrequest_94',['SuccessfullRequest',['../classResponseManager.html#af96d4add1d9a4da8fb3b21f47aec8ede',1,'ResponseManager']]]
 ];

@@ -1,11 +1,14 @@
 var searchData=
 [
-  ['sendloginrequest_87',['sendLoginRequest',['../classLoginWidget.html#acdecebe1c1993a45ece8624d9bc508fe',1,'LoginWidget']]],
-  ['sendrequest_88',['sendRequest',['../classClientHandler.html#ac83e40235b51c02bd186ae640e3876af',1,'ClientHandler']]],
-  ['sendresponseback_89',['sendResponseBack',['../classClientHandler.html#a0269cf757270b7f92d4b929300f5e2e4',1,'ClientHandler']]],
-  ['sendtcprequest_90',['sendTcpRequest',['../classTcpClient.html#ab595fd55636a7f4e81beac3be309fb5e',1,'TcpClient']]],
-  ['setfieldvaliditystyle_91',['setFieldValidityStyle',['../classBaseDialog.html#ab83ac795b8f131b9b21d804dc026b2b4',1,'BaseDialog']]],
-  ['setupui_92',['setupUI',['../classBaseDialog.html#ae5e9f9df38ea7f36d8282dfa28f4648f',1,'BaseDialog::setupUI()'],['../classUpdateEmailDialog.html#ac536a9cd527cc9a0a6a4d12d74991ca6',1,'UpdateEmailDialog::setupUI()'],['../classUpdatePasswordDialog.html#aec60b38012638806423fd873f7ce74ae',1,'UpdatePasswordDialog::setupUI()']]],
-  ['start_93',['start',['../classAppManager.html#ab3b9bfa5387850ab1f99663ff44eb3d6',1,'AppManager']]],
-  ['successfullrequest_94',['SuccessfullRequest',['../classResponseManager.html#af96d4add1d9a4da8fb3b21f47aec8ede',1,'ResponseManager']]]
+  ['requestclientconnection_76',['requestClientConnection',['../classClientHandler.html#ade05a12eb09a1c14f3ff8d5d9a7775b3',1,'ClientHandler']]],
+  ['requestclientdisconnection_77',['requestClientDisconnection',['../classClientHandler.html#a325999da116f2deb7caa7d1caf056fed',1,'ClientHandler']]],
+  ['requestconnection_78',['requestConnection',['../classUIManager.html#ad0ea470ffcdc3dde7ee606d4e04c1aad',1,'UIManager']]],
+  ['requestdisconnection_79',['requestDisconnection',['../classUIManager.html#a924af632a6382716c9e86b15f2eea2df',1,'UIManager']]],
+  ['requestmanager_80',['RequestManager',['../classRequestManager.html',1,'']]],
+  ['requestmanager_2eh_81',['RequestManager.h',['../RequestManager_8h.html',1,'']]],
+  ['requestready_82',['requestReady',['../classUIManager.html#ae3b2e6b93a0ea5a5e2a594f6da296305',1,'UIManager']]],
+  ['responsemanager_83',['ResponseManager',['../classResponseManager.html',1,'ResponseManager'],['../classResponseManager.html#a0253362263f94b8fb1b5c7e3fcd7ca8f',1,'ResponseManager::ResponseManager()']]],
+  ['responseready_84',['responseReady',['../classUIManager.html#a07f79ae3d3b675df0efa016013882a87',1,'UIManager']]],
+  ['responsereadysignal_85',['ResponseReadySignal',['../classTcpClient.html#a98c4f7a47ee7e2ff22705f5aefe323e5',1,'TcpClient']]],
+  ['run_86',['run',['../classClientHandler.html#a88abe966b363ef9a5fedd1c5555a9a32',1,'ClientHandler']]]
 ];

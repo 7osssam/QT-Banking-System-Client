@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "BankingSystem_Client", "index.html", [
-    [ "C++ Project Template with CMake", "index.html", null ],
+    [ "QT Banking System (Client side)", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

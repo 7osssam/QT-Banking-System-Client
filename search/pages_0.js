@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['c_2b_2b_20project_20template_20with_20cmake_258',['C++ Project Template with CMake',['../index.html',1,'']]]
+  ['qt_20banking_20system_20_28client_20side_29_258',['QT Banking System (Client side)',['../index.html',1,'']]]
 ];

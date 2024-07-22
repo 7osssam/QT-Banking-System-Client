@@ -1,19 +1,8 @@
 var searchData=
 [
-  ['uimanager_100',['UIManager',['../classUIManager.html',1,'UIManager'],['../classUIManager.html#a084fc287d25c2d96c8319d0654a001f4',1,'UIManager::UIManager()']]],
-  ['uimanager_2eh_101',['UIManager.h',['../UIManager_8h.html',1,'']]],
-  ['updateconfirmbuttonstate_102',['updateConfirmButtonState',['../classBaseDialog.html#a2698a96efb218e5e676585a9bea3d68e',1,'BaseDialog']]],
-  ['updateemail_103',['UpdateEmail',['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46ab67a3ce626b2ad2a963b8aa95b099584',1,'ResponseManager::UpdateEmail()'],['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310ac8974e51516860572533ff425c9162ba',1,'RequestManager::UpdateEmail()']]],
-  ['updateemaildialog_104',['UpdateEmailDialog',['../classUpdateEmailDialog.html',1,'UpdateEmailDialog'],['../classUpdateEmailDialog.html#ae408c2d2c94dbb371679bf1d3a9f9cca',1,'UpdateEmailDialog::UpdateEmailDialog()']]],
-  ['updateemaildialog_2eh_105',['UpdateEmailDialog.h',['../UpdateEmailDialog_8h.html',1,'']]],
-  ['updatepassword_106',['UpdatePassword',['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310a55a93a95e948c8d526ab395d9b56b7bc',1,'RequestManager::UpdatePassword()'],['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a893790cde1186cb3a10776a2661f9ec2',1,'ResponseManager::UpdatePassword()']]],
-  ['updatepassworddialog_107',['UpdatePasswordDialog',['../classUpdatePasswordDialog.html',1,'UpdatePasswordDialog'],['../classUpdatePasswordDialog.html#aa630d564fdc111a2e1763265ccfb72cc',1,'UpdatePasswordDialog::UpdatePasswordDialog()']]],
-  ['updatepassworddialog_2eh_108',['UpdatePasswordDialog.h',['../UpdatePasswordDialog_8h.html',1,'']]],
-  ['updateuser_109',['UpdateUser',['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310abe9610f90871c52199552ba9a7eee628',1,'RequestManager::UpdateUser()'],['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46ae5f110efed8be4198d2b2917437f2930',1,'ResponseManager::UpdateUser()']]],
-  ['updateuserdialog_110',['UpdateUserDialog',['../classUpdateUserDialog.html',1,'UpdateUserDialog'],['../classUpdateUserDialog.html#ad1400d9d5e4731aa1101150476054e5d',1,'UpdateUserDialog::UpdateUserDialog()']]],
-  ['updateuserdialog_2eh_111',['UpdateUserDialog.h',['../UpdateUserDialog_8h.html',1,'']]],
-  ['userinit_112',['UserInit',['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310a3d57ea768887ade2528b49470afeee2e',1,'RequestManager::UserInit()'],['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a1ebd4aff3719ac52e34d00d462f9be12',1,'ResponseManager::UserInit()']]],
-  ['userloginsuccess_113',['userloginSuccess',['../classResponseManager.html#a6353f20634ce5632f7093286982f778c',1,'ResponseManager']]],
-  ['userwidget_114',['UserWidget',['../classUserWidget.html#aca06f061c4efc03b1f1be03c45d14ad6',1,'UserWidget::UserWidget()'],['../classUserWidget.html',1,'UserWidget']]],
-  ['userwidget_2eh_115',['UserWidget.h',['../UserWidget_8h.html',1,'']]]
+  ['tcpclient_95',['TcpClient',['../classTcpClient.html',1,'TcpClient'],['../classTcpClient.html#a135f8e77b7d681ec99077774e2c8949c',1,'TcpClient::TcpClient()']]],
+  ['tcpclient_2ecpp_96',['tcpclient.cpp',['../tcpclient_8cpp.html',1,'']]],
+  ['tcpclient_2eh_97',['tcpclient.h',['../tcpclient_8h.html',1,'']]],
+  ['transactionsfetched_98',['TransactionsFetched',['../classResponseManager.html#a15f87910b0e8b1f7e4ff75fbc937cc84',1,'ResponseManager']]],
+  ['transferamount_99',['TransferAmount',['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310a58fc4431f7c77a667ed7d524efdb2155',1,'RequestManager::TransferAmount()'],['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a93f3b700f6f5c497c42320edf2d6ee4c',1,'ResponseManager::TransferAmount()']]]
 ];
