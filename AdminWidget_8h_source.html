@@ -191,36 +191,37 @@ $(document).ready(function(){initNavTree('AdminWidget_8h_source.html',''); initR
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keywordtype">void</span> setupFloatingActionButtons();</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    QString                       admin_email_;       </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    QString                       admin_first_name_;  </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    QList&lt;QMap&lt;QString, QString&gt;&gt; transactions_;      </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    QList&lt;QMap&lt;QString, QString&gt;&gt; databaseContent_;   </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    <a class="code" href="classRequestManager.html">RequestManager</a>*               requestManager;     </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    QtMaterialFlatButton* welcomeLabel;               </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    QtMaterialSnackbar*   notificationSnackbar;       </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    QtMaterialTabs*       tabs;                       </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    QStackedWidget*       tabContents;                </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    QtMaterialDialog*     logoutDialog;               </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    QTableWidget* databaseTable;                      </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    QTableWidget* transactionsTable;                  </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    QtMaterialFloatingActionButton* updateUserFab;    </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    QtMaterialFloatingActionButton* deleteUserFab;    </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    QtMaterialFloatingActionButton* createNewUserFab; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    QVariantMap selectedUserData;                     </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;};</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#endif                                                </span><span class="comment">// ADMINWIDGET_H</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    QString                       admin_new_email_;   </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    QString                       admin_first_name_;  </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    QList&lt;QMap&lt;QString, QString&gt;&gt; transactions_;      </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    QList&lt;QMap&lt;QString, QString&gt;&gt; databaseContent_;   </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="classRequestManager.html">RequestManager</a>*               requestManager;     </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    QtMaterialFlatButton* welcomeLabel;               </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    QtMaterialSnackbar*   notificationSnackbar;       </div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    QtMaterialTabs*       tabs;                       </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    QStackedWidget*       tabContents;                </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    QtMaterialDialog*     logoutDialog;               </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    QTableWidget* databaseTable;                      </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    QTableWidget* transactionsTable;                  </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    QtMaterialFloatingActionButton* updateUserFab;    </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    QtMaterialFloatingActionButton* deleteUserFab;    </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    QtMaterialFloatingActionButton* createNewUserFab; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    QVariantMap selectedUserData;                     </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;};</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">#endif                                                </span><span class="comment">// ADMINWIDGET_H</span></div>
 <div class="ttc" id="aRequestManager_8h_html"><div class="ttname"><a href="RequestManager_8h.html">RequestManager.h</a></div><div class="ttdoc">Header file for the RequestManager class.</div></div>
 <div class="ttc" id="aclassAdminWidget_html"><div class="ttname"><a href="classAdminWidget.html">AdminWidget</a></div><div class="ttdoc">Provides an interface for administrative tasks within the banking system.</div><div class="ttdef"><b>Definition:</b> AdminWidget.h:45</div></div>
-<div class="ttc" id="aclassAdminWidget_html_a065362884e1a3423cf4a95d61833df1f"><div class="ttname"><a href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f">AdminWidget::onSuccessfullRequest</a></div><div class="ttdeci">void onSuccessfullRequest(QString message)</div><div class="ttdoc">Slot for handling successful request messages.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:333</div></div>
+<div class="ttc" id="aclassAdminWidget_html_a065362884e1a3423cf4a95d61833df1f"><div class="ttname"><a href="classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f">AdminWidget::onSuccessfullRequest</a></div><div class="ttdeci">void onSuccessfullRequest(QString message)</div><div class="ttdoc">Slot for handling successful request messages.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:355</div></div>
 <div class="ttc" id="aclassAdminWidget_html_a1f2b985e090a371d4d02e542d30f3c2f"><div class="ttname"><a href="classAdminWidget.html#a1f2b985e090a371d4d02e542d30f3c2f">AdminWidget::logout</a></div><div class="ttdeci">void logout()</div><div class="ttdoc">Signal emitted when the admin logs out.</div></div>
 <div class="ttc" id="aclassAdminWidget_html_a3e4dad442cae1acff26333538480ebd5"><div class="ttname"><a href="classAdminWidget.html#a3e4dad442cae1acff26333538480ebd5">AdminWidget::AdminWidget</a></div><div class="ttdeci">AdminWidget(QString email, QString first_name, QWidget *parent=nullptr)</div><div class="ttdoc">Constructs an AdminWidget object.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:15</div></div>
-<div class="ttc" id="aclassAdminWidget_html_a70d2a259b7eff10abddfa37c38af09e6"><div class="ttname"><a href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6">AdminWidget::onDatabaseContentUpdated</a></div><div class="ttdeci">void onDatabaseContentUpdated(const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;data)</div><div class="ttdoc">Slot for handling updates to the database content.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:261</div></div>
-<div class="ttc" id="aclassAdminWidget_html_a83e558fb3e555fe9d226bd394ffd377c"><div class="ttname"><a href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c">AdminWidget::onTransactionsFetched</a></div><div class="ttdeci">void onTransactionsFetched(const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;transactions)</div><div class="ttdoc">Slot for handling fetched transaction history.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:299</div></div>
-<div class="ttc" id="aclassAdminWidget_html_ada18070029b272ef46e64c0527ef15a1"><div class="ttname"><a href="classAdminWidget.html#ada18070029b272ef46e64c0527ef15a1">AdminWidget::onFailedRequest</a></div><div class="ttdeci">void onFailedRequest(QString message)</div><div class="ttdoc">Slot for handling failed request messages.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:341</div></div>
+<div class="ttc" id="aclassAdminWidget_html_a70d2a259b7eff10abddfa37c38af09e6"><div class="ttname"><a href="classAdminWidget.html#a70d2a259b7eff10abddfa37c38af09e6">AdminWidget::onDatabaseContentUpdated</a></div><div class="ttdeci">void onDatabaseContentUpdated(const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;data)</div><div class="ttdoc">Slot for handling updates to the database content.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:276</div></div>
+<div class="ttc" id="aclassAdminWidget_html_a83e558fb3e555fe9d226bd394ffd377c"><div class="ttname"><a href="classAdminWidget.html#a83e558fb3e555fe9d226bd394ffd377c">AdminWidget::onTransactionsFetched</a></div><div class="ttdeci">void onTransactionsFetched(const QList&lt; QMap&lt; QString, QString &gt;&gt; &amp;transactions)</div><div class="ttdoc">Slot for handling fetched transaction history.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:317</div></div>
+<div class="ttc" id="aclassAdminWidget_html_ada18070029b272ef46e64c0527ef15a1"><div class="ttname"><a href="classAdminWidget.html#ada18070029b272ef46e64c0527ef15a1">AdminWidget::onFailedRequest</a></div><div class="ttdeci">void onFailedRequest(QString message)</div><div class="ttdoc">Slot for handling failed request messages.</div><div class="ttdef"><b>Definition:</b> AdminWidget.cpp:368</div></div>
 <div class="ttc" id="aclassRequestManager_html"><div class="ttname"><a href="classRequestManager.html">RequestManager</a></div><div class="ttdoc">Manages the creation and dispatching of requests in the system.</div><div class="ttdef"><b>Definition:</b> RequestManager.h:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

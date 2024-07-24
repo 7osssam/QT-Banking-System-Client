@@ -198,7 +198,7 @@ $(document).ready(function(){initNavTree('ValidationStrategy_8h_source.html','')
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="classAccountNumberValidationStrategy.html#a8ee7c7faa84e0f98452233c537b7815c">  164</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classAccountNumberValidationStrategy.html#a8ee7c7faa84e0f98452233c537b7815c">isValid</a>(<span class="keyword">const</span> QString&amp; input)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">const</span> QRegularExpression accountNumberPattern(R<span class="stringliteral">&quot;((^[0-9]{10}$))&quot;);</span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">const</span> QRegularExpression accountNumberPattern(R<span class="stringliteral">&quot;((^[0-9]{6}$))&quot;);</span></div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="stringliteral">        </span><span class="keywordflow">return</span> accountNumberPattern.match(input).hasMatch();</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
