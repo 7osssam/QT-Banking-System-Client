@@ -151,7 +151,7 @@ public:
 /**
  * @class AccountNumberValidationStrategy
  * @brief Concrete validation strategy for account numbers.
- * @details Validates that the input string is a valid account number consisting of exactly 10 digits.
+ * @details Validates that the input string is a valid account number consisting of exactly 6 digits.
  */
 class AccountNumberValidationStrategy : public IValidationStrategy
 {
@@ -163,7 +163,7 @@ public:
 	 */
 	bool isValid(const QString& input) const override
 	{
-		const QRegularExpression accountNumberPattern(R"((^[0-9]{10}$))");
+		const QRegularExpression accountNumberPattern(R"((^[0-9]{6}$))");
 		return accountNumberPattern.match(input).hasMatch();
 	}
 
