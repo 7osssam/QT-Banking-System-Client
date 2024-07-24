@@ -18,10 +18,10 @@ last_names = [
 db_settings = {
     'host': 'aws-0-us-east-1.pooler.supabase.com',
     'port': 6543,
-    #'user': 'postgres.ajfrcwmgtitxbvcnhzwn', # Production
-    'user': 'postgres.yflugnxlcmfwjczwzspw', # Testing
-    #'password': 'z7HQs^*#HnmqQ3m2', # Production
-    'password': 'dpd2q2*5BULBCz$J', # Testing
+    'user': 'postgres.ajfrcwmgtitxbvcnhzwn', # Production
+    #'user': 'postgres.yflugnxlcmfwjczwzspw', # Testing
+    'password': 'z7HQs^*#HnmqQ3m2', # Production
+    #'password': 'dpd2q2*5BULBCz$J', # Testing
     'dbname': 'postgres'
 }
 
