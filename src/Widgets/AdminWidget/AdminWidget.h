@@ -176,6 +176,7 @@ private:
 	void setupFloatingActionButtons();
 
 	QString						  admin_email_;		  ///< The email of the admin.
+	QString						  admin_new_email_;	  ///< The potential new email of the admin.
 	QString						  admin_first_name_;  ///< The first name of the admin.
 	QList<QMap<QString, QString>> transactions_;	  ///< List of transactions.
 	QList<QMap<QString, QString>> databaseContent_;	  ///< List of database content.

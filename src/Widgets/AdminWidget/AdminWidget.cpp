@@ -75,10 +75,17 @@ QWidget* AdminWidget::createDatabaseTab()
 	layout->addWidget(welcomeLabel);
 
 	databaseTable = new QTableWidget(databaseTab);
+	// These settings only need to be set once
 	databaseTable->setColumnCount(6);
 	databaseTable->setHorizontalHeaderLabels({"Account Number", "First Name", "Last Name", "Email", "Role", "Balance"});
 	databaseTable->setGridStyle(Qt::NoPen);
-	databaseTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+	databaseTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	databaseTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+	databaseTable->setShowGrid(false);
+	databaseTable->setAlternatingRowColors(true);
+	databaseTable->verticalHeader()->setVisible(false);
+	databaseTable->horizontalHeader()->setStretchLastSection(true);
+
 	layout->addWidget(databaseTable);
 
 	connect(databaseTable->selectionModel(), &QItemSelectionModel::selectionChanged, this,
@@ -97,7 +104,13 @@ QWidget* AdminWidget::createTransactionsTab()
 	transactionsTable->setColumnCount(4);
 	transactionsTable->setHorizontalHeaderLabels({"From Account", "To Account", "Amount", "Date of Transaction"});
 	transactionsTable->setGridStyle(Qt::NoPen);
-	transactionsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+	transactionsTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	transactionsTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+	transactionsTable->setShowGrid(false);
+	transactionsTable->setAlternatingRowColors(true);
+	transactionsTable->verticalHeader()->setVisible(false);
+	transactionsTable->horizontalHeader()->setStretchLastSection(true);
+
 	layout->addWidget(transactionsTable);
 
 	return transactionsTab;
@@ -207,6 +220,8 @@ void AdminWidget::onUpdateEmail()
 			return;
 		}
 
+		admin_new_email_ = data["new_email"].toString();
+
 		requestManager->createRequest(RequestManager::UpdateEmail, data);
 	}
 }
@@ -283,15 +298,18 @@ void AdminWidget::onDatabaseContentUpdated(const QList<QMap<QString, QString>>& 
 		databaseTable->setItem(row, 3, emailItem);
 		databaseTable->setItem(row, 4, roleItem);
 		databaseTable->setItem(row, 5, balanceItem);
-
-		databaseTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
-		databaseTable->setSelectionBehavior(QAbstractItemView::SelectRows);
-		databaseTable->setShowGrid(false);
-		databaseTable->setAlternatingRowColors(true);
-		databaseTable->horizontalHeader()->setStretchLastSection(true);
-		databaseTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-		databaseTable->verticalHeader()->setVisible(false);
 	}
+
+	// Ensure columns resize to fit content but don't leave excess space
+	for (int column = 0; column < databaseTable->columnCount(); ++column)
+	{
+		databaseTable->horizontalHeader()->setSectionResizeMode(column, QHeaderView::ResizeToContents);
+	}
+	// Set the last column to stretch to fill any remaining space
+	databaseTable->horizontalHeader()->setSectionResizeMode(databaseTable->columnCount() - 1, QHeaderView::Stretch);
+
+	// Optionally, you can force a resize to contents for better accuracy
+	// databaseTable->resizeColumnsToContents(); // This might not be necessary if resize mode is set correctly
 
 	onSuccessfullRequest("Database updated Successfully");
 }
@@ -317,15 +335,19 @@ void AdminWidget::onTransactionsFetched(const QList<QMap<QString, QString>>& tra
 		transactionsTable->setItem(row, 1, toAccountItem);
 		transactionsTable->setItem(row, 2, amountItem);
 		transactionsTable->setItem(row, 3, dateItem);
-
-		databaseTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
-		databaseTable->setSelectionBehavior(QAbstractItemView::SelectRows);
-		databaseTable->setShowGrid(false);
-		databaseTable->setAlternatingRowColors(true);
-		databaseTable->horizontalHeader()->setStretchLastSection(true);
-		databaseTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-		databaseTable->verticalHeader()->setVisible(false);
 	}
+
+	// Ensure columns resize to fit content but don't leave excess space
+	for (int column = 0; column < transactionsTable->columnCount(); ++column)
+	{
+		transactionsTable->horizontalHeader()->setSectionResizeMode(column, QHeaderView::ResizeToContents);
+	}
+	// Set the last column to stretch to fill any remaining space
+	transactionsTable->horizontalHeader()->setSectionResizeMode(transactionsTable->columnCount() - 1,
+																QHeaderView::Stretch);
+
+	// Optionally, you can force a resize to contents for better accuracy
+	// transactionsTable->resizeColumnsToContents(); // This might not be necessary if resize mode is set correctly
 
 	onSuccessfullRequest("Transactions updated Successfully");
 }
@@ -336,6 +358,11 @@ void AdminWidget::onSuccessfullRequest(QString message)
 	notificationSnackbar->setBackgroundColor(QColor(0, 200, 0, 255)); // Solid green
 
 	notificationSnackbar->addMessage(message);
+
+	if (message == "Email updated successfully")
+	{
+		admin_email_ = admin_new_email_;
+	}
 }
 
 void AdminWidget::onFailedRequest(QString message)
