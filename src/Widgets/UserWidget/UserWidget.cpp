@@ -80,9 +80,14 @@ QWidget* UserWidget::createHomeTab()
 
 	transactionsTable = new QTableWidget(homeTab);
 	transactionsTable->setColumnCount(4);
-	transactionsTable->setAccessibleName("Transactions Table");
-	transactionsTable->setGridStyle(Qt::NoPen);
 	transactionsTable->setHorizontalHeaderLabels({"From Account", "To Account", "Amount", "Date of Transaction"});
+	transactionsTable->setGridStyle(Qt::NoPen);
+	transactionsTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	transactionsTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+	transactionsTable->setShowGrid(false);
+	transactionsTable->setAlternatingRowColors(true);
+	transactionsTable->verticalHeader()->setVisible(false);
+	transactionsTable->horizontalHeader()->setStretchLastSection(true);
 
 	// Set column width ratio
 	transactionsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -197,7 +202,7 @@ QWidget* UserWidget::createSettingsTab()
 	logoutButton->setOverlayStyle(Material::TintedOverlay);
 	logoutButton->setFont(QFont("Fira Sans", 20, QFont::Light));
 
-		logoutButton->setIcon(QtMaterialTheme::icon("action", "exit_to_app"));
+	logoutButton->setIcon(QtMaterialTheme::icon("action", "exit_to_app"));
 	logoutButton->setCornerRadius(20);
 
 	connect(logoutButton, &QPushButton::clicked, this, &UserWidget::onLogoutClicked);
@@ -348,18 +353,20 @@ void UserWidget::onTransactionsFetched(const QList<QMap<QString, QString>>& tran
 		transactionsTable->setItem(row, 1, toAccountItem);
 		transactionsTable->setItem(row, 2, amountItem);
 		transactionsTable->setItem(row, 3, dateItem);
-
-		transactionsTable->setRowHeight(row, 30);
-
-		// make the table read only
-		transactionsTable->setEditTriggers(QAbstractItemView::NoEditTriggers);
-		transactionsTable->setSelectionBehavior(QAbstractItemView::SelectRows);
-		transactionsTable->setShowGrid(false);
-		transactionsTable->setAlternatingRowColors(true);
-		transactionsTable->horizontalHeader()->setStretchLastSection(true);
-		transactionsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-		transactionsTable->verticalHeader()->setVisible(false);
 	}
+
+	// Ensure columns resize to fit content but don't leave excess space
+	for (int column = 0; column < transactionsTable->columnCount(); ++column)
+	{
+		transactionsTable->horizontalHeader()->setSectionResizeMode(column, QHeaderView::ResizeToContents);
+	}
+	// Set the last column to stretch to fill any remaining space
+	transactionsTable->horizontalHeader()->setSectionResizeMode(transactionsTable->columnCount() - 1,
+																QHeaderView::Stretch);
+
+	// Optionally, you can force a resize to contents for better accuracy
+	// transactionsTable->resizeColumnsToContents(); // This might not be necessary if resize mode is set correctly
+
 	onSuccessfullRequest("Transactions updated Successfully");
 }
 
@@ -460,6 +467,11 @@ void UserWidget::onSuccessfullRequest(QString message)
 	notificationSnackbar->setBackgroundColor(QColor(0, 200, 0, 255)); // Solid green
 
 	notificationSnackbar->addMessage(message);
+
+	if (message == "Email updated successfully")
+	{
+		email_ = new_email_;
+	}
 }
 
 void UserWidget::onFailedRequest(QString message)

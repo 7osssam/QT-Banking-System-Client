@@ -158,6 +158,7 @@ private:
 	QVBoxLayout* createTabLayout();
 
 	QString						  email_;		   ///< The user's email address.
+	QString						  new_email_;	   ///< The potential new email address.
 	QString						  first_name_;	   ///< The user's first name.
 	QString						  account_number_; ///< The user's account number.
 	QString						  balance_;		   ///< The user's current balance.
