@@ -4,13 +4,13 @@
 cmake_minimum_required(VERSION 3.20)
 
 # Set Project Name
-set (PROJECT_NAME "BankingSystem_Client")
+set (PROJECT_NAME "Banking_System_Client")
 
 # Set Project Version
 set (PROJECT_VERSION 1.0.0)
 
 # Set Project Description
-set (PROJECT_DESCRIPTION "This is a qt project for a banking system (Client side)")
+set (PROJECT_DESCRIPTION "Qt-based banking app for user/admin account management, transactions, secure server communication via PostgreSQL/Supabase.")
 
 # Set supported languages
 set(PROJECT_LANGUAGES C CXX)
