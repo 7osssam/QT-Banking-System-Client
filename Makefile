@@ -63,11 +63,9 @@ pdf:
 doc: html pdf
 	@echo "All Documentation generated successfully!"
 
-# Run tests
 test:
 	@echo "Running tests..."
-	@cd $(BUILD_DIR) && ctest --output-on-failure
-
+	@cd $(BUILD_DIR) && cmake .. -DENABLE_TESTS=ON && cmake --build . && ctest --output-on-failure
 
 diagrams: build
 
@@ -76,18 +74,21 @@ ifeq ($(OS), Windows_NT)
 	mkdir -p docs/diagrams/plantuml
 	mkdir -p docs/diagrams/mermaid
 	clang-uml -g plantuml -g json -g mermaid -p
-	@echo "Convert .puml files to svg images"
+	@echo "Converting .puml files to SVG and PNG..."
 	plantuml -tsvg -nometadata -o plantuml docs/diagrams/*.puml
+	plantuml -tpng -nometadata -o plantuml docs/diagrams/*.puml
 	@echo "Convert .mmd files to svg images"
-	py utils/generate_mermaid.py docs/diagrams/*.mmd
+	py utils/generate_mermaid.py "docs/diagrams/*.mmd"
 	@echo "Format generated SVG files..."
 	py utils/format_svg.py docs/diagrams/plantuml/*.svg
 	py utils/format_svg.py docs/diagrams/mermaid/*.svg
+	@echo "Done!"
 else
 	@echo "installing dependencies..."
 	sudo apt-get install -y plantuml npm python3 python3-pip python3-yaml
 	npm install -g mermaid.cli
 	pip install pyyaml
+	pip install cairosvg
 	@echo "installing clang-uml..."
 
 	sudo add-apt-repository ppa:bkryza/clang-uml
@@ -100,8 +101,9 @@ else
 	@echo "Convert .puml files to svg images"
 	plantuml -tsvg -nometadata -o plantuml docs/diagrams/*.puml
 	@echo "Convert .mmd files to svg images"
-	py utils/generate_mermaid.py docs/diagrams/*.mmd
+	py utils/generate_mermaid.py "docs/diagrams/*.mmd"
 	@echo "Format generated SVG files..."
 	py utils/format_svg.py docs/diagrams/plantuml/*.svg
 	py utils/format_svg.py docs/diagrams/mermaid/*.svg
+	@echo "Done!"
 endif
