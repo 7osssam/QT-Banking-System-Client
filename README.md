@@ -37,25 +37,25 @@ QT-Banking-System-Client is the client-side implementation of a banking system, 
 ### Building the Project (Using the wrapper Makefile)
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/7osssam/QT-Banking-System-Client.git
-    cd QT-Banking-System-Client
-    ```
+```sh
+git clone https://github.com/7osssam/QT-Banking-System-Client.git
+cd QT-Banking-System-Client
+```
 
 2. Install dependencies:
-    ```sh
-    make dependency
-    ```
+```sh
+make dependency
+```
 
 3. Configure the project using CMake:
-    ```sh
-    make clean-cache-reconfigure
-    ```
+```sh
+make clean-cache-reconfigure
+```
 
 4. Build the project using the Makefile:
-    ```sh
-    make build
-    ```
+```sh
+make build
+```
 
 ### Running the Application
 
