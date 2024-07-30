@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Doxygen Awesome" />
 <meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
 <!-- END twitter metadata -->
-<title>BankingSystem_Client: QT Banking System (Client side)</title>
+<title>BankingSystem_Client: QT-Banking-System-Client</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -115,10 +115,83 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">QT Banking System (Client side) </div>  </div>
+<div class="title">QT-Banking-System-Client </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__home_runner_work_QT_Banking_System_Client_QT_Banking_System_Client_README"></a></p>
+<div class="textblock"><p><a class="anchor" id="md__home_runner_work_QT_Banking_System_Client_QT_Banking_System_Client_README"></a> </p><h1>Overview</h1>
+<p>QT-Banking-System-Client is the client-side implementation of a banking system, built using the Qt 6/C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations. The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL with Supabase hosting.</p>
+<h1>Features</h1>
+<ul>
+<li><b>User Management:</b> Administrators can manage user accounts, including creating, updating, and deleting accounts.</li>
+<li><b>Transaction Management:</b> Users can view transaction history and process transactions securely.</li>
+<li><b>Real-Time Updates:</b> The client receives real-time updates from the server regarding account balances and transaction statuses.</li>
+<li><b>Secure Communication:</b> Communication between the client and server is secured with appropriate security measures (e.g., hashing, encryption).</li>
+<li><b>Responsive UI:</b> The application features a responsive and user-friendly interface, utilizing Qt's powerful GUI capabilities with the help of <a href="https://github.com/sebcaux/qt-material-widgets">qt-material-widgets</a> library for a modern look and feel.</li>
+</ul>
+<h1>Technologies Used</h1>
+<ul>
+<li><b>C++/Qt 6:</b> Core language and framework for building the application.<ul>
+<li><b>Qt Components:</b> Gui, Widgets, Network, Sql and StateMachine modules.</li>
+</ul>
+</li>
+<li><b>PostgreSQL with Supabase:</b> Database management system for handling data operations.</li>
+<li><b>JSON:</b> Data format for communication between client and server.</li>
+<li><b>CMake:</b> Build system for managing the build process.</li>
+<li><b>GoogleTest:</b> Framework for unit testing the application.</li>
+<li><b>GitHub Actions:</b> Continuous integration for automated testing and documentation generation.</li>
+<li><b>Doxygen:</b> Tool for generating documentation from source code.</li>
+</ul>
+<h1>Setup and Installation</h1>
+<h2>Prerequisites</h2>
+<ul>
+<li>Qt 6.7.1 or later</li>
+<li>CMake</li>
+<li>MinGW or another compatible compiler</li>
+<li>PostgreSQL database</li>
+<li>Supabase account and configuration</li>
+</ul>
+<h2>Building the Project (Using the wrapper Makefile)</h2>
+<ol type="1">
+<li>Clone the repository: ```sh git clone <a href="https://github.com/7osssam/QT-Banking-System-Client.git">https://github.com/7osssam/QT-Banking-System-Client.git</a> cd QT-Banking-System-Client ```</li>
+<li>Install dependencies: ```sh make dependency ```</li>
+<li>Configure the project using CMake: ```sh make clean-cache-reconfigure ```</li>
+<li>Build the project using the Makefile: ```sh make build ```</li>
+</ol>
+<h2>Running the Application</h2>
+<p>To run the application, execute the following command: </p><div class="fragment"><div class="line">make run</div>
+</div><!-- fragment --> <h1>Usage</h1>
+<h2>User Interface</h2>
+<p>The client application provides the following main UI components:</p>
+<ul>
+<li><b>Login Form:</b> Allows users to log in to their accounts.</li>
+<li><b>Admin Dashboard:</b> Provides administrators with tools for managing users and viewing transaction logs.</li>
+<li><b>User Dashboard:</b> Allows users to view their account details and transaction history.</li>
+</ul>
+<h2>Signals and Slots</h2>
+<p>Qt's signal and slot mechanism is used extensively throughout the application to handle UI interactions and communicate with the server.</p>
+<h1>Testing</h1>
+<p>Unit tests are written using GoogleTest. To build and run the tests, execute the following command: </p><div class="fragment"><div class="line">make test</div>
+</div><!-- fragment --><h1>Documentation</h1>
+<p>Comprehensive documentation is available, detailing the purpose, design, and usage of each class and function within the project. The documentation is generated using Doxygen and can be viewed by opening the <code>docs/html/index.html</code> file in a web browser or by visiting the <a href="https://7osssam.github.io/QT-Banking-System-Client/">GitHub Page</a> site.</p>
+<h1>Design and Architecture</h1>
+<h2>Include Diagram</h2>
+<p><img src="docs/diagrams/mermaid/include_diagram.svg" alt="Include Diagram" style="pointer-events: none;" class="inline"/> </p><h2>State Diagram</h2>
+<p><img src="docs/diagrams/plantuml/state_diagram.svg" alt="State Diagram" style="pointer-events: none;" class="inline"/> </p><h2>Sequence Diagram</h2>
+<p><img src="docs/diagrams/plantuml/system_sequence_diagram.svg" alt="Sequence Diagram" style="pointer-events: none;" class="inline"/></p>
+<h1>Continuous Integration</h1>
+<p>The project uses GitHub Actions for continuous integration. The build and test status can be monitored through the following badges:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Documentation   </th><th class="markdownTableHeadNone">Pages Build Deployment   </th><th class="markdownTableHeadNone">Ubuntu CI Test    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a href="https://github.com/7osssam/QT-Banking-System-Client/actions/workflows/documentation.yml"><img src="https://github.com/7osssam/QT-Banking-System-Client/actions/workflows/documentation.yml/badge.svg" alt="Documentation" style="pointer-events: none;" class="inline"/></a>   </td><td class="markdownTableBodyNone"><a href="https://github.com/7osssam/QT-Banking-System-Client/actions/workflows/pages/pages-build-deployment"><img src="https://github.com/7osssam/QT-Banking-System-Client/actions/workflows/pages/pages-build-deployment/badge.svg" alt="pages-build-deployment" style="pointer-events: none;" class="inline"/></a>   </td><td class="markdownTableBodyNone"><a href="https://github.com/7osssam/QT-Banking-System-Client/actions/workflows/Ubuntu.yml"><img src="https://github.com/7osssam/QT-Banking-System-Client/actions/workflows/Ubuntu.yml/badge.svg" alt="Ubuntu CI Test" style="pointer-events: none;" class="inline"/></a>   </td></tr>
+</table>
+<h1>Contribution</h1>
+<p>Contributions are welcome! Please open an issue or submit a pull request for any changes or enhancements.</p>
+<h1>License</h1>
+<p>This project is licensed under the MIT License. See the LICENSE file for details.</p>
+<hr  />
+<p>Happy coding! </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

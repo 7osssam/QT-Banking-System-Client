@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qt_20banking_20system_20_28client_20side_29_258',['QT Banking System (Client side)',['../index.html',1,'']]]
+  ['qt_2dbanking_2dsystem_2dclient_258',['QT-Banking-System-Client',['../index.html',1,'']]]
 ];
