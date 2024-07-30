@@ -2,7 +2,7 @@
 
 ## Overview
 
-QT-Banking-System-Client is the client-side implementation of a banking system, built using the Qt 6/C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations. The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL with Supabase hosting.
+QT-Banking-System-Client is the client-side implementation of a banking system, built using the Qt 6/C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations. The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL (in the server side) with Supabase hosting.
 
 
 ## Features
@@ -16,8 +16,7 @@ QT-Banking-System-Client is the client-side implementation of a banking system, 
 ## Technologies Used
 
 - **C++/Qt 6:** Core language and framework for building the application.
-	- **Qt Components:** Gui, Widgets, Network, Sql and StateMachine modules.
-- **PostgreSQL with Supabase:** Database management system for handling data operations.
+	- **Qt Components:** Gui, Widgets, Network and StateMachine modules.
 - **JSON:** Data format for communication between client and server.
 - **CMake:** Build system for managing the build process.
 - **GoogleTest:** Framework for unit testing the application.
@@ -31,8 +30,6 @@ QT-Banking-System-Client is the client-side implementation of a banking system, 
 - Qt 6.7.1 or later
 - CMake
 - MinGW or another compatible compiler
-- PostgreSQL database
-- Supabase account and configuration
 
 ### Building the Project (Using the wrapper Makefile)
 
