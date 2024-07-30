@@ -1,0 +1,7 @@
+<map id="BaseDialog.h" name="BaseDialog.h">
+<area shape="rect" id="node1" title="Header file for the BaseDialog class." alt="" coords="274,5,372,32"/>
+<area shape="rect" id="node2" href="$CreateUserDialog_8h.html" title="Header file for the CreateUserDialog class." alt="" coords="5,80,139,107"/>
+<area shape="rect" id="node3" href="$UpdateEmailDialog_8h.html" title="Header file for the UpdateEmailDialog class." alt="" coords="162,80,305,107"/>
+<area shape="rect" id="node4" href="$UpdatePasswordDialog_8h.html" title="Header file for the UpdatePasswordDialog class." alt="" coords="329,80,495,107"/>
+<area shape="rect" id="node5" href="$UpdateUserDialog_8h.html" title="Header file for the UpdateUserDialog class." alt="" coords="520,80,656,107"/>
+</map>

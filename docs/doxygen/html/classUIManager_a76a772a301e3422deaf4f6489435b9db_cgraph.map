@@ -1,0 +1,13 @@
+<map id="UIManager::createAdminWidget" name="UIManager::createAdminWidget">
+<area shape="rect" id="node1" title="Creates the admin widget." alt="" coords="5,20,211,47"/>
+<area shape="rect" id="node2" href="$classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="259,121,385,148"/>
+<area shape="rect" id="node5" href="$classAdminWidget.html#a170e668616cdd3f32c6f5c0b979716ce" title="Slot for handling updates to the database content." alt="" coords="681,5,903,48"/>
+<area shape="rect" id="node7" href="$classAdminWidget.html#a2d9d0b9afbd7cedf0f7f73d601f4e228" title="Slot for handling fetched transaction history." alt="" coords="694,72,890,115"/>
+<area shape="rect" id="node3" href="$classLoginWidget.html#a9eefea5a7f5c538ff74e5b9ef061da9f" title="Clears the input fields for email and password." alt="" coords="451,71,615,97"/>
+<area shape="rect" id="node4" href="$classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="433,121,633,148"/>
+<area shape="rect" id="node8" href="$classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="438,172,628,199"/>
+<area shape="rect" id="node6" href="$classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="951,57,1139,100"/>
+<area shape="rect" id="node9" href="$classUserWidget.html#a2559a719f73a41c0755b954e7e88f37c" title="Slot to handle successful fetch of balance." alt="" coords="689,143,895,169"/>
+<area shape="rect" id="node11" href="$classUserWidget.html#a164b551dcb3aab265309427bb9a5f861" title="Slot to handle successful fetch of transactions." alt="" coords="699,193,885,236"/>
+<area shape="rect" id="node10" href="$classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="956,151,1134,193"/>
+</map>

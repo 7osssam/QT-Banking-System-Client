@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,132,75,159"/>
+<area shape="rect" id="node2" href="$classAppManager.html" title=" " alt="" coords="140,5,235,32"/>
+<area shape="rect" id="node3" href="$classClientHandler.html" title="A class for managing client requests and responses." alt="" coords="138,56,237,83"/>
+<area shape="rect" id="node4" href="$classRequestManager.html" title="Manages the creation and dispatching of requests in the system." alt="" coords="128,107,247,133"/>
+<area shape="rect" id="node5" href="$classResponseManager.html" title="Manages the responses received from the server." alt="" coords="123,157,252,184"/>
+<area shape="rect" id="node6" href="$classTcpClient.html" title="A class for managing TCP client connections." alt="" coords="150,208,225,235"/>
+<area shape="rect" id="node7" href="$classUIManager.html" title=" " alt="" coords="146,259,229,285"/>
+</map>

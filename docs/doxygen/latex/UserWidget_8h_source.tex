@@ -1,0 +1,95 @@
+\hypertarget{UserWidget_8h_source}{}\doxysection{User\+Widget.\+h}
+\label{UserWidget_8h_source}\index{UserWidget.h@{UserWidget.h}}
+\mbox{\hyperlink{UserWidget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ USERWIDGET\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ USERWIDGET\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QStackedWidget>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QTableWidget>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}qtmaterialtabs.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}qtmaterialflatbutton.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}qtmaterialdialog.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}qtmaterialsnackbar.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}qtmaterialtextfield.h"{}}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RequestManager_8h}{RequestManager.h}}"{}}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUserWidget}{UserWidget}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00044\ \{}
+\DoxyCodeLine{00045\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classUserWidget}{UserWidget}}(QString\ email,\ QString\ first\_name,\ QString\ account\_number,\ QString\ balance,\ QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ signals:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUserWidget_aad9e17f2f7ca5156fd672a7d9eb6b941}{logout}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUserWidget_a164b551dcb3aab265309427bb9a5f861}{onTransactionsFetched}}(\textcolor{keyword}{const}\ QList<QMap<QString,\ QString>>\&\ transactions);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUserWidget_a2559a719f73a41c0755b954e7e88f37c}{onBalanceFetched}}(\textcolor{keyword}{const}\ QString\ balance);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUserWidget_ac4913a74c0f5ac1a60b39fb16b47a945}{onSuccessfullRequest}}(QString\ message);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUserWidget_a5a60611c42c15e352eca583657488ee5}{onFailedRequest}}(QString\ message);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ onUpdateEmail();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ onUpdatePassword();}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ onLogoutClicked();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ onLogoutConfirmed();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ updateTransactionsTable();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{void}\ onBalanceLabelClicked();}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ updateFirstNameLabel();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{void}\ onTransferFieldsChanged();}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{void}\ onTransferButtonClicked();}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00140\ \ \ \ \ QWidget*\ createHomeTab();}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00146\ \ \ \ \ QWidget*\ createTransferTab();}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00152\ \ \ \ \ QWidget*\ createSettingsTab();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00158\ \ \ \ \ QVBoxLayout*\ createTabLayout();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ email\_;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00161\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ new\_email\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ first\_name\_;\ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ account\_number\_;\ }
+\DoxyCodeLine{00164\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ balance\_;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00165\ \ \ \ \ QList<QMap<QString,\ QString>>\ transactions\_;\ \ \ }
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \ \ \ \ \mbox{\hyperlink{classRequestManager}{RequestManager}}*\ requestManager;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \ \ \ \ QtMaterialSnackbar*\ \ \ notificationSnackbar;\ \ \ \ }
+\DoxyCodeLine{00170\ \ \ \ \ QtMaterialTabs*\ \ \ \ \ \ \ tabs;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00171\ \ \ \ \ QStackedWidget*\ \ \ \ \ \ \ tabContents;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00172\ \ \ \ \ QtMaterialDialog*\ \ \ \ \ logoutDialog;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ QtMaterialFlatButton*\ balanceLabel;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ QtMaterialFlatButton*\ welcomeLabel;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ QtMaterialTextField*\ \ toAccountField;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00177\ \ \ \ \ QtMaterialTextField*\ \ toEmailField;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00178\ \ \ \ \ QtMaterialTextField*\ \ amountField;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \ \ QtMaterialFlatButton*\ transferButton;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00180\ \ \ \ \ QTableWidget*\ \ \ \ \ \ \ \ \ transactionsTable;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00181\ \};}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ USERWIDGET\_H}}
+
+\end{DoxyCode}

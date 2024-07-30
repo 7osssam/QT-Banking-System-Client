@@ -1,0 +1,4 @@
+<map id="TcpClient::connectToServer" name="TcpClient::connectToServer">
+<area shape="rect" id="node1" title="Connect to a TCP server." alt="" coords="236,13,415,40"/>
+<area shape="rect" id="node2" href="$classClientHandler.html#ade05a12eb09a1c14f3ff8d5d9a7775b3" title="Requests a connection to the server." alt="" coords="5,5,188,48"/>
+</map>

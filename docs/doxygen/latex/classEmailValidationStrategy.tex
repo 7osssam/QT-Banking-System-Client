@@ -1,0 +1,94 @@
+\hypertarget{classEmailValidationStrategy}{}\doxysection{Email\+Validation\+Strategy Class Reference}
+\label{classEmailValidationStrategy}\index{EmailValidationStrategy@{EmailValidationStrategy}}
+
+
+Concrete validation strategy for emails.  
+
+
+
+
+{\ttfamily \#include $<$Validation\+Strategy.\+h$>$}
+
+
+
+Inheritance diagram for Email\+Validation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classEmailValidationStrategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Email\+Validation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classEmailValidationStrategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEmailValidationStrategy_ab951f50ceed6d3ae51154ed6d15df2bf}{is\+Valid}} (const QString \&input) const override
+\begin{DoxyCompactList}\small\item\em Validates the input string as an email. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classEmailValidationStrategy_a586268dcfb838d1a6970447a174ffba3}{error\+Message}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the error message for an invalid email. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}{is\+Valid}} (const QString \&input) const =0
+\begin{DoxyCompactList}\small\item\em Validates the input string. \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}{error\+Message}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the error message for invalid input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete validation strategy for emails. 
+
+Validates that the input string is a valid email address. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEmailValidationStrategy_a586268dcfb838d1a6970447a174ffba3}\label{classEmailValidationStrategy_a586268dcfb838d1a6970447a174ffba3}} 
+\index{EmailValidationStrategy@{EmailValidationStrategy}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!EmailValidationStrategy@{EmailValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{errorMessage()}{errorMessage()}}
+{\footnotesize\ttfamily QString Email\+Validation\+Strategy\+::error\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the error message for an invalid email. 
+
+\begin{DoxyReturn}{Returns}
+The error message as a QString. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}{IValidation\+Strategy}}.
+
+\mbox{\Hypertarget{classEmailValidationStrategy_ab951f50ceed6d3ae51154ed6d15df2bf}\label{classEmailValidationStrategy_ab951f50ceed6d3ae51154ed6d15df2bf}} 
+\index{EmailValidationStrategy@{EmailValidationStrategy}!isValid@{isValid}}
+\index{isValid@{isValid}!EmailValidationStrategy@{EmailValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Email\+Validation\+Strategy\+::is\+Valid (\begin{DoxyParamCaption}\item[{const QString \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Validates the input string as an email. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input string to validate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input is a valid email, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}{IValidation\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ValidationStrategy_8h}{Validation\+Strategy.\+h}}\end{DoxyCompactItemize}

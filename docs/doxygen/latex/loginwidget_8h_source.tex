@@ -1,0 +1,81 @@
+\hypertarget{loginwidget_8h_source}{}\doxysection{loginwidget.\+h}
+\label{loginwidget_8h_source}\index{loginwidget.h@{loginwidget.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOGINWIDGET\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOGINWIDGET\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}qtmaterialtextfield.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}qtmaterialflatbutton.h"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}qtmaterialiconbutton.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}qtmaterialsnackbar.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}qtmaterialwidget.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RequestManager_8h}{RequestManager.h}}"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QMovie>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classLoginWidget}{LoginWidget}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00029\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classLoginWidget}{LoginWidget}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ signals:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_af570bac978edf62a10119fd7a205abb4}{connectToServer}}(\textcolor{keyword}{const}\ QString\&\ host,\ quint16\ port);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_ac72d1556f0cb79f39f35b4469fddd8a5}{disconnectFromServer}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_acdecebe1c1993a45ece8624d9bc508fe}{sendLoginRequest}}(QJsonObject\ loginData);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_aa8b517477c0dfb8d176c85bfe2bc9093}{onConnected}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_ade2fcc2eae6ac42a0a494cb04cc705fe}{onDisconnected}}();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_acec729298fad290d58afa915747db662}{onFailedRequest}}(QString\ message);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_ada9460a9aca11b5a4e7a78d047964c15}{onSuccessfullRequest}}(QString\ message);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classLoginWidget_a9eefea5a7f5c538ff74e5b9ef061da9f}{clearFields}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ onLoginButton();}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ onLoginTextChanged();}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ onConnectionIconButton();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ onConnectButton();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00108\ \ \ \ \ QtMaterialTextField*\ \ emailField;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ QtMaterialTextField*\ \ passwordField;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00110\ \ \ \ \ QLabel*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ titleLabel;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ QtMaterialFlatButton*\ loginButton;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ QLabel*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ backgroundLabel;\ \ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ QMovie*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ backgroundMovie;\ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \ \ \ \ QtMaterialIconButton*\ connectionIconButton;\ }
+\DoxyCodeLine{00115\ \ \ \ \ QtMaterialSnackbar*\ \ \ notificationSnackbar;\ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{classRequestManager}{RequestManager}}*\ \ \ \ \ \ \ \ \ requestManager;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isConnected;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{comment}{//\ Connection\ dialog\ components}}
+\DoxyCodeLine{00120\ \ \ \ \ QDialog*\ \ \ \ \ connectionDialog;\ }
+\DoxyCodeLine{00121\ \ \ \ \ QLineEdit*\ \ \ ipPortField;\ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ QPushButton*\ connectButton;\ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ QString\ \ \ \ \ email;\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ QString\ \ \ \ \ password;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \ \ \ \ QVariantMap\ loginData;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LOGINWIDGET\_H}}
+
+\end{DoxyCode}

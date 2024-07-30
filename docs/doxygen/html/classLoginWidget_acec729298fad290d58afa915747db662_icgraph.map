@@ -1,0 +1,6 @@
+<map id="LoginWidget::onFailedRequest" name="LoginWidget::onFailedRequest">
+<area shape="rect" id="node1" title="Slot to handle failed login request." alt="" coords="534,31,732,57"/>
+<area shape="rect" id="node2" href="$classLoginWidget.html#ade2fcc2eae6ac42a0a494cb04cc705fe" title="Slot to handle disconnection from the server." alt="" coords="287,5,481,32"/>
+<area shape="rect" id="node4" href="$classUIManager.html#a9012bf1f97207eb755720a5eeb400f87" title="Displays a failed notification." alt="" coords="282,56,486,83"/>
+<area shape="rect" id="node3" href="$classUIManager.html#ab1f16dfdc06aebc864ddd21dffd4be87" title="Handles the server connection response." alt="" coords="5,5,234,32"/>
+</map>

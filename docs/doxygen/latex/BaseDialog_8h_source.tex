@@ -1,0 +1,52 @@
+\hypertarget{BaseDialog_8h_source}{}\doxysection{Base\+Dialog.\+h}
+\label{BaseDialog_8h_source}\index{BaseDialog.h@{BaseDialog.h}}
+\mbox{\hyperlink{BaseDialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ BASEDIALOG\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ BASEDIALOG\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QHBoxLayout>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ValidationStrategy_8h}{ValidationStrategy.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}qtmaterialflatbutton.h"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}qtmaterialtextfield.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBaseDialog}{BaseDialog}}\ :\ \textcolor{keyword}{public}\ QDialog}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classBaseDialog}{BaseDialog}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ QVariantMap\ \mbox{\hyperlink{classBaseDialog_a74c0e53c3d5a3ed0a6e7cab2b229f269}{getData}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseDialog_ae5e9f9df38ea7f36d8282dfa28f4648f}{setupUI}}()\ =\ 0;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseDialog_afdfd5707b754ca2391a77a8c03d650dd}{connectSignals}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00061\ \ \ \ \ QtMaterialTextField*\ \mbox{\hyperlink{classBaseDialog_ae4870830d6d305c993a746ecf7515dd6}{createInputField}}(QVBoxLayout*\ layout,\ \textcolor{keyword}{const}\ QString\&\ labelText,}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classIValidationStrategy}{IValidationStrategy}}*\ validationStrategy,\ \textcolor{keywordtype}{bool}\ isPassword\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseDialog_a8def162fdb199789470ed23570465e95}{validateInput}}(QtMaterialTextField*\ field);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseDialog_a2698a96efb218e5e676585a9bea3d68e}{updateConfirmButtonState}}();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBaseDialog_ab83ac795b8f131b9b21d804dc026b2b4}{setFieldValidityStyle}}(QtMaterialTextField*\ field,\ QLabel*\ errorLabel,\ \textcolor{keyword}{const}\ QString\&\ errorMessage,}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isValid);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ QMap<QtMaterialTextField*,\ IValidationStrategy*>}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBaseDialog_ad95823a270f3a8b2e990bc1ab214c38a}{validationStrategies\_}};\ }
+\DoxyCodeLine{00087\ \ \ \ \ QMap<QtMaterialTextField*,\ QLabel*>\ \mbox{\hyperlink{classBaseDialog_a2cd48593a6157db9390aafd40c67552e}{errorLabels\_}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ QtMaterialFlatButton*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBaseDialog_a12c46b90ddb8e9f3e2e49ee7677daeb0}{confirmButton}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ QtMaterialFlatButton*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classBaseDialog_a7f6c4439421e5ed61b594f0c4c29071e}{cancelButton}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ BASEDIALOG\_H}}
+
+\end{DoxyCode}

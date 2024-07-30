@@ -1,0 +1,205 @@
+\hypertarget{classLoginWidget}{}\doxysection{Login\+Widget Class Reference}
+\label{classLoginWidget}\index{LoginWidget@{LoginWidget}}
+
+
+The \mbox{\hyperlink{classLoginWidget}{Login\+Widget}} class provides a user interface for logging into the banking system.  
+
+
+
+
+{\ttfamily \#include $<$loginwidget.\+h$>$}
+
+
+
+Inheritance diagram for Login\+Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classLoginWidget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Login\+Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classLoginWidget__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLoginWidget_aa8b517477c0dfb8d176c85bfe2bc9093}\label{classLoginWidget_aa8b517477c0dfb8d176c85bfe2bc9093}} 
+void {\bfseries on\+Connected} ()
+\begin{DoxyCompactList}\small\item\em Slot to handle successful connection to the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoginWidget_ade2fcc2eae6ac42a0a494cb04cc705fe}\label{classLoginWidget_ade2fcc2eae6ac42a0a494cb04cc705fe}} 
+void {\bfseries on\+Disconnected} ()
+\begin{DoxyCompactList}\small\item\em Slot to handle disconnection from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoginWidget_acec729298fad290d58afa915747db662}{on\+Failed\+Request}} (QString message)
+\begin{DoxyCompactList}\small\item\em Slot to handle failed login request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoginWidget_ada9460a9aca11b5a4e7a78d047964c15}{on\+Successfull\+Request}} (QString message)
+\begin{DoxyCompactList}\small\item\em Slot to handle successful login request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoginWidget_a9eefea5a7f5c538ff74e5b9ef061da9f}\label{classLoginWidget_a9eefea5a7f5c538ff74e5b9ef061da9f}} 
+void {\bfseries clear\+Fields} ()
+\begin{DoxyCompactList}\small\item\em Clears the input fields for email and password. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classLoginWidget_af570bac978edf62a10119fd7a205abb4}{connect\+To\+Server}} (const QString \&host, quint16 port)
+\begin{DoxyCompactList}\small\item\em Signal emitted to connect to the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLoginWidget_ac72d1556f0cb79f39f35b4469fddd8a5}\label{classLoginWidget_ac72d1556f0cb79f39f35b4469fddd8a5}} 
+void {\bfseries disconnect\+From\+Server} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted to disconnect from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoginWidget_acdecebe1c1993a45ece8624d9bc508fe}{send\+Login\+Request}} (QJson\+Object login\+Data)
+\begin{DoxyCompactList}\small\item\em Signal emitted to send login request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLoginWidget_a031e07c8e32b288e982a0c23d0fe1d0d}{Login\+Widget}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classLoginWidget}{Login\+Widget}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classLoginWidget}{Login\+Widget}} class provides a user interface for logging into the banking system. 
+
+The \mbox{\hyperlink{classLoginWidget}{Login\+Widget}} is responsible for user authentication, including connecting to the server, handling user input, and displaying appropriate feedback. It provides fields for email and password entry, a login button, and an indicator for connection status. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLoginWidget_a031e07c8e32b288e982a0c23d0fe1d0d}\label{classLoginWidget_a031e07c8e32b288e982a0c23d0fe1d0d}} 
+\index{LoginWidget@{LoginWidget}!LoginWidget@{LoginWidget}}
+\index{LoginWidget@{LoginWidget}!LoginWidget@{LoginWidget}}
+\doxysubsubsection{\texorpdfstring{LoginWidget()}{LoginWidget()}}
+{\footnotesize\ttfamily Login\+Widget\+::\+Login\+Widget (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \mbox{\hyperlink{classLoginWidget}{Login\+Widget}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent QWidget, defaults to nullptr. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLoginWidget_af570bac978edf62a10119fd7a205abb4}\label{classLoginWidget_af570bac978edf62a10119fd7a205abb4}} 
+\index{LoginWidget@{LoginWidget}!connectToServer@{connectToServer}}
+\index{connectToServer@{connectToServer}!LoginWidget@{LoginWidget}}
+\doxysubsubsection{\texorpdfstring{connectToServer}{connectToServer}}
+{\footnotesize\ttfamily void Login\+Widget\+::connect\+To\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]{host,  }\item[{quint16}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted to connect to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & The server IP address. \\
+\hline
+{\em port} & The server port. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}{UIManager\+::create\+Login\+Widget()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLoginWidget_af570bac978edf62a10119fd7a205abb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLoginWidget_acec729298fad290d58afa915747db662}\label{classLoginWidget_acec729298fad290d58afa915747db662}} 
+\index{LoginWidget@{LoginWidget}!onFailedRequest@{onFailedRequest}}
+\index{onFailedRequest@{onFailedRequest}!LoginWidget@{LoginWidget}}
+\doxysubsubsection{\texorpdfstring{onFailedRequest}{onFailedRequest}}
+{\footnotesize\ttfamily void Login\+Widget\+::on\+Failed\+Request (\begin{DoxyParamCaption}\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle failed login request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The error message to display. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classLoginWidget_ade2fcc2eae6ac42a0a494cb04cc705fe}{on\+Disconnected()}}, and \mbox{\hyperlink{classUIManager_a9012bf1f97207eb755720a5eeb400f87}{UIManager\+::on\+Failed\+Notification()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLoginWidget_acec729298fad290d58afa915747db662_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLoginWidget_ada9460a9aca11b5a4e7a78d047964c15}\label{classLoginWidget_ada9460a9aca11b5a4e7a78d047964c15}} 
+\index{LoginWidget@{LoginWidget}!onSuccessfullRequest@{onSuccessfullRequest}}
+\index{onSuccessfullRequest@{onSuccessfullRequest}!LoginWidget@{LoginWidget}}
+\doxysubsubsection{\texorpdfstring{onSuccessfullRequest}{onSuccessfullRequest}}
+{\footnotesize\ttfamily void Login\+Widget\+::on\+Successfull\+Request (\begin{DoxyParamCaption}\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle successful login request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The success message to display. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classLoginWidget_aa8b517477c0dfb8d176c85bfe2bc9093}{on\+Connected()}}, and \mbox{\hyperlink{classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8}{UIManager\+::on\+Successfull\+Notification()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLoginWidget_ada9460a9aca11b5a4e7a78d047964c15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLoginWidget_ada9460a9aca11b5a4e7a78d047964c15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLoginWidget_acdecebe1c1993a45ece8624d9bc508fe}\label{classLoginWidget_acdecebe1c1993a45ece8624d9bc508fe}} 
+\index{LoginWidget@{LoginWidget}!sendLoginRequest@{sendLoginRequest}}
+\index{sendLoginRequest@{sendLoginRequest}!LoginWidget@{LoginWidget}}
+\doxysubsubsection{\texorpdfstring{sendLoginRequest}{sendLoginRequest}}
+{\footnotesize\ttfamily void Login\+Widget\+::send\+Login\+Request (\begin{DoxyParamCaption}\item[{QJson\+Object}]{login\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted to send login request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em login\+Data} & The JSON object containing login data. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}{UIManager\+::create\+Login\+Widget()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLoginWidget_acdecebe1c1993a45ece8624d9bc508fe_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+loginwidget.\+h\item 
+loginwidget.\+cpp\end{DoxyCompactItemize}

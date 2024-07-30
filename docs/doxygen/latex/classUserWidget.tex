@@ -1,0 +1,225 @@
+\hypertarget{classUserWidget}{}\doxysection{User\+Widget Class Reference}
+\label{classUserWidget}\index{UserWidget@{UserWidget}}
+
+
+The \mbox{\hyperlink{classUserWidget}{User\+Widget}} class provides a user interface for managing user accounts, performing transactions, and modifying settings within the banking application.  
+
+
+
+
+{\ttfamily \#include $<$User\+Widget.\+h$>$}
+
+
+
+Inheritance diagram for User\+Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classUserWidget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for User\+Widget\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classUserWidget__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUserWidget_a164b551dcb3aab265309427bb9a5f861}{on\+Transactions\+Fetched}} (const QList$<$ QMap$<$ QString, QString $>$ $>$ \&transactions)
+\begin{DoxyCompactList}\small\item\em Slot to handle successful fetch of transactions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUserWidget_a2559a719f73a41c0755b954e7e88f37c}{on\+Balance\+Fetched}} (const QString balance)
+\begin{DoxyCompactList}\small\item\em Slot to handle successful fetch of balance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUserWidget_ac4913a74c0f5ac1a60b39fb16b47a945}{on\+Successfull\+Request}} (QString message)
+\begin{DoxyCompactList}\small\item\em Slot to handle successful request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUserWidget_a5a60611c42c15e352eca583657488ee5}{on\+Failed\+Request}} (QString message)
+\begin{DoxyCompactList}\small\item\em Slot to handle failed request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classUserWidget_aad9e17f2f7ca5156fd672a7d9eb6b941}\label{classUserWidget_aad9e17f2f7ca5156fd672a7d9eb6b941}} 
+void {\bfseries logout} ()
+\begin{DoxyCompactList}\small\item\em Emitted when the user requests to log out. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUserWidget_aca06f061c4efc03b1f1be03c45d14ad6}{User\+Widget}} (QString email, QString first\+\_\+name, QString account\+\_\+number, QString balance, QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classUserWidget}{User\+Widget}} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUserWidget}{User\+Widget}} class provides a user interface for managing user accounts, performing transactions, and modifying settings within the banking application. 
+
+This class represents the main user interface component that allows users to interact with their account information, view transaction history, perform transfers, and update personal settings. It includes several tabs for different functionalities such as Home, Transfer, and Settings.
+
+The \mbox{\hyperlink{classUserWidget}{User\+Widget}} class manages the display of user data, handles user interactions, and communicates with the backend server through the \mbox{\hyperlink{classRequestManager}{Request\+Manager}}. It provides features for viewing transaction history, performing money transfers, updating account details, and logging out of the application.
+
+The widget consists of\+:
+\begin{DoxyItemize}
+\item Home tab\+: Displays welcome message, current balance, and transaction history.
+\item Transfer tab\+: Allows users to transfer funds to another account or email.
+\item Settings tab\+: Provides options to update email, update password, and log out. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUserWidget_aca06f061c4efc03b1f1be03c45d14ad6}\label{classUserWidget_aca06f061c4efc03b1f1be03c45d14ad6}} 
+\index{UserWidget@{UserWidget}!UserWidget@{UserWidget}}
+\index{UserWidget@{UserWidget}!UserWidget@{UserWidget}}
+\doxysubsubsection{\texorpdfstring{UserWidget()}{UserWidget()}}
+{\footnotesize\ttfamily User\+Widget\+::\+User\+Widget (\begin{DoxyParamCaption}\item[{QString}]{email,  }\item[{QString}]{first\+\_\+name,  }\item[{QString}]{account\+\_\+number,  }\item[{QString}]{balance,  }\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classUserWidget}{User\+Widget}} instance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & The user\textquotesingle{}s email address. \\
+\hline
+{\em first\+\_\+name} & The user\textquotesingle{}s first name. \\
+\hline
+{\em account\+\_\+number} & The user\textquotesingle{}s account number. \\
+\hline
+{\em balance} & The user\textquotesingle{}s current balance. \\
+\hline
+{\em parent} & The parent widget (optional). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUserWidget_aca06f061c4efc03b1f1be03c45d14ad6_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUserWidget_a2559a719f73a41c0755b954e7e88f37c}\label{classUserWidget_a2559a719f73a41c0755b954e7e88f37c}} 
+\index{UserWidget@{UserWidget}!onBalanceFetched@{onBalanceFetched}}
+\index{onBalanceFetched@{onBalanceFetched}!UserWidget@{UserWidget}}
+\doxysubsubsection{\texorpdfstring{onBalanceFetched}{onBalanceFetched}}
+{\footnotesize\ttfamily void User\+Widget\+::on\+Balance\+Fetched (\begin{DoxyParamCaption}\item[{const QString}]{balance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle successful fetch of balance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em balance} & The balance fetched from the server. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_a44bd3b3ff855e9ea6924bab6550594ac}{UIManager\+::close\+User\+Widget()}}, \mbox{\hyperlink{classUIManager_a15fa6321d4967795e43175cdcd3c4d59}{UIManager\+::create\+User\+Widget()}}, and \mbox{\hyperlink{classUserWidget_aca06f061c4efc03b1f1be03c45d14ad6}{User\+Widget()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUserWidget_a2559a719f73a41c0755b954e7e88f37c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUserWidget_a2559a719f73a41c0755b954e7e88f37c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUserWidget_a5a60611c42c15e352eca583657488ee5}\label{classUserWidget_a5a60611c42c15e352eca583657488ee5}} 
+\index{UserWidget@{UserWidget}!onFailedRequest@{onFailedRequest}}
+\index{onFailedRequest@{onFailedRequest}!UserWidget@{UserWidget}}
+\doxysubsubsection{\texorpdfstring{onFailedRequest}{onFailedRequest}}
+{\footnotesize\ttfamily void User\+Widget\+::on\+Failed\+Request (\begin{DoxyParamCaption}\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle failed request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The failure message to display. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_a9012bf1f97207eb755720a5eeb400f87}{UIManager\+::on\+Failed\+Notification()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUserWidget_a5a60611c42c15e352eca583657488ee5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUserWidget_ac4913a74c0f5ac1a60b39fb16b47a945}\label{classUserWidget_ac4913a74c0f5ac1a60b39fb16b47a945}} 
+\index{UserWidget@{UserWidget}!onSuccessfullRequest@{onSuccessfullRequest}}
+\index{onSuccessfullRequest@{onSuccessfullRequest}!UserWidget@{UserWidget}}
+\doxysubsubsection{\texorpdfstring{onSuccessfullRequest}{onSuccessfullRequest}}
+{\footnotesize\ttfamily void User\+Widget\+::on\+Successfull\+Request (\begin{DoxyParamCaption}\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle successful request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The success message to display. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUserWidget_a2559a719f73a41c0755b954e7e88f37c}{on\+Balance\+Fetched()}}, \mbox{\hyperlink{classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8}{UIManager\+::on\+Successfull\+Notification()}}, and \mbox{\hyperlink{classUserWidget_a164b551dcb3aab265309427bb9a5f861}{on\+Transactions\+Fetched()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUserWidget_ac4913a74c0f5ac1a60b39fb16b47a945_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUserWidget_a164b551dcb3aab265309427bb9a5f861}\label{classUserWidget_a164b551dcb3aab265309427bb9a5f861}} 
+\index{UserWidget@{UserWidget}!onTransactionsFetched@{onTransactionsFetched}}
+\index{onTransactionsFetched@{onTransactionsFetched}!UserWidget@{UserWidget}}
+\doxysubsubsection{\texorpdfstring{onTransactionsFetched}{onTransactionsFetched}}
+{\footnotesize\ttfamily void User\+Widget\+::on\+Transactions\+Fetched (\begin{DoxyParamCaption}\item[{const QList$<$ QMap$<$ QString, QString $>$ $>$ \&}]{transactions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle successful fetch of transactions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em transactions} & The list of transactions fetched from the server. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_a44bd3b3ff855e9ea6924bab6550594ac}{UIManager\+::close\+User\+Widget()}}, and \mbox{\hyperlink{classUIManager_a15fa6321d4967795e43175cdcd3c4d59}{UIManager\+::create\+User\+Widget()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUserWidget_a164b551dcb3aab265309427bb9a5f861_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUserWidget_a164b551dcb3aab265309427bb9a5f861_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UserWidget_8h}{User\+Widget.\+h}}\item 
+User\+Widget.\+cpp\end{DoxyCompactItemize}

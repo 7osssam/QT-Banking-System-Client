@@ -24,14 +24,18 @@
 */
 var NAVTREE =
 [
-  [ "BankApp", "index.html", [
-    [ "Real-time Vamp plugin SDK for C++20", "index.html", null ],
+  [ "Banking_System_Client", "index.html", [
+    [ "QT-Banking-System-Client", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
+        [ "Enumerator", "functions_eval.html", null ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -42,7 +46,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"BankAccount_8hpp_source.html"
+"AdminWidget_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

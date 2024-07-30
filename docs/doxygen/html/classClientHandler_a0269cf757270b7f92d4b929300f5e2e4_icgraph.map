@@ -1,0 +1,7 @@
+<map id="ClientHandler::sendResponseBack" name="ClientHandler::sendResponseBack">
+<area shape="rect" id="node1" title="Signal to send the response back to the window manager." alt="" coords="425,80,647,107"/>
+<area shape="rect" id="node2" href="$classClientHandler.html#ae5fb26b25c3245785a105a14e34f3b04" title="Slot to handle the connected signal." alt="" coords="186,5,369,48"/>
+<area shape="rect" id="node4" href="$classClientHandler.html#adaed8be5287f9b3450e8f02ed1da8da6" title="Slot to handle the disconnected signal." alt="" coords="178,72,377,115"/>
+<area shape="rect" id="node5" href="$classClientHandler.html#a3d4c4f92147d59cf7098c54a9a4e7c52" title="Slot to handle the response received from the server." alt="" coords="188,139,367,181"/>
+<area shape="rect" id="node3" href="$classClientHandler.html#a88abe966b363ef9a5fedd1c5555a9a32" title="Runs the event loop for the ClientHandler." alt="" coords="5,80,130,107"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="TcpClient::sendTcpRequest" name="TcpClient::sendTcpRequest">
+<area shape="rect" id="node1" title="Send a TCP request." alt="" coords="236,5,416,32"/>
+<area shape="rect" id="node2" href="$classClientHandler.html#ac83e40235b51c02bd186ae640e3876af" title="Sends a request to the server." alt="" coords="5,5,188,32"/>
+</map>

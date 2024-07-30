@@ -1,0 +1,240 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1620px" preserveAspectRatio="none" style="width:1889px;height:1620px;background:#FFFFFF;" version="1.1" viewBox="0 0 1889 1620" width="1889px" zoomAndPan="magnify">
+  <defs>
+    <style type="text/css">a:hover { text-decoration: underline; }</style>
+  </defs>
+  <g>
+    <rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="917.5" y="396.125"/>
+    <rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="917.5" y="773.3438"/>
+    <rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="917.5" y="1150.5625"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="145.3125"/>
+    <rect fill="#FFFFFF" height="60.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="651.9375"/>
+    <rect fill="#FFFFFF" height="60.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="1029.1563"/>
+    <rect fill="#FFFFFF" height="60.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="1406.375"/>
+    <rect fill="#FFFFFF" height="1072.4375" style="stroke:#181818;stroke-width:1.0;" width="10" x="1237.5" y="456.8281"/>
+    <rect fill="#FFFFFF" height="695.2188" style="stroke:#181818;stroke-width:1.0;" width="10" x="1242.5" y="834.0469"/>
+    <rect fill="#FFFFFF" height="318" style="stroke:#181818;stroke-width:1.0;" width="10" x="1247.5" y="1211.2656"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1403.5" y="487.1797"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1403.5" y="864.3984"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1403.5" y="1241.6172"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="175.6641"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="517.5313"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="894.75"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="1271.9688"/>
+    <rect fill="none" height="1196.1953" style="stroke:#000000;stroke-width:1.5;" width="1827.5" x="10" y="325.0703"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="37" x2="37" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="228" x2="228" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="424" x2="424" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="702" x2="702" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="922" x2="922" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1082.5" x2="1082.5" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1242" x2="1242" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1408" x2="1408" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1594.5" x2="1594.5" y1="82.6094" y2="1538.2656"/>
+    <line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1708.5" x2="1708.5" y1="82.6094" y2="1538.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="20" y="79.5332">User</text>
+    <ellipse cx="37.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M37.5,21.5 L37.5,48.5 M24.5,29.5 L50.5,29.5 M37.5,48.5 L24.5,63.5 M37.5,48.5 L50.5,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="20" y="1551.7988">User</text>
+    <ellipse cx="37.5" cy="1563.375" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/>
+    <path d="M37.5,1571.375 L37.5,1598.375 M24.5,1579.375 L50.5,1579.375 M37.5,1598.375 L24.5,1613.375 M37.5,1598.375 L50.5,1613.375 " fill="none" style="stroke:#181818;stroke-width:0.5;"/>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="182" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="189" y="71.5332">LoginWidget</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="93" x="182" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="79" x="189" y="1558.7988">LoginWidget</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="87" x="381" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="388" y="71.5332">UserWidget</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="87" x="381" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="388" y="1558.7988">UserWidget</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="654" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="661" y="71.5332">AdminWidget</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="654" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="661" y="1558.7988">AdminWidget</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="123" x="861" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="868" y="71.5332">RequestManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="123" x="861" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="868" y="1558.7988">RequestManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="1041.5" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="1048.5" y="71.5332">UIManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="82" x="1041.5" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="1048.5" y="1558.7988">UIManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="1195" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="1202" y="71.5332">AppManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="95" x="1195" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="1202" y="1558.7988">AppManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="99" x="1359" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="1366" y="71.5332">ClientHandler</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="99" x="1359" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="1366" y="1558.7988">ClientHandler</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="1527.5" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="1534.5" y="71.5332">ResponseManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="1527.5" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="120" x="1534.5" y="1558.7988">ResponseManager</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="1671.5" y="50"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="1678.5" y="71.5332">TcpClient</text>
+    <rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="74" x="1671.5" y="1537.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="60" x="1678.5" y="1558.7988">TcpClient</text>
+    <rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="917.5" y="396.125"/>
+    <rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="917.5" y="773.3438"/>
+    <rect fill="#FFFFFF" height="30.3516" style="stroke:#181818;stroke-width:1.0;" width="10" x="917.5" y="1150.5625"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="145.3125"/>
+    <rect fill="#FFFFFF" height="60.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="651.9375"/>
+    <rect fill="#FFFFFF" height="60.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="1029.1563"/>
+    <rect fill="#FFFFFF" height="60.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1077.5" y="1406.375"/>
+    <rect fill="#FFFFFF" height="1072.4375" style="stroke:#181818;stroke-width:1.0;" width="10" x="1237.5" y="456.8281"/>
+    <rect fill="#FFFFFF" height="695.2188" style="stroke:#181818;stroke-width:1.0;" width="10" x="1242.5" y="834.0469"/>
+    <rect fill="#FFFFFF" height="318" style="stroke:#181818;stroke-width:1.0;" width="10" x="1247.5" y="1211.2656"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1403.5" y="487.1797"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1403.5" y="864.3984"/>
+    <rect fill="#FFFFFF" height="134.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="1403.5" y="1241.6172"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="175.6641"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="517.5313"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="894.75"/>
+    <rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1703.5" y="1271.9688"/>
+    <polygon fill="#181818" points="216.5,110.9609,226.5,114.9609,216.5,118.9609,220.5,114.9609" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="222.5" y1="114.9609" y2="114.9609"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="167" x="44.5" y="110.1045">Enter Connection Information</text>
+    <polygon fill="#181818" points="1065.5,141.3125,1075.5,145.3125,1065.5,149.3125,1069.5,145.3125" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="228.5" x2="1071.5" y1="145.3125" y2="145.3125"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="235.5" y="140.4561">requestConnection(host, port)</text>
+    <polygon fill="#181818" points="1691.5,171.6641,1701.5,175.6641,1691.5,179.6641,1695.5,175.6641" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1087.5" x2="1697.5" y1="175.6641" y2="175.6641"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="1094.5" y="170.8076">connectToServer(host, port)</text>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1713.5" x2="1755.5" y1="206.0156" y2="206.0156"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1755.5" x2="1755.5" y1="206.0156" y2="219.0156"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1714.5" x2="1755.5" y1="219.0156" y2="219.0156"/>
+    <polygon fill="#181818" points="1724.5,215.0156,1714.5,219.0156,1724.5,223.0156,1720.5,219.0156" style="stroke:#181818;stroke-width:1.0;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="162" x="1720.5" y="201.1592">Process connection request</text>
+    <polygon fill="#181818" points="1098.5,245.3672,1088.5,249.3672,1098.5,253.3672,1094.5,249.3672" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1092.5" x2="1707.5" y1="249.3672" y2="249.3672"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="122" x="1104.5" y="244.5107">Connection response</text>
+    <polygon fill="#181818" points="239.5,275.7188,229.5,279.7188,239.5,283.7188,235.5,279.7188" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="233.5" x2="1081.5" y1="279.7188" y2="279.7188"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="161" x="245.5" y="274.8623">connectionResult(response)</text>
+    <polygon fill="#181818" points="48.5,306.0703,38.5,310.0703,48.5,314.0703,44.5,310.0703" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="42.5" x2="227.5" y1="310.0703" y2="310.0703"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="150" x="54.5" y="305.2139">Display connection status</text>
+    <path d="M10,325.0703 L71,325.0703 L71,333.4219 L61,343.4219 L10,343.4219 L10,325.0703 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;"/>
+    <rect fill="none" height="1196.1953" style="stroke:#000000;stroke-width:1.5;" width="1827.5" x="10" y="325.0703"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="16" x="25" y="339.5654">alt</text>
+    <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="133" x="86" y="338.4893">[connection successful]</text>
+    <polygon fill="#181818" points="216.5,361.7734,226.5,365.7734,216.5,369.7734,220.5,365.7734" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="222.5" y1="365.7734" y2="365.7734"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="44.5" y="360.917">Enter login information</text>
+    <polygon fill="#181818" points="905.5,392.125,915.5,396.125,905.5,400.125,909.5,396.125" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="228.5" x2="911.5" y1="396.125" y2="396.125"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="235.5" y="391.2686">createRequest(Login, loginData)</text>
+    <polygon fill="#181818" points="1070.5,422.4766,1080.5,426.4766,1070.5,430.4766,1074.5,426.4766" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="922.5" x2="1076.5" y1="426.4766" y2="426.4766"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="929.5" y="421.6201">makeRequest(request)</text>
+    <polygon fill="#181818" points="1225.5,452.8281,1235.5,456.8281,1225.5,460.8281,1229.5,456.8281" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1082.5" x2="1231.5" y1="456.8281" y2="456.8281"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="1089.5" y="451.9717">makeRequest(request)</text>
+    <polygon fill="#181818" points="1391.5,483.1797,1401.5,487.1797,1391.5,491.1797,1395.5,487.1797" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1247.5" x2="1397.5" y1="487.1797" y2="487.1797"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="1254.5" y="482.3232">sendRequest(request)</text>
+    <polygon fill="#181818" points="1691.5,513.5313,1701.5,517.5313,1691.5,521.5313,1695.5,517.5313" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1413.5" x2="1697.5" y1="517.5313" y2="517.5313"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="1420.5" y="512.6748">sendTcpRequest(request)</text>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1713.5" x2="1755.5" y1="547.8828" y2="547.8828"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1755.5" x2="1755.5" y1="547.8828" y2="560.8828"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1714.5" x2="1755.5" y1="560.8828" y2="560.8828"/>
+    <polygon fill="#181818" points="1724.5,556.8828,1714.5,560.8828,1724.5,564.8828,1720.5,560.8828" style="stroke:#181818;stroke-width:1.0;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="1720.5" y="543.0264">Process request</text>
+    <polygon fill="#181818" points="1424.5,587.2344,1414.5,591.2344,1424.5,595.2344,1420.5,591.2344" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1418.5" x2="1707.5" y1="591.2344" y2="591.2344"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="1430.5" y="586.3779">sendResponseBack(response)</text>
+    <polygon fill="#181818" points="1582.5,617.5859,1592.5,621.5859,1582.5,625.5859,1586.5,621.5859" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1408.5" x2="1588.5" y1="621.5859" y2="621.5859"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="1415.5" y="616.7295">handleResponse(response)</text>
+    <polygon fill="#181818" points="1098.5,647.9375,1088.5,651.9375,1098.5,655.9375,1094.5,651.9375" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1092.5" x2="1593.5" y1="651.9375" y2="651.9375"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="1104.5" y="647.0811">handleResponse(response)</text>
+    <polygon fill="#181818" points="239.5,678.2891,229.5,682.2891,239.5,686.2891,235.5,682.2891" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="233.5" x2="1076.5" y1="682.2891" y2="682.2891"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="245.5" y="677.4326">responseReady(response)</text>
+    <polygon fill="#181818" points="48.5,708.6406,38.5,712.6406,48.5,716.6406,44.5,712.6406" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="42.5" x2="227.5" y1="712.6406" y2="712.6406"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="54.5" y="707.7842">Display login result</text>
+    <polygon fill="#181818" points="412.5,738.9922,422.5,742.9922,412.5,746.9922,416.5,742.9922" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="418.5" y1="742.9922" y2="742.9922"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="363" x="44.5" y="738.1357">Operation (update email/password, view balance, transfer, etc.)</text>
+    <polygon fill="#181818" points="905.5,769.3438,915.5,773.3438,905.5,777.3438,909.5,773.3438" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="424.5" x2="911.5" y1="773.3438" y2="773.3438"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196" x="431.5" y="768.4873">createRequest(requestType, data)</text>
+    <polygon fill="#181818" points="1070.5,799.6953,1080.5,803.6953,1070.5,807.6953,1074.5,803.6953" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="922.5" x2="1076.5" y1="803.6953" y2="803.6953"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="929.5" y="798.8389">makeRequest(request)</text>
+    <polygon fill="#181818" points="1230.5,830.0469,1240.5,834.0469,1230.5,838.0469,1234.5,834.0469" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1082.5" x2="1236.5" y1="834.0469" y2="834.0469"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="1089.5" y="829.1904">makeRequest(request)</text>
+    <polygon fill="#181818" points="1391.5,860.3984,1401.5,864.3984,1391.5,868.3984,1395.5,864.3984" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1252.5" x2="1397.5" y1="864.3984" y2="864.3984"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="1259.5" y="859.542">sendRequest(request)</text>
+    <polygon fill="#181818" points="1691.5,890.75,1701.5,894.75,1691.5,898.75,1695.5,894.75" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1413.5" x2="1697.5" y1="894.75" y2="894.75"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="1420.5" y="889.8936">sendTcpRequest(request)</text>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1713.5" x2="1755.5" y1="925.1016" y2="925.1016"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1755.5" x2="1755.5" y1="925.1016" y2="938.1016"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1714.5" x2="1755.5" y1="938.1016" y2="938.1016"/>
+    <polygon fill="#181818" points="1724.5,934.1016,1714.5,938.1016,1724.5,942.1016,1720.5,938.1016" style="stroke:#181818;stroke-width:1.0;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="1720.5" y="920.2451">Process request</text>
+    <polygon fill="#181818" points="1424.5,964.4531,1414.5,968.4531,1424.5,972.4531,1420.5,968.4531" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1418.5" x2="1707.5" y1="968.4531" y2="968.4531"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="1430.5" y="963.5967">sendResponseBack(response)</text>
+    <polygon fill="#181818" points="1582.5,994.8047,1592.5,998.8047,1582.5,1002.8047,1586.5,998.8047" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1408.5" x2="1588.5" y1="998.8047" y2="998.8047"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="1415.5" y="993.9482">handleResponse(response)</text>
+    <polygon fill="#181818" points="1098.5,1025.1563,1088.5,1029.1563,1098.5,1033.1563,1094.5,1029.1563" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1092.5" x2="1593.5" y1="1029.1563" y2="1029.1563"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="1104.5" y="1024.2998">handleResponse(response)</text>
+    <polygon fill="#181818" points="435.5,1055.5078,425.5,1059.5078,435.5,1063.5078,431.5,1059.5078" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="429.5" x2="1076.5" y1="1059.5078" y2="1059.5078"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="441.5" y="1054.6514">responseReady(response)</text>
+    <polygon fill="#181818" points="48.5,1085.8594,38.5,1089.8594,48.5,1093.8594,44.5,1089.8594" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="42.5" x2="423.5" y1="1089.8594" y2="1089.8594"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="54.5" y="1085.0029">Display operation result</text>
+    <polygon fill="#181818" points="690.5,1116.2109,700.5,1120.2109,690.5,1124.2109,694.5,1120.2109" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="37.5" x2="696.5" y1="1120.2109" y2="1120.2109"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="641" x="44.5" y="1115.3545">Operation (update user information/password, create user, delete user, view database/transaction records, etc.)</text>
+    <polygon fill="#181818" points="905.5,1146.5625,915.5,1150.5625,905.5,1154.5625,909.5,1150.5625" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="702.5" x2="911.5" y1="1150.5625" y2="1150.5625"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="196" x="709.5" y="1145.7061">createRequest(requestType, data)</text>
+    <polygon fill="#181818" points="1070.5,1176.9141,1080.5,1180.9141,1070.5,1184.9141,1074.5,1180.9141" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="922.5" x2="1076.5" y1="1180.9141" y2="1180.9141"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="929.5" y="1176.0576">makeRequest(request)</text>
+    <polygon fill="#181818" points="1235.5,1207.2656,1245.5,1211.2656,1235.5,1215.2656,1239.5,1211.2656" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1082.5" x2="1241.5" y1="1211.2656" y2="1211.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="131" x="1089.5" y="1206.4092">makeRequest(request)</text>
+    <polygon fill="#181818" points="1391.5,1237.6172,1401.5,1241.6172,1391.5,1245.6172,1395.5,1241.6172" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1257.5" x2="1397.5" y1="1241.6172" y2="1241.6172"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="1264.5" y="1236.7607">sendRequest(request)</text>
+    <polygon fill="#181818" points="1691.5,1267.9688,1701.5,1271.9688,1691.5,1275.9688,1695.5,1271.9688" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1413.5" x2="1697.5" y1="1271.9688" y2="1271.9688"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="1420.5" y="1267.1123">sendTcpRequest(request)</text>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1713.5" x2="1755.5" y1="1302.3203" y2="1302.3203"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1755.5" x2="1755.5" y1="1302.3203" y2="1315.3203"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1714.5" x2="1755.5" y1="1315.3203" y2="1315.3203"/>
+    <polygon fill="#181818" points="1724.5,1311.3203,1714.5,1315.3203,1724.5,1319.3203,1720.5,1315.3203" style="stroke:#181818;stroke-width:1.0;"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="95" x="1720.5" y="1297.4639">Process request</text>
+    <polygon fill="#181818" points="1424.5,1341.6719,1414.5,1345.6719,1424.5,1349.6719,1420.5,1345.6719" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1418.5" x2="1707.5" y1="1345.6719" y2="1345.6719"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="177" x="1430.5" y="1340.8154">sendResponseBack(response)</text>
+    <polygon fill="#181818" points="1582.5,1372.0234,1592.5,1376.0234,1582.5,1380.0234,1586.5,1376.0234" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1408.5" x2="1588.5" y1="1376.0234" y2="1376.0234"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="1415.5" y="1371.167">handleResponse(response)</text>
+    <polygon fill="#181818" points="1098.5,1402.375,1088.5,1406.375,1098.5,1410.375,1094.5,1406.375" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="1092.5" x2="1593.5" y1="1406.375" y2="1406.375"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="157" x="1104.5" y="1401.5186">handleResponse(response)</text>
+    <polygon fill="#181818" points="713.5,1432.7266,703.5,1436.7266,713.5,1440.7266,709.5,1436.7266" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="707.5" x2="1076.5" y1="1436.7266" y2="1436.7266"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="719.5" y="1431.8701">responseReady(response)</text>
+    <polygon fill="#181818" points="48.5,1463.0781,38.5,1467.0781,48.5,1471.0781,44.5,1467.0781" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="42.5" x2="701.5" y1="1467.0781" y2="1467.0781"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="54.5" y="1462.2217">Display operation result</text>
+    <line style="stroke:#000000;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="10" x2="1837.5" y1="1476.0781" y2="1476.0781"/>
+    <text fill="#000000" font-family="sans-serif" font-size="11" font-weight="bold" lengthAdjust="spacing" textLength="102" x="15" y="1487.4971">[connection failed]</text>
+    <polygon fill="#181818" points="48.5,1509.2656,38.5,1513.2656,48.5,1517.2656,44.5,1513.2656" style="stroke:#181818;stroke-width:1.0;"/>
+    <line style="stroke:#181818;stroke-width:1.0;" x1="42.5" x2="227.5" y1="1513.2656" y2="1513.2656"/>
+    <text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140" x="54.5" y="1508.4092">Display connection error</text>
+  </g>
+</svg>

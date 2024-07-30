@@ -1,0 +1,232 @@
+\hypertarget{classRequestManager}{}\doxysection{Request\+Manager Class Reference}
+\label{classRequestManager}\index{RequestManager@{RequestManager}}
+
+
+Manages the creation and dispatching of requests in the system.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Request\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classRequestManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Request\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classRequestManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310}{Available\+Requests}} \{ \newline
+\mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a517c61a4e946ec7f92a01e8622c97632}{Login}} = 1
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a1ce33251979ab4a049ebc6f80a7b1ca7}{Get\+Accountnumber}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a41aa3cfd8482a75d229a86203a7a7001}{Get\+Balance}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310af4f4491b688d2274389535e68917d549}{Get\+Transactions\+History}}
+, \newline
+\mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a073436de6bc4635f6f1d6a739d15e115}{Make\+Transaction}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a58fc4431f7c77a667ed7d524efdb2155}{Transfer\+Amount}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a9aa35c99906b91e1b0b65522368682a1}{Get\+Database}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a0b2388382a273df5b82ddb6abff8d675}{Create\+New\+User}}
+, \newline
+\mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310aaadb31279034a82211cbcbcb6f32f138}{Delete\+User}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310abe9610f90871c52199552ba9a7eee628}{Update\+User}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a3d57ea768887ade2528b49470afeee2e}{User\+Init}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310ac8974e51516860572533ff425c9162ba}{Update\+Email}}
+, \newline
+\mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a55a93a95e948c8d526ab395d9b56b7bc}{Update\+Password}}
+, \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a11bb09725c432a23db823edbe06bf04b}{Json\+Parse\+Error}} = -\/1
+ \}
+\begin{DoxyCompactList}\small\item\em Defines the types of requests that can be created. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classRequestManager_abffb99ce17530ae187330e53296c5b80}{make\+Request}} (QJson\+Object Data)
+\begin{DoxyCompactList}\small\item\em Signal emitted when a request is made. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRequestManager_a8660d94f94ccc3c064c114e9bbd57a11}\label{classRequestManager_a8660d94f94ccc3c064c114e9bbd57a11}} 
+{\bfseries Request\+Manager} (const \mbox{\hyperlink{classRequestManager}{Request\+Manager}} \&)=delete
+\item 
+\mbox{\Hypertarget{classRequestManager_a8e01d748009a113b82248498a1a8804d}\label{classRequestManager_a8e01d748009a113b82248498a1a8804d}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classRequestManager}{Request\+Manager}} \&)=delete
+\item 
+void \mbox{\hyperlink{classRequestManager_ab57f072ef0c3f17c67f38a3d32abba32}{create\+Request}} (\mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310}{Available\+Requests}} request\+Type, QVariant\+Map data)
+\begin{DoxyCompactList}\small\item\em Creates a request based on the provided type and data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classRequestManager}{Request\+Manager}} $\ast$ \mbox{\hyperlink{classRequestManager_a02062c5fedfde1444cd941bc2a22e785}{get\+Instance}} (QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Get the singleton instance of \mbox{\hyperlink{classRequestManager}{Request\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the creation and dispatching of requests in the system. 
+
+The \mbox{\hyperlink{classRequestManager}{Request\+Manager}} class follows the Singleton design pattern to ensure that only one instance of the class exists throughout the application. It is responsible for creating various types of requests and emitting a signal to notify when a request is made.
+
+The requests are defined by the Available\+Requests enum and include operations such as user login, account retrieval, balance checking, transaction history, and more. The requests are created in the form of QJson\+Object and emitted via the make\+Request signal. 
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310}} 
+\index{RequestManager@{RequestManager}!AvailableRequests@{AvailableRequests}}
+\index{AvailableRequests@{AvailableRequests}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{AvailableRequests}{AvailableRequests}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310}{Request\+Manager\+::\+Available\+Requests}}}
+
+
+
+Defines the types of requests that can be created. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Login@{Login}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!Login@{Login}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a517c61a4e946ec7f92a01e8622c97632}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a517c61a4e946ec7f92a01e8622c97632}} 
+Login&User login request. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GetAccountnumber@{GetAccountnumber}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!GetAccountnumber@{GetAccountnumber}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a1ce33251979ab4a049ebc6f80a7b1ca7}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a1ce33251979ab4a049ebc6f80a7b1ca7}} 
+Get\+Accountnumber&Request to get account number. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GetBalance@{GetBalance}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!GetBalance@{GetBalance}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a41aa3cfd8482a75d229a86203a7a7001}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a41aa3cfd8482a75d229a86203a7a7001}} 
+Get\+Balance&Request to get account balance. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GetTransactionsHistory@{GetTransactionsHistory}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!GetTransactionsHistory@{GetTransactionsHistory}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310af4f4491b688d2274389535e68917d549}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310af4f4491b688d2274389535e68917d549}} 
+Get\+Transactions\+History&Request to get transaction history. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MakeTransaction@{MakeTransaction}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!MakeTransaction@{MakeTransaction}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a073436de6bc4635f6f1d6a739d15e115}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a073436de6bc4635f6f1d6a739d15e115}} 
+Make\+Transaction&Request to make a transaction. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TransferAmount@{TransferAmount}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!TransferAmount@{TransferAmount}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a58fc4431f7c77a667ed7d524efdb2155}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a58fc4431f7c77a667ed7d524efdb2155}} 
+Transfer\+Amount&Request to transfer an amount (not used for now) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GetDatabase@{GetDatabase}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!GetDatabase@{GetDatabase}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a9aa35c99906b91e1b0b65522368682a1}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a9aa35c99906b91e1b0b65522368682a1}} 
+Get\+Database&Request to get the database. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CreateNewUser@{CreateNewUser}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!CreateNewUser@{CreateNewUser}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a0b2388382a273df5b82ddb6abff8d675}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a0b2388382a273df5b82ddb6abff8d675}} 
+Create\+New\+User&Request to create a new user. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DeleteUser@{DeleteUser}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!DeleteUser@{DeleteUser}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310aaadb31279034a82211cbcbcb6f32f138}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310aaadb31279034a82211cbcbcb6f32f138}} 
+Delete\+User&Request to delete a user. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateUser@{UpdateUser}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!UpdateUser@{UpdateUser}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310abe9610f90871c52199552ba9a7eee628}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310abe9610f90871c52199552ba9a7eee628}} 
+Update\+User&Request to update user information. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UserInit@{UserInit}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!UserInit@{UserInit}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a3d57ea768887ade2528b49470afeee2e}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a3d57ea768887ade2528b49470afeee2e}} 
+User\+Init&Request to initialize user. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdateEmail@{UpdateEmail}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!UpdateEmail@{UpdateEmail}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310ac8974e51516860572533ff425c9162ba}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310ac8974e51516860572533ff425c9162ba}} 
+Update\+Email&Request to update user email. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UpdatePassword@{UpdatePassword}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!UpdatePassword@{UpdatePassword}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a55a93a95e948c8d526ab395d9b56b7bc}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a55a93a95e948c8d526ab395d9b56b7bc}} 
+Update\+Password&Request to update user password. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{JsonParseError@{JsonParseError}!RequestManager@{RequestManager}}\index{RequestManager@{RequestManager}!JsonParseError@{JsonParseError}}}\mbox{\Hypertarget{classRequestManager_af9c93ecb9b028e390635d0e155d10310a11bb09725c432a23db823edbe06bf04b}\label{classRequestManager_af9c93ecb9b028e390635d0e155d10310a11bb09725c432a23db823edbe06bf04b}} 
+Json\+Parse\+Error&Indicates a JSON parse error. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRequestManager_ab57f072ef0c3f17c67f38a3d32abba32}\label{classRequestManager_ab57f072ef0c3f17c67f38a3d32abba32}} 
+\index{RequestManager@{RequestManager}!createRequest@{createRequest}}
+\index{createRequest@{createRequest}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{createRequest()}{createRequest()}}
+{\footnotesize\ttfamily void Request\+Manager\+::create\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310}{Available\+Requests}}}]{request\+Type,  }\item[{QVariant\+Map}]{data }\end{DoxyParamCaption})}
+
+
+
+Creates a request based on the provided type and data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request\+Type} & The type of request to create, defined by Available\+Requests enum. \\
+\hline
+{\em data} & The data to be included in the request, in the form of QVariant\+Map. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classLoginWidget_ada9460a9aca11b5a4e7a78d047964c15}{Login\+Widget\+::on\+Successfull\+Request()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRequestManager_ab57f072ef0c3f17c67f38a3d32abba32_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRequestManager_a02062c5fedfde1444cd941bc2a22e785}\label{classRequestManager_a02062c5fedfde1444cd941bc2a22e785}} 
+\index{RequestManager@{RequestManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRequestManager}{Request\+Manager}} $\ast$ Request\+Manager\+::get\+Instance (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the singleton instance of \mbox{\hyperlink{classRequestManager}{Request\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent QObject, default is nullptr. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Request\+Manager$\ast$ Pointer to the singleton instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRequestManager_abffb99ce17530ae187330e53296c5b80}\label{classRequestManager_abffb99ce17530ae187330e53296c5b80}} 
+\index{RequestManager@{RequestManager}!makeRequest@{makeRequest}}
+\index{makeRequest@{makeRequest}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{makeRequest}{makeRequest}}
+{\footnotesize\ttfamily void Request\+Manager\+::make\+Request (\begin{DoxyParamCaption}\item[{QJson\+Object}]{Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when a request is made. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data} & The QJson\+Object representing the request data. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classRequestManager_ab57f072ef0c3f17c67f38a3d32abba32}{create\+Request()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRequestManager_abffb99ce17530ae187330e53296c5b80_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{RequestManager_8h}{Request\+Manager.\+h}}\item 
+Request\+Manager.\+cpp\end{DoxyCompactItemize}

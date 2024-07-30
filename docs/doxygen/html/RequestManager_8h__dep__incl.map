@@ -1,0 +1,8 @@
+<map id="RequestManager.h" name="RequestManager.h">
+<area shape="rect" id="node1" title="Header file for the RequestManager class." alt="" coords="131,5,262,32"/>
+<area shape="rect" id="node2" href="$AdminWidget_8h.html" title="Header file for the AdminWidget class." alt="" coords="5,80,116,107"/>
+<area shape="rect" id="node3" href="$UIManager_8h.html" title="Manages the user interface of the application." alt="" coords="149,155,244,181"/>
+<area shape="rect" id="node5" href="$UserWidget_8h.html" title="Header file for the UserWidget class." alt="" coords="190,80,291,107"/>
+<area shape="rect" id="node6" href="$loginwidget_8h_source.html" title=" " alt="" coords="315,80,411,107"/>
+<area shape="rect" id="node4" href="$AppManager_8h.html" title="Manages the application&#39;s UI and client handling in separate threads." alt="" coords="144,229,249,256"/>
+</map>

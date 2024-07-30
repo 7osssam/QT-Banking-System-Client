@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Doxygen Awesome" />
 <meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
 <!-- END twitter metadata -->
-<title>BankApp: Class List</title>
+<title>Banking_System_Client: Class List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -56,10 +56,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">BankApp
+   <div id="projectname">Banking_System_Client
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">Bank Application</div>
+   <div id="projectbrief">Qt-based banking app for user/admin account management, transactions, secure server communication via PostgreSQL/Supabase.</div>
   </td>
  </tr>
  </tbody>
@@ -127,8 +127,26 @@ $(document).ready(function(){initNavTree('annotated.html',''); initResizable(); 
 <div class="contents">
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
 <table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classBank.html" target="_self">Bank</a></td><td class="desc"></td></tr>
-<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classBankAccount.html" target="_self">BankAccount</a></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classAccountNumberValidationStrategy.html" target="_self">AccountNumberValidationStrategy</a></td><td class="desc">Concrete validation strategy for account numbers </td></tr>
+<tr id="row_1_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classAdminWidget.html" target="_self">AdminWidget</a></td><td class="desc">Provides an interface for administrative tasks within the banking system </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classAppManager.html" target="_self">AppManager</a></td><td class="desc"></td></tr>
+<tr id="row_3_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classBalanceValidationStrategy.html" target="_self">BalanceValidationStrategy</a></td><td class="desc">Concrete validation strategy for balances </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classBaseDialog.html" target="_self">BaseDialog</a></td><td class="desc">Base class for creating dialogs with validation support </td></tr>
+<tr id="row_5_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classClientHandler.html" target="_self">ClientHandler</a></td><td class="desc">A class for managing client requests and responses </td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classCreateUserDialog.html" target="_self">CreateUserDialog</a></td><td class="desc">Dialog for creating new users with input validation </td></tr>
+<tr id="row_7_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classEmailValidationStrategy.html" target="_self">EmailValidationStrategy</a></td><td class="desc">Concrete validation strategy for emails </td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classIValidationStrategy.html" target="_self">IValidationStrategy</a></td><td class="desc">Interface for validation strategies </td></tr>
+<tr id="row_9_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classLoginWidget.html" target="_self">LoginWidget</a></td><td class="desc">User interface for logging into the banking system </td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classNameValidationStrategy.html" target="_self">NameValidationStrategy</a></td><td class="desc">Concrete validation strategy for names </td></tr>
+<tr id="row_11_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classPasswordValidationStrategy.html" target="_self">PasswordValidationStrategy</a></td><td class="desc">Concrete validation strategy for passwords </td></tr>
+<tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classRequestManager.html" target="_self">RequestManager</a></td><td class="desc">Manages the creation and dispatching of requests in the system </td></tr>
+<tr id="row_13_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classResponseManager.html" target="_self">ResponseManager</a></td><td class="desc">Manages the responses received from the server </td></tr>
+<tr id="row_14_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classTcpClient.html" target="_self">TcpClient</a></td><td class="desc">A class for managing TCP client connections </td></tr>
+<tr id="row_15_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUIManager.html" target="_self">UIManager</a></td><td class="desc"></td></tr>
+<tr id="row_16_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUpdateEmailDialog.html" target="_self">UpdateEmailDialog</a></td><td class="desc">Dialog for updating user email with input validation </td></tr>
+<tr id="row_17_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUpdatePasswordDialog.html" target="_self">UpdatePasswordDialog</a></td><td class="desc">Dialog for updating user passwords with input validation </td></tr>
+<tr id="row_18_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUpdateUserDialog.html" target="_self">UpdateUserDialog</a></td><td class="desc">Dialog for updating user information with input validation </td></tr>
+<tr id="row_19_" class="odd"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="classUserWidget.html" target="_self">UserWidget</a></td><td class="desc">User interface for managing user accounts, performing transactions, and modifying settings within the banking application </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

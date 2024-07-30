@@ -1,0 +1,5 @@
+<map id="ResponseManager::FailedRequest" name="ResponseManager::FailedRequest">
+<area shape="rect" id="node1" title="Signal emitted for a failed request." alt="" coords="516,5,736,32"/>
+<area shape="rect" id="node2" href="$classResponseManager.html#aa53d34d37b864b44bff4527d021faa76" title="Handles the response received from the server." alt="" coords="235,5,468,32"/>
+<area shape="rect" id="node3" href="$classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,5,187,32"/>
+</map>

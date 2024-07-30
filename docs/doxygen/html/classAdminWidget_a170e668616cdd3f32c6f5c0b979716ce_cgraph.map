@@ -1,0 +1,4 @@
+<map id="AdminWidget::onDatabaseContentUpdated" name="AdminWidget::onDatabaseContentUpdated">
+<area shape="rect" id="node1" title="Slot for handling updates to the database content." alt="" coords="5,5,227,48"/>
+<area shape="rect" id="node2" href="$classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="275,5,463,48"/>
+</map>

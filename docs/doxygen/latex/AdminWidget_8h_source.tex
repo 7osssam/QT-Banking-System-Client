@@ -1,0 +1,102 @@
+\hypertarget{AdminWidget_8h_source}{}\doxysection{Admin\+Widget.\+h}
+\label{AdminWidget_8h_source}\index{AdminWidget.h@{AdminWidget.h}}
+\mbox{\hyperlink{AdminWidget_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ ADMINWIDGET\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ ADMINWIDGET\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QStackedWidget>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QTableWidget>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}qtmaterialtabs.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}qtmaterialflatbutton.h"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}qtmaterialdialog.h"{}}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ "{}qtmaterialsnackbar.h"{}}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ "{}qtmaterialtextfield.h"{}}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ "{}qtmaterialfab.h"{}}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RequestManager_8h}{RequestManager.h}}"{}}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAdminWidget}{AdminWidget}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{00045\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{classAdminWidget}{AdminWidget}}(QString\ email,\ QString\ first\_name,\ QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ signals:}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAdminWidget_a1f2b985e090a371d4d02e542d30f3c2f}{logout}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAdminWidget_a170e668616cdd3f32c6f5c0b979716ce}{onDatabaseContentUpdated}}(\textcolor{keyword}{const}\ QList<QMap<QString,\ QString>>\&\ data);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAdminWidget_a2d9d0b9afbd7cedf0f7f73d601f4e228}{onTransactionsFetched}}(\textcolor{keyword}{const}\ QList<QMap<QString,\ QString>>\&\ transactions);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAdminWidget_a065362884e1a3423cf4a95d61833df1f}{onSuccessfullRequest}}(QString\ message);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAdminWidget_ada18070029b272ef46e64c0527ef15a1}{onFailedRequest}}(QString\ message);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ onUpdateEmail();}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ onUpdatePassword();}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ onLogoutClicked();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ onLogoutConfirmed();}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{void}\ updateDatabaseTable();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ updateTransactionsTable();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ onUpdateUserClicked();}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordtype}{void}\ onDeleteUserClicked();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ onCreateNewUserClicked();}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ onUserSelectionChanged();}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00144\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00150\ \ \ \ \ QWidget*\ createDatabaseTab();}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00157\ \ \ \ \ QWidget*\ createTransactionsTab();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \ \ \ \ QWidget*\ createSettingsTab();}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00171\ \ \ \ \ QVBoxLayout*\ createTabLayout();}
+\DoxyCodeLine{00172\ }
+\DoxyCodeLine{00176\ \ \ \ \ \textcolor{keywordtype}{void}\ setupFloatingActionButtons();}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ admin\_email\_;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00179\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ admin\_new\_email\_;\ \ \ }
+\DoxyCodeLine{00180\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ admin\_first\_name\_;\ \ }
+\DoxyCodeLine{00181\ \ \ \ \ QList<QMap<QString,\ QString>>\ transactions\_;\ \ \ \ \ \ }
+\DoxyCodeLine{00182\ \ \ \ \ QList<QMap<QString,\ QString>>\ databaseContent\_;\ \ \ }
+\DoxyCodeLine{00183\ \ \ \ \ \mbox{\hyperlink{classRequestManager}{RequestManager}}*\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ requestManager;\ \ \ \ \ }
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ QtMaterialFlatButton*\ welcomeLabel;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00186\ \ \ \ \ QtMaterialSnackbar*\ \ \ notificationSnackbar;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00187\ \ \ \ \ QtMaterialTabs*\ \ \ \ \ \ \ tabs;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00188\ \ \ \ \ QStackedWidget*\ \ \ \ \ \ \ tabContents;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00189\ \ \ \ \ QtMaterialDialog*\ \ \ \ \ logoutDialog;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ QTableWidget*\ databaseTable;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00192\ \ \ \ \ QTableWidget*\ transactionsTable;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \ \ \ \ QtMaterialFloatingActionButton*\ updateUserFab;\ \ \ \ }
+\DoxyCodeLine{00195\ \ \ \ \ QtMaterialFloatingActionButton*\ deleteUserFab;\ \ \ \ }
+\DoxyCodeLine{00196\ \ \ \ \ QtMaterialFloatingActionButton*\ createNewUserFab;\ }
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00198\ \ \ \ \ QVariantMap\ selectedUserData;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00199\ \};}
+\DoxyCodeLine{00200\ }
+\DoxyCodeLine{00201\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ ADMINWIDGET\_H}}
+
+\end{DoxyCode}

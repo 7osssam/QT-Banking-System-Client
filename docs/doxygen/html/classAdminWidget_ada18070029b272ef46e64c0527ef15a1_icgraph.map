@@ -1,0 +1,4 @@
+<map id="AdminWidget::onFailedRequest" name="AdminWidget::onFailedRequest">
+<area shape="rect" id="node1" title="Slot for handling failed request messages." alt="" coords="258,5,462,32"/>
+<area shape="rect" id="node2" href="$classUIManager.html#a9012bf1f97207eb755720a5eeb400f87" title="Displays a failed notification." alt="" coords="5,5,210,32"/>
+</map>

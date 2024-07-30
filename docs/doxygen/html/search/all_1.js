@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['deposit_0',['deposit',['../classBankAccount.html#abd2e2f3e3dd634bf92ca1a53af0aec42',1,'BankAccount']]],
-  ['displayaccountinfo_1',['displayAccountInfo',['../classBankAccount.html#a28b47598b05a5d53457d82bb35d3227e',1,'BankAccount']]]
+  ['balancefetched_0',['BalanceFetched',['../classResponseManager.html#af991043d309d238c2ffa982381d1f001',1,'ResponseManager']]],
+  ['balancevalidationstrategy_1',['BalanceValidationStrategy',['../classBalanceValidationStrategy.html',1,'']]],
+  ['basedialog_2',['BaseDialog',['../classBaseDialog.html',1,'BaseDialog'],['../classBaseDialog.html#abd01c2be4e0773e63b9efb216a2a9342',1,'BaseDialog::BaseDialog()']]],
+  ['basedialog_2eh_3',['BaseDialog.h',['../BaseDialog_8h.html',1,'']]]
 ];

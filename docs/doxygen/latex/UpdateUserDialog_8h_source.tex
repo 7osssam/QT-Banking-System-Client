@@ -1,0 +1,45 @@
+\hypertarget{UpdateUserDialog_8h_source}{}\doxysection{Update\+User\+Dialog.\+h}
+\label{UpdateUserDialog_8h_source}\index{UpdateUserDialog.h@{UpdateUserDialog.h}}
+\mbox{\hyperlink{UpdateUserDialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ UPDATEUSERDIALOG\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ UPDATEUSERDIALOG\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BaseDialog_8h}{BaseDialog.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}qtmaterialflatbutton.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}qtmaterialtextfield.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUpdateUserDialog}{UpdateUserDialog}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseDialog}{BaseDialog}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classUpdateUserDialog}{UpdateUserDialog}}(QVariantMap\ data,\ QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \ \ QVariantMap\ \mbox{\hyperlink{classUpdateUserDialog_a7acf26ed415f0195d3ebb50cf19dc528}{getData}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ onRoleChanged();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUI()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ connectSignals()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ QString\ \ \ \ \ role\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ QVariantMap\ data\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ QtMaterialTextField*\ firstNameEdit;\ }
+\DoxyCodeLine{00060\ \ \ \ \ QtMaterialTextField*\ lastNameEdit;\ \ }
+\DoxyCodeLine{00061\ \ \ \ \ QtMaterialTextField*\ emailEdit;\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ QComboBox*\ \ \ \ \ \ \ \ \ \ \ roleComboBox;\ \ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ QLabel*\ notificationErrorLabel;\ \ \ \ \ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ UPDATEUSERDIALOG\_H}}
+
+\end{DoxyCode}

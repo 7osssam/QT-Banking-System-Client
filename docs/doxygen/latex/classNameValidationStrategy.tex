@@ -1,0 +1,94 @@
+\hypertarget{classNameValidationStrategy}{}\doxysection{Name\+Validation\+Strategy Class Reference}
+\label{classNameValidationStrategy}\index{NameValidationStrategy@{NameValidationStrategy}}
+
+
+Concrete validation strategy for names.  
+
+
+
+
+{\ttfamily \#include $<$Validation\+Strategy.\+h$>$}
+
+
+
+Inheritance diagram for Name\+Validation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classNameValidationStrategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Name\+Validation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{classNameValidationStrategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classNameValidationStrategy_ac9db57323d7b43ee161a6517401201dd}{is\+Valid}} (const QString \&input) const override
+\begin{DoxyCompactList}\small\item\em Validates the input string as a name. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classNameValidationStrategy_a132c838033af4ad28c901f235457e1e7}{error\+Message}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the error message for an invalid name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}{is\+Valid}} (const QString \&input) const =0
+\begin{DoxyCompactList}\small\item\em Validates the input string. \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}{error\+Message}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the error message for invalid input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete validation strategy for names. 
+
+Validates that the input string is a valid name consisting of only alphabetic characters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classNameValidationStrategy_a132c838033af4ad28c901f235457e1e7}\label{classNameValidationStrategy_a132c838033af4ad28c901f235457e1e7}} 
+\index{NameValidationStrategy@{NameValidationStrategy}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!NameValidationStrategy@{NameValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{errorMessage()}{errorMessage()}}
+{\footnotesize\ttfamily QString Name\+Validation\+Strategy\+::error\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the error message for an invalid name. 
+
+\begin{DoxyReturn}{Returns}
+The error message as a QString. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}{IValidation\+Strategy}}.
+
+\mbox{\Hypertarget{classNameValidationStrategy_ac9db57323d7b43ee161a6517401201dd}\label{classNameValidationStrategy_ac9db57323d7b43ee161a6517401201dd}} 
+\index{NameValidationStrategy@{NameValidationStrategy}!isValid@{isValid}}
+\index{isValid@{isValid}!NameValidationStrategy@{NameValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Name\+Validation\+Strategy\+::is\+Valid (\begin{DoxyParamCaption}\item[{const QString \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Validates the input string as a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input string to validate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input is a valid name, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}{IValidation\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ValidationStrategy_8h}{Validation\+Strategy.\+h}}\end{DoxyCompactItemize}

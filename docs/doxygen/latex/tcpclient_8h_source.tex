@@ -1,0 +1,54 @@
+\hypertarget{tcpclient_8h_source}{}\doxysection{tcpclient.\+h}
+\label{tcpclient_8h_source}\index{tcpclient.h@{tcpclient.h}}
+\mbox{\hyperlink{tcpclient_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ TCPCLIENT\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ TCPCLIENT\_H}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QTcpSocket>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QSslSocket>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classTcpClient}{TcpClient}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classTcpClient}{TcpClient}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classTcpClient_a125d2277f401cbdebadb9689a5933e18}{\string~TcpClient}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpClient_a9df21dafec342f9a5776082ae9ff835e}{connectToServer}}(\textcolor{keyword}{const}\ QString\&\ host,\ quint16\ port);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpClient_ab595fd55636a7f4e81beac3be309fb5e}{sendTcpRequest}}(\textcolor{keyword}{const}\ QByteArray\&\ request);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpClient_a88d7419b2e07ebdbb4de21dfa5defb15}{closeConnection}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ signals:}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpClient_a98c4f7a47ee7e2ff22705f5aefe323e5}{ResponseReadySignal}}(QByteArray\ response);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpClient_af1be56f439c5999887feae9b6c5043cd}{ConnectedSignal}}();}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classTcpClient_afc80322ec1c625d62123bde851d515ea}{DisconnectedSignal}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ onConnected();}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ onReadyRead();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ onErrorOccurred(QAbstractSocket::SocketError\ socketError);}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ onStateChanged(QAbstractSocket::SocketState\ socketState);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ onDisconnected();}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00126\ \ \ \ \ QTcpSocket*\ socket;\ }
+\DoxyCodeLine{00127\ \};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TCPCLIENT\_H}}
+
+\end{DoxyCode}

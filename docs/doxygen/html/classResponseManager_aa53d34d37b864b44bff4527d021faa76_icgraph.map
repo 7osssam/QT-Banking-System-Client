@@ -1,0 +1,4 @@
+<map id="ResponseManager::handleResponse" name="ResponseManager::handleResponse">
+<area shape="rect" id="node1" title="Handles the response received from the server." alt="" coords="235,5,468,32"/>
+<area shape="rect" id="node2" href="$classUIManager.html#a07f79ae3d3b675df0efa016013882a87" title="Slot to handle responses from the server." alt="" coords="5,5,187,32"/>
+</map>

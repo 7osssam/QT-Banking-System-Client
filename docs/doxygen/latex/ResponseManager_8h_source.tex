@@ -1,0 +1,69 @@
+\hypertarget{ResponseManager_8h_source}{}\doxysection{Response\+Manager.\+h}
+\label{ResponseManager_8h_source}\index{ResponseManager.h@{ResponseManager.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ RESPONSEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ RESPONSEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classResponseManager}{ResponseManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//private:}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:\ \textcolor{comment}{//\ for\ testing}}
+\DoxyCodeLine{00027\ \textcolor{comment}{}\ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46}{AvailableRequests}}}
+\DoxyCodeLine{00028\ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a979bf7e13b6cf4b1bcf11747bde02312}{Login}}\ =\ 1,\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a96bd83eb74dce7b6c91a70d5bbb74f07}{GetAccountnumber}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46aff4e77e1000edaf723bc42e971ad2cae}{GetBalance}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a443677a815cd7e8c39ea8e92b6062711}{GetTransactionsHistory}},\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a48c9a500f90c49573d2d58f844fb2289}{MakeTransaction}},\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a93f3b700f6f5c497c42320edf2d6ee4c}{TransferAmount}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a6b2f62612623e31d1edbb0be7e77cd7d}{GetDatabase}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a1c638b6dd1d3833fdce9b202d80da3d4}{CreateNewUser}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a5b16d998c13fd92609d9a75d6519f357}{DeleteUser}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46ae5f110efed8be4198d2b2917437f2930}{UpdateUser}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Special\ requests}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a1ebd4aff3719ac52e34d00d462f9be12}{UserInit}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46ab67a3ce626b2ad2a963b8aa95b099584}{UpdateEmail}},\ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a893790cde1186cb3a10776a2661f9ec2}{UpdatePassword}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46a6588aaef496f2b07b67de79c37b48638}{JsonParseError}}\ =\ -\/1,\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classResponseManager_aedd78aa8d384dbeff2c1659c606c0a46ad39577502e7dc359479b06b537942f9f}{Connection}}\ =\ -\/2\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classResponseManager_aebf00d18670f9a73086789ca9449b48d}{getResponseStatus}}(QJsonObject\ Data);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ QString\ \mbox{\hyperlink{classResponseManager_aa8a0c60f8917fde5976be069ea30df7f}{getResponseMessage}}(QJsonObject\ Data);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ signals:}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_a6353f20634ce5632f7093286982f778c}{userloginSuccess}}(QString\ email,\ QString\ first\_name,\ QString\ account\_number,\ QString\ balance);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_a831c0fc50b2dad35dee3e0b9059ffec5}{adminLoginSuccess}}(QString\ email,\ QString\ first\_name);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_a77a22bd43518d801fad008673ef40251}{ConnectionResponse}}(\textcolor{keywordtype}{bool}\ status);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_ab2666709b02969e8c4c610608e8c55f7}{TransactionsFetched}}(\textcolor{keyword}{const}\ QList<QMap<QString,\ QString>>\&\ transactions);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_a42fdfb9304036a59c72b804a73b83b63}{DatabaseFetched}}(\textcolor{keyword}{const}\ QList<QMap<QString,\ QString>>\&\ databaseContent);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_af991043d309d238c2ffa982381d1f001}{BalanceFetched}}(QString\ balance);}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_af96d4add1d9a4da8fb3b21f47aec8ede}{SuccessfullRequest}}(QString\ message);}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_a2dccee086f7eb2eca819f9068df41e4c}{FailedRequest}}(QString\ message);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classResponseManager}{ResponseManager}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00139\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classResponseManager_aa53d34d37b864b44bff4527d021faa76}{handleResponse}}(QJsonObject\ Data);}
+\DoxyCodeLine{00140\ \};}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00142\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ RESPONSEMANAGER\_H}}
+
+\end{DoxyCode}

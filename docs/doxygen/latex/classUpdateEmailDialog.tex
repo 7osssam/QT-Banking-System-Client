@@ -1,0 +1,169 @@
+\hypertarget{classUpdateEmailDialog}{}\doxysection{Update\+Email\+Dialog Class Reference}
+\label{classUpdateEmailDialog}\index{UpdateEmailDialog@{UpdateEmailDialog}}
+
+
+The \mbox{\hyperlink{classUpdateEmailDialog}{Update\+Email\+Dialog}} class provides a dialog for updating user email with input validation.  
+
+
+
+
+{\ttfamily \#include $<$Update\+Email\+Dialog.\+h$>$}
+
+
+
+Inheritance diagram for Update\+Email\+Dialog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classUpdateEmailDialog__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Update\+Email\+Dialog\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classUpdateEmailDialog__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUpdateEmailDialog_ae408c2d2c94dbb371679bf1d3a9f9cca}{Update\+Email\+Dialog}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classUpdateEmailDialog}{Update\+Email\+Dialog}}. \end{DoxyCompactList}\item 
+QVariant\+Map \mbox{\hyperlink{classUpdateEmailDialog_a8f8033a351ffad8cb673e61336021684}{get\+Data}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the data entered in the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBaseDialog}{Base\+Dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBaseDialog_abd01c2be4e0773e63b9efb216a2a9342}{Base\+Dialog}} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classBaseDialog}{Base\+Dialog}}. \end{DoxyCompactList}\item 
+virtual QVariant\+Map \mbox{\hyperlink{classBaseDialog_a74c0e53c3d5a3ed0a6e7cab2b229f269}{get\+Data}} () const =0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to get the data from the dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUpdateEmailDialog_ac536a9cd527cc9a0a6a4d12d74991ca6}{setup\+UI}} () override
+\begin{DoxyCompactList}\small\item\em Sets up the user interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classBaseDialog}{Base\+Dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classBaseDialog_ae5e9f9df38ea7f36d8282dfa28f4648f}{setup\+UI}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to set up the user interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseDialog_afdfd5707b754ca2391a77a8c03d650dd}\label{classBaseDialog_afdfd5707b754ca2391a77a8c03d650dd}} 
+virtual void {\bfseries connect\+Signals} ()
+\begin{DoxyCompactList}\small\item\em Connects signals for the dialog. \end{DoxyCompactList}\item 
+Qt\+Material\+Text\+Field $\ast$ \mbox{\hyperlink{classBaseDialog_ae4870830d6d305c993a746ecf7515dd6}{create\+Input\+Field}} (QVBox\+Layout $\ast$layout, const QString \&label\+Text, \mbox{\hyperlink{classIValidationStrategy}{IValidation\+Strategy}} $\ast$validation\+Strategy, bool is\+Password=false)
+\begin{DoxyCompactList}\small\item\em Creates an input field with validation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDialog_a8def162fdb199789470ed23570465e95}{validate\+Input}} (Qt\+Material\+Text\+Field $\ast$field)
+\begin{DoxyCompactList}\small\item\em Validates the input of a specified field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseDialog_a2698a96efb218e5e676585a9bea3d68e}\label{classBaseDialog_a2698a96efb218e5e676585a9bea3d68e}} 
+void {\bfseries update\+Confirm\+Button\+State} ()
+\begin{DoxyCompactList}\small\item\em Updates the state of the confirm button based on the validity of the form. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBaseDialog_ab83ac795b8f131b9b21d804dc026b2b4}{set\+Field\+Validity\+Style}} (Qt\+Material\+Text\+Field $\ast$field, QLabel $\ast$error\+Label, const QString \&error\+Message, bool is\+Valid)
+\begin{DoxyCompactList}\small\item\em Sets the validity style of an input field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Protected Attributes inherited from \mbox{\hyperlink{classBaseDialog}{Base\+Dialog}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBaseDialog_ad95823a270f3a8b2e990bc1ab214c38a}\label{classBaseDialog_ad95823a270f3a8b2e990bc1ab214c38a}} 
+QMap$<$ Qt\+Material\+Text\+Field $\ast$, \mbox{\hyperlink{classIValidationStrategy}{IValidation\+Strategy}} $\ast$ $>$ {\bfseries validation\+Strategies\+\_\+}
+\begin{DoxyCompactList}\small\item\em Stores validation strategies for input fields. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseDialog_a2cd48593a6157db9390aafd40c67552e}\label{classBaseDialog_a2cd48593a6157db9390aafd40c67552e}} 
+QMap$<$ Qt\+Material\+Text\+Field $\ast$, QLabel $\ast$ $>$ {\bfseries error\+Labels\+\_\+}
+\begin{DoxyCompactList}\small\item\em Stores error labels for input fields. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseDialog_a12c46b90ddb8e9f3e2e49ee7677daeb0}\label{classBaseDialog_a12c46b90ddb8e9f3e2e49ee7677daeb0}} 
+Qt\+Material\+Flat\+Button $\ast$ {\bfseries confirm\+Button}
+\begin{DoxyCompactList}\small\item\em The confirm button. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBaseDialog_a7f6c4439421e5ed61b594f0c4c29071e}\label{classBaseDialog_a7f6c4439421e5ed61b594f0c4c29071e}} 
+Qt\+Material\+Flat\+Button $\ast$ {\bfseries cancel\+Button}
+\begin{DoxyCompactList}\small\item\em The cancel button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUpdateEmailDialog}{Update\+Email\+Dialog}} class provides a dialog for updating user email with input validation. 
+
+This class sets up the user interface and retrieves the data entered by the user. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUpdateEmailDialog_ae408c2d2c94dbb371679bf1d3a9f9cca}\label{classUpdateEmailDialog_ae408c2d2c94dbb371679bf1d3a9f9cca}} 
+\index{UpdateEmailDialog@{UpdateEmailDialog}!UpdateEmailDialog@{UpdateEmailDialog}}
+\index{UpdateEmailDialog@{UpdateEmailDialog}!UpdateEmailDialog@{UpdateEmailDialog}}
+\doxysubsubsection{\texorpdfstring{UpdateEmailDialog()}{UpdateEmailDialog()}}
+{\footnotesize\ttfamily Update\+Email\+Dialog\+::\+Update\+Email\+Dialog (\begin{DoxyParamCaption}\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classUpdateEmailDialog}{Update\+Email\+Dialog}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUpdateEmailDialog_ae408c2d2c94dbb371679bf1d3a9f9cca_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUpdateEmailDialog_a8f8033a351ffad8cb673e61336021684}\label{classUpdateEmailDialog_a8f8033a351ffad8cb673e61336021684}} 
+\index{UpdateEmailDialog@{UpdateEmailDialog}!getData@{getData}}
+\index{getData@{getData}!UpdateEmailDialog@{UpdateEmailDialog}}
+\doxysubsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily QVariant\+Map Update\+Email\+Dialog\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the data entered in the dialog. 
+
+\begin{DoxyReturn}{Returns}
+A QVariant\+Map containing the email update data. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classBaseDialog_a74c0e53c3d5a3ed0a6e7cab2b229f269}{Base\+Dialog}}.
+
+\mbox{\Hypertarget{classUpdateEmailDialog_ac536a9cd527cc9a0a6a4d12d74991ca6}\label{classUpdateEmailDialog_ac536a9cd527cc9a0a6a4d12d74991ca6}} 
+\index{UpdateEmailDialog@{UpdateEmailDialog}!setupUI@{setupUI}}
+\index{setupUI@{setupUI}!UpdateEmailDialog@{UpdateEmailDialog}}
+\doxysubsubsection{\texorpdfstring{setupUI()}{setupUI()}}
+{\footnotesize\ttfamily void Update\+Email\+Dialog\+::setup\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Sets up the user interface. 
+
+
+
+Implements \mbox{\hyperlink{classBaseDialog_ae5e9f9df38ea7f36d8282dfa28f4648f}{Base\+Dialog}}.
+
+
+
+Referenced by \mbox{\hyperlink{classUpdateEmailDialog_ae408c2d2c94dbb371679bf1d3a9f9cca}{Update\+Email\+Dialog()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUpdateEmailDialog_ac536a9cd527cc9a0a6a4d12d74991ca6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classUpdateEmailDialog_ac536a9cd527cc9a0a6a4d12d74991ca6_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UpdateEmailDialog_8h}{Update\+Email\+Dialog.\+h}}\item 
+Update\+Email\+Dialog.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,94 @@
+\hypertarget{classBalanceValidationStrategy}{}\doxysection{Balance\+Validation\+Strategy Class Reference}
+\label{classBalanceValidationStrategy}\index{BalanceValidationStrategy@{BalanceValidationStrategy}}
+
+
+Concrete validation strategy for balances.  
+
+
+
+
+{\ttfamily \#include $<$Validation\+Strategy.\+h$>$}
+
+
+
+Inheritance diagram for Balance\+Validation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classBalanceValidationStrategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Balance\+Validation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classBalanceValidationStrategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classBalanceValidationStrategy_a0960b4856e59c2ef7484f6815c87ef41}{is\+Valid}} (const QString \&input) const override
+\begin{DoxyCompactList}\small\item\em Validates the input string as a balance. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{classBalanceValidationStrategy_a76f275b0206b9950e4888249b1f9b581}{error\+Message}} () const override
+\begin{DoxyCompactList}\small\item\em Retrieves the error message for an invalid balance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}{is\+Valid}} (const QString \&input) const =0
+\begin{DoxyCompactList}\small\item\em Validates the input string. \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}{error\+Message}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the error message for invalid input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete validation strategy for balances. 
+
+Validates that the input string is a valid balance consisting of numeric characters. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBalanceValidationStrategy_a76f275b0206b9950e4888249b1f9b581}\label{classBalanceValidationStrategy_a76f275b0206b9950e4888249b1f9b581}} 
+\index{BalanceValidationStrategy@{BalanceValidationStrategy}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!BalanceValidationStrategy@{BalanceValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{errorMessage()}{errorMessage()}}
+{\footnotesize\ttfamily QString Balance\+Validation\+Strategy\+::error\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retrieves the error message for an invalid balance. 
+
+\begin{DoxyReturn}{Returns}
+The error message as a QString. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}{IValidation\+Strategy}}.
+
+\mbox{\Hypertarget{classBalanceValidationStrategy_a0960b4856e59c2ef7484f6815c87ef41}\label{classBalanceValidationStrategy_a0960b4856e59c2ef7484f6815c87ef41}} 
+\index{BalanceValidationStrategy@{BalanceValidationStrategy}!isValid@{isValid}}
+\index{isValid@{isValid}!BalanceValidationStrategy@{BalanceValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily bool Balance\+Validation\+Strategy\+::is\+Valid (\begin{DoxyParamCaption}\item[{const QString \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Validates the input string as a balance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input string to validate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input is a valid balance, otherwise false. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}{IValidation\+Strategy}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ValidationStrategy_8h}{Validation\+Strategy.\+h}}\end{DoxyCompactItemize}

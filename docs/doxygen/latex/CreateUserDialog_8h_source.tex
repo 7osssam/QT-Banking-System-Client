@@ -1,0 +1,42 @@
+\hypertarget{CreateUserDialog_8h_source}{}\doxysection{Create\+User\+Dialog.\+h}
+\label{CreateUserDialog_8h_source}\index{CreateUserDialog.h@{CreateUserDialog.h}}
+\mbox{\hyperlink{CreateUserDialog_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#ifndef\ CREATEUSERDIALOG\_H}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ CREATEUSERDIALOG\_H}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{BaseDialog_8h}{BaseDialog.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ValidationStrategy_8h}{ValidationStrategy.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QComboBox>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCreateUserDialog}{CreateUserDialog}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classBaseDialog}{BaseDialog}}}
+\DoxyCodeLine{00020\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{classCreateUserDialog}{CreateUserDialog}}(QWidget*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00034\ \ \ \ \ QVariantMap\ \mbox{\hyperlink{classCreateUserDialog_a69a96f0a7b399b8c248e1b3de3b24fa5}{getData}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ onRoleChanged();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ setupUI()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ connectSignals()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ QtMaterialTextField*\ firstNameEdit;\ \ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ QtMaterialTextField*\ lastNameEdit;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ QtMaterialTextField*\ emailEdit;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ QtMaterialTextField*\ passwordEdit;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ QtMaterialTextField*\ confirmPasswordEdit;\ }
+\DoxyCodeLine{00058\ \ \ \ \ QtMaterialTextField*\ initialBalanceEdit;\ \ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ QComboBox*\ roleComboBox;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\textcolor{comment}{//\ CREATEUSERDIALOG\_H}}
+
+\end{DoxyCode}

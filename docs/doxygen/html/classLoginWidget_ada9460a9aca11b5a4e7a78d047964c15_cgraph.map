@@ -1,0 +1,4 @@
+<map id="LoginWidget::onSuccessfullRequest" name="LoginWidget::onSuccessfullRequest">
+<area shape="rect" id="node1" title="Slot to handle successful login request." alt="" coords="5,5,188,48"/>
+<area shape="rect" id="node2" href="$classRequestManager.html#ab57f072ef0c3f17c67f38a3d32abba32" title="Creates a request based on the provided type and data." alt="" coords="236,13,447,40"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="LoginWidget::sendLoginRequest" name="LoginWidget::sendLoginRequest">
+<area shape="rect" id="node1" title="Signal emitted to send login request." alt="" coords="253,5,461,32"/>
+<area shape="rect" id="node2" href="$classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0" title="Creates the login widget." alt="" coords="5,5,205,32"/>
+</map>

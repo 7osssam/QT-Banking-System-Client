@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,56,78,83"/>
+<area shape="rect" id="node2" href="$classAdminWidget.html" title="Provides an interface for administrative tasks within the banking system." alt="" coords="126,5,225,32"/>
+<area shape="rect" id="node3" href="$classLoginWidget.html" title="The LoginWidget class provides a user interface for logging into the banking system." alt="" coords="129,56,222,83"/>
+<area shape="rect" id="node4" href="$classUserWidget.html" title="The UserWidget class provides a user interface for managing user accounts, performing transactions,..." alt="" coords="131,107,220,133"/>
+</map>

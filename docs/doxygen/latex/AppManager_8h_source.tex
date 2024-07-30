@@ -1,0 +1,39 @@
+\hypertarget{AppManager_8h_source}{}\doxysection{App\+Manager.\+h}
+\label{AppManager_8h_source}\index{AppManager.h@{AppManager.h}}
+\mbox{\hyperlink{AppManager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ APPMANAGER\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ APPMANAGER\_H}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QThread>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{UIManager_8h}{UIManager.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}ClientHandler.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAppManager}{AppManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classUIManager}{UIManager}}*\ uiManager;\ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classClientHandler}{ClientHandler}}*}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ clientHandler;\ }
+\DoxyCodeLine{00024\ \ \ \ \ QThread*\ AppManagerThread;\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classAppManager}{AppManager}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAppManager_ab3b9bfa5387850ab1f99663ff44eb3d6}{start}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classAppManager}{AppManager}}\&\ \mbox{\hyperlink{classAppManager_ac1b4cb8432e3ea24415aaab8e21efc58}{getInstance}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classAppManager_a118c946d89dac4ddb9ccc3f43b528cc3}{AppManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAppManager}{AppManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAppManager_a3409e8434c7dc5b602b86ff1494cdd2e}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAppManager}{AppManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{classAppManager_aee444cb63c8febdbf5ea3fcbf1a90836}{\string~AppManager}}();}
+\DoxyCodeLine{00062\ \};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ APPMANAGER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+<map id="UIManager::onFailedNotification" name="UIManager::onFailedNotification">
+<area shape="rect" id="node1" title="Displays a failed notification." alt="" coords="5,56,210,83"/>
+<area shape="rect" id="node2" href="$classAdminWidget.html#ada18070029b272ef46e64c0527ef15a1" title="Slot for handling failed request messages." alt="" coords="258,5,462,32"/>
+<area shape="rect" id="node3" href="$classLoginWidget.html#acec729298fad290d58afa915747db662" title="Slot to handle failed login request." alt="" coords="261,56,459,83"/>
+<area shape="rect" id="node4" href="$classUserWidget.html#a5a60611c42c15e352eca583657488ee5" title="Slot to handle failed request." alt="" coords="263,107,457,133"/>
+</map>

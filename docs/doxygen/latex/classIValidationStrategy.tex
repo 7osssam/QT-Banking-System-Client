@@ -1,0 +1,110 @@
+\hypertarget{classIValidationStrategy}{}\doxysection{IValidation\+Strategy Class Reference}
+\label{classIValidationStrategy}\index{IValidationStrategy@{IValidationStrategy}}
+
+
+Interface for validation strategies.  
+
+
+
+
+{\ttfamily \#include $<$Validation\+Strategy.\+h$>$}
+
+
+
+Inheritance diagram for IValidation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIValidationStrategy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for IValidation\+Strategy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{classIValidationStrategy__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}{is\+Valid}} (const QString \&input) const =0
+\begin{DoxyCompactList}\small\item\em Validates the input string. \end{DoxyCompactList}\item 
+virtual QString \mbox{\hyperlink{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}{error\+Message}} () const =0
+\begin{DoxyCompactList}\small\item\em Retrieves the error message for invalid input. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for validation strategies. 
+
+Provides a common interface for different validation strategies to validate input data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}\label{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2}} 
+\index{IValidationStrategy@{IValidationStrategy}!errorMessage@{errorMessage}}
+\index{errorMessage@{errorMessage}!IValidationStrategy@{IValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{errorMessage()}{errorMessage()}}
+{\footnotesize\ttfamily virtual QString IValidation\+Strategy\+::error\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retrieves the error message for invalid input. 
+
+\begin{DoxyReturn}{Returns}
+The error message as a QString. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classNameValidationStrategy_a132c838033af4ad28c901f235457e1e7}{Name\+Validation\+Strategy}}, \mbox{\hyperlink{classEmailValidationStrategy_a586268dcfb838d1a6970447a174ffba3}{Email\+Validation\+Strategy}}, \mbox{\hyperlink{classPasswordValidationStrategy_aa70d4f8faed505fa9ef690d537962a07}{Password\+Validation\+Strategy}}, \mbox{\hyperlink{classBalanceValidationStrategy_a76f275b0206b9950e4888249b1f9b581}{Balance\+Validation\+Strategy}}, and \mbox{\hyperlink{classAccountNumberValidationStrategy_a04e27345762f175a3d6547efa4d0e154}{Account\+Number\+Validation\+Strategy}}.
+
+
+
+Referenced by \mbox{\hyperlink{classBaseDialog_a8def162fdb199789470ed23570465e95}{Base\+Dialog\+::validate\+Input()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIValidationStrategy_a3469ac4def6a8a416ee0830a7af5bae2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}\label{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb}} 
+\index{IValidationStrategy@{IValidationStrategy}!isValid@{isValid}}
+\index{isValid@{isValid}!IValidationStrategy@{IValidationStrategy}}
+\doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
+{\footnotesize\ttfamily virtual bool IValidation\+Strategy\+::is\+Valid (\begin{DoxyParamCaption}\item[{const QString \&}]{input }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Validates the input string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & The input string to validate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the input is valid, otherwise false. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classNameValidationStrategy_ac9db57323d7b43ee161a6517401201dd}{Name\+Validation\+Strategy}}, \mbox{\hyperlink{classEmailValidationStrategy_ab951f50ceed6d3ae51154ed6d15df2bf}{Email\+Validation\+Strategy}}, \mbox{\hyperlink{classPasswordValidationStrategy_ae98a0d25258389a1eb1707385f18fc96}{Password\+Validation\+Strategy}}, \mbox{\hyperlink{classBalanceValidationStrategy_a0960b4856e59c2ef7484f6815c87ef41}{Balance\+Validation\+Strategy}}, and \mbox{\hyperlink{classAccountNumberValidationStrategy_a8ee7c7faa84e0f98452233c537b7815c}{Account\+Number\+Validation\+Strategy}}.
+
+
+
+Referenced by \mbox{\hyperlink{classBaseDialog_a2698a96efb218e5e676585a9bea3d68e}{Base\+Dialog\+::update\+Confirm\+Button\+State()}}, and \mbox{\hyperlink{classBaseDialog_a8def162fdb199789470ed23570465e95}{Base\+Dialog\+::validate\+Input()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classIValidationStrategy_adec0172539f5ee41c8f42424b85cc7cb_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ValidationStrategy_8h}{Validation\+Strategy.\+h}}\end{DoxyCompactItemize}

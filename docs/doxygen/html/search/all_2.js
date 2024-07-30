@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['getaccountbalance_0',['getAccountBalance',['../classBankAccount.html#af34bc12ef9f8e9dd0d244d49b7f93987',1,'BankAccount']]],
-  ['getaccountholder_1',['getAccountHolder',['../classBankAccount.html#a7383470c2a8195e7cca91748b9dcb4da',1,'BankAccount']]],
-  ['getaccountnumber_2',['getAccountNumber',['../classBankAccount.html#ad4b19502634b8f7de834bc9efe77df24',1,'BankAccount']]],
-  ['getaccounttype_3',['getAccountType',['../classBankAccount.html#aab906ff06c9d8e1225986d23e706d65e',1,'BankAccount']]]
+  ['cancelbutton_0',['cancelButton',['../classBaseDialog.html#a7f6c4439421e5ed61b594f0c4c29071e',1,'BaseDialog']]],
+  ['clearfields_1',['clearFields',['../classLoginWidget.html#a9eefea5a7f5c538ff74e5b9ef061da9f',1,'LoginWidget']]],
+  ['clienthandler_2',['ClientHandler',['../classClientHandler.html',1,'ClientHandler'],['../classClientHandler.html#a71c3bc2aedb8ef2d194f8534325e6ce9',1,'ClientHandler::ClientHandler()']]],
+  ['closeadminwidget_3',['closeAdminWidget',['../classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44',1,'UIManager']]],
+  ['closeconnection_4',['closeConnection',['../classTcpClient.html#a88d7419b2e07ebdbb4de21dfa5defb15',1,'TcpClient']]],
+  ['closeloginwidget_5',['closeLoginWidget',['../classUIManager.html#aacc11a77ee12b674d0d8f370025239b4',1,'UIManager']]],
+  ['closeuserwidget_6',['closeUserWidget',['../classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac',1,'UIManager']]],
+  ['confirmbutton_7',['confirmButton',['../classBaseDialog.html#a12c46b90ddb8e9f3e2e49ee7677daeb0',1,'BaseDialog']]],
+  ['connectedsignal_8',['ConnectedSignal',['../classTcpClient.html#af1be56f439c5999887feae9b6c5043cd',1,'TcpClient']]],
+  ['connection_9',['Connection',['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46ad39577502e7dc359479b06b537942f9f',1,'ResponseManager']]],
+  ['connectionresponse_10',['ConnectionResponse',['../classResponseManager.html#a77a22bd43518d801fad008673ef40251',1,'ResponseManager']]],
+  ['connectsignals_11',['connectSignals',['../classBaseDialog.html#afdfd5707b754ca2391a77a8c03d650dd',1,'BaseDialog']]],
+  ['connecttoserver_12',['connectToServer',['../classTcpClient.html#a9df21dafec342f9a5776082ae9ff835e',1,'TcpClient::connectToServer()'],['../classLoginWidget.html#af570bac978edf62a10119fd7a205abb4',1,'LoginWidget::connectToServer()']]],
+  ['connecttotheserver_13',['connectToTheServer',['../classUIManager.html#ad4335f9f5f44093f2cbfdcfe0fe4578d',1,'UIManager']]],
+  ['createadminwidget_14',['createAdminWidget',['../classUIManager.html#a76a772a301e3422deaf4f6489435b9db',1,'UIManager']]],
+  ['createinputfield_15',['createInputField',['../classBaseDialog.html#ae4870830d6d305c993a746ecf7515dd6',1,'BaseDialog']]],
+  ['createloginwidget_16',['createLoginWidget',['../classUIManager.html#a72cbd5279f2cd48ae9251c82cfb8a9e0',1,'UIManager']]],
+  ['createnewuser_17',['CreateNewUser',['../classRequestManager.html#af9c93ecb9b028e390635d0e155d10310a0b2388382a273df5b82ddb6abff8d675',1,'RequestManager::CreateNewUser()'],['../classResponseManager.html#aedd78aa8d384dbeff2c1659c606c0a46a1c638b6dd1d3833fdce9b202d80da3d4',1,'ResponseManager::CreateNewUser()']]],
+  ['createrequest_18',['createRequest',['../classRequestManager.html#ab57f072ef0c3f17c67f38a3d32abba32',1,'RequestManager']]],
+  ['createuserdialog_19',['CreateUserDialog',['../classCreateUserDialog.html#a08ba1774b5249f978ded3b94954809c3',1,'CreateUserDialog::CreateUserDialog()'],['../classCreateUserDialog.html',1,'CreateUserDialog']]],
+  ['createuserdialog_2eh_20',['CreateUserDialog.h',['../CreateUserDialog_8h.html',1,'']]],
+  ['createuserwidget_21',['createUserWidget',['../classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59',1,'UIManager']]]
 ];

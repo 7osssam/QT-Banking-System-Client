@@ -1,0 +1,414 @@
+\hypertarget{classUIManager}{}\doxysection{UIManager Class Reference}
+\label{classUIManager}\index{UIManager@{UIManager}}
+
+
+Inheritance diagram for UIManager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classUIManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UIManager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classUIManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUIManager_a07f79ae3d3b675df0efa016013882a87}{response\+Ready}} (QJson\+Object Data)
+\begin{DoxyCompactList}\small\item\em Slot to handle responses from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305}{request\+Ready}} (QJson\+Object Data)
+\begin{DoxyCompactList}\small\item\em Slot to handle requests that are ready to be sent. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_a58fa1af357a55ac112b41da383c1d410}{logout}} ()
+\begin{DoxyCompactList}\small\item\em Logs out the current user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}{create\+Login\+Widget}} ()
+\begin{DoxyCompactList}\small\item\em Creates the login widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_a76a772a301e3422deaf4f6489435b9db}{create\+Admin\+Widget}} (QString email, QString first\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Creates the admin widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_a15fa6321d4967795e43175cdcd3c4d59}{create\+User\+Widget}} (QString email, QString first\+\_\+name, QString account\+\_\+number, QString balance)
+\begin{DoxyCompactList}\small\item\em Creates the user widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8}{on\+Successfull\+Notification}} (QString message)
+\begin{DoxyCompactList}\small\item\em Displays a successful notification. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_a9012bf1f97207eb755720a5eeb400f87}{on\+Failed\+Notification}} (QString message)
+\begin{DoxyCompactList}\small\item\em Displays a failed notification. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUIManager_a9cbe7d3f7987016eaebbf5815a6bba44}\label{classUIManager_a9cbe7d3f7987016eaebbf5815a6bba44}} 
+void {\bfseries close\+Admin\+Widget} ()
+\begin{DoxyCompactList}\small\item\em Closes the admin widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUIManager_a44bd3b3ff855e9ea6924bab6550594ac}\label{classUIManager_a44bd3b3ff855e9ea6924bab6550594ac}} 
+void {\bfseries close\+User\+Widget} ()
+\begin{DoxyCompactList}\small\item\em Closes the user widget. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUIManager_aacc11a77ee12b674d0d8f370025239b4}\label{classUIManager_aacc11a77ee12b674d0d8f370025239b4}} 
+void {\bfseries close\+Login\+Widget} ()
+\begin{DoxyCompactList}\small\item\em Closes the login widget. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d}{connect\+To\+The\+Server}} (const QString \&host, quint16 port)
+\begin{DoxyCompactList}\small\item\em Connects to the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUIManager_a24edbc79706999c5200476b4eea01bc4}\label{classUIManager_a24edbc79706999c5200476b4eea01bc4}} 
+void {\bfseries disconnect\+From\+The\+Server} ()
+\begin{DoxyCompactList}\small\item\em Disconnects from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_ab1f16dfdc06aebc864ddd21dffd4be87}{on\+Connection\+Response}} (bool status)
+\begin{DoxyCompactList}\small\item\em Handles the server connection response. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classUIManager_a70b0aadd20c0671507c06d50c5e6a74a}{make\+Request}} (QJson\+Object Data)
+\begin{DoxyCompactList}\small\item\em Signal emitted when a request is ready to be sent to the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad}{request\+Connection}} (const QString \&host, quint16 port)
+\begin{DoxyCompactList}\small\item\em Signal emitted to request a connection to the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUIManager_a924af632a6382716c9e86b15f2eea2df}\label{classUIManager_a924af632a6382716c9e86b15f2eea2df}} 
+void {\bfseries request\+Disconnection} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted to request a disconnection from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUIManager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}{$\sim$\+UIManager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classUIManager}{UIManager}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUIManager_a084fc287d25c2d96c8319d0654a001f4}\label{classUIManager_a084fc287d25c2d96c8319d0654a001f4}} 
+{\bfseries UIManager} (const \mbox{\hyperlink{classUIManager}{UIManager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy constructor to prevent copying. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classUIManager_abfdc680586670761f2585a8596e6be78}\label{classUIManager_abfdc680586670761f2585a8596e6be78}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classUIManager}{UIManager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted assignment operator to prevent copying. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classUIManager}{UIManager}} $\ast$ \mbox{\hyperlink{classUIManager_abbd0c60ea453543a8ae5a64816eadce3}{get\+Instance}} (QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of \mbox{\hyperlink{classUIManager}{UIManager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUIManager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}\label{classUIManager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}} 
+\index{UIManager@{UIManager}!````~UIManager@{$\sim$UIManager}}
+\index{````~UIManager@{$\sim$UIManager}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$UIManager()}{~UIManager()}}
+{\footnotesize\ttfamily UIManager\+::$\sim$\+UIManager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \mbox{\hyperlink{classUIManager}{UIManager}} class. 
+
+Cleans up the main window and its widgets. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d}\label{classUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d}} 
+\index{UIManager@{UIManager}!connectToTheServer@{connectToTheServer}}
+\index{connectToTheServer@{connectToTheServer}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{connectToTheServer}{connectToTheServer}}
+{\footnotesize\ttfamily void UIManager\+::connect\+To\+The\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]{host,  }\item[{quint16}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Connects to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Server host address. \\
+\hline
+{\em port} & Server port number. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}{create\+Login\+Widget()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_a76a772a301e3422deaf4f6489435b9db}\label{classUIManager_a76a772a301e3422deaf4f6489435b9db}} 
+\index{UIManager@{UIManager}!createAdminWidget@{createAdminWidget}}
+\index{createAdminWidget@{createAdminWidget}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{createAdminWidget}{createAdminWidget}}
+{\footnotesize\ttfamily void UIManager\+::create\+Admin\+Widget (\begin{DoxyParamCaption}\item[{QString}]{email,  }\item[{QString}]{first\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Creates the admin widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & Admin email address. \\
+\hline
+{\em first\+\_\+name} & Admin first name. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a76a772a301e3422deaf4f6489435b9db_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}\label{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}} 
+\index{UIManager@{UIManager}!createLoginWidget@{createLoginWidget}}
+\index{createLoginWidget@{createLoginWidget}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{createLoginWidget}{createLoginWidget}}
+{\footnotesize\ttfamily void UIManager\+::create\+Login\+Widget (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Creates the login widget. 
+
+Initializes and displays the login widget. Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_a15fa6321d4967795e43175cdcd3c4d59}\label{classUIManager_a15fa6321d4967795e43175cdcd3c4d59}} 
+\index{UIManager@{UIManager}!createUserWidget@{createUserWidget}}
+\index{createUserWidget@{createUserWidget}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{createUserWidget}{createUserWidget}}
+{\footnotesize\ttfamily void UIManager\+::create\+User\+Widget (\begin{DoxyParamCaption}\item[{QString}]{email,  }\item[{QString}]{first\+\_\+name,  }\item[{QString}]{account\+\_\+number,  }\item[{QString}]{balance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Creates the user widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em email} & User email address. \\
+\hline
+{\em first\+\_\+name} & User first name. \\
+\hline
+{\em account\+\_\+number} & User account number. \\
+\hline
+{\em balance} & User account balance. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a15fa6321d4967795e43175cdcd3c4d59_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_abbd0c60ea453543a8ae5a64816eadce3}\label{classUIManager_abbd0c60ea453543a8ae5a64816eadce3}} 
+\index{UIManager@{UIManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUIManager}{UIManager}} $\ast$ UIManager\+::get\+Instance (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of \mbox{\hyperlink{classUIManager}{UIManager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Optional parent QObject. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the \mbox{\hyperlink{classUIManager}{UIManager}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUIManager_a58fa1af357a55ac112b41da383c1d410}\label{classUIManager_a58fa1af357a55ac112b41da383c1d410}} 
+\index{UIManager@{UIManager}!logout@{logout}}
+\index{logout@{logout}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{logout}{logout}}
+{\footnotesize\ttfamily void UIManager\+::logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Logs out the current user. 
+
+Disconnects signals and resets the UI to the login widget. 
+
+Referenced by \mbox{\hyperlink{classUIManager_a9cbe7d3f7987016eaebbf5815a6bba44}{close\+Admin\+Widget()}}, \mbox{\hyperlink{classUIManager_a44bd3b3ff855e9ea6924bab6550594ac}{close\+User\+Widget()}}, \mbox{\hyperlink{classUIManager_a76a772a301e3422deaf4f6489435b9db}{create\+Admin\+Widget()}}, and \mbox{\hyperlink{classUIManager_a15fa6321d4967795e43175cdcd3c4d59}{create\+User\+Widget()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a58fa1af357a55ac112b41da383c1d410_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a58fa1af357a55ac112b41da383c1d410_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_a70b0aadd20c0671507c06d50c5e6a74a}\label{classUIManager_a70b0aadd20c0671507c06d50c5e6a74a}} 
+\index{UIManager@{UIManager}!makeRequest@{makeRequest}}
+\index{makeRequest@{makeRequest}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{makeRequest}{makeRequest}}
+{\footnotesize\ttfamily void UIManager\+::make\+Request (\begin{DoxyParamCaption}\item[{QJson\+Object}]{Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when a request is ready to be sent to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data} & JSON object containing the request data. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305}{request\+Ready()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a70b0aadd20c0671507c06d50c5e6a74a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_ab1f16dfdc06aebc864ddd21dffd4be87}\label{classUIManager_ab1f16dfdc06aebc864ddd21dffd4be87}} 
+\index{UIManager@{UIManager}!onConnectionResponse@{onConnectionResponse}}
+\index{onConnectionResponse@{onConnectionResponse}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{onConnectionResponse}{onConnectionResponse}}
+{\footnotesize\ttfamily void UIManager\+::on\+Connection\+Response (\begin{DoxyParamCaption}\item[{bool}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Handles the server connection response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Connection status (true if connected, false otherwise). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_ab1f16dfdc06aebc864ddd21dffd4be87_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_a9012bf1f97207eb755720a5eeb400f87}\label{classUIManager_a9012bf1f97207eb755720a5eeb400f87}} 
+\index{UIManager@{UIManager}!onFailedNotification@{onFailedNotification}}
+\index{onFailedNotification@{onFailedNotification}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{onFailedNotification}{onFailedNotification}}
+{\footnotesize\ttfamily void UIManager\+::on\+Failed\+Notification (\begin{DoxyParamCaption}\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays a failed notification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The failure message to be displayed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a9012bf1f97207eb755720a5eeb400f87_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8}\label{classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8}} 
+\index{UIManager@{UIManager}!onSuccessfullNotification@{onSuccessfullNotification}}
+\index{onSuccessfullNotification@{onSuccessfullNotification}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{onSuccessfullNotification}{onSuccessfullNotification}}
+{\footnotesize\ttfamily void UIManager\+::on\+Successfull\+Notification (\begin{DoxyParamCaption}\item[{QString}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Displays a successful notification. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The success message to be displayed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad}\label{classUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad}} 
+\index{UIManager@{UIManager}!requestConnection@{requestConnection}}
+\index{requestConnection@{requestConnection}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{requestConnection}{requestConnection}}
+{\footnotesize\ttfamily void UIManager\+::request\+Connection (\begin{DoxyParamCaption}\item[{const QString \&}]{host,  }\item[{quint16}]{port }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted to request a connection to the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & Server host address. \\
+\hline
+{\em port} & Server port number. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d}{connect\+To\+The\+Server()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305}\label{classUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305}} 
+\index{UIManager@{UIManager}!requestReady@{requestReady}}
+\index{requestReady@{requestReady}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{requestReady}{requestReady}}
+{\footnotesize\ttfamily void UIManager\+::request\+Ready (\begin{DoxyParamCaption}\item[{QJson\+Object}]{Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle requests that are ready to be sent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data} & JSON object containing the request data. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}{create\+Login\+Widget()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classUIManager_a07f79ae3d3b675df0efa016013882a87}\label{classUIManager_a07f79ae3d3b675df0efa016013882a87}} 
+\index{UIManager@{UIManager}!responseReady@{responseReady}}
+\index{responseReady@{responseReady}!UIManager@{UIManager}}
+\doxysubsubsection{\texorpdfstring{responseReady}{responseReady}}
+{\footnotesize\ttfamily void UIManager\+::response\+Ready (\begin{DoxyParamCaption}\item[{QJson\+Object}]{Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Slot to handle responses from the server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Data} & JSON object containing the response data. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classUIManager_a07f79ae3d3b675df0efa016013882a87_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UIManager_8h}{UIManager.\+h}}\item 
+UIManager.\+cpp\end{DoxyCompactItemize}

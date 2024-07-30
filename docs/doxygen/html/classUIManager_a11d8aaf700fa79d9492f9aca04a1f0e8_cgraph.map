@@ -1,0 +1,7 @@
+<map id="UIManager::onSuccessfullNotification" name="UIManager::onSuccessfullNotification">
+<area shape="rect" id="node1" title="Displays a successful notification." alt="" coords="5,72,178,115"/>
+<area shape="rect" id="node2" href="$classAdminWidget.html#a065362884e1a3423cf4a95d61833df1f" title="Slot for handling successful request messages." alt="" coords="226,5,414,48"/>
+<area shape="rect" id="node3" href="$classLoginWidget.html#ada9460a9aca11b5a4e7a78d047964c15" title="Slot to handle successful login request." alt="" coords="229,72,411,115"/>
+<area shape="rect" id="node5" href="$classUserWidget.html#ac4913a74c0f5ac1a60b39fb16b47a945" title="Slot to handle successful request." alt="" coords="231,139,409,181"/>
+<area shape="rect" id="node4" href="$classRequestManager.html#ab57f072ef0c3f17c67f38a3d32abba32" title="Creates a request based on the provided type and data." alt="" coords="462,80,673,107"/>
+</map>

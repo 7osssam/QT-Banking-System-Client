@@ -1,0 +1,29 @@
+\hypertarget{AppManager_8h}{}\doxysection{App\+Manager.\+h File Reference}
+\label{AppManager_8h}\index{AppManager.h@{AppManager.h}}
+
+
+Manages the application\textquotesingle{}s UI and client handling in separate threads.  
+
+
+{\ttfamily \#include $<$QObject$>$}\newline
+{\ttfamily \#include $<$QThread$>$}\newline
+{\ttfamily \#include \char`\"{}UIManager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Client\+Handler.\+h\char`\"{}}\newline
+Include dependency graph for App\+Manager.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AppManager_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAppManager}{App\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the application\textquotesingle{}s UI and client handling in separate threads. 
+
+This class is responsible for coordinating between the UI and the client handler, ensuring that the application remains responsive by running the client handling logic in a separate thread. 

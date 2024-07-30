@@ -1,0 +1,88 @@
+\hypertarget{UIManager_8h_source}{}\doxysection{UIManager.\+h}
+\label{UIManager_8h_source}\index{UIManager.h@{UIManager.h}}
+\mbox{\hyperlink{UIManager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UIMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UIMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QStackedWidget>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QHBoxLayout>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}loginwidget.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{AdminWidget_8h}{AdminWidget.h}}"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{UserWidget_8h}{UserWidget.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{RequestManager_8h}{RequestManager.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}ResponseManager.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUIManager}{UIManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ QMainWindow*\ \ \ \ \ mainWindow;\ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ QStackedWidget*\ \ stackedWidget;\ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classLoginWidget}{LoginWidget}}*\ \ loginWidget;\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classUserWidget}{UserWidget}}*\ \ \ \ \ \ \ \ userWidget;\ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classAdminWidget}{AdminWidget}}*\ \ adminWidget;\ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ host;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ quint16\ \ \ \ \ \ \ \ \ \ port;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ first\_name;\ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ role;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ QString\ \ \ \ \ \ \ \ \ \ message;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classResponseManager}{ResponseManager}}*\ responseManager;\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classRequestManager}{RequestManager}}*\ \ \ \ requestManager;\ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classUIManager}{UIManager}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classUIManager_aeac3e2a8fd4ba49821ce653f4d2fa6b6}{\string~UIManager}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \mbox{\hyperlink{classUIManager_a084fc287d25c2d96c8319d0654a001f4}{UIManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classUIManager}{UIManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_abfdc680586670761f2585a8596e6be78}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classUIManager}{UIManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classUIManager}{UIManager}}*\ \mbox{\hyperlink{classUIManager_abbd0c60ea453543a8ae5a64816eadce3}{getInstance}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ signals:}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a70b0aadd20c0671507c06d50c5e6a74a}{makeRequest}}(QJsonObject\ Data);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_ad0ea470ffcdc3dde7ee606d4e04c1aad}{requestConnection}}(\textcolor{keyword}{const}\ QString\&\ host,\ quint16\ port);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a924af632a6382716c9e86b15f2eea2df}{requestDisconnection}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a07f79ae3d3b675df0efa016013882a87}{responseReady}}(QJsonObject\ Data);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_ae3b2e6b93a0ea5a5e2a594f6da296305}{requestReady}}(QJsonObject\ Data);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a58fa1af357a55ac112b41da383c1d410}{logout}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a72cbd5279f2cd48ae9251c82cfb8a9e0}{createLoginWidget}}();}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a76a772a301e3422deaf4f6489435b9db}{createAdminWidget}}(QString\ email,\ QString\ first\_name);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a15fa6321d4967795e43175cdcd3c4d59}{createUserWidget}}(QString\ email,\ QString\ first\_name,\ QString\ account\_number,\ QString\ balance);}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a11d8aaf700fa79d9492f9aca04a1f0e8}{onSuccessfullNotification}}(QString\ message);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00142\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a9012bf1f97207eb755720a5eeb400f87}{onFailedNotification}}(QString\ message);}
+\DoxyCodeLine{00143\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a9cbe7d3f7987016eaebbf5815a6bba44}{closeAdminWidget}}();}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a44bd3b3ff855e9ea6924bab6550594ac}{closeUserWidget}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_aacc11a77ee12b674d0d8f370025239b4}{closeLoginWidget}}();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00164\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_ad4335f9f5f44093f2cbfdcfe0fe4578d}{connectToTheServer}}(\textcolor{keyword}{const}\ QString\&\ host,\ quint16\ port);}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00169\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_a24edbc79706999c5200476b4eea01bc4}{disconnectFromTheServer}}();}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00175\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classUIManager_ab1f16dfdc06aebc864ddd21dffd4be87}{onConnectionResponse}}(\textcolor{keywordtype}{bool}\ status);}
+\DoxyCodeLine{00176\ \};}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00178\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UIMANAGER\_H}}
+
+\end{DoxyCode}

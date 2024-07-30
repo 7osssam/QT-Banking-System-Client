@@ -1,0 +1,88 @@
+\hypertarget{classAppManager}{}\doxysection{App\+Manager Class Reference}
+\label{classAppManager}\index{AppManager@{AppManager}}
+
+
+Inheritance diagram for App\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classAppManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for App\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{classAppManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classAppManager_ab3b9bfa5387850ab1f99663ff44eb3d6}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the \mbox{\hyperlink{classAppManager}{App\+Manager}} thread. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAppManager_a118c946d89dac4ddb9ccc3f43b528cc3}\label{classAppManager_a118c946d89dac4ddb9ccc3f43b528cc3}} 
+{\bfseries App\+Manager} (const \mbox{\hyperlink{classAppManager}{App\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted copy constructor to prevent copying. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAppManager_a3409e8434c7dc5b602b86ff1494cdd2e}\label{classAppManager_a3409e8434c7dc5b602b86ff1494cdd2e}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classAppManager}{App\+Manager}} \&)=delete
+\begin{DoxyCompactList}\small\item\em Deleted assignment operator to prevent copying. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAppManager_aee444cb63c8febdbf5ea3fcbf1a90836}{$\sim$\+App\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classAppManager}{App\+Manager}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classAppManager}{App\+Manager}} \& \mbox{\hyperlink{classAppManager_ac1b4cb8432e3ea24415aaab8e21efc58}{get\+Instance}} (QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of \mbox{\hyperlink{classAppManager}{App\+Manager}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAppManager_aee444cb63c8febdbf5ea3fcbf1a90836}\label{classAppManager_aee444cb63c8febdbf5ea3fcbf1a90836}} 
+\index{AppManager@{AppManager}!````~AppManager@{$\sim$AppManager}}
+\index{````~AppManager@{$\sim$AppManager}!AppManager@{AppManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$AppManager()}{~AppManager()}}
+{\footnotesize\ttfamily App\+Manager\+::$\sim$\+App\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for the \mbox{\hyperlink{classAppManager}{App\+Manager}} class. 
+
+Cleans up the \mbox{\hyperlink{classUIManager}{UIManager}} and \mbox{\hyperlink{classClientHandler}{Client\+Handler}} instances. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAppManager_ac1b4cb8432e3ea24415aaab8e21efc58}\label{classAppManager_ac1b4cb8432e3ea24415aaab8e21efc58}} 
+\index{AppManager@{AppManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!AppManager@{AppManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAppManager}{App\+Manager}} \& App\+Manager\+::get\+Instance (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of \mbox{\hyperlink{classAppManager}{App\+Manager}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Optional parent QObject. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the \mbox{\hyperlink{classAppManager}{App\+Manager}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAppManager_ab3b9bfa5387850ab1f99663ff44eb3d6}\label{classAppManager_ab3b9bfa5387850ab1f99663ff44eb3d6}} 
+\index{AppManager@{AppManager}!start@{start}}
+\index{start@{start}!AppManager@{AppManager}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void App\+Manager\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Starts the \mbox{\hyperlink{classAppManager}{App\+Manager}} thread. 
+
+This function starts the QThread which runs the \mbox{\hyperlink{classClientHandler}{Client\+Handler}}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AppManager_8h}{App\+Manager.\+h}}\item 
+App\+Manager.\+cpp\end{DoxyCompactItemize}

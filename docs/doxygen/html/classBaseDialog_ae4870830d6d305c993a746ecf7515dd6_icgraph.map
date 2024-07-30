@@ -1,0 +1,7 @@
+<map id="BaseDialog::createInputField" name="BaseDialog::createInputField">
+<area shape="rect" id="node1" title="Creates an input field with validation." alt="" coords="420,47,607,73"/>
+<area shape="rect" id="node2" href="$classUpdateEmailDialog.html#ac536a9cd527cc9a0a6a4d12d74991ca6" title="Sets up the user interface." alt="" coords="225,5,364,48"/>
+<area shape="rect" id="node4" href="$classUpdatePasswordDialog.html#aec60b38012638806423fd873f7ce74ae" title="Sets up the user interface." alt="" coords="217,72,372,115"/>
+<area shape="rect" id="node3" href="$classUpdateEmailDialog.html#ae408c2d2c94dbb371679bf1d3a9f9cca" title="Constructor for UpdateEmailDialog." alt="" coords="17,5,157,48"/>
+<area shape="rect" id="node5" href="$classUpdatePasswordDialog.html#aa630d564fdc111a2e1763265ccfb72cc" title="Constructor for UpdatePasswordDialog." alt="" coords="5,72,169,115"/>
+</map>

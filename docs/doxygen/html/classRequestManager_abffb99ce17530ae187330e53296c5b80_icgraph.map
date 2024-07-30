@@ -1,0 +1,8 @@
+<map id="RequestManager::makeRequest" name="RequestManager::makeRequest">
+<area shape="rect" id="node1" title="Signal emitted when a request is made." alt="" coords="997,35,1204,61"/>
+<area shape="rect" id="node2" href="$classRequestManager.html#ab57f072ef0c3f17c67f38a3d32abba32" title="Creates a request based on the provided type and data." alt="" coords="737,35,949,61"/>
+<area shape="rect" id="node3" href="$classLoginWidget.html#ada9460a9aca11b5a4e7a78d047964c15" title="Slot to handle successful login request." alt="" coords="507,27,689,69"/>
+<area shape="rect" id="node4" href="$classLoginWidget.html#aa8b517477c0dfb8d176c85bfe2bc9093" title="Slot to handle successful connection to the server." alt="" coords="282,5,459,32"/>
+<area shape="rect" id="node6" href="$classUIManager.html#a11d8aaf700fa79d9492f9aca04a1f0e8" title="Displays a successful notification." alt="" coords="284,56,457,99"/>
+<area shape="rect" id="node5" href="$classUIManager.html#ab1f16dfdc06aebc864ddd21dffd4be87" title="Handles the server connection response." alt="" coords="5,5,234,32"/>
+</map>

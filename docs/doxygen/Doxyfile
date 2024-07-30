@@ -42,7 +42,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = BankingSystem_Client
+PROJECT_NAME           = Banking_System_Client
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -54,7 +54,7 @@ PROJECT_NUMBER         = 1.0.0
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = This is a qt project for a banking system (Client side)
+PROJECT_BRIEF          = Qt-based banking app for user/admin account management, transactions, secure server communication via PostgreSQL/Supabase.
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
@@ -1078,7 +1078,8 @@ EXAMPLE_RECURSIVE      = NO
 # that contain images that are to be included in the documentation (see the
 # \image command).
 
-IMAGE_PATH             = D:/XDUMP/BankingSystem/QT-Banking-System-Client/docs/images
+IMAGE_PATH             = D:/XDUMP/BankingSystem/QT-Banking-System-Client/docs/diagrams/mermaid \
+						 D:/XDUMP/BankingSystem/QT-Banking-System-Client/docs/diagrams/plantuml
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should
 # invoke to filter for each input file. Doxygen will invoke the filter program
@@ -1320,7 +1321,7 @@ HTML_FOOTER            =
 # obsolete.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-HTML_STYLESHEET        = 
+HTML_STYLESHEET        =
 
 # The HTML_EXTRA_STYLESHEET tag can be used to specify additional user-defined
 # cascading style sheets that are included after the standard style sheets

@@ -1,0 +1,196 @@
+\hypertarget{classTcpClient}{}\doxysection{Tcp\+Client Class Reference}
+\label{classTcpClient}\index{TcpClient@{TcpClient}}
+
+
+A class for managing TCP client connections.  
+
+
+
+
+{\ttfamily \#include $<$tcpclient.\+h$>$}
+
+
+
+Inheritance diagram for Tcp\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classTcpClient__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tcp\+Client\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classTcpClient__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTcpClient_a98c4f7a47ee7e2ff22705f5aefe323e5}{Response\+Ready\+Signal}} (QByte\+Array response)
+\begin{DoxyCompactList}\small\item\em Signal emitted when a response is ready. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTcpClient_af1be56f439c5999887feae9b6c5043cd}\label{classTcpClient_af1be56f439c5999887feae9b6c5043cd}} 
+void {\bfseries Connected\+Signal} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when connected to the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTcpClient_afc80322ec1c625d62123bde851d515ea}\label{classTcpClient_afc80322ec1c625d62123bde851d515ea}} 
+void {\bfseries Disconnected\+Signal} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted when disconnected from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTcpClient_a135f8e77b7d681ec99077774e2c8949c}{Tcp\+Client}} (QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classTcpClient}{Tcp\+Client}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTcpClient_a125d2277f401cbdebadb9689a5933e18}{$\sim$\+Tcp\+Client}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \mbox{\hyperlink{classTcpClient}{Tcp\+Client}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpClient_a9df21dafec342f9a5776082ae9ff835e}{connect\+To\+Server}} (const QString \&host, quint16 port)
+\begin{DoxyCompactList}\small\item\em Connect to a TCP server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpClient_ab595fd55636a7f4e81beac3be309fb5e}{send\+Tcp\+Request}} (const QByte\+Array \&request)
+\begin{DoxyCompactList}\small\item\em Send a TCP request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTcpClient_a88d7419b2e07ebdbb4de21dfa5defb15}{close\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Close the TCP connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for managing TCP client connections. 
+
+The \mbox{\hyperlink{classTcpClient}{Tcp\+Client}} class is responsible for establishing a connection to a TCP server, sending requests, receiving responses, and handling various socket states and errors. It provides signals for connection status and incoming responses. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTcpClient_a135f8e77b7d681ec99077774e2c8949c}\label{classTcpClient_a135f8e77b7d681ec99077774e2c8949c}} 
+\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{TcpClient()}{TcpClient()}}
+{\footnotesize\ttfamily Tcp\+Client\+::\+Tcp\+Client (\begin{DoxyParamCaption}\item[{QObject $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for \mbox{\hyperlink{classTcpClient}{Tcp\+Client}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent object.\\
+\hline
+\end{DoxyParams}
+Initializes the \mbox{\hyperlink{classTcpClient}{Tcp\+Client}} object and connects the necessary signals and slots. \mbox{\Hypertarget{classTcpClient_a125d2277f401cbdebadb9689a5933e18}\label{classTcpClient_a125d2277f401cbdebadb9689a5933e18}} 
+\index{TcpClient@{TcpClient}!````~TcpClient@{$\sim$TcpClient}}
+\index{````~TcpClient@{$\sim$TcpClient}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{$\sim$TcpClient()}{~TcpClient()}}
+{\footnotesize\ttfamily Tcp\+Client\+::$\sim$\+Tcp\+Client (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor for \mbox{\hyperlink{classTcpClient}{Tcp\+Client}}. 
+
+Cleans up the \mbox{\hyperlink{classTcpClient}{Tcp\+Client}} object, ensuring the socket is properly deleted. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTcpClient_a88d7419b2e07ebdbb4de21dfa5defb15}\label{classTcpClient_a88d7419b2e07ebdbb4de21dfa5defb15}} 
+\index{TcpClient@{TcpClient}!closeConnection@{closeConnection}}
+\index{closeConnection@{closeConnection}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{closeConnection()}{closeConnection()}}
+{\footnotesize\ttfamily void Tcp\+Client\+::close\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Close the TCP connection. 
+
+Closes the connection to the server if it is open. 
+
+Referenced by \mbox{\hyperlink{classClientHandler_a325999da116f2deb7caa7d1caf056fed}{Client\+Handler\+::request\+Client\+Disconnection()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTcpClient_a88d7419b2e07ebdbb4de21dfa5defb15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTcpClient_a9df21dafec342f9a5776082ae9ff835e}\label{classTcpClient_a9df21dafec342f9a5776082ae9ff835e}} 
+\index{TcpClient@{TcpClient}!connectToServer@{connectToServer}}
+\index{connectToServer@{connectToServer}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{connectToServer()}{connectToServer()}}
+{\footnotesize\ttfamily void Tcp\+Client\+::connect\+To\+Server (\begin{DoxyParamCaption}\item[{const QString \&}]{host,  }\item[{quint16}]{port }\end{DoxyParamCaption})}
+
+
+
+Connect to a TCP server. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em host} & The host address of the server. \\
+\hline
+{\em port} & The port number to connect to.\\
+\hline
+\end{DoxyParams}
+Initiates a connection to the specified server. 
+
+Referenced by \mbox{\hyperlink{classClientHandler_ade05a12eb09a1c14f3ff8d5d9a7775b3}{Client\+Handler\+::request\+Client\+Connection()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTcpClient_a9df21dafec342f9a5776082ae9ff835e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTcpClient_a98c4f7a47ee7e2ff22705f5aefe323e5}\label{classTcpClient_a98c4f7a47ee7e2ff22705f5aefe323e5}} 
+\index{TcpClient@{TcpClient}!ResponseReadySignal@{ResponseReadySignal}}
+\index{ResponseReadySignal@{ResponseReadySignal}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{ResponseReadySignal}{ResponseReadySignal}}
+{\footnotesize\ttfamily void Tcp\+Client\+::\+Response\+Ready\+Signal (\begin{DoxyParamCaption}\item[{QByte\+Array}]{response }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when a response is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em response} & The response data received from the server. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by \mbox{\hyperlink{classClientHandler_a88abe966b363ef9a5fedd1c5555a9a32}{Client\+Handler\+::run()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classTcpClient_a98c4f7a47ee7e2ff22705f5aefe323e5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTcpClient_ab595fd55636a7f4e81beac3be309fb5e}\label{classTcpClient_ab595fd55636a7f4e81beac3be309fb5e}} 
+\index{TcpClient@{TcpClient}!sendTcpRequest@{sendTcpRequest}}
+\index{sendTcpRequest@{sendTcpRequest}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{sendTcpRequest()}{sendTcpRequest()}}
+{\footnotesize\ttfamily void Tcp\+Client\+::send\+Tcp\+Request (\begin{DoxyParamCaption}\item[{const QByte\+Array \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Send a TCP request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request data to be sent.\\
+\hline
+\end{DoxyParams}
+Sends the specified request to the connected server. 
+
+Referenced by \mbox{\hyperlink{classClientHandler_ac83e40235b51c02bd186ae640e3876af}{Client\+Handler\+::send\+Request()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classTcpClient_ab595fd55636a7f4e81beac3be309fb5e_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{tcpclient_8h}{tcpclient.\+h}}\item 
+\mbox{\hyperlink{tcpclient_8cpp}{tcpclient.\+cpp}}\end{DoxyCompactItemize}

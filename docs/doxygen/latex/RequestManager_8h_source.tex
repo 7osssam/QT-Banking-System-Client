@@ -1,0 +1,57 @@
+\hypertarget{RequestManager_8h_source}{}\doxysection{Request\+Manager.\+h}
+\label{RequestManager_8h_source}\index{RequestManager.h@{RequestManager.h}}
+\mbox{\hyperlink{RequestManager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ REQUESTMANAGER\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ REQUESTMANAGER\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QVariantMap>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QVariant>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRequestManager}{RequestManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{00031\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classRequestManager}{RequestManager}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ signals:}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRequestManager_abffb99ce17530ae187330e53296c5b80}{makeRequest}}(QJsonObject\ Data);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Delete\ the\ copy\ constructor\ and\ assignment\ operator\ to\ prevent\ copying}}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classRequestManager}{RequestManager}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRequestManager}{RequestManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{classRequestManager}{RequestManager}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classRequestManager}{RequestManager}}*\ \mbox{\hyperlink{classRequestManager_a02062c5fedfde1444cd941bc2a22e785}{getInstance}}(QObject*\ parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310}{AvailableRequests}}}
+\DoxyCodeLine{00068\ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a517c61a4e946ec7f92a01e8622c97632}{Login}}\ =\ 1,\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a1ce33251979ab4a049ebc6f80a7b1ca7}{GetAccountnumber}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a41aa3cfd8482a75d229a86203a7a7001}{GetBalance}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310af4f4491b688d2274389535e68917d549}{GetTransactionsHistory}},\ }
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a073436de6bc4635f6f1d6a739d15e115}{MakeTransaction}},\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a58fc4431f7c77a667ed7d524efdb2155}{TransferAmount}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a9aa35c99906b91e1b0b65522368682a1}{GetDatabase}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a0b2388382a273df5b82ddb6abff8d675}{CreateNewUser}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310aaadb31279034a82211cbcbcb6f32f138}{DeleteUser}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310abe9610f90871c52199552ba9a7eee628}{UpdateUser}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Special\ requests}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a3d57ea768887ade2528b49470afeee2e}{UserInit}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310ac8974e51516860572533ff425c9162ba}{UpdateEmail}},\ \ \ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a55a93a95e948c8d526ab395d9b56b7bc}{UpdatePassword}},\ \ \ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310a11bb09725c432a23db823edbe06bf04b}{JsonParseError}}\ =\ -\/1\ }
+\DoxyCodeLine{00084\ \ \ \ \ \};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classRequestManager_ab57f072ef0c3f17c67f38a3d32abba32}{createRequest}}(\mbox{\hyperlink{classRequestManager_af9c93ecb9b028e390635d0e155d10310}{AvailableRequests}}\ requestType,\ QVariantMap\ data);}
+\DoxyCodeLine{00093\ \};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ REQUESTMANAGER\_H}}
+
+\end{DoxyCode}
