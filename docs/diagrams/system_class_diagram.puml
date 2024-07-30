@@ -113,6 +113,7 @@ class C_0005551684386604303784 [[classAdminWidget.html{AdminWidget}]] {
 __
 -admin_email_ : QString [[[{admin_email_}]]]
 -admin_first_name_ : QString [[[{admin_first_name_}]]]
+-admin_new_email_ : QString [[[{admin_new_email_}]]]
 -createNewUserFab : QtMaterialFloatingActionButton * [[[{createNewUserFab}]]]
 -databaseContent_ : QList<QMap<QString,QString>> [[[{databaseContent_}]]]
 -databaseTable : QTableWidget * [[[{databaseTable}]]]
@@ -166,6 +167,7 @@ __
 -email_ : QString [[[{email_}]]]
 -first_name_ : QString [[[{first_name_}]]]
 -logoutDialog : QtMaterialDialog * [[[{logoutDialog}]]]
+-new_email_ : QString [[[{new_email_}]]]
 -notificationSnackbar : QtMaterialSnackbar * [[[{notificationSnackbar}]]]
 -requestManager : RequestManager * [[[{requestManager}]]]
 {static} +staticMetaObject : const QMetaObject [[[{staticMetaObject}]]]

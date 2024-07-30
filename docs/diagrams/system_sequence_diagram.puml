@@ -10,7 +10,7 @@ participant ClientHandler
 participant ResponseManager
 participant TcpClient
 
-User -> LoginWidget: Enter login information
+User -> LoginWidget: Enter Connection Information
 LoginWidget -> UIManager: requestConnection(host, port)
 activate UIManager
 

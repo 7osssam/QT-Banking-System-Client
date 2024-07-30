@@ -1,0 +1,2589 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" aria-roledescription="classDiagram" role="graphics-document document" viewBox="0 -50 5811.15234375 3695" style="max-width: 5811.15px; background-color: transparent;" width="5811.15234375" id="my-svg">
+  <style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#ccc;}#my-svg .error-icon{fill:#a44141;}#my-svg .error-text{fill:#ddd;stroke:#ddd;}#my-svg .edge-thickness-normal{stroke-width:2px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:lightgrey;stroke:lightgrey;}#my-svg .marker.cross{stroke:lightgrey;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg g.classGroup text{fill:#81B1DB;stroke:none;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:10px;}#my-svg g.classGroup text .title{font-weight:bolder;}#my-svg .nodeLabel,#my-svg .edgeLabel{color:#e0dfdf;}#my-svg .edgeLabel .label rect{fill:#1f2020;}#my-svg .label text{fill:#e0dfdf;}#my-svg .edgeLabel .label span{background:#1f2020;}#my-svg .classTitle{font-weight:bolder;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#1f2020;stroke:#81B1DB;stroke-width:1px;}#my-svg .divider{stroke:#81B1DB;stroke-width:1;}#my-svg g.clickable{cursor:pointer;}#my-svg g.classGroup rect{fill:#1f2020;stroke:#81B1DB;}#my-svg g.classGroup line{stroke:#81B1DB;stroke-width:1;}#my-svg .classLabel .box{stroke:none;stroke-width:0;fill:#1f2020;opacity:0.5;}#my-svg .classLabel .label{fill:#81B1DB;font-size:10px;}#my-svg .relation{stroke:lightgrey;stroke-width:1;fill:none;}#my-svg .dashed-line{stroke-dasharray:3;}#my-svg .dotted-line{stroke-dasharray:1 2;}#my-svg #compositionStart,#my-svg .composition{fill:lightgrey!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #compositionEnd,#my-svg .composition{fill:lightgrey!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #dependencyStart,#my-svg .dependency{fill:lightgrey!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #dependencyStart,#my-svg .dependency{fill:lightgrey!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #extensionStart,#my-svg .extension{fill:transparent!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #extensionEnd,#my-svg .extension{fill:transparent!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #aggregationStart,#my-svg .aggregation{fill:transparent!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #aggregationEnd,#my-svg .aggregation{fill:transparent!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #lollipopStart,#my-svg .lollipop{fill:#1f2020!important;stroke:lightgrey!important;stroke-width:1;}#my-svg #lollipopEnd,#my-svg .lollipop{fill:#1f2020!important;stroke:lightgrey!important;stroke-width:1;}#my-svg .edgeTerminals{font-size:11px;line-height:initial;}#my-svg .classTitleText{text-anchor:middle;font-size:18px;fill:#ccc;}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+  <g>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker aggregation classDiagram" id="my-svg_classDiagram-aggregationStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+      <style type="text/css">a:hover { text-decoration: underline; }</style>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker aggregation classDiagram" id="my-svg_classDiagram-aggregationEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker extension classDiagram" id="my-svg_classDiagram-extensionStart">
+        <path d="M 1,7 L18,13 V 1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker extension classDiagram" id="my-svg_classDiagram-extensionEnd">
+        <path d="M 1,1 V 13 L18,7 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="18" class="marker composition classDiagram" id="my-svg_classDiagram-compositionStart">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="1" class="marker composition classDiagram" id="my-svg_classDiagram-compositionEnd">
+        <path d="M 18,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="6" class="marker dependency classDiagram" id="my-svg_classDiagram-dependencyStart">
+        <path d="M 5,7 L9,13 L1,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="28" markerWidth="20" refY="7" refX="13" class="marker dependency classDiagram" id="my-svg_classDiagram-dependencyEnd">
+        <path d="M 18,7 L9,13 L14,7 L9,1 Z"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="13" class="marker lollipop classDiagram" id="my-svg_classDiagram-lollipopStart">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker orient="auto" markerHeight="240" markerWidth="190" refY="7" refX="1" class="marker lollipop classDiagram" id="my-svg_classDiagram-lollipopEnd">
+        <circle r="6" cy="7" cx="7" fill="transparent" stroke="black"/>
+      </marker>
+    </defs>
+    <g class="root">
+      <g class="clusters"/>
+      <g class="edgePaths">
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-dashed relation" id="id_C_0017581648629732253705_C_0014397068199454785176_1" d="M3777.011,3138L3776.513,3149.833C3776.016,3161.667,3775.022,3185.333,3774.664,3200.334C3774.307,3215.335,3774.587,3221.671,3774.727,3224.838L3774.866,3228.006"/>
+        <path marker-start="url(#my-svg_classDiagram-lollipopStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0017581648629732253705_C_0014397068199454785176_2" d="M3791.611,3151.488L3792.014,3161.073C3792.416,3170.659,3793.222,3189.829,3793.441,3203.581C3793.659,3217.333,3793.292,3225.667,3793.108,3229.833L3792.924,3234"/>
+        <path marker-start="url(#my-svg_classDiagram-lollipopStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0000524940392191554637_C_0015588328822049200852_3" d="M4649.969,2403.5L4649.969,2456.833C4649.969,2510.167,4649.969,2616.833,4702.55,2698.302C4755.132,2779.77,4860.294,2836.04,4912.876,2864.175L4965.457,2892.31"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0005551684386604303784_C_0017581648629732253705_4" d="M3905.023,2689L3905.023,2694.75C3905.023,2700.5,3905.023,2712,3898.904,2730.268C3892.784,2748.537,3880.544,2773.573,3874.424,2786.091L3868.304,2798.61"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0014887478323458850046_C_0017581648629732253705_5" d="M3052.094,2677.5L3052.094,2685.167C3052.094,2692.833,3052.094,2708.167,3127.141,2741.21C3202.187,2774.253,3352.281,2825.007,3427.328,2850.384L3502.375,2875.76"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0009314656593254540318_C_0017581648629732253705_6" d="M2251.117,2585.5L2251.117,2608.5C2251.117,2631.5,2251.117,2677.5,2459.62,2734.164C2668.123,2790.829,3085.129,2858.158,3293.632,2891.822L3502.135,2925.486"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0017510141229418621978_C_0012472032526046711988_7" d="M862.196,1134.423L748.674,1209.436C635.151,1284.449,408.107,1434.474,294.585,1595.737C181.063,1757,181.063,1929.5,181.063,2015.75L181.063,2102"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0017510141229418621978_C_0012861765083885074797_8" d="M914.402,1138.854L858.199,1213.128C801.997,1287.403,689.592,1435.951,633.39,1596.476C577.188,1757,577.188,1929.5,577.188,2015.75L577.188,2102"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0017510141229418621978_C_0013353315463673300878_9" d="M973.313,1142.5L973.313,1216.167C973.313,1289.833,973.313,1437.167,973.313,1597.083C973.313,1757,973.313,1929.5,973.313,2015.75L973.313,2102"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0017510141229418621978_C_0001544226777174606881_10" d="M1032.223,1138.854L1088.426,1213.128C1144.628,1287.403,1257.033,1435.951,1313.235,1596.476C1369.438,1757,1369.438,1929.5,1369.438,2015.75L1369.438,2102"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0017510141229418621978_C_0009937287470556469371_11" d="M1084.429,1134.423L1197.951,1209.436C1311.474,1284.449,1538.518,1434.474,1652.04,1595.737C1765.563,1757,1765.563,1929.5,1765.563,2015.75L1765.563,2102"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-dashed relation" id="id_C_0006277281904743403160_C_0017510141229418621978_12" d="M1482.43,405.062L1397.577,427.135C1312.724,449.208,1143.018,493.354,1058.165,591.094C973.313,688.833,973.313,840.167,973.313,915.833L973.313,991.5"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0006277281904743403160_C_0017531555969316099187_13" d="M1526.923,510.806L1517.679,515.255C1508.435,519.704,1489.948,528.602,1480.705,580.968C1471.461,633.333,1471.461,729.167,1471.461,777.083L1471.461,825"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0006277281904743403160_C_0007804638616733427194_14" d="M2057.375,521L2057.375,523.75C2057.375,526.5,2057.375,532,2057.375,582.667C2057.375,633.333,2057.375,729.167,2057.375,777.083L2057.375,825"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0006277281904743403160_C_0004896682309518099660_15" d="M2578.177,510.926L2587.207,515.355C2596.237,519.784,2614.298,528.642,2623.329,592.488C2632.359,656.333,2632.359,775.167,2632.359,834.583L2632.359,894"/>
+        <path marker-start="url(#my-svg_classDiagram-extensionStart)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0006277281904743403160_C_0011439797056535069865_16" d="M2649.802,400.777L2742.726,423.565C2835.649,446.352,3021.497,491.926,3114.42,566.463C3207.344,641,3207.344,744.5,3207.344,796.25L3207.344,848"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0003891570225386253038_C_0006770949275830638079_17" d="M5540.66,1285.5L5540.66,1335.333C5540.66,1385.167,5540.66,1484.833,5540.66,1585.417C5540.66,1686,5540.66,1787.5,5540.66,1838.25L5540.66,1889"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0004909201866089141242_C_0009314656593254540318_18" d="M3519.836,1182.921L3308.383,1249.851C3096.93,1316.781,2674.023,1450.64,2462.57,1539.57C2251.117,1628.5,2251.117,1672.5,2251.117,1694.5L2251.117,1716.5"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0004909201866089141242_C_0014887478323458850046_19" d="M3519.836,1297.415L3441.879,1345.263C3363.922,1393.11,3208.008,1488.805,3130.051,1543.319C3052.094,1597.833,3052.094,1611.167,3052.094,1617.833L3052.094,1624.5"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0004909201866089141242_C_0005551684386604303784_20" d="M3905.023,1550L3905.023,1555.75C3905.023,1561.5,3905.023,1573,3905.023,1583.5C3905.023,1594,3905.023,1603.5,3905.023,1608.25L3905.023,1613"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0004909201866089141242_C_0000524940392191554637_21" d="M4290.211,1331.685L4350.171,1373.821C4410.13,1415.957,4530.049,1500.228,4590.009,1596.948C4649.969,1693.667,4649.969,1802.833,4649.969,1857.417L4649.969,1912"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0004909201866089141242_C_0017581648629732253705_22" d="M4290.211,1226.229L4429.413,1285.941C4568.615,1345.653,4847.018,1465.076,4986.22,1619.705C5125.422,1774.333,5125.422,1964.167,5125.422,2154C5125.422,2343.833,5125.422,2533.667,4948.834,2661.165C4772.247,2788.664,4419.072,2853.828,4242.484,2886.41L4065.896,2918.992"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0004125011841911275123_C_0004909201866089141242_23" d="M4431.453,349.328L4343.715,380.69C4255.977,412.052,4080.5,474.776,3992.762,510.888C3905.023,547,3905.023,556.5,3905.023,561.25L3905.023,566"/>
+        <path marker-end="url(#my-svg_classDiagram-dependencyEnd)" style="fill:none" class="edge-pattern-solid relation" id="id_C_0004125011841911275123_C_0003891570225386253038_24" d="M4956.438,342.924L5053.808,375.353C5151.178,407.782,5345.919,472.641,5443.29,553.904C5540.66,635.167,5540.66,732.833,5540.66,781.667L5540.66,830.5"/>
+      </g>
+      <g class="edgeLabels">
+        <g transform="translate(undefined, NaN)" class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel"/>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(undefined, NaN)" class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel"/>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(undefined, NaN)" class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel"/>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(3905.0234375, 2723.5)" class="edgeLabel">
+          <g transform="translate(-59.953125, -9.5)" class="label">
+            <foreignObject height="19" width="119.90625">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-requestManager</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(3052.09375, 2723.5)" class="edgeLabel">
+          <g transform="translate(-59.953125, -9.5)" class="label">
+            <foreignObject height="19" width="119.90625">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-requestManager</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(2251.1171875, 2723.5)" class="edgeLabel">
+          <g transform="translate(-59.953125, -9.5)" class="label">
+            <foreignObject height="19" width="119.90625">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-requestManager</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(undefined, NaN)" class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel"/>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel">
+          <g transform="translate(0, 0)" class="label">
+            <foreignObject height="0" width="0">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel"/>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(5540.66015625, 1584.5)" class="edgeLabel">
+          <g transform="translate(-35.859375, -9.5)" class="label">
+            <foreignObject height="19" width="71.71875">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-tcpClient</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(2251.1171875, 1584.5)" class="edgeLabel">
+          <g transform="translate(-45.2578125, -9.5)" class="label">
+            <foreignObject height="19" width="90.515625">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-loginWidget</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(3052.09375, 1584.5)" class="edgeLabel">
+          <g transform="translate(-43.015625, -9.5)" class="label">
+            <foreignObject height="19" width="86.03125">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-userWidget</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(3905.0234375, 1584.5)" class="edgeLabel">
+          <g transform="translate(-49.890625, -9.5)" class="label">
+            <foreignObject height="19" width="99.78125">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-adminWidget</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(4649.96875, 1584.5)" class="edgeLabel">
+          <g transform="translate(-64.3125, -9.5)" class="label">
+            <foreignObject height="19" width="128.625">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-responseManager</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(5125.421875, 2154)" class="edgeLabel">
+          <g transform="translate(-59.953125, -9.5)" class="label">
+            <foreignObject height="19" width="119.90625">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-requestManager</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(3905.0234375, 537.5)" class="edgeLabel">
+          <g transform="translate(-39.53125, -9.5)" class="label">
+            <foreignObject height="19" width="79.0625">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-uiManager</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g transform="translate(5540.66015625, 537.5)" class="edgeLabel">
+          <g transform="translate(-51.546875, -9.5)" class="label">
+            <foreignObject height="19" width="103.09375">
+              <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                <span class="edgeLabel">
+                  <span class="edgeLabel">-clientHandler</span>
+                </span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+      </g>
+      <g class="nodes">
+        <a transform="translate(3784.02734375, 2971)" data-id="C_0017581648629732253705" data-node="true" xlink:href="classRequestManager.html">
+          <g title="RequestManager" id="classId-C_0017581648629732253705-0" class="node default clickable">
+            <rect height="334" width="551.9375" y="-167" x="-275.96875" class="outer title-state" style=""/>
+            <line y2="-136" y1="-136" x2="275.96875" x1="-275.96875" class="divider"/>
+            <line y2="-97" y1="-97" x2="275.96875" x1="-275.96875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -61.3359375, -159.5)" height="19" width="122.671875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">RequestManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, -124.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, -89.5)" height="19" width="378.875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-RequestManager(QObject * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, -66.5)" height="19" width="368.21875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+RequestManager(const RequestManager &amp;) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, -43.5)" height="19" width="322.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+operator=(const RequestManager &amp;) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, -20.5)" height="19" width="536.9375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+createRequest(AvailableRequests requestType, QVariantMap data) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, 2.5)" height="19" width="445.109375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+getInstance(QObject * parent = nullptr) : : RequestManager *</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, 25.5)" height="19" width="299.921875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+makeRequest(QJsonObject Data) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, 48.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, 71.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, 94.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, 117.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -268.46875, 140.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(3784.02734375, 3435.5)" data-id="C_0014397068199454785176" data-node="true" xlink:href="enumRequestManager##AvailableRequests.html">
+          <g title="RequestManager##AvailableRequests" id="classId-C_0014397068199454785176-1" class="node default clickable">
+            <rect height="403" width="284.546875" y="-201.5" x="-142.2734375" class="outer title-state" style=""/>
+            <line y2="-147.5" y1="-147.5" x2="142.2734375" x1="-142.2734375" class="divider"/>
+            <line y2="190.5" y1="190.5" x2="142.2734375" x1="-142.2734375" class="divider"/>
+            <g class="label">
+              <foreignObject transform="translate( -53.9296875, -194)" height="19" width="107.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">Â«enumerationÂ»</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, -171)" height="19" width="269.546875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">RequestManager::AvailableRequests</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, -136)" height="19" width="38.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">Login</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, -113)" height="19" width="138.21875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetAccountnumber</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, -90)" height="19" width="81.875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetBalance</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, -67)" height="19" width="164.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetTransactionsHistory</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, -44)" height="19" width="118.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">MakeTransaction</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, -21)" height="19" width="113.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">TransferAmount</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 2)" height="19" width="91.390625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetDatabase</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 25)" height="19" width="110.640625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">CreateNewUser</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 48)" height="19" width="78.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">DeleteUser</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 71)" height="19" width="83.484375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdateUser</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 94)" height="19" width="55.90625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UserInit</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 117)" height="19" width="91.21875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdateEmail</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 140)" height="19" width="116.84375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdatePassword</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -134.7734375, 163)" height="19" width="105.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">JsonParseError</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(4649.96875, 2154)" data-id="C_0000524940392191554637" data-node="true" xlink:href="classResponseManager.html">
+          <g title="ResponseManager" id="classId-C_0000524940392191554637-2" class="node default clickable">
+            <rect height="472" width="761" y="-236" x="-380.5" class="outer title-state" style=""/>
+            <line y2="-205" y1="-205" x2="380.5" x1="-380.5" class="divider"/>
+            <line y2="-166" y1="-166" x2="380.5" x1="-380.5" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -66.125, -228.5)" height="19" width="132.25" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">ResponseManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -193.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -158.5)" height="19" width="390.109375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+ResponseManager(QObject * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -135.5)" height="19" width="303.0625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+BalanceFetched(QString balance) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -112.5)" height="19" width="300.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+ConnectionResponse(bool status) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -89.5)" height="19" width="429.6875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+DatabaseFetched(const QList&gt; &amp; databaseContent) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -66.5)" height="19" width="293.921875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+FailedRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -43.5)" height="19" width="328.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+SuccessfullRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, -20.5)" height="19" width="418.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+TransactionsFetched(const QList&gt; &amp; transactions) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 2.5)" height="19" width="454.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+adminLoginSuccess(QString email, QString first_name) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 25.5)" height="19" width="373.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+getResponseMessage(QJsonObject Data) : : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 48.5)" height="19" width="338.171875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+getResponseStatus(QJsonObject Data) : : bool</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 71.5)" height="19" width="318.40625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+handleResponse(QJsonObject Data) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 94.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 117.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 140.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 163.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 186.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -373, 209.5)" height="19" width="746">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+userloginSuccess(QString email, QString first_name, QString account_number, QString balance) : : void</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(5112.51953125, 2971)" data-id="C_0015588328822049200852" data-node="true" xlink:href="enumResponseManager##AvailableRequests.html">
+          <g title="ResponseManager##AvailableRequests" id="classId-C_0015588328822049200852-3" class="node default clickable">
+            <rect height="426" width="294.125" y="-213" x="-147.0625" class="outer title-state" style=""/>
+            <line y2="-159" y1="-159" x2="147.0625" x1="-147.0625" class="divider"/>
+            <line y2="202" y1="202" x2="147.0625" x1="-147.0625" class="divider"/>
+            <g class="label">
+              <foreignObject transform="translate( -53.9296875, -205.5)" height="19" width="107.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">Â«enumerationÂ»</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -182.5)" height="19" width="279.125" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">ResponseManager::AvailableRequests</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -147.5)" height="19" width="38.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">Login</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -124.5)" height="19" width="138.21875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetAccountnumber</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -101.5)" height="19" width="81.875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetBalance</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -78.5)" height="19" width="164.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetTransactionsHistory</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -55.5)" height="19" width="118.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">MakeTransaction</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -32.5)" height="19" width="113.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">TransferAmount</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, -9.5)" height="19" width="91.390625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">GetDatabase</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 13.5)" height="19" width="110.640625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">CreateNewUser</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 36.5)" height="19" width="78.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">DeleteUser</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 59.5)" height="19" width="83.484375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdateUser</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 82.5)" height="19" width="55.90625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UserInit</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 105.5)" height="19" width="91.21875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdateEmail</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 128.5)" height="19" width="116.84375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdatePassword</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 151.5)" height="19" width="105.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">JsonParseError</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -139.5625, 174.5)" height="19" width="80.53125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">Connection</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(3905.0234375, 2154)" data-id="C_0005551684386604303784" data-node="true" xlink:href="classAdminWidget.html">
+          <g title="AdminWidget" id="classId-C_0005551684386604303784-4" class="node default clickable">
+            <rect height="1070" width="628.890625" y="-535" x="-314.4453125" class="outer title-state" style=""/>
+            <line y2="-504" y1="-504" x2="314.4453125" x1="-314.4453125" class="divider"/>
+            <line y2="-74" y1="-74" x2="314.4453125" x1="-314.4453125" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -49.5859375, -527.5)" height="19" width="99.171875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">AdminWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -492.5)" height="19" width="174.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-admin_email_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -469.5)" height="19" width="211.546875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-admin_first_name_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -446.5)" height="19" width="211.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-admin_new_email_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -423.5)" height="19" width="388.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createNewUserFab : QtMaterialFloatingActionButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -400.5)" height="19" width="371.46875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-databaseContent_ : QList&lt;QMap&lt;QString,QString&gt;&gt;</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -377.5)" height="19" width="224.296875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-databaseTable : QTableWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -354.5)" height="19" width="357.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-deleteUserFab : QtMaterialFloatingActionButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -331.5)" height="19" width="235.578125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-logoutDialog : QtMaterialDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -308.5)" height="19" width="313.40625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-notificationSnackbar : QtMaterialSnackbar</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -285.5)" height="19" width="255.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-requestManager : RequestManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -262.5)" height="19" width="237.015625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-selectedUserData : QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -239.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -216.5)" height="19" width="226.640625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-tabContents : QStackedWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -193.5)" height="19" width="161.546875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-tabs : QtMaterialTabs</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -170.5)" height="19" width="247.671875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-transactionsTable : QTableWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -147.5)" height="19" width="337.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-transactions_ : QList&lt;QMap&lt;QString,QString&gt;&gt;</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -124.5)" height="19" width="361.90625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-updateUserFab : QtMaterialFloatingActionButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -101.5)" height="19" width="279.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-welcomeLabel : QtMaterialFlatButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -66.5)" height="19" width="613.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+AdminWidget(QString email, QString first_name, QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -43.5)" height="19" width="241.875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createDatabaseTab() : : QWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, -20.5)" height="19" width="234.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createSettingsTab() : : QWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 2.5)" height="19" width="257.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createTabLayout() : : QVBoxLayout</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 25.5)" height="19" width="265.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createTransactionsTab() : : QWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 48.5)" height="19" width="121.265625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+logout() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 71.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 94.5)" height="19" width="254.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onCreateNewUserClicked() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 117.5)" height="19" width="417.3125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onDatabaseContentUpdated(const QList&gt; &amp; data) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 140.5)" height="19" width="222.40625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onDeleteUserClicked() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 163.5)" height="19" width="311.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onFailedRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 186.5)" height="19" width="191.9375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onLogoutClicked() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 209.5)" height="19" width="213.96875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onLogoutConfirmed() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 232.5)" height="19" width="345.578125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onSuccessfullRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 255.5)" height="19" width="435.515625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onTransactionsFetched(const QList&gt; &amp; transactions) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 278.5)" height="19" width="182.28125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onUpdateEmail() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 301.5)" height="19" width="207.90625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onUpdatePassword() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 324.5)" height="19" width="227.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onUpdateUserClicked() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 347.5)" height="19" width="250.015625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onUserSelectionChanged() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 370.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 393.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 416.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 439.5)" height="19" width="270.609375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-setupFloatingActionButtons() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 462.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 485.5)" height="19" width="227.34375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-updateDatabaseTable() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -306.9453125, 508.5)" height="19" width="250.265625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-updateTransactionsTable() : : void</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(3052.09375, 2154)" data-id="C_0014887478323458850046" data-node="true" xlink:href="classUserWidget.html">
+          <g title="UserWidget" id="classId-C_0014887478323458850046-5" class="node default clickable">
+            <rect height="1047" width="924.828125" y="-523.5" x="-462.4140625" class="outer title-state" style=""/>
+            <line y2="-492.5" y1="-492.5" x2="462.4140625" x1="-462.4140625" class="divider"/>
+            <line y2="-39.5" y1="-39.5" x2="462.4140625" x1="-462.4140625" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -42.7734375, -516)" height="19" width="85.546875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UserWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -481)" height="19" width="201.875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-account_number_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -458)" height="19" width="257.078125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-amountField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -435)" height="19" width="271.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-balanceLabel : QtMaterialFlatButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -412)" height="19" width="138.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-balance_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -389)" height="19" width="121.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-email_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -366)" height="19" width="159.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-first_name_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -343)" height="19" width="235.578125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-logoutDialog : QtMaterialDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -320)" height="19" width="159.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-new_email_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -297)" height="19" width="313.40625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-notificationSnackbar : QtMaterialSnackbar</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -274)" height="19" width="255.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-requestManager : RequestManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -251)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -228)" height="19" width="226.640625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-tabContents : QStackedWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -205)" height="19" width="161.546875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-tabs : QtMaterialTabs</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -182)" height="19" width="275.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-toAccountField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -159)" height="19" width="258.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-toEmailField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -136)" height="19" width="247.671875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-transactionsTable : QTableWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -113)" height="19" width="337.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-transactions_ : QList&lt;QMap&lt;QString,QString&gt;&gt;</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -90)" height="19" width="284.6875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-transferButton : QtMaterialFlatButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -67)" height="19" width="279.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-welcomeLabel : QtMaterialFlatButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -32)" height="19" width="909.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+UserWidget(QString email, QString first_name, QString account_number, QString balance, QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, -9)" height="19" width="217.078125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createHomeTab() : : QWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 14)" height="19" width="234.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createSettingsTab() : : QWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 37)" height="19" width="257.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createTabLayout() : : QVBoxLayout</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 60)" height="19" width="235.734375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-createTransferTab() : : QWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 83)" height="19" width="121.265625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+logout() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 106)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 129)" height="19" width="363.28125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onBalanceFetched(const QString balance) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 152)" height="19" width="238.390625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onBalanceLabelClicked() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 175)" height="19" width="311.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onFailedRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 198)" height="19" width="191.9375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onLogoutClicked() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 221)" height="19" width="213.96875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onLogoutConfirmed() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 244)" height="19" width="345.578125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onSuccessfullRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 267)" height="19" width="435.515625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onTransactionsFetched(const QList&gt; &amp; transactions) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 290)" height="19" width="249.59375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onTransferButtonClicked() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 313)" height="19" width="252.234375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onTransferFieldsChanged() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 336)" height="19" width="182.28125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onUpdateEmail() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 359)" height="19" width="207.90625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onUpdatePassword() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 382)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 405)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 428)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 451)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 474)" height="19" width="235.28125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-updateFirstNameLabel() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -454.9140625, 497)" height="19" width="250.265625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-updateTransactionsTable() : : void</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(2251.1171875, 2154)" data-id="C_0009314656593254540318" data-node="true" xlink:href="classLoginWidget.html">
+          <g title="LoginWidget" id="classId-C_0009314656593254540318-6" class="node default clickable">
+            <rect height="863" width="524.984375" y="-431.5" x="-262.4921875" class="outer title-state" style=""/>
+            <line y2="-400.5" y1="-400.5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <line y2="6.5" y1="6.5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -45.9609375, -424)" height="19" width="91.921875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">LoginWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -389)" height="19" width="193.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-backgroundLabel : QLabel</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -366)" height="19" width="198.96875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-backgroundMovie : QMovie</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -343)" height="19" width="218.71875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-connectButton : QPushButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -320)" height="19" width="200.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-connectionDialog : QDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -297)" height="19" width="333.96875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-connectionIconButton : QtMaterialIconButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -274)" height="19" width="113.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-email : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -251)" height="19" width="242.75">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-emailField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -228)" height="19" width="172.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-ipPortField : QLineEdit</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -205)" height="19" width="139.515625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-isConnected : bool</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -182)" height="19" width="261.390625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-loginButton : QtMaterialFlatButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -159)" height="19" width="179.3125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-loginData : QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -136)" height="19" width="313.40625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-notificationSnackbar : QtMaterialSnackbar</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -113)" height="19" width="139.703125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-password : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -90)" height="19" width="268.78125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-passwordField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -67)" height="19" width="255.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-requestManager : RequestManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -44)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -21)" height="19" width="142.515625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-titleLabel : QLabel</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 14)" height="19" width="354.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+LoginWidget(QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 37)" height="19" width="154.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+clearFields() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 60)" height="19" width="440.59375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+connectToServer(const QString &amp; host, quint16 port) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 83)" height="19" width="235.09375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+disconnectFromServer() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 106)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 129)" height="19" width="197.515625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onConnectButton() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 152)" height="19" width="169.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onConnected() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 175)" height="19" width="249.109375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onConnectionIconButton() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 198)" height="19" width="189.0625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onDisconnected() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 221)" height="19" width="311.25">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onFailedRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 244)" height="19" width="176.90625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onLoginButton() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 267)" height="19" width="220.609375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onLoginTextChanged() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 290)" height="19" width="345.578125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onSuccessfullRequest(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 313)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 336)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 359)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 382)" height="19" width="366.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+sendLoginRequest(QJsonObject loginData) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 405)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(973.3125, 1061)" data-id="C_0017510141229418621978" data-node="true" xlink:href="classIValidationStrategy.html">
+          <g title="IValidationStrategy" id="classId-C_0017510141229418621978-7" class="node default clickable">
+            <rect height="127" width="349.453125" y="-63.5" x="-174.7265625" class="outer title-state" style=""/>
+            <line y2="-9.5" y1="-9.5" x2="174.7265625" x1="-174.7265625" class="divider"/>
+            <line y2="6.5" y1="6.5" x2="174.7265625" x1="-174.7265625" class="divider"/>
+            <g class="label">
+              <foreignObject transform="translate( -37.90625, -56)" height="19" width="75.8125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">Â«abstractÂ»</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -70.078125, -33)" height="19" width="140.15625" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">IValidationStrategy</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -167.2265625, 14)" height="19" width="250.28125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+errorMessage() : : [const] QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -167.2265625, 37)" height="19" width="334.453125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+isValid(const QString &amp; input) : : [const] bool</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(181.0625, 2154)" data-id="C_0012472032526046711988" data-node="true" xlink:href="classNameValidationStrategy.html">
+          <g title="NameValidationStrategy" id="classId-C_0012472032526046711988-8" class="node default clickable">
+            <rect height="104" width="346.125" y="-52" x="-173.0625" class="outer title-state" style=""/>
+            <line y2="-21" y1="-21" x2="173.0625" x1="-173.0625" class="divider"/>
+            <line y2="-5" y1="-5" x2="173.0625" x1="-173.0625" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -88.921875, -44.5)" height="19" width="177.84375" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">NameValidationStrategy</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 2.5)" height="19" width="247.5625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+errorMessage() : : [const] QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 25.5)" height="19" width="331.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+isValid(const QString &amp; input) : : [const] bool</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(577.1875, 2154)" data-id="C_0012861765083885074797" data-node="true" xlink:href="classEmailValidationStrategy.html">
+          <g title="EmailValidationStrategy" id="classId-C_0012861765083885074797-9" class="node default clickable">
+            <rect height="104" width="346.125" y="-52" x="-173.0625" class="outer title-state" style=""/>
+            <line y2="-21" y1="-21" x2="173.0625" x1="-173.0625" class="divider"/>
+            <line y2="-5" y1="-5" x2="173.0625" x1="-173.0625" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -88.28125, -44.5)" height="19" width="176.5625" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">EmailValidationStrategy</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 2.5)" height="19" width="247.5625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+errorMessage() : : [const] QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 25.5)" height="19" width="331.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+isValid(const QString &amp; input) : : [const] bool</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(973.3125, 2154)" data-id="C_0013353315463673300878" data-node="true" xlink:href="classPasswordValidationStrategy.html">
+          <g title="PasswordValidationStrategy" id="classId-C_0013353315463673300878-10" class="node default clickable">
+            <rect height="104" width="346.125" y="-52" x="-173.0625" class="outer title-state" style=""/>
+            <line y2="-21" y1="-21" x2="173.0625" x1="-173.0625" class="divider"/>
+            <line y2="-5" y1="-5" x2="173.0625" x1="-173.0625" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -102.1796875, -44.5)" height="19" width="204.359375" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">PasswordValidationStrategy</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 2.5)" height="19" width="247.5625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+errorMessage() : : [const] QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 25.5)" height="19" width="331.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+isValid(const QString &amp; input) : : [const] bool</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(1369.4375, 2154)" data-id="C_0001544226777174606881" data-node="true" xlink:href="classBalanceValidationStrategy.html">
+          <g title="BalanceValidationStrategy" id="classId-C_0001544226777174606881-11" class="node default clickable">
+            <rect height="104" width="346.125" y="-52" x="-173.0625" class="outer title-state" style=""/>
+            <line y2="-21" y1="-21" x2="173.0625" x1="-173.0625" class="divider"/>
+            <line y2="-5" y1="-5" x2="173.0625" x1="-173.0625" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -96.90625, -44.5)" height="19" width="193.8125" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">BalanceValidationStrategy</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 2.5)" height="19" width="247.5625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+errorMessage() : : [const] QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 25.5)" height="19" width="331.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+isValid(const QString &amp; input) : : [const] bool</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(1765.5625, 2154)" data-id="C_0009937287470556469371" data-node="true" xlink:href="classAccountNumberValidationStrategy.html">
+          <g title="AccountNumberValidationStrategy" id="classId-C_0009937287470556469371-12" class="node default clickable">
+            <rect height="104" width="346.125" y="-52" x="-173.0625" class="outer title-state" style=""/>
+            <line y2="-21" y1="-21" x2="173.0625" x1="-173.0625" class="divider"/>
+            <line y2="-5" y1="-5" x2="173.0625" x1="-173.0625" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -127.859375, -44.5)" height="19" width="255.71875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">AccountNumberValidationStrategy</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 2.5)" height="19" width="247.5625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+errorMessage() : : [const] QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -165.5625, 25.5)" height="19" width="331.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+isValid(const QString &amp; input) : : [const] bool</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(2057.375, 255.5)" data-id="C_0006277281904743403160" data-node="true" xlink:href="classBaseDialog.html">
+          <g title="BaseDialog" id="classId-C_0006277281904743403160-13" class="node default clickable">
+            <rect height="495" width="1149.890625" y="-247.5" x="-574.9453125" class="outer title-state" style=""/>
+            <line y2="-193.5" y1="-193.5" x2="574.9453125" x1="-574.9453125" class="divider"/>
+            <line y2="-62.5" y1="-62.5" x2="574.9453125" x1="-574.9453125" class="divider"/>
+            <g class="label">
+              <foreignObject transform="translate( -37.90625, -240)" height="19" width="75.8125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">Â«abstractÂ»</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -39.7578125, -217)" height="19" width="79.515625" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">BaseDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -182)" height="19" width="274.09375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">#cancelButton : QtMaterialFlatButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -159)" height="19" width="284.46875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">#confirmButton : QtMaterialFlatButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -136)" height="19" width="388.421875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#errorLabels_ : QMap&lt;QtMaterialTextField *,QLabel *&gt;</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -113)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -90)" height="19" width="535.53125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#validationStrategies_ : QMap&lt;QtMaterialTextField *,IValidationStrategy *&gt;</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -55)" height="19" width="343.140625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+BaseDialog(QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -32)" height="19" width="181.875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#connectSignals() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, -9)" height="19" width="1134.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">#createInputField(QVBoxLayout * layout, const QString &amp; labelText, IValidationStrategy * validationStrategy, bool isPassword = false) : : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 14)" height="19" width="249.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+getData() : : [const] QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 37)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 60)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 83)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 106)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 129)" height="19" width="875.90625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#setFieldValidityStyle(QtMaterialTextField * field, QLabel * errorLabel, const QString &amp; errorMessage, bool isValid) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 152)" height="19" width="131.03125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">#setupUI() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 175)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 198)" height="19" width="268.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#updateConfirmButtonState() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -567.4453125, 221)" height="19" width="361.3125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#validateInput(QtMaterialTextField * field) : : void</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(1471.4609375, 1061)" data-id="C_0017531555969316099187" data-node="true" xlink:href="classUpdateUserDialog.html">
+          <g title="UpdateUserDialog" id="classId-C_0017531555969316099187-14" class="node default clickable">
+            <rect height="472" width="546.84375" y="-236" x="-273.421875" class="outer title-state" style=""/>
+            <line y2="-205" y1="-205" x2="273.421875" x1="-273.421875" class="divider"/>
+            <line y2="-5" y1="-5" x2="273.421875" x1="-273.421875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -66.3359375, -228.5)" height="19" width="132.671875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdateUserDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -193.5)" height="19" width="152.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-data_ : QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -170.5)" height="19" width="235.921875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-emailEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -147.5)" height="19" width="267.296875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-firstNameEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -124.5)" height="19" width="262.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-lastNameEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -101.5)" height="19" width="232.609375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-notificationErrorLabel : QLabel</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -78.5)" height="19" width="210.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-roleComboBox : QComboBox</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -55.5)" height="19" width="110.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-role_ : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, -32.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 2.5)" height="19" width="531.84375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+UpdateUserDialog(QVariantMap data, QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 25.5)" height="19" width="179.359375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-connectSignals() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 48.5)" height="19" width="247.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+getData() : : [const] QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 71.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 94.5)" height="19" width="182.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onRoleChanged() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 117.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 140.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 163.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 186.5)" height="19" width="127.765625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-setupUI() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -265.921875, 209.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(2057.375, 1061)" data-id="C_0007804638616733427194" data-node="true" xlink:href="classCreateUserDialog.html">
+          <g title="CreateUserDialog" id="classId-C_0007804638616733427194-15" class="node default clickable">
+            <rect height="472" width="524.984375" y="-236" x="-262.4921875" class="outer title-state" style=""/>
+            <line y2="-205" y1="-205" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <line y2="-5" y1="-5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -64.515625, -228.5)" height="19" width="129.03125" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">CreateUserDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -193.5)" height="19" width="317.703125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-confirmPasswordEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -170.5)" height="19" width="235.921875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-emailEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -147.5)" height="19" width="267.296875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-firstNameEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -124.5)" height="19" width="295.015625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-initialBalanceEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -101.5)" height="19" width="262.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-lastNameEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -78.5)" height="19" width="261.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-passwordEdit : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -55.5)" height="19" width="210.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-roleComboBox : QComboBox</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -32.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 2.5)" height="19" width="390.265625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+CreateUserDialog(QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 25.5)" height="19" width="179.359375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-connectSignals() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 48.5)" height="19" width="247.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+getData() : : [const] QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 71.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 94.5)" height="19" width="182.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onRoleChanged() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 117.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 140.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 163.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 186.5)" height="19" width="127.765625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-setupUI() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 209.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(2632.359375, 1061)" data-id="C_0004896682309518099660" data-node="true" xlink:href="classUpdateEmailDialog.html">
+          <g title="UpdateEmailDialog" id="classId-C_0004896682309518099660-16" class="node default clickable">
+            <rect height="334" width="524.984375" y="-167" x="-262.4921875" class="outer title-state" style=""/>
+            <line y2="-136" y1="-136" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <line y2="-28" y1="-28" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -69.8828125, -159.5)" height="19" width="139.765625" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdateEmailDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -124.5)" height="19" width="242.75">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-emailField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -101.5)" height="19" width="271.96875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-newEmailField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -78.5)" height="19" width="268.78125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-passwordField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -55.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -20.5)" height="19" width="401.6875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+UpdateEmailDialog(QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 2.5)" height="19" width="247.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+getData() : : [const] QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 25.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 48.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 71.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 94.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 117.5)" height="19" width="130.28125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#setupUI() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 140.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(3207.34375, 1061)" data-id="C_0011439797056535069865" data-node="true" xlink:href="classUpdatePasswordDialog.html">
+          <g title="UpdatePasswordDialog" id="classId-C_0011439797056535069865-17" class="node default clickable">
+            <rect height="426" width="524.984375" y="-213" x="-262.4921875" class="outer title-state" style=""/>
+            <line y2="-182" y1="-182" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <line y2="-5" y1="-5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -83.78125, -205.5)" height="19" width="167.5625" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UpdatePasswordDialog</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -170.5)" height="19" width="322.21875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-currentPasswordField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -147.5)" height="19" width="242.75">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-emailField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -124.5)" height="19" width="175.46875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-isPasswordVisible : bool</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -101.5)" height="19" width="297.8125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-newPasswordField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -78.5)" height="19" width="364.671875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-repeatedNewPasswordField : QtMaterialTextField</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -55.5)" height="19" width="412.484375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-showHidePasswordRadioButton : QtMaterialRadioButton</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -32.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 2.5)" height="19" width="427.3125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+UpdatePasswordDialog(QWidget * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 25.5)" height="19" width="247.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+getData() : : [const] QVariantMap</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 48.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 71.5)" height="19" width="372.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onShowHidePasswordClicked(bool checked) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 94.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 117.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 140.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 163.5)" height="19" width="130.28125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">#setupUI() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 186.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(5540.66015625, 2154)" data-id="C_0006770949275830638079" data-node="true" xlink:href="classTcpClient.html">
+          <g title="TcpClient" id="classId-C_0006770949275830638079-18" class="node default clickable">
+            <rect height="518" width="524.984375" y="-259" x="-262.4921875" class="outer title-state" style=""/>
+            <line y2="-228" y1="-228" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <line y2="-166" y1="-166" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -34.8984375, -251.5)" height="19" width="69.796875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">TcpClient</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -216.5)" height="19" width="148.625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-socket : QTcpSocket</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -193.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -158.5)" height="19" width="331.71875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+TcpClient(QObject * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -135.5)" height="19" width="151.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+~TcpClient() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -112.5)" height="19" width="194.6875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+ConnectedSignal() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -89.5)" height="19" width="213.890625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+DisconnectedSignal() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -66.5)" height="19" width="375.015625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+ResponseReadySignal(QByteArray response) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -43.5)" height="19" width="193.203125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+closeConnection() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -20.5)" height="19" width="440.59375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+connectToServer(const QString &amp; host, quint16 port) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 2.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 25.5)" height="19" width="167.34375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onConnected() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 48.5)" height="19" width="186.546875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onDisconnected() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 71.5)" height="19" width="492.203125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onErrorOccurred(QAbstractSocket::SocketError socketError) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 94.5)" height="19" width="168.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onReadyRead() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 117.5)" height="19" width="493">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-onStateChanged(QAbstractSocket::SocketState socketState) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 140.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 163.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 186.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 209.5)" height="19" width="388.8125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+sendTcpRequest(const QByteArray &amp; request) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 232.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(5540.66015625, 1061)" data-id="C_0003891570225386253038" data-node="true" xlink:href="classClientHandler.html">
+          <g title="ClientHandler" id="classId-C_0003891570225386253038-19" class="node default clickable">
+            <rect height="449" width="524.984375" y="-224.5" x="-262.4921875" class="outer title-state" style=""/>
+            <line y2="-193.5" y1="-193.5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <line y2="-131.5" y1="-131.5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -51.609375, -217)" height="19" width="103.21875" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">ClientHandler</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -182)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -159)" height="19" width="155.3125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-tcpClient : TcpClient</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -124)" height="19" width="363.78125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+ClientHandler(QObject * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -101)" height="19" width="183.5">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+~ClientHandler() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -78)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -55)" height="19" width="212.015625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onConnectedSignal() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -32)" height="19" width="231.21875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onDisconnectedSignal() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -9)" height="19" width="350.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onResponseReady(QByteArray response) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 14)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 37)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 60)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 83)" height="19" width="499.640625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+requestClientConnection(const QString &amp; host, quint16 port) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 106)" height="19" width="272.796875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+requestClientDisconnection() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 129)" height="19" width="99.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+run() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 152)" height="19" width="315.46875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+sendRequest(QJsonObject request) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 175)" height="19" width="366.359375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+sendResponseBack(QJsonObject response) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 198)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(3905.0234375, 1061)" data-id="C_0004909201866089141242" data-node="true" xlink:href="classUIManager.html">
+          <g title="UIManager" id="classId-C_0004909201866089141242-20" class="node default clickable">
+            <rect height="978" width="770.375" y="-489" x="-385.1875" class="outer title-state" style=""/>
+            <line y2="-458" y1="-458" x2="385.1875" x1="-385.1875" class="divider"/>
+            <line y2="-143" y1="-143" x2="385.1875" x1="-385.1875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -38.890625, -481.5)" height="19" width="77.78125" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">UIManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -446.5)" height="19" width="211.71875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-adminWidget : AdminWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -423.5)" height="19" width="150.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-first_name : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -400.5)" height="19" width="103.953125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-host : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -377.5)" height="19" width="196.203125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-loginWidget : LoginWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -354.5)" height="19" width="214.578125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-mainWindow : QMainWindow</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -331.5)" height="19" width="133.921875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-message : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -308.5)" height="19" width="105.546875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-port : quint16</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -285.5)" height="19" width="255.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-requestManager : RequestManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -262.5)" height="19" width="272.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-responseManager : ResponseManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -239.5)" height="19" width="102.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-role : QString</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -216.5)" height="19" width="243.515625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-stackedWidget : QStackedWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -193.5)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -170.5)" height="19" width="185.1875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-userWidget : UserWidget</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -135.5)" height="19" width="337.109375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-UIManager(QObject * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -112.5)" height="19" width="284.6875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+UIManager(const UIManager &amp;) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -89.5)" height="19" width="159.359375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+~UIManager() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -66.5)" height="19" width="280.359375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+operator=(const UIManager &amp;) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -43.5)" height="19" width="207.609375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+closeAdminWidget() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, -20.5)" height="19" width="200.703125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+closeLoginWidget() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 2.5)" height="19" width="194.46875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+closeUserWidget() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 25.5)" height="19" width="467.34375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+connectToTheServer(const QString &amp; host, quint16 port) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 48.5)" height="19" width="459.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+createAdminWidget(QString email, QString first_name) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 71.5)" height="19" width="210.609375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+createLoginWidget() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 94.5)" height="19" width="755.375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+createUserWidget(QString email, QString first_name, QString account_number, QString balance) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 117.5)" height="19" width="261.859375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+disconnectFromTheServer() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 140.5)" height="19" width="403.34375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+getInstance(QObject * parent = nullptr) : : UIManager *</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 163.5)" height="19" width="121.265625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+logout() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 186.5)" height="19" width="299.921875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+makeRequest(QJsonObject Data) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 209.5)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 232.5)" height="19" width="317.828125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onConnectionResponse(bool status) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 255.5)" height="19" width="339.40625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onFailedNotification(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 278.5)" height="19" width="373.734375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+onSuccessfullNotification(QString message) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 301.5)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 324.5)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 347.5)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 370.5)" height="19" width="456.96875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+requestConnection(const QString &amp; host, quint16 port) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 393.5)" height="19" width="230.125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+requestDisconnection() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 416.5)" height="19" width="301.59375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+requestReady(QJsonObject Data) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 439.5)" height="19" width="310.3125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+responseReady(QJsonObject Data) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -377.6875, 462.5)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+        <a transform="translate(4693.9453125, 255.5)" data-id="C_0004125011841911275123" data-node="true" xlink:href="classAppManager.html">
+          <g title="AppManager" id="classId-C_0004125011841911275123-21" class="node default clickable">
+            <rect height="403" width="524.984375" y="-201.5" x="-262.4921875" class="outer title-state" style=""/>
+            <line y2="-170.5" y1="-170.5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <line y2="-62.5" y1="-62.5" x2="262.4921875" x1="-262.4921875" class="divider"/>
+            <g class="label">
+              <foreignObject height="0" width="0">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel"/>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -45.625, -194)" height="19" width="91.25" class="classTitle">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">AppManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -159)" height="19" width="222.359375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-AppManagerThread : QThread</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -136)" height="19" width="220.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-clientHandler : ClientHandler</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -113)" height="19" width="284.4375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+staticMetaObject : const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -90)" height="19" width="172.078125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">-uiManager : UIManager</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -55)" height="19" width="349.546875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">-AppManager(QObject * parent = nullptr) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -32)" height="19" width="308.671875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+AppManager(const AppManager &amp;) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, -9)" height="19" width="171.796875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+~AppManager() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 14)" height="19" width="291.921875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+operator=(const AppManager &amp;) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 37)" height="19" width="420.3125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+getInstance(QObject * parent = nullptr) : : AppManager &amp;</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 60)" height="19" width="323.65625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+metaObject() : : [const] const QMetaObject</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 83)" height="19" width="373.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+qt_metacall(QMetaObject::Call, int, void **) : : int</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 106)" height="19" width="251.328125">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="font-style: italic; display: inline-block; white-space: nowrap;">
+                  <span style="font-style:italic;" class="nodeLabel">+qt_metacast(const char *) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 129)" height="19" width="509.984375">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">-qt_static_metacall(QObject *, QMetaObject::Call, int, void **) : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 152)" height="19" width="110.046875">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">
+                  <span class="nodeLabel">+start() : : void</span>
+                </div>
+              </foreignObject>
+              <foreignObject transform="translate( -254.9921875, 175)" height="19" width="456.15625">
+                <div xmlns="http://www.w3.org/1999/xhtml" style="text-decoration: underline; display: inline-block; white-space: nowrap;">
+                  <span style="text-decoration:underline;" class="nodeLabel">+tr(const char * s, const char * c = nullptr, int n = -1) : : QString</span>
+                </div>
+              </foreignObject>
+            </g>
+          </g>
+        </a>
+      </g>
+    </g>
+  </g>
+  <text class="classTitleText" y="-25" x="2905.576171875">This Diagram shows the relationship between all system components</text>
+</svg>

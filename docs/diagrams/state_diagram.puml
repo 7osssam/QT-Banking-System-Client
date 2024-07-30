@@ -1,0 +1,49 @@
+@startuml
+title TCP Client-Server Banking Application - Client State Diagram (Summarized)
+
+[*] --> Disconnected : Start
+Disconnected --> Connecting : requestClientConnection
+Connecting --> Connected : onConnectedSignal
+Connected --> Disconnecting : requestClientDisconnection
+Disconnecting --> Disconnected : onDisconnectedSignal
+Connected --> SendingRequest : sendRequest
+SendingRequest --> WaitingForResponse : RequestSent
+WaitingForResponse --> Connected : onResponseReady
+WaitingForResponse --> Disconnected : onDisconnectedSignal
+Connected --> Disconnected : onDisconnectedSignal
+Disconnected --> [*] : Exit
+
+state Connected {
+    [*] --> Idle
+
+    Idle --> HandlingRequest : handleRequest
+    HandlingRequest --> WaitingForResponse : makeRequest
+    WaitingForResponse --> HandlingResponse : handleResponse
+    HandlingResponse --> Idle : ResponseProcessed
+
+    state User {
+        [*] --> ViewingHome
+        ViewingHome --> ViewingTransfer : ViewTransferTab
+        ViewingTransfer --> TransferringFunds : TransferFunds
+        TransferringFunds --> WaitingForResponse : sendTransferRequest
+        ViewingHome --> ViewingSettings : ViewSettingsTab
+        ViewingSettings --> UpdatingEmail : UpdateEmailClicked
+        ViewingSettings --> UpdatingPassword : UpdatePasswordClicked
+    }
+
+    state Admin {
+        [*] --> ViewingDatabase
+        ViewingDatabase --> ManagingUsers : ManageUsers
+        ManagingUsers --> WaitingForResponse : sendUserManagementRequest
+        ViewingDatabase --> ViewingTransactions : ViewTransactionsTab
+        ViewingTransactions --> ManagingTransactions : ManageTransactions
+        ManagingTransactions --> WaitingForResponse : sendTransactionRequest
+        ViewingDatabase --> ViewingSettings : ViewSettingsTab
+        ViewingSettings --> UpdatingEmail : UpdateEmailClicked
+        ViewingSettings --> UpdatingPassword : UpdatePasswordClicked
+    }
+
+    User --> HandlingRequest : UserAction
+    Admin --> HandlingRequest : AdminAction
+}
+@enduml
