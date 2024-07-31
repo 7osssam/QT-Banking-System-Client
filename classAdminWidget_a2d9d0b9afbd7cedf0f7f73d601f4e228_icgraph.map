@@ -1,0 +1,8 @@
+<map id="AdminWidget::onTransactionsFetched" name="AdminWidget::onTransactionsFetched">
+<area shape="rect" id="node1" title="Slot for handling fetched transaction history." alt="" coords="681,73,877,116"/>
+<area shape="rect" id="node2" href="$classUIManager.html#a9cbe7d3f7987016eaebbf5815a6bba44" title="Closes the admin widget." alt="" coords="433,56,633,83"/>
+<area shape="rect" id="node5" href="$classUIManager.html#a76a772a301e3422deaf4f6489435b9db" title="Creates the admin widget." alt="" coords="5,107,211,133"/>
+<area shape="rect" id="node3" href="$classUIManager.html#a58fa1af357a55ac112b41da383c1d410" title="Logs out the current user." alt="" coords="259,56,385,83"/>
+<area shape="rect" id="node4" href="$classUIManager.html#a44bd3b3ff855e9ea6924bab6550594ac" title="Closes the user widget." alt="" coords="13,5,203,32"/>
+<area shape="rect" id="node6" href="$classUIManager.html#a15fa6321d4967795e43175cdcd3c4d59" title="Creates the user widget." alt="" coords="10,56,206,83"/>
+</map>

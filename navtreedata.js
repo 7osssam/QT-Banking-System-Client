@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "BankingSystem_Client", "index.html", [
+  [ "Banking_System_Client", "index.html", [
     [ "QT-Banking-System-Client", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

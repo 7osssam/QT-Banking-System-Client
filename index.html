@@ -16,7 +16,7 @@
 <meta name="twitter:title" content="Doxygen Awesome" />
 <meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
 <!-- END twitter metadata -->
-<title>BankingSystem_Client: QT-Banking-System-Client</title>
+<title>Banking_System_Client: QT-Banking-System-Client</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -55,11 +55,12 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="bank.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">BankingSystem_Client
+   <div id="projectname">Banking_System_Client
    &#160;<span id="projectnumber">1.0.0</span>
    </div>
-   <div id="projectbrief">This is a qt project for a banking system (Client side)</div>
+   <div id="projectbrief">Qt-based banking app for user/admin account management, transactions, secure server communication via PostgreSQL/Supabase.</div>
   </td>
  </tr>
  </tbody>
@@ -119,7 +120,14 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__home_runner_work_QT_Banking_System_Client_QT_Banking_System_Client_README"></a> </p><h1>Overview</h1>
-<p>QT-Banking-System-Client is the client-side implementation of a banking system, built using the Qt 6/C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations. The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL with Supabase hosting.</p>
+<p>QT-Banking-System-Client is the client-side implementation of a banking system, built using the Qt 6/C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations.</p>
+<p>The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL (in the server side) with Supabase hosting.</p>
+<blockquote class="doxtable">
+<p>[!NOTE] This project is part of a Banking System (TCP Client-Server) project, which includes the following repositories:</p><ul>
+<li><a href="https://github.com/7osssam/QT-Banking-System-Client">QT-Banking-System-Client</a>: The client-side implementation of the banking system.</li>
+<li><a href="https://github.com/7osssam/QT-Banking-System-Server">QT-Banking-System-Server</a>: The server-side implementation of the banking system. </li>
+</ul>
+</blockquote>
 <h1>Features</h1>
 <ul>
 <li><b>User Management:</b> Administrators can manage user accounts, including creating, updating, and deleting accounts.</li>
@@ -131,10 +139,9 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <h1>Technologies Used</h1>
 <ul>
 <li><b>C++/Qt 6:</b> Core language and framework for building the application.<ul>
-<li><b>Qt Components:</b> Gui, Widgets, Network, Sql and StateMachine modules.</li>
+<li><b>Qt Components:</b> Gui, Widgets, Network and StateMachine modules.</li>
 </ul>
 </li>
-<li><b>PostgreSQL with Supabase:</b> Database management system for handling data operations.</li>
 <li><b>JSON:</b> Data format for communication between client and server.</li>
 <li><b>CMake:</b> Build system for managing the build process.</li>
 <li><b>GoogleTest:</b> Framework for unit testing the application.</li>
@@ -147,15 +154,18 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li>Qt 6.7.1 or later</li>
 <li>CMake</li>
 <li>MinGW or another compatible compiler</li>
-<li>PostgreSQL database</li>
-<li>Supabase account and configuration</li>
 </ul>
 <h2>Building the Project (Using the wrapper Makefile)</h2>
 <ol type="1">
-<li>Clone the repository: ```sh git clone <a href="https://github.com/7osssam/QT-Banking-System-Client.git">https://github.com/7osssam/QT-Banking-System-Client.git</a> cd QT-Banking-System-Client ```</li>
-<li>Install dependencies: ```sh make dependency ```</li>
-<li>Configure the project using CMake: ```sh make clean-cache-reconfigure ```</li>
-<li>Build the project using the Makefile: ```sh make build ```</li>
+<li>Clone the repository: <div class="fragment"><div class="line">git clone https://github.com/7osssam/QT-Banking-System-Client.git</div>
+<div class="line">cd QT-Banking-System-Client</div>
+</div><!-- fragment --></li>
+<li>Install dependencies: <div class="fragment"><div class="line">make dependency</div>
+</div><!-- fragment --></li>
+<li>Configure the project using CMake: <div class="fragment"><div class="line">make clean-cache-reconfigure</div>
+</div><!-- fragment --></li>
+<li>Build the project using the Makefile: <div class="fragment"><div class="line">make build</div>
+</div><!-- fragment --></li>
 </ol>
 <h2>Running the Application</h2>
 <p>To run the application, execute the following command: </p><div class="fragment"><div class="line">make run</div>
@@ -175,9 +185,9 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p>Comprehensive documentation is available, detailing the purpose, design, and usage of each class and function within the project. The documentation is generated using Doxygen and can be viewed by opening the <code>docs/html/index.html</code> file in a web browser or by visiting the <a href="https://7osssam.github.io/QT-Banking-System-Client/">GitHub Page</a> site.</p>
 <h1>Design and Architecture</h1>
 <h2>Include Diagram</h2>
-<p><img src="docs/diagrams/mermaid/include_diagram.svg" alt="Include Diagram" style="pointer-events: none;" class="inline"/> </p><h2>State Diagram</h2>
-<p><img src="docs/diagrams/plantuml/state_diagram.svg" alt="State Diagram" style="pointer-events: none;" class="inline"/> </p><h2>Sequence Diagram</h2>
-<p><img src="docs/diagrams/plantuml/system_sequence_diagram.svg" alt="Sequence Diagram" style="pointer-events: none;" class="inline"/></p>
+<p><img src="include_diagram.svg" alt="" style="pointer-events: none;" class="inline" title="Include Diagram"/> </p><h2>State Diagram</h2>
+<p><img src="state_diagram.svg" alt="" style="pointer-events: none;" class="inline" title="State Diagram"/> </p><h2>Sequence Diagram</h2>
+<p><img src="system_sequence_diagram.svg" alt="" style="pointer-events: none;" class="inline" title="Sequence Diagram"/></p>
 <h1>Continuous Integration</h1>
 <p>The project uses GitHub Actions for continuous integration. The build and test status can be monitored through the following badges:</p>
 <table class="markdownTable">

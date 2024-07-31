@@ -1,0 +1,4 @@
+<map id="UpdateEmailDialog::setupUI" name="UpdateEmailDialog::setupUI">
+<area shape="rect" id="node1" title="Sets up the user interface." alt="" coords="5,5,145,48"/>
+<area shape="rect" id="node2" href="$classBaseDialog.html#ae4870830d6d305c993a746ecf7515dd6" title="Creates an input field with validation." alt="" coords="193,13,380,40"/>
+</map>
