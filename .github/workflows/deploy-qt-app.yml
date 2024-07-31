@@ -1,0 +1,89 @@
+#--------------------------------------------------------------------------------
+# Workflow configuration
+#--------------------------------------------------------------------------------
+
+name: Build
+on:
+  push:               # Run on push
+  pull_request:       # Run on pull-request
+
+#--------------------------------------------------------------------------------
+# Define application name & version
+#--------------------------------------------------------------------------------
+
+#env:
+#  VERSION: "1.0.0"
+#  EXECUTABLE: "QtApp"
+#  APPLICATION: "Qt App"
+
+#--------------------------------------------------------------------------------
+# Workflow jobs (GNU/Linux, macOS & Windows)
+#--------------------------------------------------------------------------------
+
+jobs:
+  #
+  # GNU/Linux build (we run on Ubuntu 20.04 for better compatibility)
+  #
+  build-linux:
+    runs-on: ubuntu-22.04
+    steps:
+
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev
+          make dependency
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          aqtversion: '==3.1.*'
+          version: '6.7.1'
+          host: 'linux'
+          target: 'desktop'
+          arch: 'linux_gcc_64'
+          modules: 'qtconnectivity qthttpserver qtmultimedia qtnetworkauth qtremoteobjects qtscxml'
+          tools: 'tools_ninja'
+
+      - name: cleaning up
+        run: |
+          make clean
+
+      - name: building
+        run: |
+          make build-release
+
+      #
+      # Create the AppImage
+      #
+      - name: Create AppImage
+        run: |
+          make -C build INSTALL_ROOT=appdir install
+          wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
+          chmod a+x linuxdeployqt
+          ./linuxdeployqt appdir/usr/share/applications/*.desktop -appimage -bundle-non-qt-libs -extra-plugins=imageformats/libqsvg.so
+
+      #
+      # Rename AppImage to match "%AppName%-%Version%-Linux.AppImage" format
+      #
+      - name: Rename AppImage
+        #run: mv *.AppImage ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
+        run: mv *.AppImage myApp-1.0.0-Linux.AppImage
+
+
+
+      #
+      # Upload AppImage to build artifacts
+      #
+      - name: Upload AppImage
+        uses: actions/upload-artifact@v2
+        with:
+#          name: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
+          name: myApp-1.0.0-Linux.AppImage
+#          path: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
+          path: myApp-1.0.0-Linux.AppImage
