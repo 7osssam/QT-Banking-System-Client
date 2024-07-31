@@ -2,7 +2,9 @@
 \Hypertarget{index_md_D__XDUMP_BankingSystem_QT_Banking_System_Client_README}%
  \doxysection*{Overview}
 
-QT-\/\+Banking-\/\+System-\/\+Client is the client-\/side implementation of a banking system, built using the Qt 6/\+C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations. The client communicates with a server-\/side application through a TCP socket and handles database operations using Postgre\+SQL with Supabase hosting.
+QT-\/\+Banking-\/\+System-\/\+Client is the client-\/side implementation of a banking system, built using the Qt 6/\+C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations.
+
+The client communicates with a server-\/side application through a TCP socket and handles database operations using Postgre\+SQL (in the server side) with Supabase hosting.
 
 \doxysection*{Features}
 
@@ -21,9 +23,8 @@ QT-\/\+Banking-\/\+System-\/\+Client is the client-\/side implementation of a ba
 \begin{DoxyItemize}
 \item {\bfseries{C++/\+Qt 6\+:}} Core language and framework for building the application.
 \begin{DoxyItemize}
-\item {\bfseries{Qt Components\+:}} Gui, Widgets, Network, Sql and State\+Machine modules.
+\item {\bfseries{Qt Components\+:}} Gui, Widgets, Network and State\+Machine modules.
 \end{DoxyItemize}
-\item {\bfseries{Postgre\+SQL with Supabase\+:}} Database management system for handling data operations.
 \item {\bfseries{JSON\+:}} Data format for communication between client and server.
 \item {\bfseries{CMake\+:}} Build system for managing the build process.
 \item {\bfseries{Google\+Test\+:}} Framework for unit testing the application.
@@ -40,8 +41,6 @@ QT-\/\+Banking-\/\+System-\/\+Client is the client-\/side implementation of a ba
 \item Qt 6.\+7.\+1 or later
 \item CMake
 \item Min\+GW or another compatible compiler
-\item Postgre\+SQL database
-\item Supabase account and configuration
 \end{DoxyItemize}
 
 \doxysubsection*{Building the Project (Using the wrapper Makefile)}

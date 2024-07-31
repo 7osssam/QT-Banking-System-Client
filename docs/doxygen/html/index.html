@@ -126,7 +126,8 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_D__XDUMP_BankingSystem_QT_Banking_System_Client_README"></a> </p><h1>Overview</h1>
-<p>QT-Banking-System-Client is the client-side implementation of a banking system, built using the Qt 6/C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations. The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL with Supabase hosting.</p>
+<p>QT-Banking-System-Client is the client-side implementation of a banking system, built using the Qt 6/C++ framework. The application provides a graphical user interface (GUI) for users and administrators to manage bank accounts, process transactions, and handle various banking operations.</p>
+<p>The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL (in the server side) with Supabase hosting.</p>
 <h1>Features</h1>
 <ul>
 <li><b>User Management:</b> Administrators can manage user accounts, including creating, updating, and deleting accounts.</li>
@@ -138,10 +139,9 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <h1>Technologies Used</h1>
 <ul>
 <li><b>C++/Qt 6:</b> Core language and framework for building the application.<ul>
-<li><b>Qt Components:</b> Gui, Widgets, Network, Sql and StateMachine modules.</li>
+<li><b>Qt Components:</b> Gui, Widgets, Network and StateMachine modules.</li>
 </ul>
 </li>
-<li><b>PostgreSQL with Supabase:</b> Database management system for handling data operations.</li>
 <li><b>JSON:</b> Data format for communication between client and server.</li>
 <li><b>CMake:</b> Build system for managing the build process.</li>
 <li><b>GoogleTest:</b> Framework for unit testing the application.</li>
@@ -154,8 +154,6 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li>Qt 6.7.1 or later</li>
 <li>CMake</li>
 <li>MinGW or another compatible compiler</li>
-<li>PostgreSQL database</li>
-<li>Supabase account and configuration</li>
 </ul>
 <h2>Building the Project (Using the wrapper Makefile)</h2>
 <ol type="1">
