@@ -43,7 +43,7 @@ build-debug:
 	       -S . \
 	       -B $(BUILD_DIR) \
 	       -G "Ninja"
-		   
+
 	@echo "Building Debug..."
 	@cd $(BUILD_DIR) && cmake .. && cmake --build . --config Debug -j 4
 	@echo "========= Debug build done ========="
@@ -65,6 +65,26 @@ build-release:
 	@echo "Building release..."
 	@cmake --build $(BUILD_DIR) --config Release --target all -- -j 4
 	@echo "========= Release build done ========="
+
+# Install the project
+install:
+	@echo "Installing the application..."
+# Create the necessary directories in the INSTALL_ROOT
+	mkdir -p $(INSTALL_ROOT)/usr/bin
+	mkdir -p $(INSTALL_ROOT)/usr/share/applications
+	mkdir -p $(INSTALL_ROOT)/usr/share/icons/hicolor/256x256/apps
+
+# Copy the binary
+#	cp $(BUILD_DIR)/$(EXECUTABLE) $(INSTALL_ROOT)/usr/bin/
+
+# Copy the .desktop file
+#	cp resources/$(EXECUTABLE).desktop $(INSTALL_ROOT)/usr/share/applications/
+
+# Copy the icon
+#	cp resources/$(EXECUTABLE).png $(INSTALL_ROOT)/usr/share/icons/hicolor/256x256/apps/
+
+# Copy all files in build/build/release to INSTALL_ROOT
+	cp -r $(BUILD_DIR)/build/Release/* $(INSTALL_ROOT)
 
 # Run the project
 run:
