@@ -6,6 +6,11 @@ QT-Banking-System-Client is the client-side implementation of a banking system, 
 
 The client communicates with a server-side application through a TCP socket and handles database operations using PostgreSQL (in the server side) with Supabase hosting.
 
+<!-- link for Client-Server project -->
+> [!NOTE]
+> This project is part of a Banking System (TCP Client-Server) project, which includes the following repositories:
+> - [QT-Banking-System-Client](https://github.com/7osssam/QT-Banking-System-Client): The client-side implementation of the banking system.
+> - [QT-Banking-System-Server](https://github.com/7osssam/QT-Banking-System-Server): The server-side implementation of the banking system.
 
 ## Features
 
