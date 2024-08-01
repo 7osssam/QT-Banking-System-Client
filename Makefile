@@ -74,12 +74,16 @@ install:
 
 # Copy all the files from release build to the bin directory
 	@cp $(BUILD_DIR)/Release/* $(DESTDIR)/$(INSTALL_ROOT)/bin
-# Copy libqt-material-widgets from build/lib/qtmaterial/components to the bin directory
-	@cp $(BUILD_DIR)/lib/qtmaterial/components/libqt-material-widgets.so $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@tree $(BUILD_DIR)/lib /f
+# Copy all files in build/lib/qtmaterial/components to the bin directory
+	@cp -r $(BUILD_DIR)/lib/qtmaterial/components $(DESTDIR)/$(INSTALL_ROOT)/bin
 # Copy the desktop file to the applications directory
 	@cp ./resources/*.desktop $(DESTDIR)/$(INSTALL_ROOT)/bin
 # Copy the icon to the icons directory
 	@cp ./resources/icons/*.png $(DESTDIR)/$(INSTALL_ROOT)/bin
+
+	@tree $(DESTDIR)/$(INSTALL_ROOT)/bin /f
+
 
 # Run the application
 run:
