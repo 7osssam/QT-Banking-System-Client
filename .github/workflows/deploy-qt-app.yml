@@ -58,10 +58,7 @@ jobs:
         run: |
           make build-release
 
-      #
-      # Create the AppImage
-      #
-      - name: Create AppImage
+      - name: Deploy AppImage
         run: |
           export QTDIR=$RUNNER_WORKSPACE/Qt/6.7.1/gcc_64
           export PATH=$QTDIR/bin:$PATH
@@ -69,14 +66,23 @@ jobs:
           make install DESTDIR=appdir
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
+          ls -l appdir/bin
           ./linuxdeployqt appdir/bin/Banking_System_Client -unsupported-allow-new-glibc
-#  ./linuxdeployqt appdir/share/applications/*.desktop -appimage -bundle-non-qt-libs -extra-plugins=imageformats/libqsvg.so
+      #
+      # Create the AppImage
+      #
+      - name: Create AppImage
+        run: |
+          wget -c -nv "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" -O appimagetool
+          chmod a+x appimagetool
+          ./appimagetool appdir/ myApp-1.0.0-Linux.AppImage
+
 
       #
       # Rename AppImage to match "%AppName%-%Version%-Linux.AppImage" format
       #
-      - name: Rename AppImage
-        run: mv *.AppImage myApp-1.0.0-Linux.AppImage
+    #  - name: Rename AppImage
+    #    run: mv *.AppImage myApp-1.0.0-Linux.AppImage
 
       #
       # Upload AppImage to build artifacts

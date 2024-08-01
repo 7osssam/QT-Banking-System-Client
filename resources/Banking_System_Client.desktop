@@ -3,4 +3,7 @@ Type=Application
 Name=Banking System Client
 Comment=Qt-based banking app for user/admin account management, transactions, secure server communication via PostgreSQL/Supabase.
 Exec=Banking_System_Client
-Icon=icons/bank.png
+Icon=bank
+Terminal=false
+Categories=Application;Finance;
+
