@@ -74,6 +74,10 @@ install:
 
 # Copy all the files from release build to the bin directory
 	@cp $(BUILD_DIR)/Release/* $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@echo "List of files in the bin directory:"
+	@ls $(BUILD_DIR)/Release/
+	@echo "List of files in the install directory:"
+	@ls -l $(DESTDIR)/$(INSTALL_ROOT)/bin
 # Copy the desktop file to the applications directory
 	@cp ./resources/*.desktop $(DESTDIR)/$(INSTALL_ROOT)/bin
 # Copy the icon to the icons directory

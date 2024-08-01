@@ -68,6 +68,8 @@ jobs:
           chmod a+x linuxdeployqt
           ls appdir/bin
           ./linuxdeployqt appdir/bin/Banking_System_Client -unsupported-allow-new-glibc
+          ls appdir/bin
+
       #
       # Create the AppImage
       #
