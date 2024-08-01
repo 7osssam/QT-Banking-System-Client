@@ -68,8 +68,8 @@ build-release:
 
 	@echo "List of files in the release build directory (with hidden files):"
 	@ls -a $(BUILD_DIR)/Release
-	@echo "List of folders in the build directory:"
-	@ls $(BUILD_DIR)
+	@echo "tree of all files in the release build directory:"
+	@tree $(BUILD_DIR)/Release /f
 
 
 # Install the project
