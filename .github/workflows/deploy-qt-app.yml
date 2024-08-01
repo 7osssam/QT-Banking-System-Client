@@ -42,7 +42,7 @@ jobs:
             version: '6.7.1'
             host: 'windows'
             target: 'desktop'
-            arch: 'win64_msvc2019_arm64'
+            arch: 'win64_mingw'
             modules: 'qtconnectivity qthttpserver qtmultimedia qtnetworkauth qtremoteobjects qtscxml'
             tools: 'tools_cmake tools_ninja'
         #
