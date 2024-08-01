@@ -25,7 +25,7 @@ jobs:
   # GNU/Linux build (we run on Ubuntu 20.04 for better compatibility)
   #
   build-linux:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     steps:
 
       - name: Checkout repository and submodules
@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev libfuse2
+          sudo apt-get install -y libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev fuse libfuse2
           make dependency
 
       - name: Install Qt
@@ -72,10 +72,7 @@ jobs:
       # Rename AppImage to match "%AppName%-%Version%-Linux.AppImage" format
       #
       - name: Rename AppImage
-        #run: mv *.AppImage ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
         run: mv *.AppImage myApp-1.0.0-Linux.AppImage
-
-
 
       #
       # Upload AppImage to build artifacts
@@ -83,7 +80,5 @@ jobs:
       - name: Upload AppImage
         uses: actions/upload-artifact@v2
         with:
-#          name: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
           name: myApp-1.0.0-Linux.AppImage
-#          path: ${{env.EXECUTABLE}}-${{env.VERSION}}-Linux.AppImage
           path: myApp-1.0.0-Linux.AppImage
