@@ -13,7 +13,7 @@ all: install dependency build run doc test
 dependency:
 	@echo "Installing dependencies..."
 ifeq ($(OS), Windows_NT)
-	@choco install mingw cmake llvm ninja doxygen.install
+	@choco install cmake llvm ninja doxygen.install
 else
 	@sudo apt-get install -y gcc g++ cmake llvm ninja-build doxygen graphviz clang-format texlive
 endif
