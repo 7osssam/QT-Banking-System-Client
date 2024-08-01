@@ -66,7 +66,7 @@ jobs:
           make install DESTDIR=appdir
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
-          ls -l appdir/bin
+          ls appdir/bin
           ./linuxdeployqt appdir/bin/Banking_System_Client -unsupported-allow-new-glibc
       #
       # Create the AppImage
@@ -75,14 +75,16 @@ jobs:
         run: |
           wget -c -nv "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage" -O appimagetool
           chmod a+x appimagetool
-          ./appimagetool appdir/ myApp-1.0.0-Linux.AppImage
+          ./appimagetool appdir/bin
+          ls -l
+          ls -l appdir/bin
 
 
       #
       # Rename AppImage to match "%AppName%-%Version%-Linux.AppImage" format
       #
-    #  - name: Rename AppImage
-    #    run: mv *.AppImage myApp-1.0.0-Linux.AppImage
+      - name: Rename AppImage
+        run: mv *.AppImage myApp-1.0.0-Linux.AppImage
 
       #
       # Upload AppImage to build artifacts
