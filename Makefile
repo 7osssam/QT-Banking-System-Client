@@ -66,8 +66,10 @@ build-release:
 	@cmake --build $(BUILD_DIR) --config Release --target all -- -j 4
 	@echo "========= Release build done ========="
 
-	@echo "List of files in the release build directory:"
-	@ls $(BUILD_DIR)/Release/
+	@echo "List of files in the release build directory (with hidden files):"
+	@ls -a $(BUILD_DIR)/Release
+	@echo "List of folders in the build directory:"
+	@ls $(BUILD_DIR)
 
 
 # Install the project
