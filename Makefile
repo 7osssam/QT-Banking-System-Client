@@ -71,24 +71,24 @@ build-release:
 install:
 	@echo "Installing the application..."
 # Create the necessary directories in the INSTALL_ROOT
-	@mkdir -p $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@mkdir -p $(DESTDIR)/$(INSTALL_ROOT)
 
 # Copy all the files from release build to the bin directory
-	@cp $(BUILD_DIR)/Release/* $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@cp $(BUILD_DIR)/Release/* $(DESTDIR)/$(INSTALL_ROOT)
 
 # Copy Shared Libraries files with (dll, so, dylib) extensions
 ifeq ($(OS), Windows_NT)
-	@cp $(BUILD_DIR)/Release/*.dll $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@cp $(BUILD_DIR)/Release/*.dll $(DESTDIR)/$(INSTALL_ROOT)
 else
-	@cp $(BUILD_DIR)/lib/*.so $(DESTDIR)/$(INSTALL_ROOT)/bin
-	@cp $(BUILD_DIR)/lib/*.dylib $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@cp $(BUILD_DIR)/lib/*.so $(DESTDIR)/$(INSTALL_ROOT)
+	@cp $(BUILD_DIR)/lib/*.dylib $(DESTDIR)/$(INSTALL_ROOT)
 endif
 
 # Copy the desktop file to the applications directory
-	@cp ./resources/*.desktop $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@cp ./resources/*.desktop $(DESTDIR)/$(INSTALL_ROOT)
 # Copy the icon to the icons directory
-	@cp ./resources/icons/*.png $(DESTDIR)/$(INSTALL_ROOT)/bin
-	@tree $(DESTDIR)/$(INSTALL_ROOT)/bin /f
+	@cp ./resources/icons/*.png $(DESTDIR)/$(INSTALL_ROOT)
+	@tree $(DESTDIR)/$(INSTALL_ROOT) /f
 
 
 # Run the application

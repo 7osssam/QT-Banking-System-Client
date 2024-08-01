@@ -64,7 +64,7 @@ jobs:
         #
         - name: Make NSIS installer
           run: |
-            move BANKING_SYSTEM deploy\windows\nsis\
+            move release deploy\windows\nsis\
             cd deploy\windows\nsis
             makensis /X"SetCompressor /FINAL lzma" setup.nsi
             ren *.exe Banking_System_Client-1.0.0-Windows.exe
