@@ -44,7 +44,7 @@ jobs:
             target: 'desktop'
             arch: 'win64_mingw'
             modules: 'qtconnectivity qthttpserver qtmultimedia qtnetworkauth qtremoteobjects qtscxml'
-            tools: 'tools_cmake tools_ninja'
+            tools: 'tools_cmake,3.29.3-202405151154,qt.tools.cmake tools_ninja,1.12.0-202405151040,qt.tools.ninja'
         #
         # Install NSIS
         #
