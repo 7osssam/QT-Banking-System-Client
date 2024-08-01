@@ -58,13 +58,15 @@ jobs:
           run: |
             make install DESTDIR=release
             windeployqt --dir= release --compiler-runtime
+            mkdir Banking_System_Client
+            move release Banking_System_Client
 
         #
         # Create NSIS installer
         #
         - name: Make NSIS installer
           run: |
-            move release deploy\windows\nsis\
+            move Banking_System_Client deploy\windows\nsis\
             cd deploy\windows\nsis
             makensis /X"SetCompressor /FINAL lzma" setup.nsi
             ren *.exe Banking_System_Client-1.0.0-Windows.exe
