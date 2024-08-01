@@ -55,4 +55,12 @@ install(TARGETS ${APPNAME}
         ARCHIVE DESTINATION lib
         RUNTIME DESTINATION bin )
 
+
+set_target_properties(qt-material-widgets PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+	POSITION_INDEPENDENT_CODE ON
+)
+
 message(STATUS "[Application: ${APPNAME}] Added Executable target: ${APPNAME}")
