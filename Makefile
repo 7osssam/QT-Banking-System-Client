@@ -66,12 +66,6 @@ build-release:
 	@cmake --build $(BUILD_DIR) --config Release --target all -- -j 4
 	@echo "========= Release build done ========="
 
-	@echo "List of files in the release build directory (with hidden files):"
-	@ls -a $(BUILD_DIR)/Release
-	@echo "tree of all files in the release build directory:"
-	@tree $(BUILD_DIR)/lib /f
-
-
 # Install the project
 install:
 	@echo "Installing the application..."
@@ -80,10 +74,8 @@ install:
 
 # Copy all the files from release build to the bin directory
 	@cp $(BUILD_DIR)/Release/* $(DESTDIR)/$(INSTALL_ROOT)/bin
-	@echo "List of files in the bin directory:"
-	@ls $(BUILD_DIR)/Release/
-	@echo "List of files in the install directory:"
-	@ls $(DESTDIR)/$(INSTALL_ROOT)/bin
+# Copy libqt-material-widgets from build/lib/qtmaterial/components to the bin directory
+	@cp -r $(BUILD_DIR)/lib/qtmaterial/components/libqt-material-widgets $(DESTDIR)/$(INSTALL_ROOT)/bin
 # Copy the desktop file to the applications directory
 	@cp ./resources/*.desktop $(DESTDIR)/$(INSTALL_ROOT)/bin
 # Copy the icon to the icons directory
