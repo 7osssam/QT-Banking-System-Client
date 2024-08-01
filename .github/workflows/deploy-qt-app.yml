@@ -59,7 +59,7 @@ jobs:
         #
         - name: Compile
           run: |
-            make release
+            make build-release
 
         #
         # Copy Qt DLLs, compiler runtime & application icon
