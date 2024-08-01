@@ -65,11 +65,12 @@ build-release:
 	@echo "Building release..."
 	@cmake --build $(BUILD_DIR) --config Release --target all -- -j 4
 	@echo "========= Release build done ========="
-	@tree $(BUILD_DIR)/release /f
+	@tree $(BUILD_DIR)/Release /f
 
 # Install the project
 install:
 	@echo "Installing the application..."
+	@tree $(BUILD_DIR)/lib /f -L 2
 # Create the necessary directories in the INSTALL_ROOT
 	@mkdir -p $(DESTDIR)/$(INSTALL_ROOT)/bin
 
