@@ -69,7 +69,7 @@ build-release:
 	@echo "List of files in the release build directory (with hidden files):"
 	@ls -a $(BUILD_DIR)/Release
 	@echo "tree of all files in the release build directory:"
-	@tree $(BUILD_DIR)/Release /f
+	@tree $(BUILD_DIR)/lib /f
 
 
 # Install the project
