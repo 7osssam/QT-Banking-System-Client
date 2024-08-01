@@ -44,32 +44,28 @@ jobs:
             scoop bucket add extras
             scoop install nsis
 
-        #
-        # Compile application
-        #
+
         - name: Compile
           run: |
             make build-release
 
-        #
-        # Copy Qt DLLs, compiler runtime & application icon
-        #
+
         - name: Deploy
           run: |
             make install DESTDIR=release
-            windeployqt --dir= release --compiler-runtime
+            windeployqt --dir=release --compiler-runtime
             mkdir Banking_System_Client
-            move release Banking_System_Client
+            Move-Item -Path release/* -Destination Banking_System_Client
 
         #
         # Create NSIS installer
         #
         - name: Make NSIS installer
           run: |
-            move Banking_System_Client deploy\windows\nsis\
+            Move-Item -Path Banking_System_Client -Destination deploy\windows\nsis\
             cd deploy\windows\nsis
             makensis /X"SetCompressor /FINAL lzma" setup.nsi
-            ren *.exe Banking_System_Client-1.0.0-Windows.exe
+            Rename-Item -Path *.exe -NewName Banking_System_Client-1.0.0-Windows.exe
 
         - name: Upload NSIS installer
           uses: actions/upload-artifact@v2
