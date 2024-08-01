@@ -77,6 +77,9 @@ install:
 # Copy all the files from release build to the bin directory
 	@cp $(BUILD_DIR)/Release/* $(DESTDIR)/$(INSTALL_ROOT)/bin
 
+# Copy Shared Libraries files from lib to bin directory
+	@cp -r $(BUILD_DIR)/lib/* $(DESTDIR)/$(INSTALL_ROOT)/bin
+
 # Copy the desktop file to the applications directory
 	@cp ./resources/*.desktop $(DESTDIR)/$(INSTALL_ROOT)/bin
 # Copy the icon to the icons directory
