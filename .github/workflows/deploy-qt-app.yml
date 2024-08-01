@@ -29,6 +29,9 @@ jobs:
             arch: x64
             spectre: true
 
+        - name: Install dependencies
+          run: |
+            make dependency
         #
         # Install Qt
         #
@@ -41,7 +44,7 @@ jobs:
             target: 'desktop'
             arch: 'win64_msvc2019_arm64'
             modules: 'qtconnectivity qthttpserver qtmultimedia qtnetworkauth qtremoteobjects qtscxml'
-            tools: 'tools_ninja'
+            tools: 'tools_cmake tools_ninja'
         #
         # Install NSIS
         #
