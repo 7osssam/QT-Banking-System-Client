@@ -20,21 +20,17 @@ jobs:
           with:
             submodules: recursive
 
-        #
-        # Configure MSVC
-        #
-        - name: Configure MSVC
-          uses: ilammy/msvc-dev-cmd@v1
-          with:
-            arch: x64
-            spectre: true
 
         - name: Install dependencies
           run: |
             make dependency
-        #
-        # Install Qt
-        #
+
+        - name: Set up MinGW
+          uses: egor-tensin/setup-mingw@v2
+          with:
+            platform: x64
+
+
         - name: Install Qt
           uses: jurplel/install-qt-action@v2
           with:
