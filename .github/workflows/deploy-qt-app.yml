@@ -7,84 +7,98 @@ on:
   push:               # Run on push
   pull_request:       # Run on pull-request
 
-
 jobs:
   build-windows:
-      runs-on: windows-latest
-      steps:
-        #
-        # Checkout the repository
-        #
-        - name: Checkout repository and submodules
-          uses: actions/checkout@v2
-          with:
-            submodules: recursive
+    runs-on: windows-latest
+    steps:
+      #
+      # Checkout the repository and submodules
+      #
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+          submodules: recursive
 
-        #
-        # Extract project information from CMake
-        #
-        - name: Extract project information
-          run: |
-            cd utils
-            chmod +x extract_cmake_project_info.sh
-            PROJECT_INFO=$(./extract_cmake_project_info.sh ../CMakeLists.txt)
-            echo "$PROJECT_INFO"
-            echo "$PROJECT_INFO" >> $GITHUB_ENV
+      #
+      # Extract project information from CMake
+      #
+      - name: Extract project information
+        shell: bash
+        run: |
+          cd utils
+          chmod +x extract_cmake_project_info.sh
+          PROJECT_INFO=$(./extract_cmake_project_info.sh ../CMakeLists.txt)
+          echo "$PROJECT_INFO"
+          echo "$PROJECT_INFO" >> $GITHUB_ENV
 
+      #
+      # Install dependencies
+      #
+      - name: Install dependencies
+        shell: bash
+        run: |
+          make dependency
 
-        - name: Install dependencies
-          run: |
-            make dependency
+      #
+      # Install Qt
+      #
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v2
+        with:
+          aqtversion: '==3.1.*'
+          version: '6.7.1'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win64_mingw'
+          modules: 'qtconnectivity qthttpserver qtmultimedia qtnetworkauth qtremoteobjects qtscxml'
+          tools: 'tools_cmake,3.29.3-202405151154,qt.tools.cmake tools_ninja,1.12.0-202405151040,qt.tools.ninja'
 
-        - name: Install Qt
-          uses: jurplel/install-qt-action@v2
-          with:
-            aqtversion: '==3.1.*'
-            version: '6.7.1'
-            host: 'windows'
-            target: 'desktop'
-            arch: 'win64_mingw'
-            modules: 'qtconnectivity qthttpserver qtmultimedia qtnetworkauth qtremoteobjects qtscxml'
-            tools: 'tools_cmake,3.29.3-202405151154,qt.tools.cmake tools_ninja,1.12.0-202405151040,qt.tools.ninja'
+      #
+      # Compile
+      #
+      - name: Compile
+        shell: bash
+        run: |
+          make build-release
 
-        - name: Compile
-          run: |
-            make build-release
+      #
+      # Deploy
+      #
+      - name: Deploy
+        shell: bash
+        run: |
+          mkdir bin
+          mv release/${{env.PROJECT_NAME}}.exe bin
+          windeployqt bin/${{env.PROJECT_NAME}}.exe --compiler-runtime
+          mkdir "${{env.PROJECT_NAME}}"
+          mv bin "${{env.PROJECT_NAME}}"
 
-        - name: Deploy
-          run: |
-               mkdir bin
-               move release/${{env.PROJECT_NAME}}.exe bin
-               windeployqt bin/${{env.PROJECT_NAME }}.exe --compiler-runtime
-               mkdir "${{env.PROJECT_NAME}}"
-               move bin "${{env.PROJECT_NAME}}"
+      #
+      # Install NSIS
+      #
+      - name: Install NSIS
+        shell: bash
+        run: |
+          Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
+          scoop bucket add extras
+          scoop install nsis
 
+      #
+      # Create NSIS installer
+      #
+      - name: Make NSIS installer
+        shell: bash
+        run: |
+          mv "${{env.PROJECT_NAME}}" deploy/windows/nsis/
+          cd deploy/windows/nsis
+          makensis /X"SetCompressor /FINAL lzma" setup.nsi
+          mv *.exe ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
 
-        #
-        # Install NSIS
-        #
-        - name: Install NSIS
-          run: |
-               Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-               scoop bucket add extras
-               scoop install nsis
-
-
-        #
-        # Create NSIS installer
-        #
-        - name: Make NSIS installer
-          run: |
-               move "${{env.PROJECT_NAME}}" deploy\windows\nsis\
-               cd deploy\windows\nsis
-               makensis /X"SetCompressor /FINAL lzma" setup.nsi
-               ren *.exe ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
-
-        #
-        # Upload installer to build artifacts
-        #
-        - name: Upload NSIS installer
-          uses: actions/upload-artifact@v2
-          with:
-            name: ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
-            path: deploy/windows/nsis/${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
+      #
+      # Upload installer to build artifacts
+      #
+      - name: Upload NSIS installer
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
+          path: deploy/windows/nsis/${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
