@@ -63,6 +63,7 @@ jobs:
           export QTDIR=$RUNNER_WORKSPACE/Qt/6.7.1/gcc_64
           export PATH=$QTDIR/bin:$PATH
           export LD_LIBRARY_PATH=$QTDIR/lib:$LD_LIBRARY_PATH
+          export LD_LIBRARY_PATH=$RUNNER_WORKSPACE/build/lib:$LD_LIBRARY_PATH
           make install DESTDIR=appdir
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
