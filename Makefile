@@ -65,6 +65,7 @@ build-release:
 	@echo "Building release..."
 	@cmake --build $(BUILD_DIR) --config Release --target all -- -j 4
 	@echo "========= Release build done ========="
+	@tree $(BUILD_DIR)/release /f
 
 # Install the project
 install:
