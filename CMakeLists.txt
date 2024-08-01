@@ -164,4 +164,4 @@ install(TARGETS ${PROJECT_NAME}
 # Install .desktop and icon files
 install(FILES resources/${PROJECT_NAME}.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 
-install(FILES resources/icons/*.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps)
+install(FILES resources/icons/*.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons)
