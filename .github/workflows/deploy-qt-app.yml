@@ -78,7 +78,6 @@ jobs:
       # Install NSIS
       #
       - name: Install NSIS
-        shell: bash
         run: |
           Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
           scoop bucket add extras
