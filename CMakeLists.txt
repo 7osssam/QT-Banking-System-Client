@@ -64,7 +64,7 @@ set(CMAKE_COLOR_DIAGNOSTICS ON)
 #==============================================================================
 # Project Options
 #==============================================================================
-option(ENABLE_TESTS "Enable All Tests" ON)
+option(ENABLE_TESTS "Enable All Tests" OFF)
 option(ENABLE_COVERAGE "Enable Coverage" ON) # TODO: Adding code coverage Support for this template
 
 option(ENABLE_WARNINGS "Enable to add warnings to a target." OFF)
@@ -78,8 +78,8 @@ option(ENABLE_SANITIZE_THREAD "Enable thread sanitize (Gcc/Clang only)." OFF)
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE)
 
 # Set the output directories for Debug and Release configurations
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/build/Debug)
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/build/Release)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_BINARY_DIR}/Debug)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_BINARY_DIR}/Release)
 
 #==============================================================================
 # CMake Modules
@@ -152,3 +152,16 @@ if (ENABLE_TESTS)
 	#endif()
 
 endif()
+
+# Define installation directories
+include(GNUInstallDirs)
+
+install(TARGETS ${PROJECT_NAME}
+        RUNTIME DESTINATION lib
+        LIBRARY DESTINATION lib
+        ARCHIVE DESTINATION bin)
+
+# Install .desktop and icon files
+install(FILES resources/${PROJECT_NAME}.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
+
+install(FILES resources/icons/*.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps)
