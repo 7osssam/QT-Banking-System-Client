@@ -57,6 +57,8 @@ jobs:
       - name: building
         run: |
           make build-release
+          echo "Listing files in build/release"
+          ls build/release
 
       - name: Deploy AppImage
         run: |
@@ -66,9 +68,7 @@ jobs:
           make install DESTDIR=appdir
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
-          ls appdir/bin
           ./linuxdeployqt appdir/bin/Banking_System_Client -unsupported-allow-new-glibc
-          ls appdir/bin
 
       #
       # Create the AppImage
