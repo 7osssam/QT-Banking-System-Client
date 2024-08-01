@@ -57,7 +57,7 @@ jobs:
         - name: Deploy
           run: |
             make install DESTDIR=release
-            windeployqt --dir= release\bin\ --compiler-runtime
+            windeployqt --dir= release --compiler-runtime
 
         #
         # Create NSIS installer
