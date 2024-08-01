@@ -28,7 +28,6 @@ jobs:
           cd utils
           chmod +x extract_cmake_project_info.sh
           PROJECT_INFO=$(./extract_cmake_project_info.sh ../CMakeLists.txt)
-          echo "$PROJECT_INFO"
           echo "$PROJECT_INFO" >> $GITHUB_ENV
 
       #

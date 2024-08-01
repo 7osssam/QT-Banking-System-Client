@@ -4,8 +4,6 @@
 
 CMAKE_FILE=$1
 
-echo "Looking for CMakeLists.txt at: $CMAKE_FILE"
-
 if [ ! -f "$CMAKE_FILE" ]; then
   echo "Error: $CMAKE_FILE not found."
   exit 1
