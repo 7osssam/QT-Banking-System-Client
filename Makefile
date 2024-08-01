@@ -70,23 +70,20 @@ build-release:
 install:
 	@echo "Installing the application..."
 # Create the necessary directories in the INSTALL_ROOT
-	mkdir -p $(INSTALL_ROOT)/usr/bin
-	mkdir -p $(INSTALL_ROOT)/usr/share/applications
-	mkdir -p $(INSTALL_ROOT)/usr/share/icons/hicolor/256x256/apps
+	mkdir -p $(INSTALL_ROOT)/bin
+	mkdir -p $(INSTALL_ROOT)/share/applications
+	mkdir -p $(INSTALL_ROOT)/share/icons/hicolor/256x256/apps
 
-# Copy the binary
-#	cp $(BUILD_DIR)/$(EXECUTABLE) $(INSTALL_ROOT)/usr/bin/
+# Copy the executable to the bin directory
+	cp -r ./$(BUILD_DIR)/build/Release/* $(INSTALL_ROOT)/bin
 
-# Copy the .desktop file
-#	cp resources/$(EXECUTABLE).desktop $(INSTALL_ROOT)/usr/share/applications/
+# Copy the desktop file to the applications directory
+	cp ./resources/*.desktop $(INSTALL_ROOT)/share/applications
 
-# Copy the icon
-#	cp resources/$(EXECUTABLE).png $(INSTALL_ROOT)/usr/share/icons/hicolor/256x256/apps/
+# Copy the icon to the icons directory
+	cp ./resources/icons/*.png $(INSTALL_ROOT)/share/icons/hicolor/256x256/apps
 
-# Copy all files in build/build/release to INSTALL_ROOT
-	cp -r $(BUILD_DIR)/build/Release/* $(INSTALL_ROOT)
-
-# Run the project
+# Run the application
 run:
 	@echo "Running the project..."
 ifeq ($(OS), Windows_NT)
