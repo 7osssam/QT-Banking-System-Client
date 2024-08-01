@@ -57,8 +57,6 @@ jobs:
       - name: building
         run: |
           make build-release
-          echo "Listing files in build/release"
-          ls build/release
 
       - name: Deploy AppImage
         run: |
