@@ -72,7 +72,7 @@ install:
 # Create the necessary directories in the INSTALL_ROOT
 	mkdir -p $(INSTALL_ROOT)/bin
 	mkdir -p $(INSTALL_ROOT)/share/applications
-	mkdir -p $(INSTALL_ROOT)/share/icons/hicolor/256x256/apps
+	mkdir -p $(INSTALL_ROOT)/icons
 
 # Copy the executable to the bin directory
 	cp -r ./$(BUILD_DIR)/build/Release/* $(INSTALL_ROOT)/bin
@@ -81,7 +81,7 @@ install:
 	cp ./resources/*.desktop $(INSTALL_ROOT)/share/applications
 
 # Copy the icon to the icons directory
-	cp ./resources/icons/*.png $(INSTALL_ROOT)/share/icons/hicolor/256x256/apps
+	cp ./resources/icons/*.png $(INSTALL_ROOT)/icons
 
 # Run the application
 run:
