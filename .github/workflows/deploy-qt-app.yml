@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev fuse libfuse2
+          sudo apt-get install -y libgl1-mesa-dev libxkbcommon-x11-0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-xinerama0 libzstd-dev fuse libfuse2 libxcb-cursor0
           make dependency
 
       - name: Install Qt
@@ -69,7 +69,7 @@ jobs:
           make install DESTDIR=appdir
           wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" -O linuxdeployqt
           chmod a+x linuxdeployqt
-          ./linuxdeployqt appdir/bin/Banking_System_Client -appimage -bundle-non-qt-libs -extra-plugins=imageformats/libqsvg.so -executable=appdir/bin/Banking_System_Client
+          ./linuxdeployqt appdir/bin/Banking_System_Client -unsupported-allow-new-glibc
 #  ./linuxdeployqt appdir/share/applications/*.desktop -appimage -bundle-non-qt-libs -extra-plugins=imageformats/libqsvg.so
 
       #
