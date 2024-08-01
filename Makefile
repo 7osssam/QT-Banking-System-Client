@@ -70,18 +70,18 @@ build-release:
 install:
 	@echo "Installing the application..."
 # Create the necessary directories in the INSTALL_ROOT
-	mkdir -p $(INSTALL_ROOT)/bin
-	mkdir -p $(INSTALL_ROOT)/share/applications
-	mkdir -p $(INSTALL_ROOT)/icons
+	@mkdir -p $(DESTDIR)/$(INSTALL_ROOT)/bin
+	@mkdir -p $(DESTDIR)/$(INSTALL_ROOT)/share/applications
+	@mkdir -p $(DESTDIR)/$(INSTALL_ROOT)/icons
 
-# Copy the executable to the bin directory
-	cp -r ./$(BUILD_DIR)/build/Release/* $(INSTALL_ROOT)/bin
+# Copy all the files from release build to the bin directory
+	@cp $(BUILD_DIR)/Release/* $(DESTDIR)/$(INSTALL_ROOT)/bin
 
 # Copy the desktop file to the applications directory
-	cp ./resources/*.desktop $(INSTALL_ROOT)/share/applications
+	@cp ./resources/*.desktop $(DESTDIR)/$(INSTALL_ROOT)/share/applications
 
 # Copy the icon to the icons directory
-	cp ./resources/icons/*.png $(INSTALL_ROOT)/icons
+	@cp ./resources/icons/*.png $(DESTDIR)/$(INSTALL_ROOT)/icons
 
 # Run the application
 run:
