@@ -89,6 +89,9 @@ jobs:
       - name: Make NSIS installer
         shell: bash
         run: |
+          mkdir deploy
+          mkdir deploy/windows
+          mkdir deploy/windows/nsis
           mv "${{env.PROJECT_NAME}}" deploy/windows/nsis/
           cd deploy/windows/nsis
           makensis /X"SetCompressor /FINAL lzma" setup.nsi
