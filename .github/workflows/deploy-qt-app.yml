@@ -65,8 +65,7 @@ jobs:
       - name: Deploy
         shell: bash
         run: |
-          mkdir bin
-          mv build/Release/${{env.PROJECT_NAME}}.exe bin
+          make install DESTDIR=bin
           windeployqt bin/${{env.PROJECT_NAME}}.exe --compiler-runtime
           mkdir "${{env.PROJECT_NAME}}"
           mv bin "${{env.PROJECT_NAME}}"
@@ -74,8 +73,8 @@ jobs:
       - name: Packing
         shell: bash
         run: |
-          7z a "${{env.PROJECT_NAME}}.7z" "${{env.PROJECT_NAME}}"
-          mv "${{env.PROJECT_NAME}}.7z" "${{env.PROJECT_NAME}}.zip"
+          7z a -tzip ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}.zip ${{env.PROJECT_NAME}}
+
 
       - name: Upload
         uses: actions/upload-artifact@v2
