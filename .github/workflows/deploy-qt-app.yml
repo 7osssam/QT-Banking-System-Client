@@ -62,9 +62,6 @@ jobs:
         run: |
           make build-release
 
-      #
-      # Deploy
-      #
       - name: Deploy
         shell: bash
         run: |
@@ -74,37 +71,17 @@ jobs:
           mkdir "${{env.PROJECT_NAME}}"
           mv bin "${{env.PROJECT_NAME}}"
 
-      #
-      # Install NSIS
-      #
-      - name: Install NSIS
-        run: |
-          Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')
-          scoop bucket add extras
-          scoop install nsis
-
-      #
-      # Create NSIS installer
-      #
-      - name: Make NSIS installer
+      - name: Packing
         shell: bash
         run: |
-          mkdir deploy
-          mkdir deploy/windows
-          mkdir deploy/windows/nsis
-          mv "${{env.PROJECT_NAME}}" deploy/windows/nsis/
-          cd deploy/windows/nsis
-          echo 'SetCompressor /FINAL lzma' > compressor_setup.nsi
-          echo '!include "setup.nsi"' >> compressor_setup.nsi
-          makensis compressor_setup.nsi
-          mv *.exe ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
+          7z a "${{env.PROJECT_NAME}}.7z" "${{env.PROJECT_NAME}}"
+          mv "${{env.PROJECT_NAME}}.7z" "${{env.PROJECT_NAME}}.zip"
 
-
-      #
-      # Upload installer to build artifacts
-      #
-      - name: Upload NSIS installer
+      - name: Upload
         uses: actions/upload-artifact@v2
         with:
-          name: ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
-          path: deploy/windows/nsis/${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
+          name: ${{env.PROJECT_NAME}}
+          path: ${{env.PROJECT_NAME}}.zip
+
+
+
