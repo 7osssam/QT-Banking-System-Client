@@ -94,8 +94,11 @@ jobs:
           mkdir deploy/windows/nsis
           mv "${{env.PROJECT_NAME}}" deploy/windows/nsis/
           cd deploy/windows/nsis
-          makensis /X"SetCompressor /FINAL lzma" setup.nsi
+          echo 'SetCompressor /FINAL lzma' > compressor_setup.nsi
+          echo '!include "setup.nsi"' >> compressor_setup.nsi
+          makensis compressor_setup.nsi
           mv *.exe ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}-Windows.exe
+
 
       #
       # Upload installer to build artifacts
