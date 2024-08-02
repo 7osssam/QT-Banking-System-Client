@@ -79,8 +79,8 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v2
         with:
-          name: ${{env.PROJECT_NAME}}
-          path: ${{env.PROJECT_NAME}}.zip
+          name: ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}
+          path: ${{env.PROJECT_NAME}}-${{env.PROJECT_VERSION}}.zip
 
 
 
