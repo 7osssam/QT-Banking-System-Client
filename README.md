@@ -74,11 +74,11 @@ make run
 The client application provides the following main UI components:
 
 - **Login Form:** Allows users to log in to their accounts.
-<!-- gif of login form -->
+![Login Form](docs/images/login.png)
 - **Admin Dashboard:** Provides administrators with tools for managing users and viewing transaction logs.
-<!-- gif of admin dashboard -->
+![Admin Dashboard](docs/images/admin.png)
 - **User Dashboard:** Allows users to view their account details and transaction history.
-<!-- gif of user dashboard -->
+![User Dashboard](docs/images/user.png)
 
 ### Signals and Slots
 
