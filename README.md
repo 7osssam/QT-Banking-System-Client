@@ -80,6 +80,11 @@ The client application provides the following main UI components:
 - **User Dashboard:** Allows users to view their account details and transaction history.
 ![User Dashboard](docs/images/user.png)
 
+<!-- add demo youtube like of GUI -->
+> For a detailed demonstration of the application's features and GUI, please refer to the following video:
+> [Demo Video](https://youtu.be/_1zwW4iqX5U)
+
+
 ### Signals and Slots
 
 Qt's signal and slot mechanism is used extensively throughout the application to handle UI interactions and communicate with the server.
