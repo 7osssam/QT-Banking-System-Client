@@ -1080,6 +1080,7 @@ EXAMPLE_RECURSIVE      = NO
 
 IMAGE_PATH             = D:/XDUMP/BankingSystem/QT-Banking-System-Client/docs/diagrams/mermaid \
 						 D:/XDUMP/BankingSystem/QT-Banking-System-Client/docs/diagrams/plantuml \
+						 D:/XDUMP/BankingSystem/QT-Banking-System-Client/docs/images \
 						 D:/XDUMP/BankingSystem/QT-Banking-System-Client/resources/icons
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should

@@ -1080,6 +1080,7 @@ EXAMPLE_RECURSIVE      = NO
 
 IMAGE_PATH             = @CMAKE_SOURCE_DIR_CONVERTED@/docs/diagrams/mermaid \
 						 @CMAKE_SOURCE_DIR_CONVERTED@/docs/diagrams/plantuml \
+						 @CMAKE_SOURCE_DIR_CONVERTED@/docs/images \
 						 @CMAKE_SOURCE_DIR_CONVERTED@/resources/icons
 
 # The INPUT_FILTER tag can be used to specify a program that doxygen should

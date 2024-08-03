@@ -66,15 +66,15 @@ The client communicates with a server-\/side application through a TCP socket an
 
 \end{DoxyCode}
 
-\item Configure the project using CMake\+: 
+\item Clean the project (optional)\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{make\ clean-\/cache-\/reconfigure}
+\DoxyCodeLine{make\ clean}
 
 \end{DoxyCode}
 
 \item Build the project using the Makefile\+: 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{make\ build}
+\DoxyCodeLine{make\ build-\/debug}
 
 \end{DoxyCode}
 
@@ -95,9 +95,21 @@ The client application provides the following main UI components\+:
 
 
 \begin{DoxyItemize}
-\item {\bfseries{Login Form\+:}} Allows users to log in to their accounts.
-\item {\bfseries{Admin Dashboard\+:}} Provides administrators with tools for managing users and viewing transaction logs.
-\item {\bfseries{User Dashboard\+:}} Allows users to view their account details and transaction history.
+\item {\bfseries{Login Form\+:}} Allows users to log in to their accounts.  
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{login.png}%Login Form
+\end{DoxyInlineImage}
+   
+\item {\bfseries{Admin Dashboard\+:}} Provides administrators with tools for managing users and viewing transaction logs.  
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{admin.png}%Admin Dashboard
+\end{DoxyInlineImage}
+   
+\item {\bfseries{User Dashboard\+:}} Allows users to view their account details and transaction history.  
+\begin{DoxyInlineImage}
+\includegraphics[height=\baselineskip,keepaspectratio=true]{user.png}%User Dashboard
+\end{DoxyInlineImage}
+   
 \end{DoxyItemize}
 
 \doxysubsection*{Signals and Slots}
